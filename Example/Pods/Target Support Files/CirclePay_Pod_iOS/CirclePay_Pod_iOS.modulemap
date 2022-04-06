@@ -1,0 +1,6 @@
+framework module CirclePay_Pod_iOS {
+  umbrella header "CirclePay_Pod_iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

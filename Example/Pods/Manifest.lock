@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (5.4.1)
+  - CirclePay_Pod_iOS (0.1.0):
+    - Alamofire (= 5.4.1)
+
+DEPENDENCIES:
+  - Alamofire (= 5.4.1)
+  - CirclePay_Pod_iOS (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  CirclePay_Pod_iOS:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  CirclePay_Pod_iOS: 5ad8de037a682fd1ae957100a066bd45ce27e61c
+
+PODFILE CHECKSUM: 828349bf5ed4d34b406fd060168bb2ad93801d8b
+
+COCOAPODS: 1.10.1

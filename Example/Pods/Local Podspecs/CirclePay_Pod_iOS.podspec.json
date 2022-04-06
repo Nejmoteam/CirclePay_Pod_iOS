@@ -1,0 +1,28 @@
+{
+  "name": "CirclePay_Pod_iOS",
+  "version": "0.1.0",
+  "summary": "A short description of CirclePay_Pod_iOS.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/adelmohey/CirclePay_Pod_iOS",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "adelmohey": "79041608+adelmohey@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/adelmohey/CirclePay_Pod_iOS.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "CirclePay_Pod_iOS/Classes/**/*",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Alamofire": [
+      "5.4.1"
+    ]
+  }
+}
