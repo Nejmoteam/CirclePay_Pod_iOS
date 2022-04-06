@@ -1,10 +1,10 @@
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '12.0'
 
 target 'CirclePay_Pod_iOS_Example' do
   pod 'CirclePay_Pod_iOS', :path => '../'
-
+  pod 'Alamofire', '5.4.1'
   target 'CirclePay_Pod_iOS_Tests' do
     inherit! :search_paths
 

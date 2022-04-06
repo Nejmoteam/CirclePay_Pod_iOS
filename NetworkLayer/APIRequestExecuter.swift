@@ -32,7 +32,6 @@ class APIRequestExecuter<T: APIRequestBuilder> {
             switch response.result {
             case .success:
                 if response.response?.statusCode == 403 {
-                    RoutingManager.shared.logout()
                     completion(.failure(.client))
                     return
                 }

@@ -10,10 +10,9 @@ import Alamofire
 import Foundation
 
 final class APIRequestInterceptor: RequestInterceptor {
-    let userDefaultsManager: UserDefaultsProtocol = UserDefaultsManager()
 
     func adapt(_ urlRequest: URLRequest, for _: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        let token = userDefaultsManager.value(key: UserDefaultsKeys.userToken) ?? ""
+        let token =  ""
         var urlRequest = urlRequest
         urlRequest.headers.add(.authorization(bearerToken: token))
         completion(.success(urlRequest))
