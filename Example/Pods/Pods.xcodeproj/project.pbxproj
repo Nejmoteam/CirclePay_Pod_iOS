@@ -28,6 +28,11 @@
 		18226C5227FD723F00F87597 /* Int+BusinessErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C2A27FD723E00F87597 /* Int+BusinessErrorCode.swift */; };
 		18226C5327FD723F00F87597 /* TransactionsNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C2C27FD723E00F87597 /* TransactionsNetworking.swift */; };
 		18226C5427FD723F00F87597 /* TransactionsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C2D27FD723E00F87597 /* TransactionsWorker.swift */; };
+		18226C6227FD75ED00F87597 /* Customers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6127FD75ED00F87597 /* Customers.swift */; };
+		18226C6527FD78E900F87597 /* CreateCustomerEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6427FD78E900F87597 /* CreateCustomerEntities.swift */; };
+		18226C6727FD7B4D00F87597 /* CirclePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6627FD7B4D00F87597 /* CirclePay.swift */; };
+		18226C6927FE6DE300F87597 /* GetCustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6827FE6DE300F87597 /* GetCustomerCodable.swift */; };
+		18226C6B27FE722800F87597 /* UpdateCustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6A27FE722800F87597 /* UpdateCustomerCodable.swift */; };
 		19D605A3233499828FB6B790869F3E9C /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */; };
 		1E5E0F20F89353DC3F0A081DF94907BE /* Pods-CirclePay_Pod_iOS_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CD3E31B07EB69702D879151B3CA88 /* Pods-CirclePay_Pod_iOS_Tests-dummy.m */; };
 		210915D0E2E19317A837C52DE6ECC98C /* Pods-CirclePay_Pod_iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AB51BE3A4F72A13DEA1014EFA666DED /* Pods-CirclePay_Pod_iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -129,6 +134,11 @@
 		18226C2A27FD723E00F87597 /* Int+BusinessErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+BusinessErrorCode.swift"; sourceTree = "<group>"; };
 		18226C2C27FD723E00F87597 /* TransactionsNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsNetworking.swift; sourceTree = "<group>"; };
 		18226C2D27FD723E00F87597 /* TransactionsWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsWorker.swift; sourceTree = "<group>"; };
+		18226C6127FD75ED00F87597 /* Customers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
+		18226C6427FD78E900F87597 /* CreateCustomerEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomerEntities.swift; sourceTree = "<group>"; };
+		18226C6627FD7B4D00F87597 /* CirclePay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePay.swift; sourceTree = "<group>"; };
+		18226C6827FE6DE300F87597 /* GetCustomerCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerCodable.swift; sourceTree = "<group>"; };
+		18226C6A27FE722800F87597 /* UpdateCustomerCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomerCodable.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		20097F794E1A1791AB97EBE230264E61 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		230D1A76F5832DA4A4FD2486DA384C62 /* Pods-CirclePay_Pod_iOS_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CirclePay_Pod_iOS_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -276,6 +286,7 @@
 		18226C1A27FD723E00F87597 /* CustomersWorker */ = {
 			isa = PBXGroup;
 			children = (
+				18226C6327FD78D200F87597 /* Entities */,
 				18226C1B27FD723E00F87597 /* CustomersNetworking.swift */,
 				18226C1E27FD723E00F87597 /* CustomersWorker.swift */,
 			);
@@ -298,6 +309,24 @@
 				18226C2D27FD723E00F87597 /* TransactionsWorker.swift */,
 			);
 			path = TransactionsWorker;
+			sourceTree = "<group>";
+		};
+		18226C6027FD75CE00F87597 /* Customers */ = {
+			isa = PBXGroup;
+			children = (
+				18226C6127FD75ED00F87597 /* Customers.swift */,
+			);
+			path = Customers;
+			sourceTree = "<group>";
+		};
+		18226C6327FD78D200F87597 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				18226C6427FD78E900F87597 /* CreateCustomerEntities.swift */,
+				18226C6827FE6DE300F87597 /* GetCustomerCodable.swift */,
+				18226C6A27FE722800F87597 /* UpdateCustomerCodable.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		3F836C875D4C452ADE9439BC7BF1CC46 /* Pod */ = {
@@ -438,6 +467,8 @@
 		C783E2F28A762FF10AD2980AB37205A1 /* CirclePay_Pod_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				18226C6627FD7B4D00F87597 /* CirclePay.swift */,
+				18226C6027FD75CE00F87597 /* Customers */,
 				18226C0D27FD723E00F87597 /* NetworkLayer */,
 				3F836C875D4C452ADE9439BC7BF1CC46 /* Pod */,
 				912AF5F59C496648E2999D0DEF536FCB /* Support Files */,
@@ -723,6 +754,9 @@
 				18226C4B27FD723F00F87597 /* PaymentLinksNetworking.swift in Sources */,
 				18226C4127FD723F00F87597 /* InvoicesWorker.swift in Sources */,
 				18226C4827FD723F00F87597 /* CustomersWorker.swift in Sources */,
+				18226C6527FD78E900F87597 /* CreateCustomerEntities.swift in Sources */,
+				18226C6B27FE722800F87597 /* UpdateCustomerCodable.swift in Sources */,
+				18226C6927FE6DE300F87597 /* GetCustomerCodable.swift in Sources */,
 				18226C4A27FD723F00F87597 /* PaymentLinksWorker.swift in Sources */,
 				18226C5127FD723F00F87597 /* APIRequestInterceptor.swift in Sources */,
 				DDDE279AAAB3DFBCE04E2E91E3F82421 /* CirclePay_Pod_iOS-dummy.m in Sources */,
@@ -732,6 +766,8 @@
 				18226C3C27FD723F00F87597 /* APIRequestBuilder.swift in Sources */,
 				18226C4927FD723F00F87597 /* APIRequestExecuter.swift in Sources */,
 				18226C3F27FD723F00F87597 /* Int+HTTPStatusCode.swift in Sources */,
+				18226C6727FD7B4D00F87597 /* CirclePay.swift in Sources */,
+				18226C6227FD75ED00F87597 /* Customers.swift in Sources */,
 				18226C5227FD723F00F87597 /* Int+BusinessErrorCode.swift in Sources */,
 				18226C4027FD723F00F87597 /* InvoicesNetworking.swift in Sources */,
 				18226C5427FD723F00F87597 /* TransactionsWorker.swift in Sources */,
