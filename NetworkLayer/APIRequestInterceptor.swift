@@ -12,9 +12,12 @@ import Foundation
 final class APIRequestInterceptor: RequestInterceptor {
 
     func adapt(_ urlRequest: URLRequest, for _: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
-        let token =  ""
         var urlRequest = urlRequest
-        urlRequest.headers.add(.authorization(bearerToken: token))
+        if !CirclePay.merchantToken.isEmpty {
+            urlRequest.headers.add(name: "merchant-token", value: CirclePay.merchantToken)
+        }
+        urlRequest.headers.add(name: "account-token", value: CirclePay.accountToken)
+        urlRequest.headers.add(name: "account-key", value: CirclePay.accountKey)
         completion(.success(urlRequest))
     }
 

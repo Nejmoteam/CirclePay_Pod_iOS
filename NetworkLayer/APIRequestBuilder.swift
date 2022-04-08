@@ -21,8 +21,7 @@ protocol APIRequestBuilder {
 
 extension APIRequestBuilder {
     var baseUrl: String {
-        "https://staging.dashboard.apicirclepay.com/"
-//        "https://api.payment.circlepay.ai/"
+        "https://staging-openapi.circlepay.ai/"
     }
 
     var headers: [String: String]? {
