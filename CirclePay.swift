@@ -11,6 +11,6 @@ public class CirclePay {
     public static var accountToken:String = ""
     public static var accountKey:String = ""
     public init () {}
-    public var customers : CustomersProtocol = Customers()
-    
+    public let customers : CustomersProtocol = Customers()
+    public let invoices: InvoicesProtocol = Invoices()
 }

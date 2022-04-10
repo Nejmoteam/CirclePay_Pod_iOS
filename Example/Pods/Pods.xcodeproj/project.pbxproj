@@ -33,6 +33,12 @@
 		18226C6727FD7B4D00F87597 /* CirclePay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6627FD7B4D00F87597 /* CirclePay.swift */; };
 		18226C6927FE6DE300F87597 /* GetCustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6827FE6DE300F87597 /* GetCustomerCodable.swift */; };
 		18226C6B27FE722800F87597 /* UpdateCustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6A27FE722800F87597 /* UpdateCustomerCodable.swift */; };
+		18226C7127FFD48200F87597 /* CreateInvoiceCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6F27FFD39F00F87597 /* CreateInvoiceCodable.swift */; };
+		18226C7227FFD48600F87597 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C6D27FFCF1200F87597 /* Items.swift */; };
+		18226C7627FFD52A00F87597 /* Invoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C7427FFD4BE00F87597 /* Invoices.swift */; };
+		18226C7927FFE26B00F87597 /* InvoiceCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C7727FFE04500F87597 /* InvoiceCodable.swift */; };
+		18226C7B27FFE5DA00F87597 /* InvoiceDeleteCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C7A27FFE5DA00F87597 /* InvoiceDeleteCodable.swift */; };
+		18226C7D28030CC700F87597 /* InvoicePayCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18226C7C28030CC700F87597 /* InvoicePayCodable.swift */; };
 		19D605A3233499828FB6B790869F3E9C /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 401A0C3C3516540407583753D10DEB2B /* NetworkReachabilityManager.swift */; };
 		1E5E0F20F89353DC3F0A081DF94907BE /* Pods-CirclePay_Pod_iOS_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 716CD3E31B07EB69702D879151B3CA88 /* Pods-CirclePay_Pod_iOS_Tests-dummy.m */; };
 		210915D0E2E19317A837C52DE6ECC98C /* Pods-CirclePay_Pod_iOS_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AB51BE3A4F72A13DEA1014EFA666DED /* Pods-CirclePay_Pod_iOS_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -139,6 +145,12 @@
 		18226C6627FD7B4D00F87597 /* CirclePay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePay.swift; sourceTree = "<group>"; };
 		18226C6827FE6DE300F87597 /* GetCustomerCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomerCodable.swift; sourceTree = "<group>"; };
 		18226C6A27FE722800F87597 /* UpdateCustomerCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCustomerCodable.swift; sourceTree = "<group>"; };
+		18226C6D27FFCF1200F87597 /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
+		18226C6F27FFD39F00F87597 /* CreateInvoiceCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInvoiceCodable.swift; sourceTree = "<group>"; };
+		18226C7427FFD4BE00F87597 /* Invoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoices.swift; sourceTree = "<group>"; };
+		18226C7727FFE04500F87597 /* InvoiceCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceCodable.swift; sourceTree = "<group>"; };
+		18226C7A27FFE5DA00F87597 /* InvoiceDeleteCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDeleteCodable.swift; sourceTree = "<group>"; };
+		18226C7C28030CC700F87597 /* InvoicePayCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicePayCodable.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		20097F794E1A1791AB97EBE230264E61 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		230D1A76F5832DA4A4FD2486DA384C62 /* Pods-CirclePay_Pod_iOS_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CirclePay_Pod_iOS_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -277,6 +289,7 @@
 		18226C1227FD723E00F87597 /* InvoicesWorker */ = {
 			isa = PBXGroup;
 			children = (
+				18226C6C27FFCEF300F87597 /* InvoiceEntities */,
 				18226C1327FD723E00F87597 /* InvoicesNetworking.swift */,
 				18226C1427FD723E00F87597 /* InvoicesWorker.swift */,
 			);
@@ -327,6 +340,26 @@
 				18226C6A27FE722800F87597 /* UpdateCustomerCodable.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		18226C6C27FFCEF300F87597 /* InvoiceEntities */ = {
+			isa = PBXGroup;
+			children = (
+				18226C6D27FFCF1200F87597 /* Items.swift */,
+				18226C6F27FFD39F00F87597 /* CreateInvoiceCodable.swift */,
+				18226C7727FFE04500F87597 /* InvoiceCodable.swift */,
+				18226C7A27FFE5DA00F87597 /* InvoiceDeleteCodable.swift */,
+				18226C7C28030CC700F87597 /* InvoicePayCodable.swift */,
+			);
+			path = InvoiceEntities;
+			sourceTree = "<group>";
+		};
+		18226C7327FFD4B000F87597 /* Invoices */ = {
+			isa = PBXGroup;
+			children = (
+				18226C7427FFD4BE00F87597 /* Invoices.swift */,
+			);
+			path = Invoices;
 			sourceTree = "<group>";
 		};
 		3F836C875D4C452ADE9439BC7BF1CC46 /* Pod */ = {
@@ -467,6 +500,7 @@
 		C783E2F28A762FF10AD2980AB37205A1 /* CirclePay_Pod_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				18226C7327FFD4B000F87597 /* Invoices */,
 				18226C6627FD7B4D00F87597 /* CirclePay.swift */,
 				18226C6027FD75CE00F87597 /* Customers */,
 				18226C0D27FD723E00F87597 /* NetworkLayer */,
@@ -749,13 +783,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				18226C3E27FD723F00F87597 /* BaseAPIRequestResponseFailureErrorType.swift in Sources */,
+				18226C7227FFD48600F87597 /* Items.swift in Sources */,
 				18226C5027FD723F00F87597 /* APIRequestResponseLog.swift in Sources */,
+				18226C7D28030CC700F87597 /* InvoicePayCodable.swift in Sources */,
 				18226C4627FD723F00F87597 /* CustomersNetworking.swift in Sources */,
 				18226C4B27FD723F00F87597 /* PaymentLinksNetworking.swift in Sources */,
 				18226C4127FD723F00F87597 /* InvoicesWorker.swift in Sources */,
 				18226C4827FD723F00F87597 /* CustomersWorker.swift in Sources */,
+				18226C7B27FFE5DA00F87597 /* InvoiceDeleteCodable.swift in Sources */,
+				18226C7627FFD52A00F87597 /* Invoices.swift in Sources */,
 				18226C6527FD78E900F87597 /* CreateCustomerEntities.swift in Sources */,
 				18226C6B27FE722800F87597 /* UpdateCustomerCodable.swift in Sources */,
+				18226C7127FFD48200F87597 /* CreateInvoiceCodable.swift in Sources */,
 				18226C6927FE6DE300F87597 /* GetCustomerCodable.swift in Sources */,
 				18226C4A27FD723F00F87597 /* PaymentLinksWorker.swift in Sources */,
 				18226C5127FD723F00F87597 /* APIRequestInterceptor.swift in Sources */,
@@ -764,6 +803,7 @@
 				18226C5327FD723F00F87597 /* TransactionsNetworking.swift in Sources */,
 				18226C4527FD723F00F87597 /* BaseAPIRequestResponseModel.swift in Sources */,
 				18226C3C27FD723F00F87597 /* APIRequestBuilder.swift in Sources */,
+				18226C7927FFE26B00F87597 /* InvoiceCodable.swift in Sources */,
 				18226C4927FD723F00F87597 /* APIRequestExecuter.swift in Sources */,
 				18226C3F27FD723F00F87597 /* Int+HTTPStatusCode.swift in Sources */,
 				18226C6727FD7B4D00F87597 /* CirclePay.swift in Sources */,
