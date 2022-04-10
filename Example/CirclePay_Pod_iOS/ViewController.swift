@@ -16,13 +16,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let circlePay = CirclePay()
         
-        circlePay.customers.listCustomers { customers, error in
+        circlePay.invoices.delete(invoiceNumber: "CIR_INV_1649386853467") { results, error in
             if error != nil {
                 print(error)
             } else {
-                for customer in customers! {
-                    print(customer)
-                }
+                print(results)
             }
         }
         
