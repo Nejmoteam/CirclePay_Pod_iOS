@@ -14,4 +14,8 @@ public class CirclePay {
     public static let customers : CustomersProtocol = Customers()
     public static let invoices: InvoicesProtocol = Invoices()
     public static let merchants: MerchantsProtocol = Merchants()
+    public static let payments: PaymentsProtocol = Payments()
+    public static let refunds: RefundsProtocol = Refunds()
+    public static let paymentGateways: PaymentGatewaysProtocol = PaymentGateways()
+    public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
 }
