@@ -14,13 +14,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let circlePay = CirclePay()
-        
-        circlePay.invoices.delete(invoiceNumber: "CIR_INV_1649386853467") { results, error in
-            if error != nil {
-                print(error)
+        CirclePay.merchants.sendOTP(countryCode: "+20", mobileNumber: "01117507878") { res, err in
+            if err != nil {
+                print(err)
             } else {
-                print(results)
+                print(res)
             }
         }
         
