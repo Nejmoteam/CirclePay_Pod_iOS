@@ -14,11 +14,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        CirclePay.merchants.sendOTP(countryCode: "+20", mobileNumber: "01117507878") { res, err in
+        CirclePay.paymentGateways.list { gate, err in
             if err != nil {
                 print(err)
             } else {
-                print(res)
+                print(gate)
             }
         }
         
