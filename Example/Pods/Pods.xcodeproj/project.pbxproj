@@ -533,6 +533,22 @@
 			path = PaymentMethods;
 			sourceTree = "<group>";
 		};
+		18226CC92807497D00F87597 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				18226CC52805233200F87597 /* PaymentMethods */,
+				18226CBA2805204700F87597 /* PaymentGateways */,
+				18226CAD28051B3600F87597 /* Refunds */,
+				18226CA2280513EF00F87597 /* Payments */,
+				18226C7E28032A8600F87597 /* Merchants */,
+				18226C7327FFD4B000F87597 /* Invoices */,
+				18226C6627FD7B4D00F87597 /* CirclePay.swift */,
+				18226C6027FD75CE00F87597 /* Customers */,
+				18226C0D27FD723E00F87597 /* NetworkLayer */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		3F836C875D4C452ADE9439BC7BF1CC46 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -671,15 +687,7 @@
 		C783E2F28A762FF10AD2980AB37205A1 /* CirclePay_Pod_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				18226CC52805233200F87597 /* PaymentMethods */,
-				18226CBA2805204700F87597 /* PaymentGateways */,
-				18226CAD28051B3600F87597 /* Refunds */,
-				18226CA2280513EF00F87597 /* Payments */,
-				18226C7E28032A8600F87597 /* Merchants */,
-				18226C7327FFD4B000F87597 /* Invoices */,
-				18226C6627FD7B4D00F87597 /* CirclePay.swift */,
-				18226C6027FD75CE00F87597 /* Customers */,
-				18226C0D27FD723E00F87597 /* NetworkLayer */,
+				18226CC92807497D00F87597 /* Source */,
 				3F836C875D4C452ADE9439BC7BF1CC46 /* Pod */,
 				912AF5F59C496648E2999D0DEF536FCB /* Support Files */,
 			);

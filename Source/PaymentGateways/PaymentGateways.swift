@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public protocol PaymentGatewaysProtocol: class {
+public protocol PaymentGatewaysProtocol {
     func list(completion: @escaping ([PaymentGatewayCodable]?, String?) -> Void)
     
     func get(paymentGatewayId:String, completion: @escaping (PaymentGatewayCodable?, String?) -> Void)

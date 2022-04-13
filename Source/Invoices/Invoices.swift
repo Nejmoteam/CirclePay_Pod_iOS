@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public protocol InvoicesProtocol: class {
+public protocol InvoicesProtocol {
     func create(invoiceNumber:String?,items: [Items], customerMobile:String, status:Int?, createDate:String?, dueDate:String, prefPaymentMethod:String?, shippingFees:Double?, discountValue:Double?, discountType:String?, discountValueCalculated:Double?, tax:Double?, taxValue:Double?, shippingPolicy:String?, returnPolicy:String?, extraNotes:String?, completion: @escaping (CreateInvoiceCodable?, String?) -> Void)
     
     func list(customerMobile:String?, completion: @escaping ([InvoiceCodable]?, String?) -> Void)

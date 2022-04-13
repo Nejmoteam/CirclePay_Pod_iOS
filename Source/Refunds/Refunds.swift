@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public protocol RefundsProtocol: class {
+public protocol RefundsProtocol {
     func list(completion: @escaping ([RefundCodable]?, String?) -> Void)
     
     func get(refundId:Int, completion: @escaping (RefundCodable?, String?) -> Void)

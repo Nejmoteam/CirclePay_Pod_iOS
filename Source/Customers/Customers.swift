@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public protocol CustomersProtocol: class {
+public protocol CustomersProtocol {
     func createCustomer(firstName:String, lastName:String, address:String, country:String, governorate:String, city:String, aptNumber:String, email:String, mobileNumber:String,  completion: @escaping (CreateCustomerCodable?, String?) -> Void)
     
     func updateCustomer(firstName:String, lastName:String, address:String, country:String, governorate:String, city:String, aptNumber:String, email:String, mobileNumber:String,  completion: @escaping (UpdateCustomerCodable?, String?) -> Void)

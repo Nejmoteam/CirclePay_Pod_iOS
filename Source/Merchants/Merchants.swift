@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public protocol MerchantsProtocol: class {
+public protocol MerchantsProtocol {
     func create(firstName:String, lastName:String, email:String, mobileNumber:String, businessName:String, businessAddress:String, callbackURL:String, completion: @escaping (MerchantCreateCodable?, String?) -> Void)
     
     func get(completion: @escaping (MerchantCodable?, String?) -> Void)
