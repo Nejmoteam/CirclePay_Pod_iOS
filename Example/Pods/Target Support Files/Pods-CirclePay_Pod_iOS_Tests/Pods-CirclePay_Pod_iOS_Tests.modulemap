@@ -1,0 +1,6 @@
+framework module Pods_CirclePay_Pod_iOS_Tests {
+  umbrella header "Pods-CirclePay_Pod_iOS_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
