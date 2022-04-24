@@ -21,7 +21,7 @@ protocol APIRequestBuilder {
 
 extension APIRequestBuilder {
     var baseUrl: String {
-        "https://staging-openapi.circlepay.ai/"
+        return CirclePay.mode.rawValue
     }
 
     var headers: [String: String]? {
@@ -77,3 +77,4 @@ enum MultiPartDataExtension: String {
     case excel = ".xls"
     case ppt = ".ppt"
 }
+

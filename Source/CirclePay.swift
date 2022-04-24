@@ -18,4 +18,11 @@ public class CirclePay {
     public static let refunds: RefundsProtocol = Refunds()
     public static let paymentGateways: PaymentGatewaysProtocol = PaymentGateways()
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
+    public static var mode: Inviroment = .sandBox
+}
+
+
+public enum Inviroment: String {
+    case production = "https://staging-openapi.circlepay.ai/"
+    case sandBox =  "SandBox ..."
 }

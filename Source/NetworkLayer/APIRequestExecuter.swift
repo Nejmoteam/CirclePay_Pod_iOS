@@ -23,6 +23,7 @@ class APIRequestExecuter<T: APIRequestBuilder> {
         let method = Alamofire.HTTPMethod(rawValue: target.method.rawValue)
         let parameters = buildParameters(withTask: target.task)
         let headers = buildHeaders(withHeader: target.headers)
+        print(target.baseUrl)
         AF.request(target.baseUrl + target.path, method: method, parameters: parameters.0, encoding: parameters.1, headers: headers ?? nil, interceptor: APIRequestInterceptor()).responseJSON { response in
             guard (response.response?.statusCode) != nil else {
                 // We Should add Custom Error here...
