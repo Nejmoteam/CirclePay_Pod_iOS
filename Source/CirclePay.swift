@@ -23,6 +23,8 @@ public class CirclePay {
 
 
 public enum Inviroment: String {
-    case production = "https://staging-openapi.circlepay.ai/"
-    case sandBox =  "SandBox ..."
+    //case staging = "https://staging-openapi.circlepay.ai/"
+    // case preProduction = "https://preprod-openapi-admin.circlepay.ai/"
+    case production = "https://openapi-admin.circlepay.ai/"
+    case sandBox =  "https://sandbox-openapi-admin.circlepay.ai/"
 }
