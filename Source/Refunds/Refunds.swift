@@ -7,16 +7,16 @@
 
 import Foundation
 public protocol RefundsProtocol {
-    func list(completion: @escaping ([RefundCodable]?, String?) -> Void)
+    func getAllRefunds(completion: @escaping ([RefundCodable]?, String?) -> Void)
     
-    func get(refundId:Int, completion: @escaping (RefundCodable?, String?) -> Void)
+    func getRefuntStatus(refundId:Int, completion: @escaping (RefundCodable?, String?) -> Void)
     
     func requestRefund(transactionId:Int, completion: @escaping (RequestRefundCodable?, String?) -> Void)
 }
 public class Refunds:RefundsProtocol {
     private let refundWorker: RefundWorkerProtocol = RefundWorker()
     
-    public func list(completion: @escaping ([RefundCodable]?, String?) -> Void) {
+    public func getAllRefunds(completion: @escaping ([RefundCodable]?, String?) -> Void) {
         refundWorker.list { results in
             switch results {
             case let .success(model):
@@ -31,7 +31,7 @@ public class Refunds:RefundsProtocol {
         }
     }
     
-    public func get(refundId: Int, completion: @escaping (RefundCodable?, String?) -> Void) {
+    public func getRefuntStatus(refundId: Int, completion: @escaping (RefundCodable?, String?) -> Void) {
         refundWorker.get(refundId: refundId) { results in
             switch results {
             case let .success(model):

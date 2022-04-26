@@ -7,14 +7,14 @@
 
 import Foundation
 public protocol PaymentsProtocol {
-    func list(couponCode:String?, customerMobile:String?, invoiceNum:String?, paymentLinkUrl:String?, completion: @escaping ([PaymentCodable]?, String?) -> Void)
+    func getAllPayments(couponCode:String?, customerMobile:String?, invoiceNum:String?, paymentLinkUrl:String?, completion: @escaping ([PaymentCodable]?, String?) -> Void)
     
-    func get(transactionId:Int, completion: @escaping (PaymentCodable?, String?) -> Void)
+    func getPayment(transactionId:Int, completion: @escaping (PaymentCodable?, String?) -> Void)
 }
 public class Payments:PaymentsProtocol {
     private let paymentWorker: PaymentWorkerProtocol = PaymentWorker()
     
-    public func list(couponCode: String?, customerMobile: String?, invoiceNum: String?, paymentLinkUrl: String?, completion: @escaping ([PaymentCodable]?, String?) -> Void) {
+    public func getAllPayments(couponCode: String?, customerMobile: String?, invoiceNum: String?, paymentLinkUrl: String?, completion: @escaping ([PaymentCodable]?, String?) -> Void) {
         paymentWorker.list(couponCode: couponCode, customerMobile: customerMobile, invoiceNum: invoiceNum, paymentLinkUrl: paymentLinkUrl) { results in
             switch results {
             case let .success(model):
@@ -29,7 +29,7 @@ public class Payments:PaymentsProtocol {
         }
     }
     
-    public func get(transactionId: Int, completion: @escaping (PaymentCodable?, String?) -> Void) {
+    public func getPayment(transactionId: Int, completion: @escaping (PaymentCodable?, String?) -> Void) {
         paymentWorker.get(transactionId: transactionId) { results in
             switch results {
             case let .success(model):
