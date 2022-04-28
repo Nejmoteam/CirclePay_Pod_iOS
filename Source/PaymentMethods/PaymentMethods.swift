@@ -7,14 +7,14 @@
 
 import Foundation
 public protocol PaymentMethodsProtocol {
-    func list(paymentGatewayId:String, completion: @escaping ([PaymentMethodCodable]?, String?) -> Void)
+    func getAllPaymentMethods(paymentGatewayId:String, completion: @escaping ([PaymentMethodCodable]?, String?) -> Void)
     
-    func get(paymentMethodId:String, completion: @escaping (PaymentMethodCodable?, String?) -> Void)
+    func getPaymentMethod(paymentMethodId:String, completion: @escaping (PaymentMethodCodable?, String?) -> Void)
 }
 public class PaymentMethods:PaymentMethodsProtocol {
     private let paymentMethodWorker: PaymentMethodWorkerProtocol = PaymentMethodWorker()
     
-    public func list(paymentGatewayId: String, completion: @escaping ([PaymentMethodCodable]?, String?) -> Void) {
+    public func getAllPaymentMethods(paymentGatewayId: String, completion: @escaping ([PaymentMethodCodable]?, String?) -> Void) {
         paymentMethodWorker.list(paymentGatewayId: paymentGatewayId) { results in
             switch results {
             case let .success(model):
@@ -29,7 +29,7 @@ public class PaymentMethods:PaymentMethodsProtocol {
         }
     }
     
-    public func get(paymentMethodId: String, completion: @escaping (PaymentMethodCodable?, String?) -> Void) {
+    public func getPaymentMethod(paymentMethodId: String, completion: @escaping (PaymentMethodCodable?, String?) -> Void) {
         paymentMethodWorker.get(paymentMethodId: paymentMethodId) { results in
             switch results {
             case let .success(model):

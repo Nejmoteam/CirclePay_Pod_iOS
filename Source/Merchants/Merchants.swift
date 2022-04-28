@@ -7,13 +7,13 @@
 
 import Foundation
 public protocol MerchantsProtocol {
-    func create(firstName:String, lastName:String, email:String, mobileNumber:String, businessName:String, businessAddress:String, callbackURL:String, completion: @escaping (MerchantCreateCodable?, String?) -> Void)
+    func createMerchant(firstName:String, lastName:String, email:String, mobileNumber:String, businessName:String, businessAddress:String, callbackURL:String, completion: @escaping (MerchantCreateCodable?, String?) -> Void)
     
-    func get(completion: @escaping (MerchantCodable?, String?) -> Void)
+    func getMerchant(completion: @escaping (MerchantCodable?, String?) -> Void)
     
-    func list(completion: @escaping ([MerchantCodable]?, String?) -> Void)
+    func getAllMerchants(completion: @escaping ([MerchantCodable]?, String?) -> Void)
     
-    func update(firstName:String, lastName:String, email:String, mobileNumber:String, businessName:String, businessAddress:String, callbackURL:String, completion: @escaping (MerchantCodable?, String?) -> Void)
+    func updateMerchant(firstName:String, lastName:String, email:String, mobileNumber:String, businessName:String, businessAddress:String, callbackURL:String, completion: @escaping (MerchantCodable?, String?) -> Void)
     
     func enablePaymentGateway(paymentGatewayId:String, completion: @escaping (MerchantPaymentGatewayEnabledCodable?, String?) -> Void)
     
@@ -34,7 +34,7 @@ public protocol MerchantsProtocol {
 
 public class Merchants: MerchantsProtocol {
     private let merchantWorker: MerchantsWorkerProtocol = MerchantsWorker()
-    public func create(firstName: String, lastName: String, email: String, mobileNumber: String, businessName: String, businessAddress: String, callbackURL: String, completion: @escaping (MerchantCreateCodable?, String?) -> Void) {
+    public func createMerchant(firstName: String, lastName: String, email: String, mobileNumber: String, businessName: String, businessAddress: String, callbackURL: String, completion: @escaping (MerchantCreateCodable?, String?) -> Void) {
         self.merchantWorker.create(firstName: firstName, lastName: lastName, email: email, mobileNumber: mobileNumber, businessName: businessName, businessAddress: businessAddress, callbackURL: callbackURL) { results in
             switch results {
             case let .success(model):
@@ -49,7 +49,7 @@ public class Merchants: MerchantsProtocol {
         }
     }
     
-    public func get(completion: @escaping (MerchantCodable?, String?) -> Void) {
+    public func getMerchant(completion: @escaping (MerchantCodable?, String?) -> Void) {
         self.merchantWorker.get { results in
             switch results {
             case let .success(model):
@@ -64,7 +64,7 @@ public class Merchants: MerchantsProtocol {
         }
     }
     
-    public func list(completion: @escaping ([MerchantCodable]?, String?) -> Void) {
+    public func getAllMerchants(completion: @escaping ([MerchantCodable]?, String?) -> Void) {
         self.merchantWorker.list { results in
             switch results {
             case let .success(model):
@@ -79,7 +79,7 @@ public class Merchants: MerchantsProtocol {
         }
     }
     
-    public func update(firstName: String, lastName: String, email: String, mobileNumber: String, businessName: String, businessAddress: String, callbackURL: String, completion: @escaping (MerchantCodable?, String?) -> Void) {
+    public func updateMerchant(firstName: String, lastName: String, email: String, mobileNumber: String, businessName: String, businessAddress: String, callbackURL: String, completion: @escaping (MerchantCodable?, String?) -> Void) {
         merchantWorker.update(firstName: firstName, lastName: lastName, email: email, mobileNumber: mobileNumber, businessName: businessName, businessAddress: businessAddress, callbackURL: callbackURL) { results in
             switch results{
             case let .success(model):

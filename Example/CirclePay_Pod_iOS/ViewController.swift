@@ -15,13 +15,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         CirclePay.mode = .sandBox
-        CirclePay.paymentGateways.list { gate, err in
-            if err != nil {
-                print(err)
-            } else {
-                print(gate)
-            }
-        }
+//        CirclePay.paymentGateways.getAllPaymentGetways { gate, err in
+//            if err != nil {
+//                print(err)
+//            } else {
+//                print(gate)
+//            }
+//        }
+        
         
     }
 

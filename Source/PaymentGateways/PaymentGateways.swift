@@ -7,15 +7,15 @@
 
 import Foundation
 public protocol PaymentGatewaysProtocol {
-    func list(completion: @escaping ([PaymentGatewayCodable]?, String?) -> Void)
+    func getAllPaymentGetways(completion: @escaping ([PaymentGatewayCodable]?, String?) -> Void)
     
-    func get(paymentGatewayId:String, completion: @escaping (PaymentGatewayCodable?, String?) -> Void)
+    func getPaymentGetway(paymentGatewayId:String, completion: @escaping (PaymentGatewayCodable?, String?) -> Void)
 }
 public class PaymentGateways:PaymentGatewaysProtocol {
     private let paymentGatewayWorker: PaymentGatewayWorkerProtocol = PaymentGatewayWorker()
     
     
-    public func list(completion: @escaping ([PaymentGatewayCodable]?, String?) -> Void) {
+    public func getAllPaymentGetways(completion: @escaping ([PaymentGatewayCodable]?, String?) -> Void) {
         paymentGatewayWorker.list { results in
             switch results {
             case let .success(model):
@@ -30,7 +30,7 @@ public class PaymentGateways:PaymentGatewaysProtocol {
         }
     }
     
-    public func get(paymentGatewayId: String, completion: @escaping (PaymentGatewayCodable?, String?) -> Void) {
+    public func getPaymentGetway(paymentGatewayId: String, completion: @escaping (PaymentGatewayCodable?, String?) -> Void) {
         paymentGatewayWorker.get(paymentGatewayId: paymentGatewayId) { results in
             switch results {
             case let .success(model):
