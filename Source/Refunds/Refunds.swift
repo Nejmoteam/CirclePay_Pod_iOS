@@ -6,57 +6,60 @@
 //
 
 import Foundation
+
 public protocol RefundsProtocol {
-    func getAllRefunds(completion: @escaping ([RefundCodable]?, String?) -> Void)
+    func getAllRefunds(completion: @escaping ([RefundCodable]?, CirclePayError?) -> Void)
     
-    func getRefuntStatus(refundId:Int, completion: @escaping (RefundCodable?, String?) -> Void)
+    func getRefuntStatus(refundId:Int, completion: @escaping (RefundCodable?, CirclePayError?) -> Void)
     
-    func requestRefund(transactionId:Int, completion: @escaping (RequestRefundCodable?, String?) -> Void)
+    func requestRefund(transactionId:Int, completion: @escaping (RequestRefundCodable?, CirclePayError?) -> Void)
 }
 public class Refunds:RefundsProtocol {
     private let refundWorker: RefundWorkerProtocol = RefundWorker()
     
-    public func getAllRefunds(completion: @escaping ([RefundCodable]?, String?) -> Void) {
+
+    
+    public func getAllRefunds(completion: @escaping ([RefundCodable]?, CirclePayError?) -> Void) {
         refundWorker.list { results in
             switch results {
             case let .success(model):
                 if model?.isError == true {
-                    completion(nil, model?.details)
+                    completion(nil,CirclePayError(errorCode: model?.errorCode, errorMsg: model?.details))
                 } else {
                     completion(model?.data, nil)
                 }
             case let .failure(error):
-                completion(nil, error.localizedDescription)
+                completion(nil, CirclePayError(errorCode:0, errorMsg: error.localizedDescription))
             }
         }
     }
     
-    public func getRefuntStatus(refundId: Int, completion: @escaping (RefundCodable?, String?) -> Void) {
+    public func getRefuntStatus(refundId: Int, completion: @escaping (RefundCodable?, CirclePayError?) -> Void) {
         refundWorker.get(refundId: refundId) { results in
             switch results {
             case let .success(model):
                 if model?.isError == true {
-                    completion(nil, model?.details)
+                    completion(nil,CirclePayError(errorCode: model?.errorCode, errorMsg: model?.details))
                 } else {
                     completion(model?.data?.first, nil)
                 }
             case let .failure(error):
-                completion(nil, error.localizedDescription)
+                completion(nil, CirclePayError(errorCode:0, errorMsg: error.localizedDescription))
             }
         }
     }
     
-    public func requestRefund(transactionId: Int, completion: @escaping (RequestRefundCodable?, String?) -> Void) {
+    public func requestRefund(transactionId: Int, completion: @escaping (RequestRefundCodable?, CirclePayError?) -> Void) {
         refundWorker.requestRefund(transactionId: transactionId) { results in
             switch results {
             case let .success(model):
                 if model?.isError == true {
-                    completion(nil, model?.details)
+                    completion(nil,CirclePayError(errorCode: model?.errorCode, errorMsg: model?.details))
                 } else {
                     completion(model?.data?.first, nil)
                 }
             case let .failure(error):
-                completion(nil, error.localizedDescription)
+                completion(nil, CirclePayError(errorCode:0, errorMsg: error.localizedDescription))
             }
         }
     }

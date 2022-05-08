@@ -15,3 +15,12 @@ struct BaseAPIRequestResponseModel<T: Codable>: Codable {
     var details: String?
     var data: T?
 }
+
+public struct CirclePayError {
+    public var errorCode: Int?
+    public var errorMsg: String?
+    public init(errorCode: Int?, errorMsg: String?){
+        self.errorCode = errorCode
+        self.errorMsg = errorMsg
+    }
+}

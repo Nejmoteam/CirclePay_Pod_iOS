@@ -536,11 +536,11 @@
 		18226CC92807497D00F87597 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				18226C7E28032A8600F87597 /* Merchants */,
 				18226CC52805233200F87597 /* PaymentMethods */,
 				18226CBA2805204700F87597 /* PaymentGateways */,
 				18226CAD28051B3600F87597 /* Refunds */,
 				18226CA2280513EF00F87597 /* Payments */,
-				18226C7E28032A8600F87597 /* Merchants */,
 				18226C7327FFD4B000F87597 /* Invoices */,
 				18226C6627FD7B4D00F87597 /* CirclePay.swift */,
 				18226C6027FD75CE00F87597 /* Customers */,
