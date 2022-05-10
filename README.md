@@ -22,7 +22,7 @@ pod 'CirclePay_Pod_iOS'
 
 ## Author
 
-adelmohey, 79041608+adelmohey@users.noreply.github.com
+adelmohy_58@hotmail.com, allam40960@gmail.com
 
 ## License
 
