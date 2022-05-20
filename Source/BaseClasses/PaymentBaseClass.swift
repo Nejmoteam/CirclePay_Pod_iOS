@@ -31,7 +31,7 @@ class PaymentBaseClass: UIView {
         stack.axis = .vertical
         stack.alignment = .fill
         stack.distribution = .fill
-        stack.spacing = 20
+        stack.spacing = 1
         return stack
     }()
     
@@ -77,7 +77,7 @@ class PaymentBaseClass: UIView {
     
     private func setupVStackViewConstraints() {
         NSLayoutConstraint.activate([
-            vStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            vStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 32),
             vStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             vStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             vStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
