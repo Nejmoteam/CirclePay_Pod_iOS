@@ -1,15 +1,19 @@
 PODS:
   - Alamofire (5.4.1)
-  - CirclePay_Pod_iOS (0.1.0):
+  - CirclePay_Pod_iOS (1.0.2):
     - Alamofire (= 5.4.1)
+    - FontBlaster (= 5.3.0)
+  - FontBlaster (5.3.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.4.1)
   - CirclePay_Pod_iOS (from `../`)
+  - FontBlaster (= 5.3.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FontBlaster
 
 EXTERNAL SOURCES:
   CirclePay_Pod_iOS:
@@ -17,8 +21,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  CirclePay_Pod_iOS: 5ad8de037a682fd1ae957100a066bd45ce27e61c
+  CirclePay_Pod_iOS: 6897123d99fbc55b5f7e186f1368da91a7f0cdd0
+  FontBlaster: 941f89d735a29e1c7d24e7a90d3e16939ef1609a
 
-PODFILE CHECKSUM: 828349bf5ed4d34b406fd060168bb2ad93801d8b
+PODFILE CHECKSUM: f724ce2d05a61e70f68fa72fbdc6a0f242bce09d
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.3
