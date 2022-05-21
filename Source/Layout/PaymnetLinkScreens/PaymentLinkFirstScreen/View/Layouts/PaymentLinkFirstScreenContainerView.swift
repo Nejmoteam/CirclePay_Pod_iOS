@@ -7,6 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import UIKit
+import FontBlaster
 class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
     
     private lazy var logoView: LogoContainerView = {
@@ -25,6 +26,7 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
         let titleContainer = TitleViewContainer()
         titleContainer.translatesAutoresizingMaskIntoConstraints = false
         titleContainer.titleLabel.text = "Payment Summery"
+        titleContainer.titleLabel.font = UIFont(name: FontType.boldFont.name, size: 20)
         return titleContainer
     }()
     
@@ -51,7 +53,7 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
     private lazy var subTotalView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Sub Total :")
         container.valueLabel.text = "120 EGP"
-        container.keyLabel.font = UIFont.systemFont(ofSize: 16)
+        container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
@@ -59,7 +61,7 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
     private lazy var taxView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Tax (14%) :")
         container.valueLabel.text = "45 EGP"
-        container.keyLabel.font = UIFont.systemFont(ofSize: 16)
+        container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
@@ -67,7 +69,7 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
     private lazy var shippingView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Shipping :")
         container.valueLabel.text = "35 EGP"
-        container.keyLabel.font = UIFont.systemFont(ofSize: 16)
+        container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
@@ -75,7 +77,7 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
     private lazy var discuntView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Discount (5%) :")
         container.valueLabel.text = "120 EGP"
-        container.keyLabel.font = UIFont.systemFont(ofSize: 16)
+        container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
@@ -132,12 +134,6 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
         self.addProductDetailsView()
         self.setupShippingRefundView()
         self.addNextButtonContainer()
-        
-        //Testing UI
-        self.logoView.isHidden = true
-        self.shippingRefundButtonContainer.isHidden = true
-        self.totalAmountView.isHidden = true
-        self.productDetailsView.isHidden = true
     }
 
     private func addLogoImageView() {
@@ -214,7 +210,7 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
         sepratorView.translatesAutoresizingMaskIntoConstraints = false
         sepratorView.backgroundColor = .clear
         
-        sepratorView.heightAnchor.constraint(equalToConstant: 47).isActive = true
+        sepratorView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         self.vStackView.addArrangedSubview(sepratorView)
         
     }

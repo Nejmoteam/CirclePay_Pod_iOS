@@ -13,8 +13,11 @@ class LogoContainerView: UIView {
     private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(image: nil)
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = UIImage(named: "Logo",
+                                  in: Bundle(for: type(of:self)),
+                                  compatibleWith: nil)
         imageView.contentMode = .scaleToFill
-        imageView.backgroundColor = .black
+        imageView.backgroundColor = .clear
         return imageView
     }()
     override init(frame: CGRect) {

@@ -16,6 +16,7 @@ class SingleStepView: UIView {
         label.textAlignment = .center
         label.textColor = .white
         label.text = ""
+        label.font = UIFont(name: FontType.mediumFont.name, size: 14)
         label.backgroundColor = .blue
         return label
     }()
@@ -27,6 +28,7 @@ class SingleStepView: UIView {
         label.textAlignment = .center
         label.textColor = .black
         label.text = ""
+        label.font = UIFont(name: FontType.regularFont.name, size: 14)
         label.backgroundColor = .clear
         return label
     }()

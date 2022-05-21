@@ -27,6 +27,7 @@ class CupponView: UIView {
         let view = CupponTextField()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.titleLabel.text = "Cuppon Code"
+        view.titleLabel.font = UIFont(name: FontType.mediumFont.name, size: 16)
         view.textFieldContainerView.textField.placeholder = "_   _   _   _   _   _"
         view.textFieldContainerView.textField.textContentType = .oneTimeCode
         view.textFieldContainerView.textField.keyboardType = .numberPad
@@ -41,7 +42,7 @@ class CupponView: UIView {
         button.backgroundColor = ColorTypes.PrimaryMain500.value
         button.setTitleColor(.white, for: .normal)
         button.setTitle("Apply Cuppon", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
+        button.titleLabel?.font = UIFont(name: FontType.mediumFont.name, size: 14)
         button.layer.cornerRadius = 5
         button.clipsToBounds = true
         button.sizeToFit()

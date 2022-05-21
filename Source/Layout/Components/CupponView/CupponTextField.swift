@@ -18,16 +18,16 @@ class CupponTextField: UIView {
         stack.spacing = 8
         return stack
     }()
-
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 16)
         label.textColor = ColorTypes.GrayPrimary900.value
-       // label.setupAlignment()
+        // label.setupAlignment()
         return label
     }()
-
+    
     lazy var textFieldContainerView: CirclePayTFContainer = {
         let view = CirclePayTFContainer()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -39,21 +39,20 @@ class CupponTextField: UIView {
         view.heightAnchor.constraint(equalToConstant: 36).isActive = true
         return view
     }()
-
+    
     lazy var errorLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-//        label.font = UIFont(name: FontType.regularFont.name, size: 12)
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.font = UIFont(name: FontType.regularFont.name, size: 14)
         label.textColor = ColorTypes.Error500.value
-      //  label.setupAlignment()
+        //  label.setupAlignment()
         label.text = "Please enter valid cuppon"
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.isHidden = true
         return label
     }()
-
+    
     var isInErrorMode = false {
         didSet {
             if isInErrorMode {
@@ -65,29 +64,29 @@ class CupponTextField: UIView {
             }
         }
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUserInterface()
     }
-
+    
     @available(*, unavailable)
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     private func setupUserInterface() {
         addSubViews()
         setupVerticalStackConstraints()
     }
-
+    
     private func addSubViews() {
         addSubview(verticalStack)
         verticalStack.addArrangedSubview(titleLabel)
         verticalStack.addArrangedSubview(textFieldContainerView)
         verticalStack.addArrangedSubview(errorLabel)
     }
-
+    
     private func setupVerticalStackConstraints() {
         NSLayoutConstraint.activate([
             verticalStack.topAnchor.constraint(equalTo: topAnchor),

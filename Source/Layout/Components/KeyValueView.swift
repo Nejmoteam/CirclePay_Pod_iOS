@@ -16,7 +16,7 @@ class KeyValueView: UIView {
         label.textAlignment = .center
         label.text = ""
         label.textColor = ColorTypes.GrayPrimary700.value
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont(name: FontType.mediumFont.name, size: 16)
         label.backgroundColor = .clear
         return label
     }()
@@ -28,7 +28,7 @@ class KeyValueView: UIView {
         label.textAlignment = .center
         label.text = ""
         label.textColor = ColorTypes.GrayPrimary700.value
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont(name: FontType.mediumFont.name, size: 16)
         label.backgroundColor = .clear
         return label
     }()

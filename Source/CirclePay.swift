@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FontBlaster
 public class CirclePay {
     public static var merchantToken:String = ""
     public static var accountToken:String = ""
@@ -19,6 +20,12 @@ public class CirclePay {
     public static let paymentGateways: PaymentGatewaysProtocol = PaymentGateways()
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
     public static var mode: Inviroment = .sandBox
+    
+    public static func prepareSDK() {
+        FontBlaster.debugEnabled = true
+        FontBlaster.blast()
+        
+    }
     
     public static func excutePayment(with paymentType: PaymentType) {
         switch paymentType {

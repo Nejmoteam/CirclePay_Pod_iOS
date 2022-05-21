@@ -12,8 +12,8 @@ class TotalAmountViewContainer: UIView {
     private lazy var keyValueViewContainer: KeyValueView = {
         var container = KeyValueView(keyTitle: "Total Amount")
         container.valueLabel.text = "120 EGP"
-        container.keyLabel.font = UIFont.systemFont(ofSize: 18)
-        container.valueLabel.font = UIFont.systemFont(ofSize: 20)
+        container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 18)
+        container.valueLabel.font = UIFont(name: FontType.mediumFont.name, size: 20)
         container.bottomSeprator.isHidden = false
         container.topSeprator.isHidden = false
         container.translatesAutoresizingMaskIntoConstraints = false
