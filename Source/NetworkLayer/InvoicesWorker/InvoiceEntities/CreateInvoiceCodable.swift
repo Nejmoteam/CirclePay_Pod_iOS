@@ -8,8 +8,8 @@
 import Foundation
 
 public struct CreateInvoiceCodable:Codable {
-    let invoiceNumber:String?
-    let invoiceUrl:String?
+    public let invoiceNumber:String?
+    public let invoiceUrl:String?
     
     enum CodingKeys: String, CodingKey {
         case invoiceNumber = "invoice_number"

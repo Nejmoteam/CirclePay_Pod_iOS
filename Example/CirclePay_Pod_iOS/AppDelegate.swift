@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CirclePay.accountToken = "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjpudWxsLCJjdHkiOiJKV1QifQ..dwuPPjmNsyXv4ZuPsuWzQA.3pAMatxtxLHVsakkBnxHz0J57F-qrmpO-TikuVFHQqsVQxnm0bAWiOiC0ZUvL5EjK51ZBILQ483l0164RYqtqEsZkGw4bqyC5tY0v2oQvZrKpk_lUI92njCyKrsaS4BiCN4EOLIa3fOK3Nx5O0ITz1ohYEwbaXhgVm85_VzOhxzrlVf0IVBV3qjYpHAy5gaA8FYu0tQQGlLP3jK10oeVvSScwokk48gujXIRVnDwAuMtYCoWaWxtYxm1ZXQpfZekTV9EgEGAYvSiuC5FAF3a-yh3c7gwzYK5ips3EXhJVbzSaZcZnesCNV4h6EEoKzsb-f_BRiY9sw-SQXX71dzjOYYVS7mH4OrZvPIVw1H8tIJ1nVd3j2QlYsYfh4mfKVoS.5A12HGs6ExJiddpAF1B0oQ"
         
         CirclePay.accountKey = "e1a69fb4-193e-3756-b600-5fade92c5eb4"
+        CirclePay.mode = .staging
         return true
     }
 
