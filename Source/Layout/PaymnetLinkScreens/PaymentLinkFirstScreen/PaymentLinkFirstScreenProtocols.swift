@@ -13,8 +13,10 @@ protocol PaymentLinkFirstScreenViewProtocol: class {
 protocol PaymentLinkFirstScreenPresenterProtocol {
     var view: PaymentLinkFirstScreenViewProtocol? {get set}
     func viewDidLoad()
+    func navigateToStepTwo()
 }
 protocol PaymentLinkFirstScreenRouterProtocol {
+    func navigateToStepTwo()
 }
 protocol PaymentLinkFirstScreenInteractorInPutProtocol {
     var presenter: PaymentLinkFirstScreenInteractorOutPutProtocol? {get set}

@@ -21,4 +21,8 @@ class PaymentLinkFirstScreenPresenter: PaymentLinkFirstScreenPresenterProtocol, 
         print("ViewDidLoad")
 
     }
+    
+    func navigateToStepTwo() {
+        self.router.navigateToStepTwo()
+    }
 }

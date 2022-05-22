@@ -102,6 +102,7 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
     
     lazy var nextButtonContainer: ButtonsContainerView = {
         let button = ButtonsContainerView()
+        button.nextButton.addTarget(self, action: #selector(didTappedNext), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -217,5 +218,9 @@ class PaymentLinkFirstScreenContainerView: PaymentBaseClass {
     private func addNextButtonContainer() {
         self.nextButtonContainer.heightAnchor.constraint(equalToConstant: 36 + 61).isActive = true
         self.vStackView.addArrangedSubview(self.nextButtonContainer)
+    }
+    
+    @objc func didTappedNext() {
+        self.presenter.navigateToStepTwo()
     }
 }

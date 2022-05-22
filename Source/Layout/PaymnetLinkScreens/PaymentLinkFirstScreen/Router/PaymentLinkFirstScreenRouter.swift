@@ -19,4 +19,15 @@ class PaymentLinkFirstScreenRouter: PaymentLinkFirstScreenRouterProtocol {
         router.viewController = view
         return view
     }
+    
+    func navigateToStepTwo() {
+        let stepTwo = PaymentLinkSecondScreenRouter.createAnModule()
+        stepTwo.modalPresentationStyle = .fullScreen
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.viewController?.present(stepTwo, animated: true, completion: nil)
+        }
+    }
 }

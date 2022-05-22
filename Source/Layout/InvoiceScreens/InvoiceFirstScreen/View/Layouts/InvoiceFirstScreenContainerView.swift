@@ -13,7 +13,6 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     init(presenter:InvoiceFirstScreenPresenterProtocol) {
         self.presenter = presenter
         super.init(frame: .zero)
-        self.backgroundColor = .white
         self.layoutUserInterFace()
     }
     
