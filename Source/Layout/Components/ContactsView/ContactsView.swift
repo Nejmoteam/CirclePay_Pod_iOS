@@ -36,7 +36,7 @@ class ContactsView: UIView {
         stack.axis = .vertical
         stack.alignment = .fill
         stack.distribution = .fillEqually
-        stack.spacing = 1
+        stack.spacing = 0
         return stack
     }()
     lazy var sepratorView: UIView = {
