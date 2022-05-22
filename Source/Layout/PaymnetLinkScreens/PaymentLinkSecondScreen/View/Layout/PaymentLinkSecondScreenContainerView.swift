@@ -93,7 +93,7 @@ class PaymentLinkSecondScreenContainerView: PaymentBaseClass {
         self.addAddressDetailsView()
         self.addSelectPaymentMethodTitleView()
         self.addPayButtonContainer()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.injectPaymentMethodView()
         }
     }
@@ -152,6 +152,7 @@ class PaymentLinkSecondScreenContainerView: PaymentBaseClass {
         
         self.paymentMethodsView.heightAnchor.constraint(equalToConstant: height).isActive = true
         self.vStackView.insertArrangedSubview(paymentMethodsView, at: self.vStackView.arrangedSubviews.count - 1)
+        self.paymentMethodsView.tableView.reloadData()
     }
 }
 

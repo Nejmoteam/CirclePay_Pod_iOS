@@ -26,6 +26,9 @@ class PaymentMethodsViewContainer: UIView, UITableViewDataSource , UITableViewDe
         tableView.delegate = self
         return tableView
     }()
+    
+    let paymentMethodsName = ["Credit Card","Mobile Wallet","Cash On Delivery","Fawry"]
+    let paymentGetwaysName = ["By.Paymob" , "By.Paymob", "By.CirclePay", "By.Fawry"]
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,15 +52,59 @@ class PaymentMethodsViewContainer: UIView, UITableViewDataSource , UITableViewDe
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return self.paymentMethodsName.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(PaymentMethodCell.self), for: indexPath) as? PaymentMethodCell else {
             return UITableViewCell()
         }
+        cell.paymentSelectioanView.paymentMethodName.text = self.paymentMethodsName[indexPath.item]
+        cell.paymentSelectioanView.paymentGatewayName.text = self.paymentGetwaysName[indexPath.item]
+        
+        let imageView1 = UIImageView(image: UIImage(named: "Visa",
+                                                   in: Bundle(for: type(of:self)),
+                                                   compatibleWith: nil))
+        imageView1.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        imageView1.contentMode = .center
+        imageView1.clipsToBounds = true
+        let imageView2 = UIImageView(image: UIImage(named: "Mastercard",
+                                                   in: Bundle(for: type(of:self)),
+                                                   compatibleWith: nil))
+        imageView2.contentMode = .scaleAspectFit
+        imageView2.clipsToBounds = true
+
+        let imageView3 = UIImageView(image: UIImage(named: "Vodafone",
+                                                   in: Bundle(for: type(of:self)),
+                                                   compatibleWith: nil))
+        imageView3.contentMode = .scaleAspectFit
+        imageView3.clipsToBounds = true
+        if indexPath.item == 0 {
+            cell.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView1)
+            cell.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView2)
+            cell.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView3)
+        } else if indexPath.item == 1 {
+            cell.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView2)
+            cell.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView3)
+        } else if indexPath.item == 2 {
+            cell.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView3)
+        } else if indexPath.item == 3 {
+            cell.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView2)
+        }
+
+
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 66
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? PaymentMethodCell {
+            cell.paymentSelectioanView.isSelected = true
+        }
+    }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? PaymentMethodCell {
+            cell.paymentSelectioanView.isSelected = false
+        }
     }
 }
