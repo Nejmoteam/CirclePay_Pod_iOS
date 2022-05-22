@@ -16,11 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        CirclePay.prepareSDK()
         CirclePay.merchantToken = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzgwLCJpc1ZlcmlmaWVkIjpmYWxzZSwidG9rZW4iOiIiLCJmb3JnZXRQYXNzd29yZHRva2VuIjoiIiwiZ29vZ2xlT2F1dGhJRCI6IiIsImZhY2Vib29rT2F0aElkIjoiIiwiYXV0aHlfaWQiOiIiLCJzdGF0dXMiOiIwIiwiYWRkcmVzcyI6IiIsImJ1c2luZXNzTmFtZSI6IiIsImZpcnN0TmFtZSI6Ik5vaGEiLCJsYXN0TmFtZSI6IkV0aXNhbGF0IHRlc3QiLCJlbWFpbCI6Im5vaGFyYWRpQGNpcmNsZXBheS5haSIsInBhc3N3b3JkIjoiJDJhJDA4JHhnc2lIeUNMcUVOWVptbDRheXJQeE9lOVo5TzF0VEI3YmNSTXU1VWd3Q3djemtTU2lSdk9hIiwibW9iaWxlIjoiKzIwMTE1NDMxMjQ4NSIsImJ1c2luZXNzQWRkcmVzcyI6Ik1hZGRpIHN0cmVldCIsInVzZXJuYW1lIjpudWxsLCJ1cGRhdGVkQXQiOiIyMDIyLTAyLTE2VDE1OjU1OjU0LjkxMloiLCJjcmVhdGVkQXQiOiIyMDIyLTAyLTE2VDE1OjU1OjU0LjkxMloiLCJhcHBfbmFtZSI6Ik5vaGEgUmFkaSIsImlhdCI6MTY0NTAyNjk1NH0.kJaiGeKWjtdJFec0vPAf2WKXh4eKrr2aJ4P_73EGLt0"
         
         CirclePay.accountToken = "Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjpudWxsLCJjdHkiOiJKV1QifQ..dwuPPjmNsyXv4ZuPsuWzQA.3pAMatxtxLHVsakkBnxHz0J57F-qrmpO-TikuVFHQqsVQxnm0bAWiOiC0ZUvL5EjK51ZBILQ483l0164RYqtqEsZkGw4bqyC5tY0v2oQvZrKpk_lUI92njCyKrsaS4BiCN4EOLIa3fOK3Nx5O0ITz1ohYEwbaXhgVm85_VzOhxzrlVf0IVBV3qjYpHAy5gaA8FYu0tQQGlLP3jK10oeVvSScwokk48gujXIRVnDwAuMtYCoWaWxtYxm1ZXQpfZekTV9EgEGAYvSiuC5FAF3a-yh3c7gwzYK5ips3EXhJVbzSaZcZnesCNV4h6EEoKzsb-f_BRiY9sw-SQXX71dzjOYYVS7mH4OrZvPIVw1H8tIJ1nVd3j2QlYsYfh4mfKVoS.5A12HGs6ExJiddpAF1B0oQ"
         
         CirclePay.accountKey = "e1a69fb4-193e-3756-b600-5fade92c5eb4"
+        CirclePay.mode = .staging
         return true
     }
 
