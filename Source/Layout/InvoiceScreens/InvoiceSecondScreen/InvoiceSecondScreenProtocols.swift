@@ -9,7 +9,9 @@
 import Foundation
 protocol InvoiceSecondScreenViewProtocol: class {
     var presenter: InvoiceSecondScreenPresenterProtocol! {get set}
+    
     func reloadPaymentMethodsData()
+    func setupCustomerData(customer:CustomerViewModel)
 }
 protocol InvoiceSecondScreenPresenterProtocol {
     var view: InvoiceSecondScreenViewProtocol? {get set}

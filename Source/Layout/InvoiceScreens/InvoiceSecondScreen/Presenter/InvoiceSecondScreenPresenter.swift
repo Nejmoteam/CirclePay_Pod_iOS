@@ -34,7 +34,17 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     func viewDidLoad() {
         print("ViewDidLoad")
         self.getPaymentMethods()
-        
+        var customerPhone = ""
+        if let unwrappedPhone = customer.mobileNumber {
+            customerPhone = unwrappedPhone
+            while customerPhone.first != "1" && !customerPhone.isEmpty{
+                customerPhone = String(customerPhone.dropFirst())
+            }
+            print(unwrappedPhone)
+            print(customerPhone)
+        }
+        let customerView = CustomerViewModel(firstName: customer.firstName ?? "", lastName: customer.lastName ?? "", countryCode: "🇪🇬  +20", phoneNumber: customerPhone, email: customer.email ?? "", country: customer.country ?? "Egypt", city: customer.city ?? "", aptNumber: customer.aptNumber ?? "", extraDetails: customer.address ?? "")
+        self.view?.setupCustomerData(customer: customerView)
     }
     
     func numberOfPaymentMethods() -> Int {

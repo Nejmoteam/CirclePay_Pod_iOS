@@ -98,6 +98,7 @@
 		187F71F0283E713A0054309D /* Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F71ED283E713A0054309D /* Close@3x.png */; };
 		187F71F1283E713A0054309D /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F71EE283E713A0054309D /* Close@2x.png */; };
 		187F71F2283E713A0054309D /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F71EF283E713A0054309D /* Close.png */; };
+		18F825B6283E76ED00ED0B21 /* CustomerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F825B5283E76ED00ED0B21 /* CustomerViewModel.swift */; };
 		1A4A41F6D6D079093B993F0DAD9FE216 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1C09841013B919553E8287B500A1B /* Items.swift */; };
 		1BBCC0139356B1E03F19B7716692EB36 /* BaseAPIRequestResponseFailureErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3C6533AEB7FB9ED4F0BEBFF038E34 /* BaseAPIRequestResponseFailureErrorType.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB6622CD7A12E3A9ABE1F6F80B6CA0 /* RequestTaskMap.swift */; };
@@ -347,6 +348,7 @@
 		187F71ED283E713A0054309D /* Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@3x.png"; sourceTree = "<group>"; };
 		187F71EE283E713A0054309D /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
 		187F71EF283E713A0054309D /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
+		18F825B5283E76ED00ED0B21 /* CustomerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewModel.swift; sourceTree = "<group>"; };
 		198A4EBFF4377842EAE2155F1F11527D /* FontBlaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontBlaster-umbrella.h"; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		19F11DEB78C744D5683FAABADDF5CF75 /* StepsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
@@ -798,6 +800,7 @@
 			children = (
 				187F71AF283D060D0054309D /* InvoiceSecondScreenEntity.swift */,
 				187F71C5283D07340054309D /* PaymentMethodsViewModel.swift */,
+				18F825B5283E76ED00ED0B21 /* CustomerViewModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1946,6 +1949,7 @@
 				30ECC538D0D12A0D37A7F2B7CE48BA7D /* LogoContainerView.swift in Sources */,
 				187F711D283A25A80054309D /* PaymentLinkSecondScreenContainerView.swift in Sources */,
 				956160ECC076188314C02716EABCB8CC /* MerchantCodable.swift in Sources */,
+				18F825B6283E76ED00ED0B21 /* CustomerViewModel.swift in Sources */,
 				187F71B4283D060D0054309D /* InvoiceSecondScreenViewController.swift in Sources */,
 				05726AAE0F4BCF9949FF77BCD829A01C /* MerchantCreateCodable.swift in Sources */,
 				CAE886BA6B8A1BDE102D44E73C8ACB32 /* MerchantNetworking.swift in Sources */,
