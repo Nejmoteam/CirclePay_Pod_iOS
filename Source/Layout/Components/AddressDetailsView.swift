@@ -144,7 +144,7 @@ class AddressDetailsView: UIView {
         self.setupSelectCountrySepratorView()
         self.setupSelectCitySepratorView()
         self.setupAppartamentSepratorView()
-        self.setupSelectCityArrowImageView()
+      //  self.setupSelectCityArrowImageView()
         self.setupSelectCountryArrowImageView()
     }
     

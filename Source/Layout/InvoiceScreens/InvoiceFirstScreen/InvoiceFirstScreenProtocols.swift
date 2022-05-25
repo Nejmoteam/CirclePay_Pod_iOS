@@ -22,9 +22,11 @@ protocol InvoiceFirstScreenPresenterProtocol {
     var view: InvoiceFirstScreenViewProtocol? {get set}
     func viewDidLoad()
     func navigateToStepTwo()
+    func navigateToInvoiceDetails()
 }
 protocol InvoiceFirstScreenRouterProtocol {
     func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable)
+    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable)
 }
 protocol InvoiceFirstScreenInteractorInPutProtocol {
     var presenter: InvoiceFirstScreenInteractorOutPutProtocol? {get set}

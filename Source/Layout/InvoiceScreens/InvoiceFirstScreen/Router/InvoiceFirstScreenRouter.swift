@@ -30,4 +30,15 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
             self.viewController?.present(stepTwo, animated: true, completion: nil)
         }
     }
+    
+    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let invoiceDetails = InvoiceDetailsRouter.createAnModule(invoiceViewModel: invoiceViewModel, customer: customer)
+            invoiceDetails.modalPresentationStyle = .fullScreen
+            self.viewController?.present(invoiceDetails, animated: true, completion: nil)
+        }
+    }
 }

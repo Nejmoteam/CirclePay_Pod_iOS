@@ -9,6 +9,7 @@
 
 import Foundation
 class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceFirstScreenInteractorOutPutProtocol {
+
     weak var view: InvoiceFirstScreenViewProtocol?
     private let interactor: InvoiceFirstScreenInteractorInPutProtocol
     private let router: InvoiceFirstScreenRouterProtocol
@@ -89,4 +90,11 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
 
         }
     }
+    
+    func navigateToInvoiceDetails() {
+        if let customer = self.customer {
+            self.router.navigateToInvoiceDetails(invoiceViewModel: self.invoiceViewModel, customer: customer)
+        }
+    }
+    
 }

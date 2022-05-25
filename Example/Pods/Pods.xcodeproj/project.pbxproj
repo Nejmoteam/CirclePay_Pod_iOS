@@ -84,6 +84,20 @@
 		187F71B6283D060D0054309D /* InvoiceSecondScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AE283D060D0054309D /* InvoiceSecondScreenInteractor.swift */; };
 		187F71B7283D060D0054309D /* InvoiceSecondScreenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AF283D060D0054309D /* InvoiceSecondScreenEntity.swift */; };
 		187F71CD283D07340054309D /* PaymentMethodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71C5283D07340054309D /* PaymentMethodsViewModel.swift */; };
+		187F71E1283E71040054309D /* InvoiceDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71D0283E71030054309D /* InvoiceDetailsPresenter.swift */; };
+		187F71E2283E71040054309D /* InvoiceDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71D1283E71030054309D /* InvoiceDetailsProtocols.swift */; };
+		187F71E3283E71040054309D /* InvoiceDetailsProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71D5283E71030054309D /* InvoiceDetailsProductTableViewCell.swift */; };
+		187F71E4283E71040054309D /* InvoiceDetailsPaymentSammaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71D6283E71030054309D /* InvoiceDetailsPaymentSammaryTableViewCell.swift */; };
+		187F71E5283E71040054309D /* InoviceDetailsTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71D7283E71030054309D /* InoviceDetailsTableHeaderView.swift */; };
+		187F71E6283E71040054309D /* InvoiceDetailContainerView + UItableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71D8283E71030054309D /* InvoiceDetailContainerView + UItableView.swift */; };
+		187F71E7283E71040054309D /* InvoiceDetailsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71D9283E71030054309D /* InvoiceDetailsContainerView.swift */; };
+		187F71E8283E71040054309D /* InvoiceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71DA283E71030054309D /* InvoiceDetailsViewController.swift */; };
+		187F71E9283E71040054309D /* InvoiceDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71DC283E71040054309D /* InvoiceDetailsInteractor.swift */; };
+		187F71EA283E71040054309D /* InvoiceDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71DE283E71040054309D /* InvoiceDetailsEntity.swift */; };
+		187F71EB283E71040054309D /* InvoiceDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71E0283E71040054309D /* InvoiceDetailsRouter.swift */; };
+		187F71F0283E713A0054309D /* Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F71ED283E713A0054309D /* Close@3x.png */; };
+		187F71F1283E713A0054309D /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F71EE283E713A0054309D /* Close@2x.png */; };
+		187F71F2283E713A0054309D /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F71EF283E713A0054309D /* Close.png */; };
 		1A4A41F6D6D079093B993F0DAD9FE216 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1C09841013B919553E8287B500A1B /* Items.swift */; };
 		1BBCC0139356B1E03F19B7716692EB36 /* BaseAPIRequestResponseFailureErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3C6533AEB7FB9ED4F0BEBFF038E34 /* BaseAPIRequestResponseFailureErrorType.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB6622CD7A12E3A9ABE1F6F80B6CA0 /* RequestTaskMap.swift */; };
@@ -319,6 +333,20 @@
 		187F71AE283D060D0054309D /* InvoiceSecondScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenInteractor.swift; sourceTree = "<group>"; };
 		187F71AF283D060D0054309D /* InvoiceSecondScreenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenEntity.swift; sourceTree = "<group>"; };
 		187F71C5283D07340054309D /* PaymentMethodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewModel.swift; sourceTree = "<group>"; };
+		187F71D0283E71030054309D /* InvoiceDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsPresenter.swift; sourceTree = "<group>"; };
+		187F71D1283E71030054309D /* InvoiceDetailsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsProtocols.swift; sourceTree = "<group>"; };
+		187F71D5283E71030054309D /* InvoiceDetailsProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsProductTableViewCell.swift; sourceTree = "<group>"; };
+		187F71D6283E71030054309D /* InvoiceDetailsPaymentSammaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsPaymentSammaryTableViewCell.swift; sourceTree = "<group>"; };
+		187F71D7283E71030054309D /* InoviceDetailsTableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InoviceDetailsTableHeaderView.swift; sourceTree = "<group>"; };
+		187F71D8283E71030054309D /* InvoiceDetailContainerView + UItableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "InvoiceDetailContainerView + UItableView.swift"; sourceTree = "<group>"; };
+		187F71D9283E71030054309D /* InvoiceDetailsContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsContainerView.swift; sourceTree = "<group>"; };
+		187F71DA283E71030054309D /* InvoiceDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsViewController.swift; sourceTree = "<group>"; };
+		187F71DC283E71040054309D /* InvoiceDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsInteractor.swift; sourceTree = "<group>"; };
+		187F71DE283E71040054309D /* InvoiceDetailsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsEntity.swift; sourceTree = "<group>"; };
+		187F71E0283E71040054309D /* InvoiceDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsRouter.swift; sourceTree = "<group>"; };
+		187F71ED283E713A0054309D /* Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@3x.png"; sourceTree = "<group>"; };
+		187F71EE283E713A0054309D /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
+		187F71EF283E713A0054309D /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
 		198A4EBFF4377842EAE2155F1F11527D /* FontBlaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontBlaster-umbrella.h"; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		19F11DEB78C744D5683FAABADDF5CF75 /* StepsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
@@ -782,6 +810,90 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		187F71CE283E71030054309D /* InvoiceDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				187F71CF283E71030054309D /* Presenter */,
+				187F71D1283E71030054309D /* InvoiceDetailsProtocols.swift */,
+				187F71D2283E71030054309D /* View */,
+				187F71DB283E71040054309D /* Interactor */,
+				187F71DD283E71040054309D /* Entities */,
+				187F71DF283E71040054309D /* Router */,
+			);
+			path = InvoiceDetailsScreen;
+			sourceTree = "<group>";
+		};
+		187F71CF283E71030054309D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				187F71D0283E71030054309D /* InvoiceDetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		187F71D2283E71030054309D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				187F71D3283E71030054309D /* Layouts */,
+				187F71DA283E71030054309D /* InvoiceDetailsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187F71D3283E71030054309D /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				187F71D4283E71030054309D /* Cells */,
+				187F71D7283E71030054309D /* InoviceDetailsTableHeaderView.swift */,
+				187F71D8283E71030054309D /* InvoiceDetailContainerView + UItableView.swift */,
+				187F71D9283E71030054309D /* InvoiceDetailsContainerView.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		187F71D4283E71030054309D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				187F71D5283E71030054309D /* InvoiceDetailsProductTableViewCell.swift */,
+				187F71D6283E71030054309D /* InvoiceDetailsPaymentSammaryTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		187F71DB283E71040054309D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				187F71DC283E71040054309D /* InvoiceDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		187F71DD283E71040054309D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				187F71DE283E71040054309D /* InvoiceDetailsEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		187F71DF283E71040054309D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				187F71E0283E71040054309D /* InvoiceDetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		187F71EC283E713A0054309D /* Close */ = {
+			isa = PBXGroup;
+			children = (
+				187F71ED283E713A0054309D /* Close@3x.png */,
+				187F71EE283E713A0054309D /* Close@2x.png */,
+				187F71EF283E713A0054309D /* Close.png */,
+			);
+			path = Close;
+			sourceTree = "<group>";
+		};
 		1AA4299199024FC77CE622D80C9E2BE3 /* PaymentLinkFirstScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1100,6 +1212,7 @@
 		66A8C6220D07DAE9DCDBC5943E8BC76D /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				187F71EC283E713A0054309D /* Close */,
 				187F7149283A4C890054309D /* PaymentGetways */,
 				187F7148283A4C820054309D /* UnselectedIcon */,
 				187F7147283A4C7A0054309D /* SelectedIcon */,
@@ -1383,6 +1496,7 @@
 		E58BC858F98D93F49CCC9744511C533E /* InvoiceScreens */ = {
 			isa = PBXGroup;
 			children = (
+				187F71CE283E71030054309D /* InvoiceDetailsScreen */,
 				187F71A7283D05C80054309D /* InvoiceSecondScreen */,
 				ED604462D88140EF8079D06BECDA5713 /* InvoiceFirstScreen */,
 			);
@@ -1645,7 +1759,9 @@
 				18022607283810A1009DE80D /* Roboto-Bold.ttf in Resources */,
 				187F7155283A4CA00054309D /* Etisalat.png in Resources */,
 				187F7153283A4CA00054309D /* Meeza.png in Resources */,
+				187F71F1283E713A0054309D /* Close@2x.png in Resources */,
 				180225FB283810A1009DE80D /* Roboto-MediumItalic.ttf in Resources */,
+				187F71F2283E713A0054309D /* Close.png in Resources */,
 				180225F9283810A1009DE80D /* Roboto-Regular.ttf in Resources */,
 				18022609283810A1009DE80D /* Roboto-Thin.ttf in Resources */,
 				187F715C283A4E140054309D /* UnSelectedIcon.png in Resources */,
@@ -1655,6 +1771,7 @@
 				1802260B283810A1009DE80D /* Roboto-Black.ttf in Resources */,
 				180226142838E062009DE80D /* Logo@3x.png in Resources */,
 				187F715B283A4CA00054309D /* Orange.png in Resources */,
+				187F71F0283E713A0054309D /* Close@3x.png in Resources */,
 				18022605283810A1009DE80D /* Roboto-BlackItalic.ttf in Resources */,
 				180225FF283810A1009DE80D /* Roboto-BoldItalic.ttf in Resources */,
 				180225F7283810A1009DE80D /* Roboto-Light.ttf in Resources */,
@@ -1786,11 +1903,14 @@
 				53043456FD9FFA4D80EF681BC436797F /* BaseAPIRequestResponseModel.swift in Sources */,
 				5A4E7DA4FF1AAE8DD8CF1BB47C163254 /* ButtonsContainerView.swift in Sources */,
 				6E03B52370928AC3206B91B3FDFFD22D /* CirclePay.swift in Sources */,
+				187F71E6283E71040054309D /* InvoiceDetailContainerView + UItableView.swift in Sources */,
 				3DA542D0BFDD9DCC55B5DE41CF467542 /* CirclePay_Pod_iOS-dummy.m in Sources */,
 				187F7146283A4AE40054309D /* PaymentSelectionView.swift in Sources */,
 				C95863950AEB1CE17576D0E3A7D33810 /* CirclePayTFContainer.swift in Sources */,
 				EA7659CEB26FF539342C225B08E02693 /* ColorTypes.swift in Sources */,
 				187F7122283A25A80054309D /* PaymentLinkSecondScreenInteractor.swift in Sources */,
+				187F71E5283E71040054309D /* InoviceDetailsTableHeaderView.swift in Sources */,
+				187F71E2283E71040054309D /* InvoiceDetailsProtocols.swift in Sources */,
 				AB76AB628A28A9CB33277E1183A57165 /* CreateCustomerEntities.swift in Sources */,
 				2731EBFF7D302AB00BE00BA0BB9A71A2 /* CreateInvoiceCodable.swift in Sources */,
 				187F7123283A25A80054309D /* PaymentLinkSecondScreenEntity.swift in Sources */,
@@ -1801,6 +1921,8 @@
 				FF8FBFDA40C85590EBAFEB529839EA91 /* Customers.swift in Sources */,
 				E59992E2052CA858901B93C3E3626EC2 /* CustomersNetworking.swift in Sources */,
 				E0E42791A9B4204D90A10601D592CE62 /* CustomersWorker.swift in Sources */,
+				187F71E9283E71040054309D /* InvoiceDetailsInteractor.swift in Sources */,
+				187F71E8283E71040054309D /* InvoiceDetailsViewController.swift in Sources */,
 				555B6C401BE226C82BA2EEDF598C33FA /* GetCustomerCodable.swift in Sources */,
 				D7173863184AEF28047054E1452DB0B1 /* Int+BusinessErrorCode.swift in Sources */,
 				AD8C3799F484F7AAAED57A3D046386F3 /* Int+HTTPStatusCode.swift in Sources */,
@@ -1827,7 +1949,9 @@
 				187F71B4283D060D0054309D /* InvoiceSecondScreenViewController.swift in Sources */,
 				05726AAE0F4BCF9949FF77BCD829A01C /* MerchantCreateCodable.swift in Sources */,
 				CAE886BA6B8A1BDE102D44E73C8ACB32 /* MerchantNetworking.swift in Sources */,
+				187F71EA283E71040054309D /* InvoiceDetailsEntity.swift in Sources */,
 				4C2165CC80C2756E5F9CD9B31F99B840 /* MerchantPaymentGatewayCodable.swift in Sources */,
+				187F71EB283E71040054309D /* InvoiceDetailsRouter.swift in Sources */,
 				187F7132283A34100054309D /* ContactsView.swift in Sources */,
 				4DE29D42C24658D2104C9701CAC2F3C2 /* MerchantPaymentGatewayEnabledCodable.swift in Sources */,
 				187F713A283A34A90054309D /* CountryView.swift in Sources */,
@@ -1836,6 +1960,7 @@
 				438244F68B7B2B4857136F011D8F3E4F /* MerchantPaymentMethodEnabledCodable.swift in Sources */,
 				C535478763D664535E088242C286F472 /* Merchants.swift in Sources */,
 				A7633DF4820F427498C3054C8D2264D1 /* MerchantSendOTPCodable.swift in Sources */,
+				187F71E7283E71040054309D /* InvoiceDetailsContainerView.swift in Sources */,
 				187F7120283A25A80054309D /* PaymentLinkSecondScreenViewController.swift in Sources */,
 				5B53A509CF27CA17D46558F3BDAC7F94 /* MerchantWorker.swift in Sources */,
 				187F713F283A41B30054309D /* AddressDetailsView.swift in Sources */,
@@ -1859,6 +1984,7 @@
 				187F712E283A32890054309D /* UITextField.swift in Sources */,
 				187F71A2283B838E0054309D /* InvoiceFirstScreenViewModel.swift in Sources */,
 				E123A7406A3A4131E45E148593D056E5 /* PaymentMethods.swift in Sources */,
+				187F71E3283E71040054309D /* InvoiceDetailsProductTableViewCell.swift in Sources */,
 				5B8903C9E825CB68BEFF63531D0CCF7A /* PaymentMethodWorker.swift in Sources */,
 				187F71B3283D060D0054309D /* InvoiceSecondScreenRouter.swift in Sources */,
 				EA14DF1F7078E0F41A91A51850FE4067 /* PaymentNetworking.swift in Sources */,
@@ -1875,10 +2001,12 @@
 				5C3CE3EE9991A8C50F804A2628372CDE /* ShippingAndRefundContainer.swift in Sources */,
 				187F71B6283D060D0054309D /* InvoiceSecondScreenInteractor.swift in Sources */,
 				187F711F283A25A80054309D /* PaymentLinkSecondScreenRouter.swift in Sources */,
+				187F71E4283E71040054309D /* InvoiceDetailsPaymentSammaryTableViewCell.swift in Sources */,
 				97C1766A06221612D7545A4F9B023646 /* SingleStepView.swift in Sources */,
 				A49D5C3C88311F4256CF2CA1F359A158 /* StepsView.swift in Sources */,
 				05B6A6F14C776624DEEDFE0F8BE04790 /* TitleViewContainer.swift in Sources */,
 				7D9E1D92915169DC41EE87A18FB48CAC /* TotalAmountContainer.swift in Sources */,
+				187F71E1283E71040054309D /* InvoiceDetailsPresenter.swift in Sources */,
 				85A1B8469DD0546605D57493880D1DA3 /* UIApplication + TopViewController.swift in Sources */,
 				2FD30ADA4969C68F2E8712BC82CD592A /* UpdateCustomerCodable.swift in Sources */,
 			);

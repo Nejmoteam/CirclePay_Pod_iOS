@@ -93,6 +93,7 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
             view.productNameView.keyLabel.text = "View Invoice Details >"
         view.productNameView.valueLabel.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTappedInvoiceDetails)))
         return view
     }()
     
@@ -226,5 +227,9 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     
     @objc func didTappedNext() {
         self.presenter.navigateToStepTwo()
+    }
+    
+    @objc func didTappedInvoiceDetails() {
+        self.presenter.navigateToInvoiceDetails()
     }
 }
