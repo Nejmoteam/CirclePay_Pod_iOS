@@ -75,6 +75,15 @@
 		187F715A283A4CA00054309D /* Cash.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F7151283A4CA00054309D /* Cash.png */; };
 		187F715B283A4CA00054309D /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F7152283A4CA00054309D /* Orange.png */; };
 		187F715C283A4E140054309D /* UnSelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F714D283A4C9F0054309D /* UnSelectedIcon.png */; };
+		18F82579283A5E1E00ED0B21 /* PaymentLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82578283A5E1E00ED0B21 /* PaymentLinks.swift */; };
+		18F8257E283A5F5900ED0B21 /* PaymentLinksNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8257D283A5F5900ED0B21 /* PaymentLinksNetworking.swift */; };
+		18F82581283A655D00ED0B21 /* PaymentLinksWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82580283A655D00ED0B21 /* PaymentLinksWorker.swift */; };
+		18F82583283A65A400ED0B21 /* PaymentLinkCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82582283A65A400ED0B21 /* PaymentLinkCodable.swift */; };
+		18F82585283A717000ED0B21 /* PaymentLinkURLCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82584283A717000ED0B21 /* PaymentLinkURLCodable.swift */; };
+		18F82587283A74B000ED0B21 /* PaymentLinkActivationCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82586283A74B000ED0B21 /* PaymentLinkActivationCodable.swift */; };
+		18F82589283A80F800ED0B21 /* PaymentLinkCreationCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F82588283A80F800ED0B21 /* PaymentLinkCreationCodable.swift */; };
+		18F8258B283A860100ED0B21 /* PaymentLinkCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8258A283A860100ED0B21 /* PaymentLinkCustomer.swift */; };
+		18F8258D283A8A2600ED0B21 /* PaymentLinkFormResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8258C283A8A2600ED0B21 /* PaymentLinkFormResponse.swift */; };
 		1A4A41F6D6D079093B993F0DAD9FE216 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1C09841013B919553E8287B500A1B /* Items.swift */; };
 		1BBCC0139356B1E03F19B7716692EB36 /* BaseAPIRequestResponseFailureErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3C6533AEB7FB9ED4F0BEBFF038E34 /* BaseAPIRequestResponseFailureErrorType.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB6622CD7A12E3A9ABE1F6F80B6CA0 /* RequestTaskMap.swift */; };
@@ -301,6 +310,15 @@
 		187F7150283A4C9F0054309D /* SelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedIcon.png; sourceTree = "<group>"; };
 		187F7151283A4CA00054309D /* Cash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cash.png; sourceTree = "<group>"; };
 		187F7152283A4CA00054309D /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
+		18F82578283A5E1E00ED0B21 /* PaymentLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinks.swift; sourceTree = "<group>"; };
+		18F8257D283A5F5900ED0B21 /* PaymentLinksNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinksNetworking.swift; sourceTree = "<group>"; };
+		18F82580283A655D00ED0B21 /* PaymentLinksWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinksWorker.swift; sourceTree = "<group>"; };
+		18F82582283A65A400ED0B21 /* PaymentLinkCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinkCodable.swift; sourceTree = "<group>"; };
+		18F82584283A717000ED0B21 /* PaymentLinkURLCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinkURLCodable.swift; sourceTree = "<group>"; };
+		18F82586283A74B000ED0B21 /* PaymentLinkActivationCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinkActivationCodable.swift; sourceTree = "<group>"; };
+		18F82588283A80F800ED0B21 /* PaymentLinkCreationCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinkCreationCodable.swift; sourceTree = "<group>"; };
+		18F8258A283A860100ED0B21 /* PaymentLinkCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinkCustomer.swift; sourceTree = "<group>"; };
+		18F8258C283A8A2600ED0B21 /* PaymentLinkFormResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentLinkFormResponse.swift; sourceTree = "<group>"; };
 		198A4EBFF4377842EAE2155F1F11527D /* FontBlaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontBlaster-umbrella.h"; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		19F11DEB78C744D5683FAABADDF5CF75 /* StepsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
@@ -694,6 +712,37 @@
 			path = PaymentGetways;
 			sourceTree = "<group>";
 		};
+		18F82577283A5E0500ED0B21 /* PaymentLinks */ = {
+			isa = PBXGroup;
+			children = (
+				18F82578283A5E1E00ED0B21 /* PaymentLinks.swift */,
+			);
+			path = PaymentLinks;
+			sourceTree = "<group>";
+		};
+		18F8257C283A5F3200ED0B21 /* PaymentLinksWorker */ = {
+			isa = PBXGroup;
+			children = (
+				18F8257F283A654900ED0B21 /* Entities */,
+				18F8257D283A5F5900ED0B21 /* PaymentLinksNetworking.swift */,
+				18F82580283A655D00ED0B21 /* PaymentLinksWorker.swift */,
+			);
+			path = PaymentLinksWorker;
+			sourceTree = "<group>";
+		};
+		18F8257F283A654900ED0B21 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				18F82582283A65A400ED0B21 /* PaymentLinkCodable.swift */,
+				18F82584283A717000ED0B21 /* PaymentLinkURLCodable.swift */,
+				18F82586283A74B000ED0B21 /* PaymentLinkActivationCodable.swift */,
+				18F82588283A80F800ED0B21 /* PaymentLinkCreationCodable.swift */,
+				18F8258A283A860100ED0B21 /* PaymentLinkCustomer.swift */,
+				18F8258C283A8A2600ED0B21 /* PaymentLinkFormResponse.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		1AA4299199024FC77CE622D80C9E2BE3 /* PaymentLinkFirstScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -968,6 +1017,7 @@
 		63DA9E6184014CCE07F0FD991892EE47 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				18F8257C283A5F3200ED0B21 /* PaymentLinksWorker */,
 				1D413531ECD74BD87E15DDB98A684D43 /* APIRequestBuilder.swift */,
 				5E5B9953524A55E40EF25F613B96839F /* APIRequestExecuter.swift */,
 				EEFE916DB235E7479B999C66EFBECBF1 /* APIRequestInterceptor.swift */,
@@ -1263,6 +1313,7 @@
 			isa = PBXGroup;
 			children = (
 				C6D15B67AD4226AAC1A949E942BE1B32 /* CirclePay.swift */,
+				18F82577283A5E0500ED0B21 /* PaymentLinks */,
 				AFE89B13056487B36C76F377F9D2C071 /* BaseClasses */,
 				A20BA8F5977F7697D10AA89FC9D8D91C /* Customers */,
 				567ACF53D4F2524025F744B947E562F0 /* Extensions */,
@@ -1722,6 +1773,7 @@
 				61D31E8EB54BEE42B5A4BB8AA56F64F0 /* InvoiceFirstScreenRouter.swift in Sources */,
 				46252B58CEEF88E64A53E40FBEF9C0BC /* InvoiceFirstScreenViewController.swift in Sources */,
 				97EE0167146D4E7DEEF7447B8B1AA178 /* InvoicePayCodable.swift in Sources */,
+				18F82583283A65A400ED0B21 /* PaymentLinkCodable.swift in Sources */,
 				7F734B3D33C6F5DE0F931ADCB75F59C3 /* Invoices.swift in Sources */,
 				E9161769910C0D22F2665221CF024271 /* InvoicesNetworking.swift in Sources */,
 				008089A8B1AD3E7E9E978CE7655F1ECB /* InvoicesWorker.swift in Sources */,
@@ -1733,15 +1785,18 @@
 				05726AAE0F4BCF9949FF77BCD829A01C /* MerchantCreateCodable.swift in Sources */,
 				CAE886BA6B8A1BDE102D44E73C8ACB32 /* MerchantNetworking.swift in Sources */,
 				4C2165CC80C2756E5F9CD9B31F99B840 /* MerchantPaymentGatewayCodable.swift in Sources */,
+				18F82587283A74B000ED0B21 /* PaymentLinkActivationCodable.swift in Sources */,
 				187F7132283A34100054309D /* ContactsView.swift in Sources */,
 				4DE29D42C24658D2104C9701CAC2F3C2 /* MerchantPaymentGatewayEnabledCodable.swift in Sources */,
 				187F713A283A34A90054309D /* CountryView.swift in Sources */,
 				187F7121283A25A80054309D /* PaymentLinkSecondScreenProtocols.swift in Sources */,
 				9D9FF54B0D83F743DE2CEB2CD2381A07 /* MerchantPaymentMethodCodable.swift in Sources */,
+				18F8257E283A5F5900ED0B21 /* PaymentLinksNetworking.swift in Sources */,
 				438244F68B7B2B4857136F011D8F3E4F /* MerchantPaymentMethodEnabledCodable.swift in Sources */,
 				C535478763D664535E088242C286F472 /* Merchants.swift in Sources */,
 				A7633DF4820F427498C3054C8D2264D1 /* MerchantSendOTPCodable.swift in Sources */,
 				187F7120283A25A80054309D /* PaymentLinkSecondScreenViewController.swift in Sources */,
+				18F8258B283A860100ED0B21 /* PaymentLinkCustomer.swift in Sources */,
 				5B53A509CF27CA17D46558F3BDAC7F94 /* MerchantWorker.swift in Sources */,
 				187F713F283A41B30054309D /* AddressDetailsView.swift in Sources */,
 				34F00DD01E5357DC36066C50A3228415 /* PaymentBaseClass.swift in Sources */,
@@ -1750,6 +1805,7 @@
 				2BECC0DADE8C426EF7A11B8F37FEB3A0 /* PaymentGatewayNetworking.swift in Sources */,
 				6AD25A18F1E129EF0282E8429F58A702 /* PaymentGateways.swift in Sources */,
 				5CD317E3982D7F9C0814C1F6A5EA7EE9 /* PaymentGatewayWorker.swift in Sources */,
+				18F82579283A5E1E00ED0B21 /* PaymentLinks.swift in Sources */,
 				961D496C0335F0AB5AEAAE9A6C12351D /* PaymentLinkFirstScreenContainerView.swift in Sources */,
 				44CDE8941F9C4875FA2F7F3E467F26E0 /* PaymentLinkFirstScreenEntity.swift in Sources */,
 				187F7134283A34290054309D /* PhoneContainerView.swift in Sources */,
@@ -1760,6 +1816,7 @@
 				DD9556A38A16527709F98E1AB8A8607A /* PaymentLinkFirstScreenViewController.swift in Sources */,
 				BE59ED4B7FA6D85A3189059ADF4428CD /* PaymentMethodCodable.swift in Sources */,
 				13554D13580E62F2FA38BCA93DB3C7D8 /* PaymentMethodNetworking.swift in Sources */,
+				18F82589283A80F800ED0B21 /* PaymentLinkCreationCodable.swift in Sources */,
 				187F712E283A32890054309D /* UITextField.swift in Sources */,
 				E123A7406A3A4131E45E148593D056E5 /* PaymentMethods.swift in Sources */,
 				5B8903C9E825CB68BEFF63531D0CCF7A /* PaymentMethodWorker.swift in Sources */,
@@ -1768,10 +1825,13 @@
 				C5FC7FEF43926169B0E428D842E87F16 /* PaymentWorker.swift in Sources */,
 				B118431ACDECB7BEEFB090EBD48C9C25 /* ProductDetailsView.swift in Sources */,
 				27A0BC821F4D1B5F946419D6B6F8DD10 /* RefundCodable.swift in Sources */,
+				18F8258D283A8A2600ED0B21 /* PaymentLinkFormResponse.swift in Sources */,
 				7CAD61E3962AA4690520A53D6B210ED3 /* RefundNetworking.swift in Sources */,
 				E4B26A3AA129FBA066A5AFC69C6FFB84 /* Refunds.swift in Sources */,
+				18F82581283A655D00ED0B21 /* PaymentLinksWorker.swift in Sources */,
 				2E162F58CA032EB68393D6F41C1211DF /* RefundWorker.swift in Sources */,
 				25616BBB8A93BAD4BCB8B9CA6C55C376 /* RequestRefundCodable.swift in Sources */,
+				18F82585283A717000ED0B21 /* PaymentLinkURLCodable.swift in Sources */,
 				724319B9C5491B126DB423F351DAC1C4 /* ResponseDataEmptyObject.swift in Sources */,
 				5C3CE3EE9991A8C50F804A2628372CDE /* ShippingAndRefundContainer.swift in Sources */,
 				187F711F283A25A80054309D /* PaymentLinkSecondScreenRouter.swift in Sources */,

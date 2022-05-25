@@ -19,6 +19,7 @@ public class CirclePay {
     public static let refunds: RefundsProtocol = Refunds()
     public static let paymentGateways: PaymentGatewaysProtocol = PaymentGateways()
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
+    public static let paymentLinks: PaymentLinksProtocol = PaymentLinks()
     public static var mode: Inviroment = .sandBox
     
     public static func prepareSDK() {
