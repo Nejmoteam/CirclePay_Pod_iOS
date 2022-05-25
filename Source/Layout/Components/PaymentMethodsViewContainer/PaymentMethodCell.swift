@@ -42,6 +42,21 @@ class PaymentMethodCell: UITableViewCell {
     }
 }
 
+extension PaymentMethodCell: PaymentMethodsCellView {
+    func setData(paymentMethod: PaymentMethodsViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.paymentSelectioanView.paymentMethodName.text = paymentMethod.paymentMethodName
+            self.paymentSelectioanView.paymentGatewayName.text = "By: \(paymentMethod.paymentGetwayName)"
+        }
+       
+        
+    }
+    
+    
+}
 
 
 
@@ -56,3 +71,4 @@ extension UIView {
         layer.shouldRasterize = false
     }
 }
+

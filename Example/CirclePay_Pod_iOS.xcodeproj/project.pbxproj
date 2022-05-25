@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		060B5AA48FF6E7A86D8B5696 /* Pods_CirclePay_Pod_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D2084C5B1FEB93B9908C58 /* Pods_CirclePay_Pod_iOS_Tests.framework */; };
+		187F719C283B79A30054309D /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719B283B79A30054309D /* NormalIndicator.swift */; };
+		187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719D283B79D80054309D /* Indicator + UIView.swift */; };
+		187F71A0283B79EC0054309D /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719F283B79EC0054309D /* LottieIndicator.swift */; };
 		498F500029D9409882FB5AD4 /* Pods_CirclePay_Pod_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A2134673A78D8D125EA624 /* Pods_CirclePay_Pod_iOS_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACD81AFB9204008FA782 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* InitialViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -29,13 +32,16 @@
 
 /* Begin PBXFileReference section */
 		01D7A2188D4229946AD6D51C /* Pods-CirclePay_Pod_iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Example.debug.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Example/Pods-CirclePay_Pod_iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		187F719B283B79A30054309D /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
+		187F719D283B79D80054309D /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
+		187F719F283B79EC0054309D /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
 		3D65E01FE3EF862122C994EE /* Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DF9595C73407471D3DAD489 /* CirclePay_Pod_iOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CirclePay_Pod_iOS.podspec; path = ../CirclePay_Pod_iOS.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5EBA8DD96B26A74407A05CCF /* Pods-CirclePay_Pod_iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Tests.release.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CirclePay_Pod_iOS_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CirclePay_Pod_iOS_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -69,6 +75,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		187F7199283B798D0054309D /* Utills */ = {
+			isa = PBXGroup;
+			children = (
+				187F719A283B79960054309D /* Indicator */,
+			);
+			name = Utills;
+			sourceTree = "<group>";
+		};
+		187F719A283B79960054309D /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				187F719B283B79A30054309D /* NormalIndicator.swift */,
+				187F719D283B79D80054309D /* Indicator + UIView.swift */,
+				187F719F283B79EC0054309D /* LottieIndicator.swift */,
+			);
+			name = Indicator;
+			sourceTree = "<group>";
+		};
+		187F71A3283BBA680054309D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				187F71A5283BBA800054309D /* InvoicesList */,
+				187F71A4283BBA6F0054309D /* Initial */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		187F71A4283BBA6F0054309D /* Initial */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* InitialViewController.swift */,
+			);
+			name = Initial;
+			sourceTree = "<group>";
+		};
+		187F71A5283BBA800054309D /* InvoicesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = InvoicesList;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -93,8 +141,9 @@
 		607FACD21AFB9204008FA782 /* Example for CirclePay_Pod_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				187F71A3283BBA680054309D /* Modules */,
+				187F7199283B798D0054309D /* Utills */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -337,8 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */,
+				607FACD81AFB9204008FA782 /* InitialViewController.swift in Sources */,
+				187F719C283B79A30054309D /* NormalIndicator.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				187F71A0283B79EC0054309D /* LottieIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
