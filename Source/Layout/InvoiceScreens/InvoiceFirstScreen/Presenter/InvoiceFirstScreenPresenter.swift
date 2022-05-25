@@ -12,13 +12,81 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
     weak var view: InvoiceFirstScreenViewProtocol?
     private let interactor: InvoiceFirstScreenInteractorInPutProtocol
     private let router: InvoiceFirstScreenRouterProtocol
-    init(view: InvoiceFirstScreenViewProtocol, interactor: InvoiceFirstScreenInteractorInPutProtocol, router: InvoiceFirstScreenRouterProtocol) {
+    var invoiceViewModel: InvoiceFirstScreenViewModel
+    var customer: GetCustomerCodable?
+    var subTotal:Double {
+        return invoiceViewModel.getInvoiceSubTotal()
+    }
+    var discunt: Double {
+        return invoiceViewModel.getDiscuntValue()
+    }
+    var tax: Double {
+        return invoiceViewModel.getTax()
+    }
+    init(view: InvoiceFirstScreenViewProtocol, interactor: InvoiceFirstScreenInteractorInPutProtocol, router: InvoiceFirstScreenRouterProtocol, invoiceNumber: InvoiceFirstScreenViewModel) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.invoiceViewModel = invoiceNumber
     }
     func viewDidLoad() {
         print("ViewDidLoad")
+        print(invoiceViewModel.invoiceDetails)
+        print(invoiceViewModel.merchantDetails)
+        CirclePay.customers.getCustomer(mobileNumber: invoiceViewModel.invoiceDetails.customerMobile ?? "") { customer, err in
+            if err != nil {
+                
+            } else {
+                self.customer = customer
+                //Sammery
+                self.view?.configurePaymentSummery(billedFrom: customer?.getFullName() ?? "", billedTo: self.invoiceViewModel.merchantDetails.businessName ?? "")
+                
+                //TOTAL
+                
+                
+                
+                
+                //SUBTOTAL
+                self.view?.configureSubTotal(subTotal: "\(self.subTotal)")
+                
+                
+                //TAX
+                self.view?.configureTaxView(taxValue: "\(self.tax)", taxPersentage: "\((self.invoiceViewModel.invoiceDetails.tax ?? 0.0))")
+//                self.setupTax()
 
+                
+
+                //Shipping
+                self.view?.configureShipping(shippingValue: "\(self.invoiceViewModel.invoiceDetails.shippingFees ?? 0.0)")
+                
+                
+                //DISCOUNT
+                self.view?.configureDiscount(discountPercentage: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.discunt)")
+
+                
+                
+                self.view?.configureInvoiceDate(date: self.invoiceViewModel.invoiceDetails.dueDate ?? "")
+                
+            }
+        }
+
+
+    }
+    
+    private func setupTax() {
+        let taxValue = self.invoiceViewModel.invoiceDetails.taxValue ?? 0.0
+        let taxValueString = "\(taxValue)"
+        let taxPersentage = self.invoiceViewModel.invoiceDetails.tax ?? 0.0
+        let taxPersentageString = "\(taxPersentage)"
+        self.view?.configureTaxView(taxValue: taxValueString, taxPersentage: taxPersentageString)
+
+    }
+    
+    
+    func navigateToStepTwo() {
+        if let unwrappedCustomer = customer {
+            self.router.navigateToStepTwo(invoiceViewModel: self.invoiceViewModel, customer: unwrappedCustomer)
+
+        }
     }
 }

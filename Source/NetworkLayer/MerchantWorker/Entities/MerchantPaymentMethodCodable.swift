@@ -8,11 +8,11 @@
 import Foundation
 
 public struct MerchantPaymentMethodCodable:Codable {
-    let id:String?
-    let name:String?
-    let gateWayId:String?
-    let status:Bool?
-    let rateObject:MerchantPaymentMethodRateObjectCodable?
+   public let id:String?
+   public let name:String?
+   public let gateWayId:String?
+   public let status:Bool?
+   public let rateObject:MerchantPaymentMethodRateObjectCodable?
     
     enum CodingKeys:String, CodingKey {
         case id, name, status
@@ -23,10 +23,10 @@ public struct MerchantPaymentMethodCodable:Codable {
 
 
 public struct MerchantPaymentMethodRateObjectCodable:Codable {
-    let paymentFeePercentage:Double?
-    let paymentFeeAmount:Double?
-    let refundFeePercentage:Double?
-    let refundFeeAmount:Double?
+   public let paymentFeePercentage:Double?
+   public let paymentFeeAmount:Double?
+   public let refundFeePercentage:Double?
+   public let refundFeeAmount:Double?
     
     enum CodingKeys:String, CodingKey {
         case paymentFeePercentage = "payment_fee_percentage"

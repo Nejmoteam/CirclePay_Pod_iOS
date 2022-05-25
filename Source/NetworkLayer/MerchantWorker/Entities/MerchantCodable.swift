@@ -30,4 +30,10 @@ public struct MerchantCodable: Codable {
         case merchantToken = "merchant_token"
         case email, status
     }
+    
+    public func getFullName() -> String {
+        let fistName = self.firstName ?? ""
+        let lastName = self.lastName ?? ""
+        return  fistName + " " + lastName
+    }
 }

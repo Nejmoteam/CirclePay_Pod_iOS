@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 class ProductDetailsView: UIView {
     
-    private lazy var productNameView: KeyValueView = {
+    lazy var productNameView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Product Name")
         container.valueLabel.text = "120 EGP"
         container.keyLabel.textColor = ColorTypes.GrayPrimary800.value

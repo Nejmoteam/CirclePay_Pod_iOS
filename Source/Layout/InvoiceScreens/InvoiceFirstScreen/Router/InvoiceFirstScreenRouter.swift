@@ -9,14 +9,25 @@
 import UIKit
 class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
     weak var viewController: UIViewController?
-    static func createAnModule() -> UIViewController {
+    static func createAnModule(invoiceViewModel: InvoiceFirstScreenViewModel) -> UIViewController {
         let interactor = InvoiceFirstScreenInteractor()
         let router = InvoiceFirstScreenRouter()
         let view = InvoiceFirstScreenViewController()
-        let presenter = InvoiceFirstScreenPresenter(view: view, interactor: interactor, router: router)
+        let presenter = InvoiceFirstScreenPresenter(view: view, interactor: interactor, router: router, invoiceNumber: invoiceViewModel)
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view
         return view
+    }
+    
+    func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable) {
+        let stepTwo = InvoiceSecondScreenRouter.createAnModule(invoiceViewModel: invoiceViewModel, customer: customer)
+        stepTwo.modalPresentationStyle = .fullScreen
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.viewController?.present(stepTwo, animated: true, completion: nil)
+        }
     }
 }

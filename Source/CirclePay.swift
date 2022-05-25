@@ -37,13 +37,65 @@ public class CirclePay {
             } else {
                 print("failed to get top view Controller")
             }
-        case .Invoice:
+        case let .Invoice(invoiceNumber):
             if let vc = UIApplication.shared.topMostViewController() {
-                let paymentLinkScreen = InvoiceFirstScreenRouter.createAnModule()
-                paymentLinkScreen.modalPresentationStyle = .fullScreen
-                vc.present(paymentLinkScreen, animated: true, completion: nil)
+                CirclePay.getInvoiceDetails(invoiceNumber: invoiceNumber) { viewModel, err in
+                    if err != nil {
+                        print(err)
+                        print("Throw an error here")
+                    } else {
+                        if let unwrappedViewModel = viewModel {
+                            let invoiceFirstScreen = InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel)
+                            invoiceFirstScreen.modalPresentationStyle = .fullScreen
+                            vc.present(invoiceFirstScreen, animated: true, completion: nil)
+                        } else {
+                            print("Throw an error here")
+                        }
+                    }
+                }
             } else {
                 print("failed to get top view Controller")
+            }
+        }
+    }
+    
+   public static
+   func getInvoiceDetails(invoiceNumber: String,completion: @escaping (InvoiceFirstScreenViewModel?, CirclePayError?) -> Void) {
+        let dispatchGroup = DispatchGroup()
+        var invoiceDetails : InvoiceCodable?
+        var merchantDetails: MerchantCodable?
+        var error: CirclePayError?
+        dispatchGroup.enter()
+        CirclePay.invoices.getInvoice(invoiceNumber: invoiceNumber) { invoice, err in
+            if err != nil {
+                error = err
+                dispatchGroup.leave()
+            } else {
+                invoiceDetails = invoice
+                dispatchGroup.leave()
+            }
+        }
+        
+        dispatchGroup.enter()
+        CirclePay.merchants.getMerchant { merchant, err in
+            if err != nil {
+                error = err
+                dispatchGroup.leave()
+            } else {
+                merchantDetails = merchant
+                dispatchGroup.leave()
+            }
+        }
+        dispatchGroup.notify(queue: .main) {
+            guard invoiceDetails != nil && merchantDetails != nil else {
+                completion(nil, error)
+                return
+            }
+            if let unwrappedInvoiceDetails = invoiceDetails , let unwrappedMerchant = merchantDetails {
+                let viewModel = InvoiceFirstScreenViewModel(invoiceDetails: unwrappedInvoiceDetails, merchantDetails: unwrappedMerchant)
+                completion(viewModel, nil)
+            } else {
+                completion(nil, error)
             }
         }
     }
@@ -59,6 +111,6 @@ public enum Inviroment: String {
 
 
 public enum PaymentType {
-    case PaymentLink
-    case Invoice
+    case PaymentLink(paymentLinkUrl: String)
+    case Invoice(invoiceNumber: String)
 }

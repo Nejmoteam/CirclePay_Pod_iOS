@@ -1,14 +1,13 @@
 //
-//  PaymentLinkSecondScreenContainerView.swift
+//  InvoiceSecondScreenContainerView.swift
 //  Pods
 //
-//  Created Alchemist on 22/05/2022.
+//  Created Alchemist on 24/05/2022.
 //  Copyright © 2022 ___ORGANIZATIONNAME___. All rights reserved.
 //
 //@Mahmoud Allam Templete ^_^
 import UIKit
-class PaymentLinkSecondScreenContainerView: PaymentBaseClass {
-    
+class InvoiceSecondScreenContainerView: PaymentBaseClass {
     private lazy var logoView: LogoContainerView = {
         let logoContainer = LogoContainerView()
         logoContainer.translatesAutoresizingMaskIntoConstraints = false
@@ -58,21 +57,22 @@ class PaymentLinkSecondScreenContainerView: PaymentBaseClass {
     
     lazy var payButtonContainer: ButtonsContainerView = {
         let button = ButtonsContainerView()
-//        button.nextButton.addTarget(self, action: #selector(didTappedNext), for: .touchUpInside)
+        button.nextButton.setTitle("Pay", for: .normal)
+        button.nextButton.addTarget(self, action: #selector(didTappedPay), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     lazy var paymentMethodsView: PaymentMethodsViewContainer = {
-        let button = PaymentMethodsViewContainer(presenter: nil)
+        let button = PaymentMethodsViewContainer(presenter: self.presenter)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
-
     
-    var presenter: PaymentLinkSecondScreenPresenterProtocol
     
-    init(presenter:PaymentLinkSecondScreenPresenterProtocol) {
+    var presenter: InvoiceSecondScreenPresenterProtocol
+    
+    init(presenter:InvoiceSecondScreenPresenterProtocol) {
         self.presenter = presenter
         super.init(frame: .zero)
         self.backgroundColor = .white
@@ -92,9 +92,6 @@ class PaymentLinkSecondScreenContainerView: PaymentBaseClass {
         self.addAddressDetailsView()
         self.addSelectPaymentMethodTitleView()
         self.addPayButtonContainer()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.injectPaymentMethodView()
-        }
     }
     
     private func addLogoImageView() {
@@ -145,13 +142,17 @@ class PaymentLinkSecondScreenContainerView: PaymentBaseClass {
         self.vStackView.addArrangedSubview(self.payButtonContainer)
     }
     
-    private func injectPaymentMethodView() {
-        let paymentMethodsCount: CGFloat = 4
+    func injectPaymentMethodView() {
+        let paymentMethodsCount: CGFloat = CGFloat(self.presenter.numberOfPaymentMethods())
         let height : CGFloat = paymentMethodsCount * 66 + 32
         
         self.paymentMethodsView.heightAnchor.constraint(equalToConstant: height).isActive = true
         self.vStackView.insertArrangedSubview(paymentMethodsView, at: self.vStackView.arrangedSubviews.count - 1)
         self.paymentMethodsView.tableView.reloadData()
+    }
+    
+    @objc func didTappedPay() {
+        self.presenter.onTapPay()
     }
 }
 

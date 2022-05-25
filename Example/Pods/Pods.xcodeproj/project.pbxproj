@@ -75,6 +75,15 @@
 		187F715A283A4CA00054309D /* Cash.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F7151283A4CA00054309D /* Cash.png */; };
 		187F715B283A4CA00054309D /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F7152283A4CA00054309D /* Orange.png */; };
 		187F715C283A4E140054309D /* UnSelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 187F714D283A4C9F0054309D /* UnSelectedIcon.png */; };
+		187F71A2283B838E0054309D /* InvoiceFirstScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71A1283B838E0054309D /* InvoiceFirstScreenViewModel.swift */; };
+		187F71B1283D060D0054309D /* InvoiceSecondScreenContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71A9283D060D0054309D /* InvoiceSecondScreenContainerView.swift */; };
+		187F71B2283D060D0054309D /* InvoiceSecondScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AA283D060D0054309D /* InvoiceSecondScreenPresenter.swift */; };
+		187F71B3283D060D0054309D /* InvoiceSecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AB283D060D0054309D /* InvoiceSecondScreenRouter.swift */; };
+		187F71B4283D060D0054309D /* InvoiceSecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AC283D060D0054309D /* InvoiceSecondScreenViewController.swift */; };
+		187F71B5283D060D0054309D /* InvoiceSecondScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AD283D060D0054309D /* InvoiceSecondScreenProtocols.swift */; };
+		187F71B6283D060D0054309D /* InvoiceSecondScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AE283D060D0054309D /* InvoiceSecondScreenInteractor.swift */; };
+		187F71B7283D060D0054309D /* InvoiceSecondScreenEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71AF283D060D0054309D /* InvoiceSecondScreenEntity.swift */; };
+		187F71CD283D07340054309D /* PaymentMethodsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F71C5283D07340054309D /* PaymentMethodsViewModel.swift */; };
 		1A4A41F6D6D079093B993F0DAD9FE216 /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA1C09841013B919553E8287B500A1B /* Items.swift */; };
 		1BBCC0139356B1E03F19B7716692EB36 /* BaseAPIRequestResponseFailureErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3C6533AEB7FB9ED4F0BEBFF038E34 /* BaseAPIRequestResponseFailureErrorType.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFB6622CD7A12E3A9ABE1F6F80B6CA0 /* RequestTaskMap.swift */; };
@@ -301,6 +310,15 @@
 		187F7150283A4C9F0054309D /* SelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedIcon.png; sourceTree = "<group>"; };
 		187F7151283A4CA00054309D /* Cash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cash.png; sourceTree = "<group>"; };
 		187F7152283A4CA00054309D /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
+		187F71A1283B838E0054309D /* InvoiceFirstScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFirstScreenViewModel.swift; sourceTree = "<group>"; };
+		187F71A9283D060D0054309D /* InvoiceSecondScreenContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenContainerView.swift; sourceTree = "<group>"; };
+		187F71AA283D060D0054309D /* InvoiceSecondScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenPresenter.swift; sourceTree = "<group>"; };
+		187F71AB283D060D0054309D /* InvoiceSecondScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenRouter.swift; sourceTree = "<group>"; };
+		187F71AC283D060D0054309D /* InvoiceSecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenViewController.swift; sourceTree = "<group>"; };
+		187F71AD283D060D0054309D /* InvoiceSecondScreenProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenProtocols.swift; sourceTree = "<group>"; };
+		187F71AE283D060D0054309D /* InvoiceSecondScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenInteractor.swift; sourceTree = "<group>"; };
+		187F71AF283D060D0054309D /* InvoiceSecondScreenEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenEntity.swift; sourceTree = "<group>"; };
+		187F71C5283D07340054309D /* PaymentMethodsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewModel.swift; sourceTree = "<group>"; };
 		198A4EBFF4377842EAE2155F1F11527D /* FontBlaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontBlaster-umbrella.h"; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		19F11DEB78C744D5683FAABADDF5CF75 /* StepsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StepsView.swift; sourceTree = "<group>"; };
@@ -694,6 +712,76 @@
 			path = PaymentGetways;
 			sourceTree = "<group>";
 		};
+		187F71A6283CEEB90054309D /* Date */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		187F71A7283D05C80054309D /* InvoiceSecondScreen */ = {
+			isa = PBXGroup;
+			children = (
+				187F71BD283D064B0054309D /* Router */,
+				187F71BC283D06450054309D /* Entities */,
+				187F71BB283D063F0054309D /* Presenter */,
+				187F71BA283D06370054309D /* Interactor */,
+				187F71B8283D062F0054309D /* View */,
+				187F71AD283D060D0054309D /* InvoiceSecondScreenProtocols.swift */,
+			);
+			path = InvoiceSecondScreen;
+			sourceTree = "<group>";
+		};
+		187F71B8283D062F0054309D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				187F71AC283D060D0054309D /* InvoiceSecondScreenViewController.swift */,
+				187F71B9283D06330054309D /* Layout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187F71B9283D06330054309D /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				187F71A9283D060D0054309D /* InvoiceSecondScreenContainerView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		187F71BA283D06370054309D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				187F71AE283D060D0054309D /* InvoiceSecondScreenInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		187F71BB283D063F0054309D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				187F71AA283D060D0054309D /* InvoiceSecondScreenPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		187F71BC283D06450054309D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				187F71AF283D060D0054309D /* InvoiceSecondScreenEntity.swift */,
+				187F71C5283D07340054309D /* PaymentMethodsViewModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		187F71BD283D064B0054309D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				187F71AB283D060D0054309D /* InvoiceSecondScreenRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		1AA4299199024FC77CE622D80C9E2BE3 /* PaymentLinkFirstScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +840,7 @@
 			isa = PBXGroup;
 			children = (
 				00C825FD00E3AE57033367726362057F /* InvoiceFirstScreenEntity.swift */,
+				187F71A1283B838E0054309D /* InvoiceFirstScreenViewModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -941,6 +1030,7 @@
 		567ACF53D4F2524025F744B947E562F0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				187F71A6283CEEB90054309D /* Date */,
 				A2996F884AC4D5B03C2C9BB315D0D5F2 /* UIApplication + TopViewController.swift */,
 				187F712D283A32890054309D /* UITextField.swift */,
 			);
@@ -1293,6 +1383,7 @@
 		E58BC858F98D93F49CCC9744511C533E /* InvoiceScreens */ = {
 			isa = PBXGroup;
 			children = (
+				187F71A7283D05C80054309D /* InvoiceSecondScreen */,
 				ED604462D88140EF8079D06BECDA5713 /* InvoiceFirstScreen */,
 			);
 			path = InvoiceScreens;
@@ -1682,6 +1773,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187F71B2283D060D0054309D /* InvoiceSecondScreenPresenter.swift in Sources */,
+				187F71B1283D060D0054309D /* InvoiceSecondScreenContainerView.swift in Sources */,
 				E94B77A0CB7D6C35DF73A00CA9DAA5F4 /* APIRequestBuilder.swift in Sources */,
 				7B0B76E0EA863580DB8C7AB2F053C80A /* APIRequestExecuter.swift in Sources */,
 				C26BFEB9BC53AEFD46A3322F70E5F43E /* APIRequestInterceptor.swift in Sources */,
@@ -1713,6 +1806,7 @@
 				AD8C3799F484F7AAAED57A3D046386F3 /* Int+HTTPStatusCode.swift in Sources */,
 				E4F8CDB2848BEBCC2AAE9D508EE3C8B7 /* InvoiceCodable.swift in Sources */,
 				2313954DEF6153037516D0654495616E /* InvoiceDeleteCodable.swift in Sources */,
+				187F71B7283D060D0054309D /* InvoiceSecondScreenEntity.swift in Sources */,
 				A62BF4E95CFBD05A6D83E5FB26513B09 /* InvoiceFirstScreenContainerView.swift in Sources */,
 				27FB4D7AF99F94987463C95C9C59B0D4 /* InvoiceFirstScreenEntity.swift in Sources */,
 				E1425C99FB5DACB5BBC55420B6868706 /* InvoiceFirstScreenInteractor.swift in Sources */,
@@ -1730,6 +1824,7 @@
 				30ECC538D0D12A0D37A7F2B7CE48BA7D /* LogoContainerView.swift in Sources */,
 				187F711D283A25A80054309D /* PaymentLinkSecondScreenContainerView.swift in Sources */,
 				956160ECC076188314C02716EABCB8CC /* MerchantCodable.swift in Sources */,
+				187F71B4283D060D0054309D /* InvoiceSecondScreenViewController.swift in Sources */,
 				05726AAE0F4BCF9949FF77BCD829A01C /* MerchantCreateCodable.swift in Sources */,
 				CAE886BA6B8A1BDE102D44E73C8ACB32 /* MerchantNetworking.swift in Sources */,
 				4C2165CC80C2756E5F9CD9B31F99B840 /* MerchantPaymentGatewayCodable.swift in Sources */,
@@ -1757,13 +1852,17 @@
 				2CE45C1DAAE8D474A65076597005DB94 /* PaymentLinkFirstScreenPresenter.swift in Sources */,
 				2B47FF91B6DF370716F731E52C588983 /* PaymentLinkFirstScreenProtocols.swift in Sources */,
 				11AA690E0AE6F7C4B0BEB7D19FF39438 /* PaymentLinkFirstScreenRouter.swift in Sources */,
+				187F71B5283D060D0054309D /* InvoiceSecondScreenProtocols.swift in Sources */,
 				DD9556A38A16527709F98E1AB8A8607A /* PaymentLinkFirstScreenViewController.swift in Sources */,
 				BE59ED4B7FA6D85A3189059ADF4428CD /* PaymentMethodCodable.swift in Sources */,
 				13554D13580E62F2FA38BCA93DB3C7D8 /* PaymentMethodNetworking.swift in Sources */,
 				187F712E283A32890054309D /* UITextField.swift in Sources */,
+				187F71A2283B838E0054309D /* InvoiceFirstScreenViewModel.swift in Sources */,
 				E123A7406A3A4131E45E148593D056E5 /* PaymentMethods.swift in Sources */,
 				5B8903C9E825CB68BEFF63531D0CCF7A /* PaymentMethodWorker.swift in Sources */,
+				187F71B3283D060D0054309D /* InvoiceSecondScreenRouter.swift in Sources */,
 				EA14DF1F7078E0F41A91A51850FE4067 /* PaymentNetworking.swift in Sources */,
+				187F71CD283D07340054309D /* PaymentMethodsViewModel.swift in Sources */,
 				9BF7A9B9E6ABB479E78CD47449326013 /* Payments.swift in Sources */,
 				C5FC7FEF43926169B0E428D842E87F16 /* PaymentWorker.swift in Sources */,
 				B118431ACDECB7BEEFB090EBD48C9C25 /* ProductDetailsView.swift in Sources */,
@@ -1774,6 +1873,7 @@
 				25616BBB8A93BAD4BCB8B9CA6C55C376 /* RequestRefundCodable.swift in Sources */,
 				724319B9C5491B126DB423F351DAC1C4 /* ResponseDataEmptyObject.swift in Sources */,
 				5C3CE3EE9991A8C50F804A2628372CDE /* ShippingAndRefundContainer.swift in Sources */,
+				187F71B6283D060D0054309D /* InvoiceSecondScreenInteractor.swift in Sources */,
 				187F711F283A25A80054309D /* PaymentLinkSecondScreenRouter.swift in Sources */,
 				97C1766A06221612D7545A4F9B023646 /* SingleStepView.swift in Sources */,
 				A49D5C3C88311F4256CF2CA1F359A158 /* StepsView.swift in Sources */,

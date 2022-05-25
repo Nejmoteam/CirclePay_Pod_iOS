@@ -7,12 +7,12 @@
 
 import Foundation
 public struct MerchantPaymentGatewayCodable:Codable {
-    let id:String?
-    let name:String?
-    let status:Bool?
-    let config:MerchantPaymentGatewayConfigure?
+   public let id:String?
+   public let name:String?
+   public let status:Bool?
+   public let config:MerchantPaymentGatewayConfigure?
 }
 
 public struct MerchantPaymentGatewayConfigure:Codable {
-    let apiKey:String?
+   public let apiKey:String?
 }

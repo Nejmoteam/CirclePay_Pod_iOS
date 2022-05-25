@@ -7,22 +7,22 @@
 
 import Foundation
 public struct InvoiceCodable:Codable {
-    let invoiceNumber:String?
-    let items: [InvoiceItemsCodable]?
-    let customerMobile:String?
-    let status:Int?
-    let createDate:String?
-    let dueDate:String?
-    let prefPaymenMethod:String?
-    let shippingFees:Double?
-    let discountValue:Double?
-    let discountType:String?
-    let discountValueCalculated:Double?
-    let tax:Double?
-    let taxValue:Double?
-    let shippingPolicy:String?
-    let returnPolicy:String?
-    let extraNotes:String?
+    public let invoiceNumber:String?
+    public let items: [InvoiceItemsCodable]?
+    public let customerMobile:String?
+    public let status:Int?
+    public let createDate:String?
+    public let dueDate:String?
+    public let prefPaymenMethod:String?
+    public let shippingFees:Double?
+    public let discountValue:Double?
+    public let discountType:String?
+    public let discountValueCalculated:Double?
+    public let tax:Double?
+    public let taxValue:Double?
+    public let shippingPolicy:String?
+    public let returnPolicy:String?
+    public let extraNotes:String?
     
     enum CodingKeys: String, CodingKey {
         case invoiceNumber = "invoice_number"
@@ -43,8 +43,17 @@ public struct InvoiceCodable:Codable {
 }
 
 public struct InvoiceItemsCodable:Codable {
-    let name:String?
-    let description:String?
-    let quantity:Int?
-    let price:Double?
+   public let name:String?
+   public let description:String?
+   public let quantity:Int?
+   public let price:Double?
+    
+    func getPrice() -> Double {
+        if Double(quantity ?? 0) != nil {
+            let totalPrice = Double(quantity ?? 0) * (price ?? 0.0)
+            return totalPrice
+        } else {
+            return 0.0
+        }
+    }
 }

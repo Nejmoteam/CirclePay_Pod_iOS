@@ -25,4 +25,10 @@ public struct GetCustomerCodable: Codable{
         case aptNumber = "apt_num"
         case email, country, governorate, city, address
     }
+    
+    public func getFullName() -> String {
+        let customerFirstName = self.firstName ?? ""
+        let customerLastName = self.lastName ?? ""
+        return  customerLastName + " " + customerLastName
+    }
 }
