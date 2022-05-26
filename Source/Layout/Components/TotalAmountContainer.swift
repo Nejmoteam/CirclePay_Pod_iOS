@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class TotalAmountViewContainer: UIView {
-    private lazy var keyValueViewContainer: KeyValueView = {
+    lazy var keyValueViewContainer: KeyValueView = {
         var container = KeyValueView(keyTitle: "Total Amount")
         container.valueLabel.text = "120 EGP"
         container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 18)

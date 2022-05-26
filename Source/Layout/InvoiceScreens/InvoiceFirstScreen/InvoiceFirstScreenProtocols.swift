@@ -16,6 +16,8 @@ protocol InvoiceFirstScreenViewProtocol: class {
     func configureDiscount(discountPercentage: String, value: String)
     func configureInvoiceDate(date: String)
     func configureSubTotal(subTotal: String)
+    func configureTotal(total: String)
+
 
 }
 protocol InvoiceFirstScreenPresenterProtocol {

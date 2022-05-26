@@ -88,6 +88,15 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
         }
     }
     
+    func configureTotal(total: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.totalAmountView.keyValueViewContainer.valueLabel.text = total + " EGP"
+        }
+    }
+    
     
 }
 

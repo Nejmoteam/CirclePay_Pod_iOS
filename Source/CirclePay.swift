@@ -21,15 +21,19 @@ public class CirclePay {
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
     public static var mode: Inviroment = .sandBox
     
+    public static var delegete: CirclePayDelegete?
+    
     public static func prepareSDK() {
         FontBlaster.debugEnabled = true
         FontBlaster.blast()
         
     }
-    
+
     public static func excutePayment(with paymentType: PaymentType) {
         switch paymentType {
         case .PaymentLink:
+            let error = CirclePayError(errorCode: 1, errorMsg: "Payment link not enabled yet , please contact the support.")
+            self.delegete?.didGetErrorAtCheckoutProcess(error: error)
             if let vc = UIApplication.shared.topMostViewController() {
                 let paymentLinkScreen = PaymentLinkFirstScreenRouter.createAnModule()
                 paymentLinkScreen.modalPresentationStyle = .fullScreen
@@ -99,6 +103,8 @@ public class CirclePay {
             }
         }
     }
+
+    
 }
 
 
@@ -113,4 +119,12 @@ public enum Inviroment: String {
 public enum PaymentType {
     case PaymentLink(paymentLinkUrl: String)
     case Invoice(invoiceNumber: String)
+}
+
+
+public protocol CirclePayDelegete {
+    func didGetErrorAtCheckoutProcess(error: CirclePayError)
+    func didPaidTransactionSucsessfully(transactionId: String)
+    func didGetErrorAtPayingTransaction(error: CirclePayError)
+
 }

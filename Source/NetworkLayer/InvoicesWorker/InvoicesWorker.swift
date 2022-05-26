@@ -7,7 +7,7 @@
 
 import Foundation
 protocol InvoicesWorkerProtocol {
-   func create(invoiceNumber:String?,items: [Items], customerMobile:String, status:Int?, createDate:String?, dueDate:String, prefPaymentMethod:String?, shippingFees:Double?, discountValue:Double?, discountType:String?, discountValueCalculated:Double?, tax:Double?, taxValue:Double?, shippingPolicy:String?, returnPolicy:String?, extraNotes:String?, completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[CreateInvoiceCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
+   func create(invoiceNumber:String?,items: [Items], customerMobile:String, status:Int?, createDate:String?, dueDate:String, prefPaymentMethod:String?, shippingFees:Double?, discountValue:Double?, discountType:String?, tax:Double?, taxValue:Double?, shippingPolicy:String?, returnPolicy:String?, extraNotes:String?, completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[CreateInvoiceCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
     
     func list(customerMobile:String?, completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[InvoiceCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
     func get(invoiceNumber:String, completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[InvoiceCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
@@ -16,8 +16,8 @@ protocol InvoicesWorkerProtocol {
 }
 
 class InvoicesWorker: APIRequestExecuter<InvoicesNetworking>, InvoicesWorkerProtocol {
-    func create(invoiceNumber: String?, items: [Items], customerMobile: String, status: Int?, createDate: String?, dueDate: String, prefPaymentMethod: String?, shippingFees: Double?, discountValue: Double?, discountType: String?, discountValueCalculated: Double?, tax: Double?, taxValue: Double?, shippingPolicy: String?, returnPolicy: String?, extraNotes: String?, completion:  @escaping (Result<BaseAPIRequestResponseModel<[CreateInvoiceCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
-        self.performRequest(target: .create(invoiceNumber: invoiceNumber, items: items, customerMobile: customerMobile, status: status, createDate: createDate, dueDate: dueDate, prefPaymentMethod: prefPaymentMethod, shippingFees: shippingFees, discountValue: discountValue, discountType: discountType, discountValueCalculated: discountValueCalculated, tax: tax, taxValue: taxValue, shippingPolicy: shippingPolicy, returnPolicy: returnPolicy, extraNotes: extraNotes), responseClass: BaseAPIRequestResponseModel<[CreateInvoiceCodable]>.self) { results in
+    func create(invoiceNumber: String?, items: [Items], customerMobile: String, status: Int?, createDate: String?, dueDate: String, prefPaymentMethod: String?, shippingFees: Double?, discountValue: Double?, discountType: String?, tax: Double?, taxValue: Double?, shippingPolicy: String?, returnPolicy: String?, extraNotes: String?, completion:  @escaping (Result<BaseAPIRequestResponseModel<[CreateInvoiceCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
+        self.performRequest(target: .create(invoiceNumber: invoiceNumber, items: items, customerMobile: customerMobile, status: status, createDate: createDate, dueDate: dueDate, prefPaymentMethod: prefPaymentMethod, shippingFees: shippingFees, discountValue: discountValue, discountType: discountType, tax: tax, taxValue: taxValue, shippingPolicy: shippingPolicy, returnPolicy: returnPolicy, extraNotes: extraNotes), responseClass: BaseAPIRequestResponseModel<[CreateInvoiceCodable]>.self) { results in
             completion(results)
         }
     }
