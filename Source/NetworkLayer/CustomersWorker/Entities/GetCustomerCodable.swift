@@ -29,6 +29,6 @@ public struct GetCustomerCodable: Codable{
     public func getFullName() -> String {
         let customerFirstName = self.firstName ?? ""
         let customerLastName = self.lastName ?? ""
-        return  customerLastName + " " + customerLastName
+        return  customerFirstName + " " + customerLastName
     }
 }

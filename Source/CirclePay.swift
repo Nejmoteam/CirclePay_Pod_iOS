@@ -7,6 +7,7 @@
 
 import Foundation
 import FontBlaster
+import IQKeyboardManagerSwift
 public class CirclePay {
     public static var merchantToken:String = ""
     public static var accountToken:String = ""
@@ -26,6 +27,7 @@ public class CirclePay {
     public static func prepareSDK() {
         FontBlaster.debugEnabled = true
         FontBlaster.blast()
+        IQKeyboardManager.shared.enable = true
         
     }
 

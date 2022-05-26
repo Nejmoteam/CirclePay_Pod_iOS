@@ -30,14 +30,14 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     
      lazy var billedFromView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Billed From :")
-        container.valueLabel.text = "Mahmoud Allam"
+        container.valueLabel.text = " "
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
     
      lazy var billedToView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Billed To :")
-        container.valueLabel.text = "CirclePay Inc"
+        container.valueLabel.text = ""
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
@@ -50,15 +50,15 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     
      lazy var subTotalView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Sub Total :")
-        container.valueLabel.text = "120 EGP"
+        container.valueLabel.text = ""
         container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
     
      lazy var taxView: KeyValueView = {
-        var container = KeyValueView(keyTitle: "Tax (14%) :")
-        container.valueLabel.text = "45 EGP"
+        var container = KeyValueView(keyTitle: "")
+        container.valueLabel.text = ""
         container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
@@ -66,15 +66,15 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     
      lazy var shippingView: KeyValueView = {
         var container = KeyValueView(keyTitle: "Shipping :")
-        container.valueLabel.text = "35 EGP"
+        container.valueLabel.text = ""
         container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
     
      lazy var discuntView: KeyValueView = {
-        var container = KeyValueView(keyTitle: "Discount (5%) :")
-        container.valueLabel.text = "120 EGP"
+        var container = KeyValueView(keyTitle: "")
+        container.valueLabel.text = ""
         container.keyLabel.font = UIFont(name: FontType.regularFont.name, size: 16)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
@@ -89,7 +89,7 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     
      lazy var invoiceDetails: ProductDetailsView = {
         var view = ProductDetailsView()
-        view.productQuantityLabel.text = "Valid till 20/6/2022"
+        view.productQuantityLabel.text = ""
             view.productNameView.keyLabel.text = "View Invoice Details >"
         view.productNameView.valueLabel.isHidden = true
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -56,13 +56,17 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
             self.containerView.shippingView.valueLabel.text = shippingValue + " EGP"
         }
     }
-    func configureDiscount(discountPercentage: String, value: String) {
+    func configureDiscount(discountType: DiscountTypes, discountValue:String,  value: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
                 return
             }
             self.containerView.discuntView.valueLabel.text = value + " EGP"
-            self.containerView.discuntView.keyLabel.text = "Discount (\(discountPercentage))%"
+            if discountType == .percentage {
+                self.containerView.discuntView.keyLabel.text = "Discount (\(discountValue))%"
+            } else {
+                self.containerView.discuntView.keyLabel.text = "Discount"
+            }
 
         }
 
@@ -73,7 +77,7 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
             guard let self = self else {
                 return
             }
-            self.containerView.invoiceDetails.productQuantityLabel.text = date
+            self.containerView.invoiceDetails.productQuantityLabel.text = "Valid till " + date
         }
     }
     

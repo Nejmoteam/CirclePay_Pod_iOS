@@ -32,12 +32,6 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
     }
     func viewDidLoad() {
         print("ViewDidLoad")
-//        if let unwrappedDelegete = self.delegete {
-//           unwrappedDelegete.didGetErrorAtCheckoutProcess(error: CirclePayError(errorCode: 0, errorMsg: "Something went error while executing checkout screens"))
-//        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: CirclePayError(errorCode: 0, errorMsg: "Something went error while executing checkout screens"))
-        }
         print(invoiceViewModel.invoiceDetails)
         print(invoiceViewModel.merchantDetails)
         CirclePay.customers.getCustomer(mobileNumber: invoiceViewModel.invoiceDetails.customerMobile ?? "") { customer, err in
@@ -68,7 +62,16 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
                 
                 
                 //DISCOUNT
-                self.view?.configureDiscount(discountPercentage: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.discunt)")
+                if self.invoiceViewModel.invoiceDetails.discountType == DiscountTypes.percentage.rawValue {
+                    self.view?.configureDiscount(discountType: .percentage, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
+                } else {
+                    self.view?.configureDiscount(discountType: .fixed, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
+
+                }
+                
+                
+                
+//                self.view?.configureDiscount(discountPercentage: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.discunt)")
 
                 
                 

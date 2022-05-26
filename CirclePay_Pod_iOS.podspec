@@ -40,6 +40,8 @@ Pod::Spec.new do |s|
    s.frameworks = 'UIKit'
    s.dependency 'Alamofire', '5.4.1'
    s.dependency "FontBlaster" , '5.3.0'
+   s.dependency 'IQKeyboardManagerSwift', '6.5.0'
+
 
    
   # s.dependency 'AFNetworking', '~> 2.3'

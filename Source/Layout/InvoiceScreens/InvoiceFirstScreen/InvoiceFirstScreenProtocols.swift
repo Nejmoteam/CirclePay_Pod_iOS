@@ -13,7 +13,7 @@ protocol InvoiceFirstScreenViewProtocol: class {
     func configureTaxView(taxValue: String, taxPersentage: String)
     
     func configureShipping(shippingValue: String)
-    func configureDiscount(discountPercentage: String, value: String)
+    func configureDiscount(discountType: DiscountTypes, discountValue:String, value: String)
     func configureInvoiceDate(date: String)
     func configureSubTotal(subTotal: String)
     func configureTotal(total: String)
