@@ -154,6 +154,32 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
     @objc func didTappedPay() {
         self.presenter.onTapPay()
     }
+    
+    func setupCustomerData(customer: CustomerViewModel) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.fullDataView.firstNameTextField.text = customer.firstName
+            self.fullDataView.lastNameTextField.text = customer.lastName
+            self.contactsView.phoneTextFieldView.countryView.country.text = customer.countryCode
+            self.contactsView.phoneTextFieldView.countryView.country.textColor = ColorTypes.GrayPrimary700.value
+            self.contactsView.phoneTextFieldView.isUserInteractionEnabled = false
+            let attributedString = NSMutableAttributedString(string: customer.phoneNumber)
+            if attributedString.length > 2 {
+                attributedString.addAttribute(NSAttributedString.Key.kern, value: CGFloat(8.0), range: NSRange(location: 2, length: 1))
+            }
+            if attributedString.length > 5 {
+                attributedString.addAttribute(NSAttributedString.Key.kern, value: CGFloat(8.0), range: NSRange(location: 5, length: 1))
+            }
+            self.contactsView.phoneTextFieldView.phoneTextField.attributedText = attributedString
+            self.contactsView.emailTextField.text = customer.email
+            self.addressDetailsView.selectCountryField.text = customer.country
+            self.addressDetailsView.selectCityField.text = customer.city
+            self.addressDetailsView.appartmentNumberField.text = customer.aptNumber
+            self.addressDetailsView.extraDetailsField.text = customer.extraDetails
+        }
+    }
 }
 
 

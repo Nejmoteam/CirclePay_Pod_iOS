@@ -34,4 +34,8 @@ class InvoiceSecondScreenViewController: UIViewController, InvoiceSecondScreenVi
             self.containerView.paymentMethodsView.tableView.reloadData()
         }
     }
+    
+    func setupCustomerData(customer: CustomerViewModel) {
+        self.containerView.setupCustomerData(customer: customer)
+    }
 }
