@@ -163,6 +163,7 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
             self.fullDataView.firstNameTextField.text = customer.firstName
             self.fullDataView.lastNameTextField.text = customer.lastName
             self.contactsView.phoneTextFieldView.countryView.country.text = customer.countryCode
+            self.contactsView.phoneTextFieldView.countryView.country.textColor = ColorTypes.GrayPrimary700.value
             self.contactsView.phoneTextFieldView.isUserInteractionEnabled = false
             let attributedString = NSMutableAttributedString(string: customer.phoneNumber)
             if attributedString.length > 2 {
