@@ -31,6 +31,10 @@ class InvoiceDetailsPresenter: InvoiceDetailsPresenterProtocol, InvoiceDetailsIn
         router.dismissView()
     }
     
+    func numberOfItems() -> Int {
+        return invoiceViewModel.invoiceDetails.items?.count ?? 0
+    }
+    
     func configureCell(cell: InvoiceDetailsPaymentSammaryTableViewCellView) {
         cell.configurePaymentSummery(billedFrom: customer.getFullName(), billedTo: invoiceViewModel.merchantDetails.businessName ?? "")
         cell.configureTaxView(taxValue: "\(self.invoiceViewModel.invoiceDetails.taxValue ?? 0.0)", taxPersentage: "\(self.invoiceViewModel.invoiceDetails.tax ?? 0.0)")

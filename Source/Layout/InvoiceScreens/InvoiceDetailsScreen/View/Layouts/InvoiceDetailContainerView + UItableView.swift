@@ -17,7 +17,7 @@ extension InvoiceDetailsContainerView: UITableViewDataSource, UITableViewDelegat
         if section == 0 {
             return 1
         } else {
-            return 4
+            return presenter.numberOfItems()
         }
     }
     

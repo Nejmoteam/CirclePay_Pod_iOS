@@ -18,6 +18,7 @@ protocol InvoiceDetailsPresenterProtocol {
     func dismissView()
     func configureCell(cell:InvoiceDetailsPaymentSammaryTableViewCellView)
     func configureCell(cell:InvoiceDetailsProductTableViewCellView, at indexPath:IndexPath)
+    func numberOfItems() -> Int
 }
 protocol InvoiceDetailsRouterProtocol {
     func dismissView()
