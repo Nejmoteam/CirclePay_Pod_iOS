@@ -24,9 +24,15 @@ extension InvoiceDetailsContainerView: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(InvoiceDetailsPaymentSammaryTableViewCell.self), for: indexPath) as? InvoiceDetailsPaymentSammaryTableViewCell ?? UITableViewCell()
+            if let UnwrappedCell = cell as? InvoiceDetailsPaymentSammaryTableViewCellView {
+                self.presenter.configureCell(cell: UnwrappedCell)
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(InvoiceDetailsProductTableViewCell.self), for: indexPath) as? InvoiceDetailsProductTableViewCell ?? UITableViewCell()
+            if let unwrappedCell = cell as? InvoiceDetailsProductTableViewCellView {
+                self.presenter.configureCell(cell: unwrappedCell, at: indexPath)
+            }
             return cell
         }
     }

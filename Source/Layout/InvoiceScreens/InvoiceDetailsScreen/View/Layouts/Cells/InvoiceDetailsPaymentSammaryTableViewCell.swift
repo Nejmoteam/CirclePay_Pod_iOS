@@ -180,3 +180,70 @@ class InvoiceDetailsPaymentSammaryTableViewCell: UITableViewCell {
         ])
     }
 }
+
+extension InvoiceDetailsPaymentSammaryTableViewCell: InvoiceDetailsPaymentSammaryTableViewCellView {
+    func configurePaymentSummery(billedFrom: String, billedTo: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.billedFromView.valueLabel.text = billedFrom
+            self.billedToView.valueLabel.text = billedTo
+            
+        }
+    }
+    
+    func configureSubTotal(subTotal: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.subTotalView.valueLabel.text = subTotal  + " EGP"
+        }
+    }
+    
+    
+    func configureShipping(shippingValue: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.shippingView.valueLabel.text = shippingValue + " EGP"
+        }
+    }
+    func configureDiscount(discountType: DiscountTypes, discountValue:String,  value: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.discountView.valueLabel.text = discountValue + " EGP"
+            if discountType == .percentage {
+                self.discountView.keyLabel.text = "Discount (\(value))%"
+            } else {
+                self.discountView.keyLabel.text = "Discount"
+            }
+
+        }
+
+    }
+    
+    func configureTaxView(taxValue: String, taxPersentage: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.taxView.keyLabel.text = "Tax (\(taxPersentage))%"
+            self.taxView.valueLabel.text = taxValue + " EGP"
+            
+        }
+    }
+    
+    func configureTotal(total: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.totalAmountView.keyValueViewContainer.valueLabel.text = total + " EGP"
+        }
+    }
+}
