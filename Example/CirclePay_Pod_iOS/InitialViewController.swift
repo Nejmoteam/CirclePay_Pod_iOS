@@ -42,7 +42,7 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        invoiceNumber = "CIR_INV_1653395307317"
+        //invoiceNumber = "CIR_INV_1653563454665"
         self.setupButtons()
         
         
@@ -69,12 +69,15 @@ class InitialViewController: UIViewController {
     
     @objc func userPressedCreateInvoice() {
         if let unwrappedInvoiceNumber = self.invoiceNumber {
+            CirclePay.delegete = self
             CirclePay.excutePayment(with: .Invoice(invoiceNumber: unwrappedInvoiceNumber))
             return
         }
-        let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 220, itemQuantity: 2), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 140, itemQuantity: 4)]
+        let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 220, itemQuantity: 2), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 140, itemQuantity: 4),Items(itemDescription: "Testing Description 3", itemnName: "Testing ItemName 3", itemPrice: 600, itemQuantity: 1)]
+        
+        
         self.view.showActivityIndicator(with: ._default, isUserInteractionEnabled: false, frame: self.view.frame, color: #colorLiteral(red: 0, green: 0.4588235294, blue: 0.8901960784, alpha: 1))
-        CirclePay.invoices.createInvoice(invoiceNumber: nil, items: items, customerMobile: "+201157818027", status: nil, createDate: nil, dueDate: "2022-6-6", prefPaymentMethod: nil, shippingFees: 15, discountValue: 2, discountType: "percentage", discountValueCalculated: nil, tax: 5, taxValue: nil, shippingPolicy: "Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy", returnPolicy: "return Policy return Policy return Policy return Policyreturn Policyreturn Policy return Policy return Policy", extraNotes: nil) { createdInvoice, err in
+        CirclePay.invoices.createInvoice(invoiceNumber: nil, items: items, customerMobile: "+201157818027", status: nil, createDate: nil, dueDate: "2022-6-6", prefPaymentMethod: nil, shippingFees: 15, discountValue: 2, discountType: "percentage",  tax: 5, taxValue: nil, shippingPolicy: "Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy", returnPolicy: "return Policy return Policy return Policy return Policyreturn Policyreturn Policy return Policy return Policy", extraNotes: nil) { createdInvoice, err in
             self.view.removeActivityIndicator()
             if err != nil {
                 print(err)
@@ -104,7 +107,16 @@ class InitialViewController: UIViewController {
     }
     
     @objc func userPressedCreatePaymentLink() {
+        
+        self.showLoading()
         CirclePay.excutePayment(with: .PaymentLink(paymentLinkUrl: ""))
+    }
+    
+    func showLoading() {
+        
+    }
+    func hideLoading() {
+        
     }
     
     private func setupButtons() {
@@ -175,3 +187,20 @@ class InitialViewController: UIViewController {
 
 
 
+
+extension InitialViewController: CirclePayDelegete {
+    func didGetErrorAtCheckoutProcess(error: CirclePayError) {
+        print(error.errorMsg)
+    }
+    
+    func didPaidTransactionSucsessfully(transactionId: String) {
+    }
+    
+    func didGetErrorAtPayingTransaction(error: CirclePayError) {
+        print(error.errorMsg)
+    }
+    
+
+    
+    
+}

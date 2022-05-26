@@ -20,12 +20,12 @@ public struct InvoiceFirstScreenViewModel {
     
     func getDiscuntValue() -> Double {
         if let discountType = invoiceDetails.discountType {
-            if discountType  == "Percentage" {
-                if let discountValue = invoiceDetails.discountValue {
+            if let discountValue = invoiceDetails.discountValue {
+                if discountType  == "percentage" {
                     let discountInDouble = (discountValue / 100) * self.getInvoiceSubTotal()
                     return discountInDouble
                 } else {
-                    return 0.0
+                    return discountValue
                 }
             } else {
                 return 0.0
@@ -45,5 +45,15 @@ public struct InvoiceFirstScreenViewModel {
         } else {
             return 0.0
         }
+    }
+    
+    func getTotal() -> Double {
+        let subTotal = self.getInvoiceSubTotal()
+        let tax = self.getTax()
+        let discount = self.getDiscuntValue()
+        let shipping = self.invoiceDetails.shippingFees ?? 0.0
+        let totalBeforeDiscount = subTotal + tax + shipping
+        let total = totalBeforeDiscount - discount
+        return total
     }
 }

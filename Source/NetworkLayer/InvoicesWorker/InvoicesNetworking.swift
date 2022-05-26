@@ -8,7 +8,7 @@
 import Alamofire
 import Foundation
 enum InvoicesNetworking {
-    case create(invoiceNumber:String?,items: [Items], customerMobile:String, status:Int?, createDate:String?, dueDate:String, prefPaymentMethod:String?, shippingFees:Double?, discountValue:Double?, discountType:String?, discountValueCalculated:Double?, tax:Double?, taxValue:Double?, shippingPolicy:String?, returnPolicy:String?, extraNotes:String?)
+    case create(invoiceNumber:String?,items: [Items], customerMobile:String, status:Int?, createDate:String?, dueDate:String, prefPaymentMethod:String?, shippingFees:Double?, discountValue:Double?, discountType:String?, tax:Double?, taxValue:Double?, shippingPolicy:String?, returnPolicy:String?, extraNotes:String?)
     
     case list(customerMobile:String?)
     case get(invoiceNumber:String)
@@ -53,7 +53,7 @@ extension InvoicesNetworking: APIRequestBuilder {
 
     var task: Task {
         switch self {
-        case let .create(invoiceNumber, items, customerMobile, status, createDate, dueDate, prefPaymentMethod, shippingFees, discountValue, discountType, discountValueCalculated, tax, taxValue, shippingPolicy, returnPolicy, extraNotes):
+        case let .create(invoiceNumber, items, customerMobile, status, createDate, dueDate, prefPaymentMethod, shippingFees, discountValue, discountType, tax, taxValue, shippingPolicy, returnPolicy, extraNotes):
             var params = ["customer_mobile":customerMobile, "due_date": dueDate] as [String : Any]
             var itemsArray = Array<Any>()
             for item in items {
@@ -82,9 +82,9 @@ extension InvoicesNetworking: APIRequestBuilder {
             if let unwrappedDiscountType = discountType {
                 params["discount_type"] = unwrappedDiscountType
             }
-            if let unwrappedDiscountValueCalculated = discountValueCalculated {
-                params["discount_value_calculated"] = unwrappedDiscountValueCalculated
-            }
+//            if let unwrappedDiscountValueCalculated = discountValueCalculated {
+//                params["discount_value_calculated"] = unwrappedDiscountValueCalculated
+//            }
             if let unwrappedTax = tax {
                 params["tax"] = unwrappedTax
             }

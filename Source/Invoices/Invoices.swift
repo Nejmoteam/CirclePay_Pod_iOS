@@ -7,7 +7,7 @@
 
 import Foundation
 public protocol InvoicesProtocol {
-    func createInvoice(invoiceNumber:String?,items: [Items], customerMobile:String, status:Int?, createDate:String?, dueDate:String, prefPaymentMethod:String?, shippingFees:Double?, discountValue:Double?, discountType:String?, discountValueCalculated:Double?, tax:Double?, taxValue:Double?, shippingPolicy:String?, returnPolicy:String?, extraNotes:String?, completion: @escaping (CreateInvoiceCodable?, CirclePayError?) -> Void)
+    func createInvoice(invoiceNumber:String?,items: [Items], customerMobile:String, status:Int?, createDate:String?, dueDate:String, prefPaymentMethod:String?, shippingFees:Double?, discountValue:Double?, discountType:String?, tax:Double?, taxValue:Double?, shippingPolicy:String?, returnPolicy:String?, extraNotes:String?, completion: @escaping (CreateInvoiceCodable?, CirclePayError?) -> Void)
     func createInvoice(items: [Items], customerMobile:String, dueDate:String, completion: @escaping (CreateInvoiceCodable?, CirclePayError?) -> Void)
     
     
@@ -21,8 +21,8 @@ public protocol InvoicesProtocol {
 public class Invoices: InvoicesProtocol {
     private let invoiceWorker: InvoicesWorkerProtocol = InvoicesWorker()
     
-    public func createInvoice(invoiceNumber: String? = "", items: [Items], customerMobile: String, status: Int?, createDate: String?, dueDate: String, prefPaymentMethod: String?, shippingFees: Double?, discountValue: Double?, discountType: String?, discountValueCalculated: Double?, tax: Double?, taxValue: Double?, shippingPolicy: String?, returnPolicy: String?, extraNotes: String?, completion: @escaping (CreateInvoiceCodable?, CirclePayError?) -> Void) {
-        invoiceWorker.create(invoiceNumber: invoiceNumber, items: items, customerMobile: customerMobile, status: status, createDate: createDate, dueDate: dueDate, prefPaymentMethod: prefPaymentMethod, shippingFees: shippingFees, discountValue: discountValue, discountType: discountType, discountValueCalculated: discountValueCalculated, tax: tax, taxValue: taxValue, shippingPolicy: shippingPolicy, returnPolicy: returnPolicy, extraNotes: extraNotes) { results in
+    public func createInvoice(invoiceNumber: String? = "", items: [Items], customerMobile: String, status: Int?, createDate: String?, dueDate: String, prefPaymentMethod: String?, shippingFees: Double?, discountValue: Double?, discountType: String?, tax: Double?, taxValue: Double?, shippingPolicy: String?, returnPolicy: String?, extraNotes: String?, completion: @escaping (CreateInvoiceCodable?, CirclePayError?) -> Void) {
+        invoiceWorker.create(invoiceNumber: invoiceNumber, items: items, customerMobile: customerMobile, status: status, createDate: createDate, dueDate: dueDate, prefPaymentMethod: prefPaymentMethod, shippingFees: shippingFees, discountValue: discountValue, discountType: discountType, tax: tax, taxValue: taxValue, shippingPolicy: shippingPolicy, returnPolicy: returnPolicy, extraNotes: extraNotes) { results in
             switch results {
             case let .success(model):
                 if model?.isError == true {
@@ -38,7 +38,7 @@ public class Invoices: InvoicesProtocol {
     
     
     public func createInvoice(items: [Items], customerMobile: String, dueDate: String, completion: @escaping (CreateInvoiceCodable?, CirclePayError?) -> Void) {
-        invoiceWorker.create(invoiceNumber: nil, items: items, customerMobile: customerMobile, status: nil, createDate: nil, dueDate: dueDate, prefPaymentMethod: nil, shippingFees: nil, discountValue: nil, discountType: nil, discountValueCalculated: nil, tax: nil, taxValue: nil, shippingPolicy: nil, returnPolicy: nil, extraNotes: nil) { results in
+        invoiceWorker.create(invoiceNumber: nil, items: items, customerMobile: customerMobile, status: nil, createDate: nil, dueDate: dueDate, prefPaymentMethod: nil, shippingFees: nil, discountValue: nil, discountType: nil, tax: nil, taxValue: nil, shippingPolicy: nil, returnPolicy: nil, extraNotes: nil) { results in
             switch results {
             case let .success(model):
                 if model?.isError == true {
