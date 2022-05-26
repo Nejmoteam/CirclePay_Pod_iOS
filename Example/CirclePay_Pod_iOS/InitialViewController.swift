@@ -42,7 +42,7 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //invoiceNumber = "CIR_INV_1653563454665"
+        invoiceNumber = "CIR_INV_1653564882593"
         self.setupButtons()
         
         
