@@ -30,4 +30,25 @@ class InvoiceDetailsPresenter: InvoiceDetailsPresenterProtocol, InvoiceDetailsIn
     func dismissView() {
         router.dismissView()
     }
+    
+    func numberOfItems() -> Int {
+        return invoiceViewModel.invoiceDetails.items?.count ?? 0
+    }
+    
+    func configureCell(cell: InvoiceDetailsPaymentSammaryTableViewCellView) {
+        cell.configurePaymentSummery(billedFrom: customer.getFullName(), billedTo: invoiceViewModel.merchantDetails.businessName ?? "")
+        cell.configureTaxView(taxValue: "\(self.invoiceViewModel.invoiceDetails.taxValue ?? 0.0)", taxPersentage: "\(self.invoiceViewModel.invoiceDetails.tax ?? 0.0)")
+        cell.configureShipping(shippingValue: "\(invoiceViewModel.invoiceDetails.shippingFees ?? 0.0)")
+        cell.configureDiscount(discountType: .percentage, discountValue:"\(self.invoiceViewModel.invoiceDetails.discountValueCalculated ?? 0.0)", value: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)")
+        cell.configureSubTotal(subTotal: "\(self.invoiceViewModel.getInvoiceSubTotal())")
+        cell.configureTotal(total: "\(invoiceViewModel.getTotal())")
+    }
+    
+    func configureCell(cell: InvoiceDetailsProductTableViewCellView, at indexPath: IndexPath) {
+        guard let items = invoiceViewModel.invoiceDetails.items, !items.isEmpty, indexPath.item < items.count else {
+            return
+        }
+        cell.configCell(product: items[indexPath.item])
+    }
+    
 }

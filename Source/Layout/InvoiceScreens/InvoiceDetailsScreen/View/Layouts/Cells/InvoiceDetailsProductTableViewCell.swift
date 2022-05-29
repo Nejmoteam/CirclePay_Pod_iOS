@@ -45,3 +45,17 @@ class InvoiceDetailsProductTableViewCell: UITableViewCell {
         ])
     }
 }
+
+
+extension InvoiceDetailsProductTableViewCell: InvoiceDetailsProductTableViewCellView {
+    func configCell(product: InvoiceItemsCodable) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.productDetailsView.productNameView.keyLabel.text = product.name
+            self.productDetailsView.productNameView.valueLabel.text = "\(product.getPrice())"
+            self.productDetailsView.productQuantityLabel.text = "\(product.quantity ?? 0) X \(product.price ?? 0.0)"
+        }
+    }
+}

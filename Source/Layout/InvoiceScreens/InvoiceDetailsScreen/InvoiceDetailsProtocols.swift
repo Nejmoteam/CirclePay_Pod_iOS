@@ -16,6 +16,9 @@ protocol InvoiceDetailsPresenterProtocol {
     
     func viewDidLoad()
     func dismissView()
+    func configureCell(cell:InvoiceDetailsPaymentSammaryTableViewCellView)
+    func configureCell(cell:InvoiceDetailsProductTableViewCellView, at indexPath:IndexPath)
+    func numberOfItems() -> Int
 }
 protocol InvoiceDetailsRouterProtocol {
     func dismissView()
@@ -24,4 +27,18 @@ protocol InvoiceDetailsInteractorInPutProtocol {
     var presenter: InvoiceDetailsInteractorOutPutProtocol? {get set}
 }
 protocol InvoiceDetailsInteractorOutPutProtocol:class {
+}
+
+protocol InvoiceDetailsPaymentSammaryTableViewCellView {
+    func configurePaymentSummery(billedFrom: String, billedTo: String)
+    func configureTaxView(taxValue: String, taxPersentage: String)
+    func configureShipping(shippingValue: String)
+    func configureDiscount(discountType: DiscountTypes, discountValue:String, value: String)
+    func configureSubTotal(subTotal: String)
+    func configureTotal(total: String)
+}
+
+
+protocol InvoiceDetailsProductTableViewCellView {
+    func configCell(product: InvoiceItemsCodable)
 }
