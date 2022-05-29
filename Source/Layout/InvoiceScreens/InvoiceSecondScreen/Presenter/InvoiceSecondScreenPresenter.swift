@@ -10,11 +10,13 @@
 import Foundation
 class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, InvoiceSecondScreenInteractorOutPutProtocol {
     
+    
     weak var view: InvoiceSecondScreenViewProtocol?
     private let interactor: InvoiceSecondScreenInteractorInPutProtocol
     private let router: InvoiceSecondScreenRouterProtocol
     var invoiceViewModel: InvoiceFirstScreenViewModel
     var customer: GetCustomerCodable
+    var updatedCustomerData: GetCustomerCodable?
     var methodsViewModel = [PaymentMethodsViewModel]()
     var selectedPaymentMethod: PaymentMethodsViewModel?
     
@@ -65,14 +67,20 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             return
         }
         self.selectedPaymentMethod = self.methodsViewModel[indexPath.item]
+        self.view?.enablePayButton()
     }
     
     func onTapPay() {
-        guard self.selectedPaymentMethod != nil else {
+        self.updatedCustomerData?.mobileNumber = self.customer.mobileNumber
+        self.updatedCustomerData?.governorate = self.customer.governorate
+        guard self.selectedPaymentMethod != nil , self.updatedCustomerData?.mobileNumber != nil else {
             //Show error
             return
         }
-        self.payInvoice()
+        self.view?.showLoadingForPayButton()
+        self.view?.disablePayButton()
+        // pay invoice , update customer
+        self.handleTappingOnPayButton()
         
     }
     
@@ -99,15 +107,34 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
         }
     }
     
-    func payInvoice() {
+    private func handleTappingOnPayButton() {
+        let dispatchGroup = DispatchGroup()
+        var iframeURL  = ""
+        dispatchGroup.enter()
+        CirclePay.customers.updateCustomer(firstName: self.updatedCustomerData?.firstName ?? "", lastName: self.updatedCustomerData?.lastName ?? "", address: self.updatedCustomerData?.address ?? "", country: self.updatedCustomerData?.country ?? "", governorate: self.updatedCustomerData?.governorate ?? "", city: self.updatedCustomerData?.city ?? "", aptNumber: self.updatedCustomerData?.aptNumber ?? "", email: self.updatedCustomerData?.email ?? "", mobileNumber: self.updatedCustomerData?.mobileNumber ?? "") { customerData, error in
+            dispatchGroup.leave()
+        }
+        dispatchGroup.enter()
         CirclePay.invoices.payInvoice(invoiceNumber: self.invoiceNumber, customerMobile: self.customerNumber, paymentMethodId: self.selectedPaymentMethod?.paymentMethodId) { invoiceData, err in
-            if err == nil {
-                let url = invoiceData?.invoiceUrl
-                print(url ?? "can't find url")
-                //Open with webView
+            if let unwrappedError = err {
+                CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
+                self.view?.hideLoadingForPayButton()
+                dispatchGroup.leave()
             } else {
-                
+                let url = invoiceData?.invoiceUrl
+                iframeURL = url ?? ""
+                dispatchGroup.leave()
             }
+        }
+        dispatchGroup.notify(queue: .main) {
+            guard iframeURL != "" else {
+                return
+            }
+            // OPEN WEB VIEW WITH IFRAME URL
+            self.view?.hideLoadingForPayButton()
+            self.view?.enablePayButton()
+            self.view?.openIframeViaSafari(iframeUrl: iframeURL)
         }
     }
 }
+

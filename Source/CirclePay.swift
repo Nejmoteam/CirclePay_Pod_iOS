@@ -46,20 +46,24 @@ public class CirclePay {
         case let .Invoice(invoiceNumber):
             if let vc = UIApplication.shared.topMostViewController() {
                 CirclePay.getInvoiceDetails(invoiceNumber: invoiceNumber) { viewModel, err in
-                    if err != nil {
+                    if let unwrappedError = err {
                         print("Throw an error here")
+                        CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
                     } else {
                         if let unwrappedViewModel = viewModel {
                             let invoiceFirstScreen = InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel)
                             invoiceFirstScreen.modalPresentationStyle = .fullScreen
                             vc.present(invoiceFirstScreen, animated: true, completion: nil)
                         } else {
-                            print("Throw an error here")
+                            let error = CirclePayError(errorCode: 20000, errorMsg: "Something went wrong, please try again.")
+                            CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
                         }
                     }
                 }
             } else {
                 print("failed to get top view Controller")
+                let error = CirclePayError(errorCode: 20000, errorMsg: "Can't get your top most ViewController")
+                CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
             }
         }
     }

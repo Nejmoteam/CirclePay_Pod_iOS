@@ -69,6 +69,7 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
         let button = ButtonsContainerView()
         button.nextButton.setTitle("Pay", for: .normal)
         button.nextButton.addTarget(self, action: #selector(didTappedPay), for: .touchUpInside)
+        button.nextButton.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -164,6 +165,7 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
     }
     
     @objc func didTappedPay() {
+        self.presenter.updatedCustomerData = GetCustomerCodable(firstName: self.fullDataView.firstNameTextField.text, lastName: self.fullDataView.lastNameTextField.text, email: self.contactsView.emailTextField.text, mobileNumber: nil, country: self.addressDetailsView.selectCountryField.text, governorate: nil, city: self.addressDetailsView.selectCityField.text, address: self.addressDetailsView.extraDetailsField.text, aptNumber: self.addressDetailsView.appartmentNumberField.text)
         self.presenter.onTapPay()
     }
     

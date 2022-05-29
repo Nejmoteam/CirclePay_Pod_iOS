@@ -12,6 +12,11 @@ protocol InvoiceSecondScreenViewProtocol: AnyObject {
     
     func reloadPaymentMethodsData()
     func setupCustomerData(customer:CustomerViewModel)
+    func openIframeViaSafari(iframeUrl: String)
+    func showLoadingForPayButton()
+    func hideLoadingForPayButton()
+    func enablePayButton()
+    func disablePayButton()
 }
 protocol InvoiceSecondScreenPresenterProtocol {
     var view: InvoiceSecondScreenViewProtocol? {get set}
@@ -21,6 +26,7 @@ protocol InvoiceSecondScreenPresenterProtocol {
     func didSelectPaymentMethod(at indexPath: IndexPath)
     func onTapPay()
     func didChangeCountry(countryName: String)
+    var updatedCustomerData : GetCustomerCodable? {get set}
 }
 protocol InvoiceSecondScreenRouterProtocol {
 }

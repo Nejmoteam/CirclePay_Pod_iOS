@@ -35,39 +35,27 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
         print(invoiceViewModel.invoiceDetails)
         print(invoiceViewModel.merchantDetails)
         CirclePay.customers.getCustomer(mobileNumber: invoiceViewModel.invoiceDetails.customerMobile ?? "") { customer, err in
-            if err != nil {
-                
+            if let unwrappedError = err {
+                CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
             } else {
                 self.customer = customer
                 //Sammery
                 self.view?.configurePaymentSummery(billedFrom: customer?.getFullName() ?? "", billedTo: self.invoiceViewModel.merchantDetails.businessName ?? "")
-                
                 //TOTAL
                 self.view?.configureTotal(total: "\(self.invoiceViewModel.getTotal())")
-                
-                
-                
                 //SUBTOTAL
                 self.view?.configureSubTotal(subTotal: "\(self.subTotal)")
-                
-                
                 //TAX
                 self.view?.configureTaxView(taxValue: "\(self.tax)", taxPersentage: "\((self.invoiceViewModel.invoiceDetails.tax ?? 0.0))")
-                
-                
-                
                 //Shipping
                 self.view?.configureShipping(shippingValue: "\(self.invoiceViewModel.invoiceDetails.shippingFees ?? 0.0)")
-                
-                
                 //DISCOUNT
                 if self.invoiceViewModel.invoiceDetails.discountType == DiscountTypes.percentage.rawValue {
                     self.view?.configureDiscount(discountType: .percentage, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
                 } else {
                     self.view?.configureDiscount(discountType: .fixed, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
-                    
                 }
-                
+                //DATE
                 self.setupInvoiceDate()
             }
         }

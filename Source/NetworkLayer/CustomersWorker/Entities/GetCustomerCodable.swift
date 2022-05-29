@@ -11,9 +11,9 @@ public struct GetCustomerCodable: Codable{
     let firstName:String?
     let lastName:String?
     let email:String?
-    let mobileNumber:String?
+    var mobileNumber:String?
     let country:String?
-    let governorate:String?
+    var governorate:String?
     let city:String?
     let address:String?
     let aptNumber:String?

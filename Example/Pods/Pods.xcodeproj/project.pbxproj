@@ -64,6 +64,10 @@
 		1829319928438FCF0005E5FF /* String+Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319828438FCF0005E5FF /* String+Date+extension.swift */; };
 		1829319C28439D8F0005E5FF /* CountryPerfixPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319B28439D8F0005E5FF /* CountryPerfixPicker.swift */; };
 		1829319E28439DBA0005E5FF /* CountriesISO3166.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319D28439DBA0005E5FF /* CountriesISO3166.swift */; };
+		182931A12843A8610005E5FF /* UIButton + Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931A02843A8610005E5FF /* UIButton + Loading.swift */; };
+		182931A52843A8930005E5FF /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931A42843A8930005E5FF /* NormalIndicator.swift */; };
+		182931A72843A89F0005E5FF /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931A62843A89F0005E5FF /* Indicator + UIView.swift */; };
+		182931A92843A8AA0005E5FF /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931A82843A8AA0005E5FF /* LottieIndicator.swift */; };
 		1B15FFDB14BEF51081EF14ADC44BC445 /* InvoiceSecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B33C76FBA36BBFE6058CFD391F3422 /* InvoiceSecondScreenViewController.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553D83DD1FA4823F2D79E6CD398528AC /* RequestTaskMap.swift */; };
 		1D2EC562A58B1804BE1B38D29EFD2F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56704CF70A00F501482C6EEC5A3EF8F /* Foundation.framework */; };
@@ -355,6 +359,10 @@
 		1829319828438FCF0005E5FF /* String+Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date+extension.swift"; sourceTree = "<group>"; };
 		1829319B28439D8F0005E5FF /* CountryPerfixPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPerfixPicker.swift; sourceTree = "<group>"; };
 		1829319D28439DBA0005E5FF /* CountriesISO3166.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesISO3166.swift; sourceTree = "<group>"; };
+		182931A02843A8610005E5FF /* UIButton + Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Loading.swift"; sourceTree = "<group>"; };
+		182931A42843A8930005E5FF /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
+		182931A62843A89F0005E5FF /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
+		182931A82843A8AA0005E5FF /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		1D027FF8CC85C63EA118AC026F4C4866 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		20CA300F9C09353E6744A90008AD0ACB /* InvoicesNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoicesNetworking.swift; sourceTree = "<group>"; };
@@ -822,6 +830,24 @@
 			path = CountryPerfixPicker;
 			sourceTree = "<group>";
 		};
+		1829319F2843A8530005E5FF /* UIButton + Loading */ = {
+			isa = PBXGroup;
+			children = (
+				182931A02843A8610005E5FF /* UIButton + Loading.swift */,
+			);
+			path = "UIButton + Loading";
+			sourceTree = "<group>";
+		};
+		182931A32843A8870005E5FF /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				182931A42843A8930005E5FF /* NormalIndicator.swift */,
+				182931A62843A89F0005E5FF /* Indicator + UIView.swift */,
+				182931A82843A8AA0005E5FF /* LottieIndicator.swift */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
 		1A3A274D85969AA7C69D838824313765 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1238,6 +1264,7 @@
 		69D2F8E74856A26EDD5F95619272ABA4 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				182931A32843A8870005E5FF /* Indicator */,
 				181DE467283FBF8300F82F9B /* Arrow */,
 				181DE475283FBF8300F82F9B /* Close */,
 				181DE463283FBF8300F82F9B /* Logo */,
@@ -1416,6 +1443,7 @@
 		AD9523D8C4897800DCDDA3FC57CDC46C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1829319F2843A8530005E5FF /* UIButton + Loading */,
 				1829318928438F680005E5FF /* Date */,
 				59D4EEDA30809F96CE314B8AB05AF260 /* UIApplication + TopViewController.swift */,
 				EDEAC89609E7D58406AEAD9723D1DEE0 /* UITextField.swift */,
@@ -2096,6 +2124,7 @@
 				1829319228438FC20005E5FF /* Date+String+extension.swift in Sources */,
 				004A1C762E3BAA27EF8D91EE5AD3BA65 /* CirclePay_Pod_iOS-dummy.m in Sources */,
 				BF3045AFFB2222C0E144CF278C725E1F /* CirclePayTFContainer.swift in Sources */,
+				182931A72843A89F0005E5FF /* Indicator + UIView.swift in Sources */,
 				F501C8C16B0985E6BD08E19362D3F60B /* ColorTypes.swift in Sources */,
 				5B7BC7C37231B48B4E6C2E87099E3FD4 /* ContactsView.swift in Sources */,
 				51A4B2C8329E993D89B393B8350AA25C /* CountryView.swift in Sources */,
@@ -2107,6 +2136,7 @@
 				92DF851A63F6352AE427405E0601EADC /* Customers.swift in Sources */,
 				4D626D929B1F4381CA6FE41351AAB7BC /* CustomersNetworking.swift in Sources */,
 				F85F4E66114F29687D7122B0840EFD7F /* CustomersWorker.swift in Sources */,
+				182931A92843A8AA0005E5FF /* LottieIndicator.swift in Sources */,
 				E29A1A00AA38267061E62BB09B7D4A13 /* CustomerViewModel.swift in Sources */,
 				56D97F8FDEC6B65FE9889CF5A38DD33F /* FullNameDataView.swift in Sources */,
 				244176EBF6F50C241AFAFA82CFE652C1 /* GetCustomerCodable.swift in Sources */,
@@ -2121,6 +2151,7 @@
 				B3C37CCE24627B2E28871208AB017343 /* InvoiceDetailsContainerView.swift in Sources */,
 				72C5EE5CB95889F923B3084625C324BB /* InvoiceDetailsEntity.swift in Sources */,
 				1829319E28439DBA0005E5FF /* CountriesISO3166.swift in Sources */,
+				182931A12843A8610005E5FF /* UIButton + Loading.swift in Sources */,
 				025698C5F2BA7EC8C8D00BBAF3DCBE92 /* InvoiceDetailsInteractor.swift in Sources */,
 				37224439E6170F0F06A3563DBE35A131 /* InvoiceDetailsPaymentSammaryTableViewCell.swift in Sources */,
 				A9E86896667588D4160F117CA066D3B2 /* InvoiceDetailsPresenter.swift in Sources */,
@@ -2187,6 +2218,7 @@
 				88EF3381759AFC6AAFB2E5B728D2E45B /* PaymentMethodNetworking.swift in Sources */,
 				7473A1FB03493602BBFE69D1BA0AE529 /* PaymentMethods.swift in Sources */,
 				86769F93873C64172F5BAFBBE11EC7C6 /* PaymentMethodsViewContainer.swift in Sources */,
+				182931A52843A8930005E5FF /* NormalIndicator.swift in Sources */,
 				9D628A48AE597CB55916796964A5E370 /* PaymentMethodsViewModel.swift in Sources */,
 				56B13262214642DF66D0862686909975 /* PaymentMethodWorker.swift in Sources */,
 				719F0CAC6967A1AE7A8E1BFDD4EAF93B /* PaymentNetworking.swift in Sources */,
