@@ -20,6 +20,7 @@ protocol InvoiceSecondScreenPresenterProtocol {
     func configurePaymentMethodsCell(cell: PaymentMethodsCellView, indexPath: IndexPath)
     func didSelectPaymentMethod(at indexPath: IndexPath)
     func onTapPay()
+    func didChangeCountry(countryName: String)
 }
 protocol InvoiceSecondScreenRouterProtocol {
 }

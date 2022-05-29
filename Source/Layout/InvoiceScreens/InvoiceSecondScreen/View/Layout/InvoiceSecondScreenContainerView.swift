@@ -43,6 +43,16 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
     private lazy var addressDetailsView: AddressDetailsView = {
         var container = AddressDetailsView()
         container.translatesAutoresizingMaskIntoConstraints = false
+        let countryButton = UIButton()
+        container.addSubview(countryButton)
+        countryButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            countryButton.centerYAnchor.constraint(equalTo: container.selectCountryField.centerYAnchor),
+            countryButton.centerXAnchor.constraint(equalTo: container.selectCountryField.centerXAnchor),
+            countryButton.widthAnchor.constraint(equalTo: container.selectCountryField.widthAnchor),
+            countryButton.heightAnchor.constraint(equalTo: container.selectCountryField.heightAnchor)
+        ])
+        countryButton.addTarget(self, action: #selector(didTappedCountryView), for: .touchUpInside)
         return container
     }()
     
@@ -69,13 +79,15 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
         return button
     }()
     
-    
+    let countryPicker = CountryPrefixPicker()
+
     var presenter: InvoiceSecondScreenPresenterProtocol
     
     init(presenter:InvoiceSecondScreenPresenterProtocol) {
         self.presenter = presenter
         super.init(frame: .zero)
         self.backgroundColor = .white
+        countryPicker.delegate = self
         self.layoutUserInterFace()
     }
     
@@ -180,7 +192,31 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
             self.addressDetailsView.extraDetailsField.text = customer.extraDetails
         }
     }
+    
+    @objc func didTappedCountryView() {
+        print("Country Tapped")
+        self.showCountriesListView()
+    }
+    
+    func showCountriesListView() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.countryPicker.frame = self.frame
+            self.addSubview(self.countryPicker)
+        }
+    }
 }
 
 
 
+
+extension InvoiceSecondScreenContainerView: CountryPrefixPickerDelegate {
+    func didSelectCountry(country: CountriesISO3166) {
+        print(country.country)
+        self.addressDetailsView.selectCountryField.text = country.country
+        self.presenter.didChangeCountry(countryName: country.country)
+       // presenter.didSelectCountry(country: country)
+    }
+}

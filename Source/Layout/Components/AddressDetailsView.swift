@@ -73,6 +73,7 @@ class AddressDetailsView: UIView {
         textField.paddingLeftCustom = 16
         textField.paddingRightCustom = 16
         textField.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        textField.isUserInteractionEnabled = false
         return textField
     }()
     lazy var selectCityField: UITextField = {

@@ -18,6 +18,8 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     var methodsViewModel = [PaymentMethodsViewModel]()
     var selectedPaymentMethod: PaymentMethodsViewModel?
     
+    var newCountry:String?
+    
     var invoiceNumber: String {
         return self.invoiceViewModel.invoiceDetails.invoiceNumber ?? ""
     }
@@ -72,6 +74,10 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
         }
         self.payInvoice()
         
+    }
+    
+    func didChangeCountry(countryName: String) {
+        self.newCountry = countryName
     }
     
     func getPaymentMethods() {

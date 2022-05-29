@@ -62,6 +62,8 @@
 		1829319628438FC20005E5FF /* Date+For+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829318F28438FC20005E5FF /* Date+For+extension.swift */; };
 		1829319728438FC20005E5FF /* Date+Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319028438FC20005E5FF /* Date+Date+extension.swift */; };
 		1829319928438FCF0005E5FF /* String+Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319828438FCF0005E5FF /* String+Date+extension.swift */; };
+		1829319C28439D8F0005E5FF /* CountryPerfixPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319B28439D8F0005E5FF /* CountryPerfixPicker.swift */; };
+		1829319E28439DBA0005E5FF /* CountriesISO3166.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319D28439DBA0005E5FF /* CountriesISO3166.swift */; };
 		1B15FFDB14BEF51081EF14ADC44BC445 /* InvoiceSecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B33C76FBA36BBFE6058CFD391F3422 /* InvoiceSecondScreenViewController.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553D83DD1FA4823F2D79E6CD398528AC /* RequestTaskMap.swift */; };
 		1D2EC562A58B1804BE1B38D29EFD2F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56704CF70A00F501482C6EEC5A3EF8F /* Foundation.framework */; };
@@ -351,6 +353,8 @@
 		1829318F28438FC20005E5FF /* Date+For+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+For+extension.swift"; sourceTree = "<group>"; };
 		1829319028438FC20005E5FF /* Date+Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Date+extension.swift"; sourceTree = "<group>"; };
 		1829319828438FCF0005E5FF /* String+Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date+extension.swift"; sourceTree = "<group>"; };
+		1829319B28439D8F0005E5FF /* CountryPerfixPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPerfixPicker.swift; sourceTree = "<group>"; };
+		1829319D28439DBA0005E5FF /* CountriesISO3166.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesISO3166.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		1D027FF8CC85C63EA118AC026F4C4866 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		20CA300F9C09353E6744A90008AD0ACB /* InvoicesNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoicesNetworking.swift; sourceTree = "<group>"; };
@@ -809,6 +813,15 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		1829319A28439D7A0005E5FF /* CountryPerfixPicker */ = {
+			isa = PBXGroup;
+			children = (
+				1829319B28439D8F0005E5FF /* CountryPerfixPicker.swift */,
+				1829319D28439DBA0005E5FF /* CountriesISO3166.swift */,
+			);
+			path = CountryPerfixPicker;
+			sourceTree = "<group>";
+		};
 		1A3A274D85969AA7C69D838824313765 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -980,6 +993,7 @@
 		3C9C1FACBD18B746F455AED8D5099E01 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1829319A28439D7A0005E5FF /* CountryPerfixPicker */,
 				A5B8117AD0570EA0939409D4878722F4 /* AddressDetailsView.swift */,
 				AF2112054AA73F37FA847135C0BEAA5D /* ButtonsContainerView.swift */,
 				59A804F4FCC291BDBEB6CF97153A0731 /* FullNameDataView.swift */,
@@ -2078,6 +2092,7 @@
 				D0307B292643837565F13AD1A6039A7C /* BaseAPIRequestResponseModel.swift in Sources */,
 				D1FB5E3FE351254888202FE9958844F8 /* ButtonsContainerView.swift in Sources */,
 				F5F7456ED3CF11FF1DBAD618CEA4702B /* CirclePay.swift in Sources */,
+				1829319C28439D8F0005E5FF /* CountryPerfixPicker.swift in Sources */,
 				1829319228438FC20005E5FF /* Date+String+extension.swift in Sources */,
 				004A1C762E3BAA27EF8D91EE5AD3BA65 /* CirclePay_Pod_iOS-dummy.m in Sources */,
 				BF3045AFFB2222C0E144CF278C725E1F /* CirclePayTFContainer.swift in Sources */,
@@ -2105,6 +2120,7 @@
 				90E00918A42A8A71402AB61ED19F5481 /* InvoiceDetailContainerView + UItableView.swift in Sources */,
 				B3C37CCE24627B2E28871208AB017343 /* InvoiceDetailsContainerView.swift in Sources */,
 				72C5EE5CB95889F923B3084625C324BB /* InvoiceDetailsEntity.swift in Sources */,
+				1829319E28439DBA0005E5FF /* CountriesISO3166.swift in Sources */,
 				025698C5F2BA7EC8C8D00BBAF3DCBE92 /* InvoiceDetailsInteractor.swift in Sources */,
 				37224439E6170F0F06A3563DBE35A131 /* InvoiceDetailsPaymentSammaryTableViewCell.swift in Sources */,
 				A9E86896667588D4160F117CA066D3B2 /* InvoiceDetailsPresenter.swift in Sources */,
