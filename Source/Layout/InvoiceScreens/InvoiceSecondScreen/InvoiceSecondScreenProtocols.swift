@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol InvoiceSecondScreenViewProtocol: class {
+protocol InvoiceSecondScreenViewProtocol: AnyObject {
     var presenter: InvoiceSecondScreenPresenterProtocol! {get set}
     
     func reloadPaymentMethodsData()
@@ -26,7 +26,7 @@ protocol InvoiceSecondScreenRouterProtocol {
 protocol InvoiceSecondScreenInteractorInPutProtocol {
     var presenter: InvoiceSecondScreenInteractorOutPutProtocol? {get set}
 }
-protocol InvoiceSecondScreenInteractorOutPutProtocol:class {
+protocol InvoiceSecondScreenInteractorOutPutProtocol:AnyObject {
 }
 
 protocol PaymentMethodsCellView {

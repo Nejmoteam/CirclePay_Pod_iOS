@@ -47,7 +47,6 @@ public class CirclePay {
             if let vc = UIApplication.shared.topMostViewController() {
                 CirclePay.getInvoiceDetails(invoiceNumber: invoiceNumber) { viewModel, err in
                     if err != nil {
-                        print(err)
                         print("Throw an error here")
                     } else {
                         if let unwrappedViewModel = viewModel {

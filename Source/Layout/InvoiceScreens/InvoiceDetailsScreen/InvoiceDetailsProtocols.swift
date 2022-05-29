@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol InvoiceDetailsViewProtocol: class {
+protocol InvoiceDetailsViewProtocol: AnyObject {
     var presenter: InvoiceDetailsPresenterProtocol! {get set}
     
 }
@@ -26,7 +26,7 @@ protocol InvoiceDetailsRouterProtocol {
 protocol InvoiceDetailsInteractorInPutProtocol {
     var presenter: InvoiceDetailsInteractorOutPutProtocol? {get set}
 }
-protocol InvoiceDetailsInteractorOutPutProtocol:class {
+protocol InvoiceDetailsInteractorOutPutProtocol:AnyObject {
 }
 
 protocol InvoiceDetailsPaymentSammaryTableViewCellView {

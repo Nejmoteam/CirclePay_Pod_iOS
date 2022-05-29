@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol PaymentLinkSecondScreenViewProtocol: class {
+protocol PaymentLinkSecondScreenViewProtocol: AnyObject {
     var presenter: PaymentLinkSecondScreenPresenterProtocol! {get set}
 }
 protocol PaymentLinkSecondScreenPresenterProtocol {
@@ -19,5 +19,5 @@ protocol PaymentLinkSecondScreenRouterProtocol {
 protocol PaymentLinkSecondScreenInteractorInPutProtocol {
     var presenter: PaymentLinkSecondScreenInteractorOutPutProtocol? {get set}
 }
-protocol PaymentLinkSecondScreenInteractorOutPutProtocol:class {
+protocol PaymentLinkSecondScreenInteractorOutPutProtocol:AnyObject {
 }

@@ -63,7 +63,6 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             return
         }
         self.selectedPaymentMethod = self.methodsViewModel[indexPath.item]
-        print(selectedPaymentMethod)
     }
     
     func onTapPay() {
@@ -98,7 +97,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
         CirclePay.invoices.payInvoice(invoiceNumber: self.invoiceNumber, customerMobile: self.customerNumber, paymentMethodId: self.selectedPaymentMethod?.paymentMethodId) { invoiceData, err in
             if err == nil {
                 let url = invoiceData?.invoiceUrl
-                print(url)
+                print(url ?? "can't find url")
                 //Open with webView
             } else {
                 

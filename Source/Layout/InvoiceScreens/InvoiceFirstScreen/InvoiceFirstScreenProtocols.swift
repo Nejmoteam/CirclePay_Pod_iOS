@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol InvoiceFirstScreenViewProtocol: class {
+protocol InvoiceFirstScreenViewProtocol: AnyObject {
     var presenter: InvoiceFirstScreenPresenterProtocol! {get set}
     func configurePaymentSummery(billedFrom: String, billedTo: String)
     func configureTaxView(taxValue: String, taxPersentage: String)
@@ -33,5 +33,5 @@ protocol InvoiceFirstScreenRouterProtocol {
 protocol InvoiceFirstScreenInteractorInPutProtocol {
     var presenter: InvoiceFirstScreenInteractorOutPutProtocol? {get set}
 }
-protocol InvoiceFirstScreenInteractorOutPutProtocol:class {
+protocol InvoiceFirstScreenInteractorOutPutProtocol:AnyObject {
 }

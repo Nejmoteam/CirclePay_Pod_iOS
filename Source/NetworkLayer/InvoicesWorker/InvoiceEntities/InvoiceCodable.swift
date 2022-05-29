@@ -49,7 +49,7 @@ public struct InvoiceItemsCodable:Codable {
    public let price:Double?
     
     func getPrice() -> Double {
-        if Double(quantity ?? 0) != nil {
+        if quantity != nil {
             let totalPrice = Double(quantity ?? 0) * (price ?? 0.0)
             return totalPrice
         } else {

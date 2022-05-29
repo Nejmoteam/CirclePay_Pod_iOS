@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol PaymentLinkFirstScreenViewProtocol: class {
+protocol PaymentLinkFirstScreenViewProtocol: AnyObject {
     var presenter: PaymentLinkFirstScreenPresenterProtocol! {get set}
 }
 protocol PaymentLinkFirstScreenPresenterProtocol {
@@ -21,5 +21,5 @@ protocol PaymentLinkFirstScreenRouterProtocol {
 protocol PaymentLinkFirstScreenInteractorInPutProtocol {
     var presenter: PaymentLinkFirstScreenInteractorOutPutProtocol? {get set}
 }
-protocol PaymentLinkFirstScreenInteractorOutPutProtocol:class {
+protocol PaymentLinkFirstScreenInteractorOutPutProtocol:AnyObject {
 }

@@ -80,11 +80,10 @@ class InitialViewController: UIViewController {
         CirclePay.invoices.createInvoice(invoiceNumber: nil, items: items, customerMobile: "+201157818027", status: nil, createDate: nil, dueDate: "2022-6-6", prefPaymentMethod: nil, shippingFees: 15, discountValue: 2, discountType: .percentage,  tax: 5, taxValue: nil, shippingPolicy: "Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy", returnPolicy: "return Policy return Policy return Policy return Policyreturn Policyreturn Policy return Policy return Policy", extraNotes: "Extra Notes for this Invoice for testing") { createdInvoice, err in
             self.view.removeActivityIndicator()
             if err != nil {
-                print(err)
             } else {
-                print(createdInvoice)
+               // print(createdInvoice)
                 if let unwrappedInvoice = createdInvoice {
-                    print(unwrappedInvoice.invoiceNumber)
+                  //  print(unwrappedInvoice.invoiceNumber)
                     self.invoiceNumber = unwrappedInvoice.invoiceNumber
                     self.createInvoice.setTitle("Execute Invoice", for: .normal)
                 }
@@ -190,14 +189,12 @@ class InitialViewController: UIViewController {
 
 extension InitialViewController: CirclePayDelegete {
     func didGetErrorAtCheckoutProcess(error: CirclePayError) {
-        print(error.errorMsg)
     }
     
     func didPaidTransactionSucsessfully(transactionId: String) {
     }
     
     func didGetErrorAtPayingTransaction(error: CirclePayError) {
-        print(error.errorMsg)
     }
     
 
