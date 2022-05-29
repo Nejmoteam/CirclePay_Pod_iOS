@@ -9,7 +9,7 @@
 
 import Foundation
 class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceFirstScreenInteractorOutPutProtocol {
-
+    
     weak var view: InvoiceFirstScreenViewProtocol?
     private let interactor: InvoiceFirstScreenInteractorInPutProtocol
     private let router: InvoiceFirstScreenRouterProtocol
@@ -53,10 +53,9 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
                 
                 //TAX
                 self.view?.configureTaxView(taxValue: "\(self.tax)", taxPersentage: "\((self.invoiceViewModel.invoiceDetails.tax ?? 0.0))")
-//                self.setupTax()
-
                 
-
+                
+                
                 //Shipping
                 self.view?.configureShipping(shippingValue: "\(self.invoiceViewModel.invoiceDetails.shippingFees ?? 0.0)")
                 
@@ -66,37 +65,27 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
                     self.view?.configureDiscount(discountType: .percentage, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
                 } else {
                     self.view?.configureDiscount(discountType: .fixed, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
-
+                    
                 }
                 
-                
-                
-//                self.view?.configureDiscount(discountPercentage: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.discunt)")
-
-                
-                
-                self.view?.configureInvoiceDate(date: self.invoiceViewModel.invoiceDetails.dueDate ?? "")
-                
+                self.setupInvoiceDate()
             }
         }
-
-
+        
+        
     }
-    
-    private func setupTax() {
-        let taxValue = self.invoiceViewModel.invoiceDetails.taxValue ?? 0.0
-        let taxValueString = "\(taxValue)"
-        let taxPersentage = self.invoiceViewModel.invoiceDetails.tax ?? 0.0
-        let taxPersentageString = "\(taxPersentage)"
-        self.view?.configureTaxView(taxValue: taxValueString, taxPersentage: taxPersentageString)
 
+    private func setupInvoiceDate() {
+        let dateString = self.invoiceViewModel.invoiceDetails.dueDate ?? ""
+        let dateStringFormated = dateString.toDate(format: .isoDateTimeMilliSec)?.toString(format: .custom("dd-MM-yyyy"))
+        self.view?.configureInvoiceDate(date: dateStringFormated ?? "")
     }
     
     
     func navigateToStepTwo() {
         if let unwrappedCustomer = customer {
             self.router.navigateToStepTwo(invoiceViewModel: self.invoiceViewModel, customer: unwrappedCustomer)
-
+            
         }
     }
     

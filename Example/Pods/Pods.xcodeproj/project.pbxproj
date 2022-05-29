@@ -54,6 +54,14 @@
 		181DE4A1283FBF9D00F82F9B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE494283FBF9D00F82F9B /* Roboto-Bold.ttf */; };
 		181DE4A2283FBF9D00F82F9B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE495283FBF9D00F82F9B /* Roboto-Thin.ttf */; };
 		181DE4A3283FBF9D00F82F9B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE496283FBF9D00F82F9B /* Roboto-Black.ttf */; };
+		1829319128438FC20005E5FF /* Date+common+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829318A28438FC00005E5FF /* Date+common+extension.swift */; };
+		1829319228438FC20005E5FF /* Date+String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829318B28438FC10005E5FF /* Date+String+extension.swift */; };
+		1829319328438FC20005E5FF /* Date+Component+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829318C28438FC10005E5FF /* Date+Component+extension.swift */; };
+		1829319428438FC20005E5FF /* Date+Adjust+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829318D28438FC20005E5FF /* Date+Adjust+extension.swift */; };
+		1829319528438FC20005E5FF /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829318E28438FC20005E5FF /* Date.swift */; };
+		1829319628438FC20005E5FF /* Date+For+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829318F28438FC20005E5FF /* Date+For+extension.swift */; };
+		1829319728438FC20005E5FF /* Date+Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319028438FC20005E5FF /* Date+Date+extension.swift */; };
+		1829319928438FCF0005E5FF /* String+Date+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829319828438FCF0005E5FF /* String+Date+extension.swift */; };
 		1B15FFDB14BEF51081EF14ADC44BC445 /* InvoiceSecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B33C76FBA36BBFE6058CFD391F3422 /* InvoiceSecondScreenViewController.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553D83DD1FA4823F2D79E6CD398528AC /* RequestTaskMap.swift */; };
 		1D2EC562A58B1804BE1B38D29EFD2F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56704CF70A00F501482C6EEC5A3EF8F /* Foundation.framework */; };
@@ -335,6 +343,14 @@
 		181DE494283FBF9D00F82F9B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		181DE495283FBF9D00F82F9B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		181DE496283FBF9D00F82F9B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		1829318A28438FC00005E5FF /* Date+common+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+common+extension.swift"; sourceTree = "<group>"; };
+		1829318B28438FC10005E5FF /* Date+String+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+String+extension.swift"; sourceTree = "<group>"; };
+		1829318C28438FC10005E5FF /* Date+Component+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Component+extension.swift"; sourceTree = "<group>"; };
+		1829318D28438FC20005E5FF /* Date+Adjust+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Adjust+extension.swift"; sourceTree = "<group>"; };
+		1829318E28438FC20005E5FF /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		1829318F28438FC20005E5FF /* Date+For+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+For+extension.swift"; sourceTree = "<group>"; };
+		1829319028438FC20005E5FF /* Date+Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Date+extension.swift"; sourceTree = "<group>"; };
+		1829319828438FCF0005E5FF /* String+Date+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Date+extension.swift"; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		1D027FF8CC85C63EA118AC026F4C4866 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		20CA300F9C09353E6744A90008AD0ACB /* InvoicesNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoicesNetworking.swift; sourceTree = "<group>"; };
@@ -776,6 +792,21 @@
 				181DE496283FBF9D00F82F9B /* Roboto-Black.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1829318928438F680005E5FF /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				1829319828438FCF0005E5FF /* String+Date+extension.swift */,
+				1829318E28438FC20005E5FF /* Date.swift */,
+				1829318D28438FC20005E5FF /* Date+Adjust+extension.swift */,
+				1829318A28438FC00005E5FF /* Date+common+extension.swift */,
+				1829318C28438FC10005E5FF /* Date+Component+extension.swift */,
+				1829319028438FC20005E5FF /* Date+Date+extension.swift */,
+				1829318F28438FC20005E5FF /* Date+For+extension.swift */,
+				1829318B28438FC10005E5FF /* Date+String+extension.swift */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		1A3A274D85969AA7C69D838824313765 /* Router */ = {
@@ -1371,6 +1402,7 @@
 		AD9523D8C4897800DCDDA3FC57CDC46C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1829318928438F680005E5FF /* Date */,
 				59D4EEDA30809F96CE314B8AB05AF260 /* UIApplication + TopViewController.swift */,
 				EDEAC89609E7D58406AEAD9723D1DEE0 /* UITextField.swift */,
 			);
@@ -2046,6 +2078,7 @@
 				D0307B292643837565F13AD1A6039A7C /* BaseAPIRequestResponseModel.swift in Sources */,
 				D1FB5E3FE351254888202FE9958844F8 /* ButtonsContainerView.swift in Sources */,
 				F5F7456ED3CF11FF1DBAD618CEA4702B /* CirclePay.swift in Sources */,
+				1829319228438FC20005E5FF /* Date+String+extension.swift in Sources */,
 				004A1C762E3BAA27EF8D91EE5AD3BA65 /* CirclePay_Pod_iOS-dummy.m in Sources */,
 				BF3045AFFB2222C0E144CF278C725E1F /* CirclePayTFContainer.swift in Sources */,
 				F501C8C16B0985E6BD08E19362D3F60B /* ColorTypes.swift in Sources */,
@@ -2065,7 +2098,9 @@
 				461D6847F58158C759807CF2C713382B /* InoviceDetailsTableHeaderView.swift in Sources */,
 				AB5D26FF26EB4DC020C4F36D3AD3C3DE /* Int+BusinessErrorCode.swift in Sources */,
 				D98DC8B9CF7655D88036E01069DDCFFD /* Int+HTTPStatusCode.swift in Sources */,
+				1829319928438FCF0005E5FF /* String+Date+extension.swift in Sources */,
 				10712D7585DF836BB28803FB4A301A1F /* InvoiceCodable.swift in Sources */,
+				1829319528438FC20005E5FF /* Date.swift in Sources */,
 				2B0185A32D9B276498193176FF5708EF /* InvoiceDeleteCodable.swift in Sources */,
 				90E00918A42A8A71402AB61ED19F5481 /* InvoiceDetailContainerView + UItableView.swift in Sources */,
 				B3C37CCE24627B2E28871208AB017343 /* InvoiceDetailsContainerView.swift in Sources */,
@@ -2081,6 +2116,7 @@
 				C6DE3EC36E100F604E1A8918B0FA530E /* InvoiceFirstScreenEntity.swift in Sources */,
 				B3A31C4CC4D9AB9AD251D4B6CB6F549A /* InvoiceFirstScreenInteractor.swift in Sources */,
 				B478DA9A95CB441537CA137B4583B628 /* InvoiceFirstScreenPresenter.swift in Sources */,
+				1829319428438FC20005E5FF /* Date+Adjust+extension.swift in Sources */,
 				C483C3B619DB404BED6B765F2B25FC4B /* InvoiceFirstScreenProtocols.swift in Sources */,
 				03510889C4D05D15CD7B3ADACFE3DBB8 /* InvoiceFirstScreenRouter.swift in Sources */,
 				81406EFC9FDCAC6E7953443C13ACAE18 /* InvoiceFirstScreenViewController.swift in Sources */,
@@ -2124,6 +2160,7 @@
 				9A4BF1F8CB396C020DFD65A710772C7A /* PaymentLinkFirstScreenViewController.swift in Sources */,
 				C9888B197881AE02514134415A7CBA6C /* PaymentLinkSecondScreenContainerView.swift in Sources */,
 				514C26649D482A38D593DBA0D716F825 /* PaymentLinkSecondScreenEntity.swift in Sources */,
+				1829319728438FC20005E5FF /* Date+Date+extension.swift in Sources */,
 				3392E3C7BAB42B049CDFFCE38CB73B72 /* PaymentLinkSecondScreenInteractor.swift in Sources */,
 				55EF476A4F6CE32C3F710F18CD538680 /* PaymentLinkSecondScreenPresenter.swift in Sources */,
 				7FE23C07DCCC52A5BBB2744D627DAE8E /* PaymentLinkSecondScreenProtocols.swift in Sources */,
@@ -2148,12 +2185,15 @@
 				0CC352B3650315D6F2E6E166A35A9383 /* RefundWorker.swift in Sources */,
 				4109C8BF4676E470298BA0B75AC63716 /* RequestRefundCodable.swift in Sources */,
 				B821096A606D97741A2D1DD316018538 /* ResponseDataEmptyObject.swift in Sources */,
+				1829319628438FC20005E5FF /* Date+For+extension.swift in Sources */,
 				679562C99D21E9997BCC974926BCB120 /* ShippingAndRefundContainer.swift in Sources */,
 				DDC063AF07FE1646896919B88797335F /* SingleStepView.swift in Sources */,
 				B2601D7B0D184217D8A31894D8B1AAAB /* StepsView.swift in Sources */,
 				7FB02227A77FDA6211595D03BC85443A /* TitleViewContainer.swift in Sources */,
 				3C2A9F5AE30EF6947EFED45C11B0AD60 /* TotalAmountContainer.swift in Sources */,
+				1829319128438FC20005E5FF /* Date+common+extension.swift in Sources */,
 				D18C663C169458B400137089F38DA380 /* UIApplication + TopViewController.swift in Sources */,
+				1829319328438FC20005E5FF /* Date+Component+extension.swift in Sources */,
 				84BC0E7B74F77EF5739CA1D30347EF36 /* UITextField.swift in Sources */,
 				E8E92A06536427881374BB5A6BA852F9 /* UpdateCustomerCodable.swift in Sources */,
 			);
