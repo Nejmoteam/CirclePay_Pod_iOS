@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		060B5AA48FF6E7A86D8B5696 /* Pods_CirclePay_Pod_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D2084C5B1FEB93B9908C58 /* Pods_CirclePay_Pod_iOS_Tests.framework */; };
+		181DE4E92843AD8800F82F9B /* InvoiceListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E12843AD8800F82F9B /* InvoiceListContainerView.swift */; };
+		181DE4EA2843AD8800F82F9B /* InvoiceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E22843AD8800F82F9B /* InvoiceListPresenter.swift */; };
+		181DE4EB2843AD8800F82F9B /* InvoiceListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E32843AD8800F82F9B /* InvoiceListRouter.swift */; };
+		181DE4EC2843AD8800F82F9B /* InvoiceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E42843AD8800F82F9B /* InvoiceListViewController.swift */; };
+		181DE4ED2843AD8800F82F9B /* InvoiceListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E52843AD8800F82F9B /* InvoiceListProtocols.swift */; };
+		181DE4EE2843AD8800F82F9B /* InvoiceListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E62843AD8800F82F9B /* InvoiceListInteractor.swift */; };
+		181DE4EF2843AD8800F82F9B /* InvoiceListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E72843AD8800F82F9B /* InvoiceListEntity.swift */; };
 		187F719C283B79A30054309D /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719B283B79A30054309D /* NormalIndicator.swift */; };
 		187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719D283B79D80054309D /* Indicator + UIView.swift */; };
 		187F71A0283B79EC0054309D /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719F283B79EC0054309D /* LottieIndicator.swift */; };
@@ -32,6 +39,13 @@
 
 /* Begin PBXFileReference section */
 		01D7A2188D4229946AD6D51C /* Pods-CirclePay_Pod_iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Example.debug.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Example/Pods-CirclePay_Pod_iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		181DE4E12843AD8800F82F9B /* InvoiceListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListContainerView.swift; sourceTree = "<group>"; };
+		181DE4E22843AD8800F82F9B /* InvoiceListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListPresenter.swift; sourceTree = "<group>"; };
+		181DE4E32843AD8800F82F9B /* InvoiceListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListRouter.swift; sourceTree = "<group>"; };
+		181DE4E42843AD8800F82F9B /* InvoiceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListViewController.swift; sourceTree = "<group>"; };
+		181DE4E52843AD8800F82F9B /* InvoiceListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListProtocols.swift; sourceTree = "<group>"; };
+		181DE4E62843AD8800F82F9B /* InvoiceListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListInteractor.swift; sourceTree = "<group>"; };
+		181DE4E72843AD8800F82F9B /* InvoiceListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListEntity.swift; sourceTree = "<group>"; };
 		187F719B283B79A30054309D /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
 		187F719D283B79D80054309D /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
 		187F719F283B79EC0054309D /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
@@ -75,6 +89,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181DE4F02843AD9700F82F9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				181DE4F52843ADC000F82F9B /* Layouts */,
+				181DE4E42843AD8800F82F9B /* InvoiceListViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		181DE4F12843AD9D00F82F9B /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				181DE4E22843AD8800F82F9B /* InvoiceListPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		181DE4F22843ADA400F82F9B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				181DE4E32843AD8800F82F9B /* InvoiceListRouter.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		181DE4F32843ADB100F82F9B /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				181DE4E62843AD8800F82F9B /* InvoiceListInteractor.swift */,
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		181DE4F42843ADB700F82F9B /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				181DE4E72843AD8800F82F9B /* InvoiceListEntity.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		181DE4F52843ADC000F82F9B /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				181DE4E12843AD8800F82F9B /* InvoiceListContainerView.swift */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
 		187F7199283B798D0054309D /* Utills */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +176,12 @@
 		187F71A5283BBA800054309D /* InvoicesList */ = {
 			isa = PBXGroup;
 			children = (
+				181DE4F02843AD9700F82F9B /* View */,
+				181DE4F12843AD9D00F82F9B /* Presenter */,
+				181DE4F22843ADA400F82F9B /* Router */,
+				181DE4E52843AD8800F82F9B /* InvoiceListProtocols.swift */,
+				181DE4F32843ADB100F82F9B /* Interactor */,
+				181DE4F42843ADB700F82F9B /* Entities */,
 			);
 			name = InvoicesList;
 			sourceTree = "<group>";
@@ -388,7 +457,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */,
+				181DE4ED2843AD8800F82F9B /* InvoiceListProtocols.swift in Sources */,
+				181DE4EA2843AD8800F82F9B /* InvoiceListPresenter.swift in Sources */,
 				607FACD81AFB9204008FA782 /* InitialViewController.swift in Sources */,
+				181DE4EE2843AD8800F82F9B /* InvoiceListInteractor.swift in Sources */,
+				181DE4E92843AD8800F82F9B /* InvoiceListContainerView.swift in Sources */,
+				181DE4EB2843AD8800F82F9B /* InvoiceListRouter.swift in Sources */,
+				181DE4EC2843AD8800F82F9B /* InvoiceListViewController.swift in Sources */,
+				181DE4EF2843AD8800F82F9B /* InvoiceListEntity.swift in Sources */,
 				187F719C283B79A30054309D /* NormalIndicator.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				187F71A0283B79EC0054309D /* LottieIndicator.swift in Sources */,

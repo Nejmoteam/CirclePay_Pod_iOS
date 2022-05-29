@@ -38,7 +38,6 @@ class InitialViewController: UIViewController {
     }()
     var invoiceNumber: String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -66,6 +65,9 @@ class InitialViewController: UIViewController {
     
     @objc func userPressedInvoicesList() {
         // TO Invoices List
+        let invoiceListVC = InvoiceListRouter.createAnModule()
+        invoiceListVC.modalPresentationStyle  = .overFullScreen
+        self.present(invoiceListVC, animated: true, completion: nil)
     }
     
     
