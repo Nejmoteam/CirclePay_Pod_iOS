@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CirclePay_Pod_iOS'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'These example sentences are selected automatically from various online news sources to reflect current usage of the word description.'
 
 # This description is used to generate tags and improve search results.
