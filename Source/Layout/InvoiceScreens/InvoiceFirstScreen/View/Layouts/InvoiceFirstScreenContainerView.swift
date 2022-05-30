@@ -99,6 +99,10 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     
      lazy var shippingRefundButtonContainer: ShippingAndRefundContainer = {
         var view = ShippingAndRefundContainer()
+        view.shippingPolicyButton.addTarget(self, action: #selector(onTapShippingPolicy), for: .touchUpInside)
+       
+        view.refundPolicyButton.addTarget(self, action: #selector(onTapRefundPolicy), for: .touchUpInside)
+
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -231,5 +235,13 @@ class InvoiceFirstScreenContainerView: PaymentBaseClass {
     
     @objc func didTappedInvoiceDetails() {
         self.presenter.navigateToInvoiceDetails()
+    }
+    
+    @objc func onTapShippingPolicy() {
+        self.presenter.navigateToShippingPolicy()
+    }
+    
+    @objc func onTapRefundPolicy() {
+        self.presenter.navigateToRefundPolicy()
     }
 }

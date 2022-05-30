@@ -41,4 +41,25 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
             self.viewController?.present(invoiceDetails, animated: true, completion: nil)
         }
     }
+    func navigateToShippingPolicy(shippingPolicy: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let shippingPolicyScene = ShippingPolicyRouter.createAnModule(shippingPolicy: shippingPolicy)
+            shippingPolicyScene.modalPresentationStyle = .fullScreen
+            self.viewController?.present(shippingPolicyScene, animated: true, completion: nil)
+        }
+    }
+    
+    func navigateToRefundPolicy(refundPolicy: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let refundPolicyScene = RefundPolicyRouter.createAnModule(refundPolicy: refundPolicy)
+            refundPolicyScene.modalPresentationStyle = .fullScreen
+            self.viewController?.present(refundPolicyScene, animated: true, completion: nil)
+        }
+    }
 }

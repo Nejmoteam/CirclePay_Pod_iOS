@@ -25,10 +25,15 @@ protocol InvoiceFirstScreenPresenterProtocol {
     func viewDidLoad()
     func navigateToStepTwo()
     func navigateToInvoiceDetails()
+    func navigateToShippingPolicy()
+    func navigateToRefundPolicy()
 }
 protocol InvoiceFirstScreenRouterProtocol {
     func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable)
     func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable)
+    func navigateToShippingPolicy(shippingPolicy: String)
+    func navigateToRefundPolicy(refundPolicy: String)
+    
 }
 protocol InvoiceFirstScreenInteractorInPutProtocol {
     var presenter: InvoiceFirstScreenInteractorOutPutProtocol? {get set}

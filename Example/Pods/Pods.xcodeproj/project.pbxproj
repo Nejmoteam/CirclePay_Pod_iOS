@@ -68,6 +68,20 @@
 		182931A52843A8930005E5FF /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931A42843A8930005E5FF /* NormalIndicator.swift */; };
 		182931A72843A89F0005E5FF /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931A62843A89F0005E5FF /* Indicator + UIView.swift */; };
 		182931A92843A8AA0005E5FF /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931A82843A8AA0005E5FF /* LottieIndicator.swift */; };
+		182931B52844BFDE0005E5FF /* RefundPolicyContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931AD2844BFDE0005E5FF /* RefundPolicyContainerView.swift */; };
+		182931B62844BFDE0005E5FF /* RefundPolicyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931AE2844BFDE0005E5FF /* RefundPolicyPresenter.swift */; };
+		182931B72844BFDE0005E5FF /* RefundPolicyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931AF2844BFDE0005E5FF /* RefundPolicyRouter.swift */; };
+		182931B82844BFDE0005E5FF /* RefundPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931B02844BFDE0005E5FF /* RefundPolicyViewController.swift */; };
+		182931B92844BFDE0005E5FF /* RefundPolicyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931B12844BFDE0005E5FF /* RefundPolicyProtocols.swift */; };
+		182931BA2844BFDE0005E5FF /* RefundPolicyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931B22844BFDE0005E5FF /* RefundPolicyInteractor.swift */; };
+		182931BB2844BFDE0005E5FF /* RefundPolicyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931B32844BFDE0005E5FF /* RefundPolicyEntity.swift */; };
+		182931C52844BFFA0005E5FF /* ShippingPolicyContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931BD2844BFFA0005E5FF /* ShippingPolicyContainerView.swift */; };
+		182931C62844BFFA0005E5FF /* ShippingPolicyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931BE2844BFFA0005E5FF /* ShippingPolicyPresenter.swift */; };
+		182931C72844BFFA0005E5FF /* ShippingPolicyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931BF2844BFFA0005E5FF /* ShippingPolicyRouter.swift */; };
+		182931C82844BFFA0005E5FF /* ShippingPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931C02844BFFA0005E5FF /* ShippingPolicyViewController.swift */; };
+		182931C92844BFFA0005E5FF /* ShippingPolicyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931C12844BFFA0005E5FF /* ShippingPolicyProtocols.swift */; };
+		182931CA2844BFFA0005E5FF /* ShippingPolicyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931C22844BFFA0005E5FF /* ShippingPolicyInteractor.swift */; };
+		182931CB2844BFFA0005E5FF /* ShippingPolicyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931C32844BFFA0005E5FF /* ShippingPolicyEntity.swift */; };
 		1B15FFDB14BEF51081EF14ADC44BC445 /* InvoiceSecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B33C76FBA36BBFE6058CFD391F3422 /* InvoiceSecondScreenViewController.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553D83DD1FA4823F2D79E6CD398528AC /* RequestTaskMap.swift */; };
 		1D2EC562A58B1804BE1B38D29EFD2F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56704CF70A00F501482C6EEC5A3EF8F /* Foundation.framework */; };
@@ -363,6 +377,20 @@
 		182931A42843A8930005E5FF /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
 		182931A62843A89F0005E5FF /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
 		182931A82843A8AA0005E5FF /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
+		182931AD2844BFDE0005E5FF /* RefundPolicyContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyContainerView.swift; sourceTree = "<group>"; };
+		182931AE2844BFDE0005E5FF /* RefundPolicyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyPresenter.swift; sourceTree = "<group>"; };
+		182931AF2844BFDE0005E5FF /* RefundPolicyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyRouter.swift; sourceTree = "<group>"; };
+		182931B02844BFDE0005E5FF /* RefundPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyViewController.swift; sourceTree = "<group>"; };
+		182931B12844BFDE0005E5FF /* RefundPolicyProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyProtocols.swift; sourceTree = "<group>"; };
+		182931B22844BFDE0005E5FF /* RefundPolicyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyInteractor.swift; sourceTree = "<group>"; };
+		182931B32844BFDE0005E5FF /* RefundPolicyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyEntity.swift; sourceTree = "<group>"; };
+		182931BD2844BFFA0005E5FF /* ShippingPolicyContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyContainerView.swift; sourceTree = "<group>"; };
+		182931BE2844BFFA0005E5FF /* ShippingPolicyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyPresenter.swift; sourceTree = "<group>"; };
+		182931BF2844BFFA0005E5FF /* ShippingPolicyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyRouter.swift; sourceTree = "<group>"; };
+		182931C02844BFFA0005E5FF /* ShippingPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyViewController.swift; sourceTree = "<group>"; };
+		182931C12844BFFA0005E5FF /* ShippingPolicyProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyProtocols.swift; sourceTree = "<group>"; };
+		182931C22844BFFA0005E5FF /* ShippingPolicyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyInteractor.swift; sourceTree = "<group>"; };
+		182931C32844BFFA0005E5FF /* ShippingPolicyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyEntity.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		1D027FF8CC85C63EA118AC026F4C4866 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		20CA300F9C09353E6744A90008AD0ACB /* InvoicesNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoicesNetworking.swift; sourceTree = "<group>"; };
@@ -848,6 +876,130 @@
 			path = Indicator;
 			sourceTree = "<group>";
 		};
+		182931AA2844BFC80005E5FF /* ShippingPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				182931D22844C0300005E5FF /* View */,
+				182931D52844C0310005E5FF /* Interactor */,
+				182931D62844C0310005E5FF /* Presenter */,
+				182931D32844C0300005E5FF /* Entities */,
+				182931D42844C0300005E5FF /* Router */,
+				182931C12844BFFA0005E5FF /* ShippingPolicyProtocols.swift */,
+			);
+			path = ShippingPolicy;
+			sourceTree = "<group>";
+		};
+		182931AB2844BFD00005E5FF /* RefundPolicy */ = {
+			isa = PBXGroup;
+			children = (
+				182931D02844C01D0005E5FF /* View */,
+				182931CF2844C0170005E5FF /* Interactor */,
+				182931CE2844C00F0005E5FF /* Presenter */,
+				182931CD2844C00B0005E5FF /* Entities */,
+				182931CC2844C0060005E5FF /* Router */,
+				182931B12844BFDE0005E5FF /* RefundPolicyProtocols.swift */,
+			);
+			path = RefundPolicy;
+			sourceTree = "<group>";
+		};
+		182931CC2844C0060005E5FF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				182931AF2844BFDE0005E5FF /* RefundPolicyRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		182931CD2844C00B0005E5FF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				182931B32844BFDE0005E5FF /* RefundPolicyEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		182931CE2844C00F0005E5FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				182931AE2844BFDE0005E5FF /* RefundPolicyPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		182931CF2844C0170005E5FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				182931B22844BFDE0005E5FF /* RefundPolicyInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		182931D02844C01D0005E5FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182931B02844BFDE0005E5FF /* RefundPolicyViewController.swift */,
+				182931D12844C0200005E5FF /* Layout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		182931D12844C0200005E5FF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				182931AD2844BFDE0005E5FF /* RefundPolicyContainerView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		182931D22844C0300005E5FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182931C02844BFFA0005E5FF /* ShippingPolicyViewController.swift */,
+				182931D72844C0310005E5FF /* Layout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		182931D32844C0300005E5FF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				182931C32844BFFA0005E5FF /* ShippingPolicyEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		182931D42844C0300005E5FF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				182931BF2844BFFA0005E5FF /* ShippingPolicyRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		182931D52844C0310005E5FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				182931C22844BFFA0005E5FF /* ShippingPolicyInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		182931D62844C0310005E5FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				182931BE2844BFFA0005E5FF /* ShippingPolicyPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		182931D72844C0310005E5FF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				182931BD2844BFFA0005E5FF /* ShippingPolicyContainerView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		1A3A274D85969AA7C69D838824313765 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1222,6 +1374,8 @@
 		6256E78A95C534D8E96E809A52D2D8E0 /* InvoiceScreens */ = {
 			isa = PBXGroup;
 			children = (
+				182931AB2844BFD00005E5FF /* RefundPolicy */,
+				182931AA2844BFC80005E5FF /* ShippingPolicy */,
 				5CE665B6FE16B66B23223753FF2B4113 /* InvoiceDetailsScreen */,
 				506E6987D9EECC2CFC3415E48A628A32 /* InvoiceFirstScreen */,
 				F764623D062C9F041AEFD95C61139AC7 /* InvoiceSecondScreen */,
@@ -2113,6 +2267,8 @@
 				BB4DBCBEC02212880234029215F1B97B /* AddressDetailsView.swift in Sources */,
 				07F24E407B7F8B413DA242E006AD19AB /* APIRequestBuilder.swift in Sources */,
 				B2094F838107DEE327F96834132A2355 /* APIRequestExecuter.swift in Sources */,
+				182931B92844BFDE0005E5FF /* RefundPolicyProtocols.swift in Sources */,
+				182931C82844BFFA0005E5FF /* ShippingPolicyViewController.swift in Sources */,
 				20BFB74CDCDE9112F4348A93622B6AF4 /* APIRequestInterceptor.swift in Sources */,
 				99DEFDBC0949EF622A5AAB5C58F644F7 /* APIRequestResponseLog.swift in Sources */,
 				E662E63EAAB1A460A4389737CE5E24E6 /* BaseAPIRequestResponseBusinessErrorType.swift in Sources */,
@@ -2144,22 +2300,27 @@
 				AB5D26FF26EB4DC020C4F36D3AD3C3DE /* Int+BusinessErrorCode.swift in Sources */,
 				D98DC8B9CF7655D88036E01069DDCFFD /* Int+HTTPStatusCode.swift in Sources */,
 				1829319928438FCF0005E5FF /* String+Date+extension.swift in Sources */,
+				182931CB2844BFFA0005E5FF /* ShippingPolicyEntity.swift in Sources */,
 				10712D7585DF836BB28803FB4A301A1F /* InvoiceCodable.swift in Sources */,
 				1829319528438FC20005E5FF /* Date.swift in Sources */,
 				2B0185A32D9B276498193176FF5708EF /* InvoiceDeleteCodable.swift in Sources */,
 				90E00918A42A8A71402AB61ED19F5481 /* InvoiceDetailContainerView + UItableView.swift in Sources */,
+				182931C62844BFFA0005E5FF /* ShippingPolicyPresenter.swift in Sources */,
 				B3C37CCE24627B2E28871208AB017343 /* InvoiceDetailsContainerView.swift in Sources */,
 				72C5EE5CB95889F923B3084625C324BB /* InvoiceDetailsEntity.swift in Sources */,
 				1829319E28439DBA0005E5FF /* CountriesISO3166.swift in Sources */,
 				182931A12843A8610005E5FF /* UIButton + Loading.swift in Sources */,
 				025698C5F2BA7EC8C8D00BBAF3DCBE92 /* InvoiceDetailsInteractor.swift in Sources */,
 				37224439E6170F0F06A3563DBE35A131 /* InvoiceDetailsPaymentSammaryTableViewCell.swift in Sources */,
+				182931CA2844BFFA0005E5FF /* ShippingPolicyInteractor.swift in Sources */,
 				A9E86896667588D4160F117CA066D3B2 /* InvoiceDetailsPresenter.swift in Sources */,
 				F77C4FB02F833B30D97F01CD6FE003D2 /* InvoiceDetailsProductTableViewCell.swift in Sources */,
 				22841A55D2DCDA6EF036E071D6DC16A6 /* InvoiceDetailsProtocols.swift in Sources */,
+				182931B52844BFDE0005E5FF /* RefundPolicyContainerView.swift in Sources */,
 				8E9774EA87B5B4CCF1E68095C00B8046 /* InvoiceDetailsRouter.swift in Sources */,
 				D235C1BDC249293D1A108A0B6CA42574 /* InvoiceDetailsViewController.swift in Sources */,
 				D934B2927D3DE6340686D04191FDBC17 /* InvoiceFirstScreenContainerView.swift in Sources */,
+				182931BB2844BFDE0005E5FF /* RefundPolicyEntity.swift in Sources */,
 				C6DE3EC36E100F604E1A8918B0FA530E /* InvoiceFirstScreenEntity.swift in Sources */,
 				B3A31C4CC4D9AB9AD251D4B6CB6F549A /* InvoiceFirstScreenInteractor.swift in Sources */,
 				B478DA9A95CB441537CA137B4583B628 /* InvoiceFirstScreenPresenter.swift in Sources */,
@@ -2172,6 +2333,7 @@
 				985B4C2087A2A31E1AC15852B2EEA45B /* Invoices.swift in Sources */,
 				965158552D0CE8A13713B6BFEFCFF032 /* InvoiceSecondScreenContainerView.swift in Sources */,
 				EA53B899DF4B03FF6D532A16E92B8BDC /* InvoiceSecondScreenEntity.swift in Sources */,
+				182931C92844BFFA0005E5FF /* ShippingPolicyProtocols.swift in Sources */,
 				A29F880B8F371F97D59C624A387CE3A9 /* InvoiceSecondScreenInteractor.swift in Sources */,
 				B64D21687BEFD78C87FC706BCF43FE61 /* InvoiceSecondScreenPresenter.swift in Sources */,
 				4AD81D752C9E55829822E73C042B716E /* InvoiceSecondScreenProtocols.swift in Sources */,
@@ -2182,6 +2344,7 @@
 				96499A1C487D5BBE2A9C928D7F16990F /* Items.swift in Sources */,
 				90E06FD6D0A631AC2E133EB9A3BDBE49 /* KeyValueView.swift in Sources */,
 				0CAE77DDF53129430955AAC2E8C966F4 /* LogoContainerView.swift in Sources */,
+				182931BA2844BFDE0005E5FF /* RefundPolicyInteractor.swift in Sources */,
 				5AA44A4F8E955CD810E20A7FED35B505 /* MerchantCodable.swift in Sources */,
 				956CE5252CF4F22DA569FE9C2AE41672 /* MerchantCreateCodable.swift in Sources */,
 				F6E056AF80F931C3B75C21619C905240 /* MerchantNetworking.swift in Sources */,
@@ -2193,6 +2356,7 @@
 				0CF63DE24521126DB0CA325236CDA93E /* MerchantSendOTPCodable.swift in Sources */,
 				535FA9942DC1529EA60B4CFB2F7520E9 /* MerchantWorker.swift in Sources */,
 				D6864DCD7C6430618841E6F3A552852C /* PaymentBaseClass.swift in Sources */,
+				182931C72844BFFA0005E5FF /* ShippingPolicyRouter.swift in Sources */,
 				80396E5C715D502708753FE06787F6E9 /* PaymentCodable.swift in Sources */,
 				D76A67C36F0E09DFA28E6D952F8F3FE6 /* PaymentGatewayCodable.swift in Sources */,
 				67D1F6266778FD4BF5C6E394E45BEFFE /* PaymentGatewayNetworking.swift in Sources */,
@@ -2203,10 +2367,12 @@
 				5C33D7CE35B665C474D9FDAF1922DD75 /* PaymentLinkFirstScreenInteractor.swift in Sources */,
 				748DAB45DBED0ABA628F8C9855B2AB23 /* PaymentLinkFirstScreenPresenter.swift in Sources */,
 				6BD2DD4E4BB0662AD07F0E53A12852BD /* PaymentLinkFirstScreenProtocols.swift in Sources */,
+				182931B72844BFDE0005E5FF /* RefundPolicyRouter.swift in Sources */,
 				D86929486771F27A3E5393AAC22FCC94 /* PaymentLinkFirstScreenRouter.swift in Sources */,
 				9A4BF1F8CB396C020DFD65A710772C7A /* PaymentLinkFirstScreenViewController.swift in Sources */,
 				C9888B197881AE02514134415A7CBA6C /* PaymentLinkSecondScreenContainerView.swift in Sources */,
 				514C26649D482A38D593DBA0D716F825 /* PaymentLinkSecondScreenEntity.swift in Sources */,
+				182931B62844BFDE0005E5FF /* RefundPolicyPresenter.swift in Sources */,
 				1829319728438FC20005E5FF /* Date+Date+extension.swift in Sources */,
 				3392E3C7BAB42B049CDFFCE38CB73B72 /* PaymentLinkSecondScreenInteractor.swift in Sources */,
 				55EF476A4F6CE32C3F710F18CD538680 /* PaymentLinkSecondScreenPresenter.swift in Sources */,
@@ -2219,6 +2385,8 @@
 				7473A1FB03493602BBFE69D1BA0AE529 /* PaymentMethods.swift in Sources */,
 				86769F93873C64172F5BAFBBE11EC7C6 /* PaymentMethodsViewContainer.swift in Sources */,
 				182931A52843A8930005E5FF /* NormalIndicator.swift in Sources */,
+				182931B82844BFDE0005E5FF /* RefundPolicyViewController.swift in Sources */,
+				182931C52844BFFA0005E5FF /* ShippingPolicyContainerView.swift in Sources */,
 				9D628A48AE597CB55916796964A5E370 /* PaymentMethodsViewModel.swift in Sources */,
 				56B13262214642DF66D0862686909975 /* PaymentMethodWorker.swift in Sources */,
 				719F0CAC6967A1AE7A8E1BFDD4EAF93B /* PaymentNetworking.swift in Sources */,
