@@ -37,6 +37,7 @@ class RefundPolicyContainerView: UIView {
         textView.showsVerticalScrollIndicator = false
         textView.text = ""
         textView.textContainerInset = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: 12)
+        textView.backgroundColor = ColorTypes.GrayPrimary100.value
         return textView
     }()
     

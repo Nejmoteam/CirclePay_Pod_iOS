@@ -29,6 +29,7 @@ protocol InvoiceSecondScreenPresenterProtocol {
     var updatedCustomerData : GetCustomerCodable? {get set}
 }
 protocol InvoiceSecondScreenRouterProtocol {
+    func navigateToWebView(webViewUrl: String)
 }
 protocol InvoiceSecondScreenInteractorInPutProtocol {
     var presenter: InvoiceSecondScreenInteractorOutPutProtocol? {get set}

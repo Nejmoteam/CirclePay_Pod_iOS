@@ -41,7 +41,7 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        invoiceNumber = "CIR_INV_1653564987377"
+        // invoiceNumber = "CIR_INV_1653564987377"
         self.setupButtons()
     }
     
@@ -61,6 +61,24 @@ class InitialViewController: UIViewController {
             CirclePay.excutePayment(with: .Invoice(invoiceNumber: unwrappedInvoiceNumber))
             return
         }
+        
+        let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 230, itemQuantity: 8), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 189, itemQuantity: 10),Items(itemDescription: "Testing Description 3", itemnName: "Testing ItemName 3", itemPrice: 667, itemQuantity: 2)]
+        
+        
+        self.view.showActivityIndicator(with: ._default, isUserInteractionEnabled: false, frame: self.view.frame, color: #colorLiteral(red: 0, green: 0.4588235294, blue: 0.8901960784, alpha: 1))
+        CirclePay.invoices.createInvoice(invoiceNumber: nil, items: items, customerMobile: "+201157818027", status: nil, createDate: nil, dueDate: "2022-6-6", prefPaymentMethod: nil, shippingFees: 15, discountValue: 2, discountType: .percentage,  tax: 5, taxValue: nil, shippingPolicy: "Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy", returnPolicy: "return Policy return Policy return Policy return Policyreturn Policyreturn Policy return Policy return Policy", extraNotes: "Extra Notes for this Invoice for testing") { createdInvoice, err in
+            self.view.removeActivityIndicator()
+            if err != nil {
+            } else {
+                // print(createdInvoice)
+                if let unwrappedInvoice = createdInvoice {
+                    //  print(unwrappedInvoice.invoiceNumber)
+                    self.invoiceNumber = unwrappedInvoice.invoiceNumber
+                    self.createInvoice.setTitle("Execute Invoice", for: .normal)
+                }
+            }
+        }
+        
     }
     
     @objc func userPressedInvoicesList() {
@@ -108,20 +126,3 @@ extension InitialViewController: CirclePayDelegete {
 }
 
 
-//
-//let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 220, itemQuantity: 2), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 140, itemQuantity: 4),Items(itemDescription: "Testing Description 3", itemnName: "Testing ItemName 3", itemPrice: 600, itemQuantity: 1)]
-//
-//
-//self.view.showActivityIndicator(with: ._default, isUserInteractionEnabled: false, frame: self.view.frame, color: #colorLiteral(red: 0, green: 0.4588235294, blue: 0.8901960784, alpha: 1))
-//CirclePay.invoices.createInvoice(invoiceNumber: nil, items: items, customerMobile: "+201157818027", status: nil, createDate: nil, dueDate: "2022-6-6", prefPaymentMethod: nil, shippingFees: 15, discountValue: 2, discountType: .percentage,  tax: 5, taxValue: nil, shippingPolicy: "Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy", returnPolicy: "return Policy return Policy return Policy return Policyreturn Policyreturn Policy return Policy return Policy", extraNotes: "Extra Notes for this Invoice for testing") { createdInvoice, err in
-//    self.view.removeActivityIndicator()
-//    if err != nil {
-//    } else {
-//       // print(createdInvoice)
-//        if let unwrappedInvoice = createdInvoice {
-//          //  print(unwrappedInvoice.invoiceNumber)
-//            self.invoiceNumber = unwrappedInvoice.invoiceNumber
-//            self.createInvoice.setTitle("Execute Invoice", for: .normal)
-//        }
-//    }
-//}

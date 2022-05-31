@@ -41,7 +41,9 @@ public struct InvoiceFirstScreenViewModel {
         let amountBeforeTax = subTotal - discount
         if let tax = self.invoiceDetails.tax  {
             let finalTaxAmount = (tax / 100) * amountBeforeTax
-            return finalTaxAmount
+            let taxDigitEnhanced = Double(round(10 * finalTaxAmount) / 10)
+
+            return taxDigitEnhanced
         } else {
             return 0.0
         }
@@ -53,7 +55,9 @@ public struct InvoiceFirstScreenViewModel {
         let discount = self.getDiscuntValue()
         let shipping = self.invoiceDetails.shippingFees ?? 0.0
         let totalBeforeDiscount = subTotal + tax + shipping
+
         let total = totalBeforeDiscount - discount
-        return total
+        let totalDigitEnhanced = Double(round(10 * total) / 10)
+        return Double(totalDigitEnhanced)
     }
 }

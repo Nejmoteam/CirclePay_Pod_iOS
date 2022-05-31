@@ -82,6 +82,13 @@
 		182931C92844BFFA0005E5FF /* ShippingPolicyProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931C12844BFFA0005E5FF /* ShippingPolicyProtocols.swift */; };
 		182931CA2844BFFA0005E5FF /* ShippingPolicyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931C22844BFFA0005E5FF /* ShippingPolicyInteractor.swift */; };
 		182931CB2844BFFA0005E5FF /* ShippingPolicyEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931C32844BFFA0005E5FF /* ShippingPolicyEntity.swift */; };
+		182931E2284636B30005E5FF /* WebViewContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931DA284636B30005E5FF /* WebViewContainerView.swift */; };
+		182931E3284636B30005E5FF /* WebViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931DB284636B30005E5FF /* WebViewPresenter.swift */; };
+		182931E4284636B30005E5FF /* WebViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931DC284636B30005E5FF /* WebViewRouter.swift */; };
+		182931E5284636B30005E5FF /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931DD284636B30005E5FF /* WebViewViewController.swift */; };
+		182931E6284636B30005E5FF /* WebViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931DE284636B30005E5FF /* WebViewProtocols.swift */; };
+		182931E7284636B30005E5FF /* WebViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931DF284636B30005E5FF /* WebViewInteractor.swift */; };
+		182931E8284636B30005E5FF /* WebViewEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182931E0284636B30005E5FF /* WebViewEntity.swift */; };
 		1B15FFDB14BEF51081EF14ADC44BC445 /* InvoiceSecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B33C76FBA36BBFE6058CFD391F3422 /* InvoiceSecondScreenViewController.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553D83DD1FA4823F2D79E6CD398528AC /* RequestTaskMap.swift */; };
 		1D2EC562A58B1804BE1B38D29EFD2F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E56704CF70A00F501482C6EEC5A3EF8F /* Foundation.framework */; };
@@ -391,6 +398,13 @@
 		182931C12844BFFA0005E5FF /* ShippingPolicyProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyProtocols.swift; sourceTree = "<group>"; };
 		182931C22844BFFA0005E5FF /* ShippingPolicyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyInteractor.swift; sourceTree = "<group>"; };
 		182931C32844BFFA0005E5FF /* ShippingPolicyEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyEntity.swift; sourceTree = "<group>"; };
+		182931DA284636B30005E5FF /* WebViewContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainerView.swift; sourceTree = "<group>"; };
+		182931DB284636B30005E5FF /* WebViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewPresenter.swift; sourceTree = "<group>"; };
+		182931DC284636B30005E5FF /* WebViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
+		182931DD284636B30005E5FF /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		182931DE284636B30005E5FF /* WebViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewProtocols.swift; sourceTree = "<group>"; };
+		182931DF284636B30005E5FF /* WebViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewInteractor.swift; sourceTree = "<group>"; };
+		182931E0284636B30005E5FF /* WebViewEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewEntity.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		1D027FF8CC85C63EA118AC026F4C4866 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		20CA300F9C09353E6744A90008AD0ACB /* InvoicesNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoicesNetworking.swift; sourceTree = "<group>"; };
@@ -1000,6 +1014,68 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		182931D8284636A50005E5FF /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				182931ED284636E90005E5FF /* View */,
+				182931EC284636E50005E5FF /* Interactor */,
+				182931EB284636DF0005E5FF /* Presenter */,
+				182931EA284636DB0005E5FF /* Entities */,
+				182931E9284636BB0005E5FF /* Router */,
+				182931DE284636B30005E5FF /* WebViewProtocols.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		182931E9284636BB0005E5FF /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				182931DC284636B30005E5FF /* WebViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		182931EA284636DB0005E5FF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				182931E0284636B30005E5FF /* WebViewEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		182931EB284636DF0005E5FF /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				182931DB284636B30005E5FF /* WebViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		182931EC284636E50005E5FF /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				182931DF284636B30005E5FF /* WebViewInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		182931ED284636E90005E5FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				182931DD284636B30005E5FF /* WebViewViewController.swift */,
+				182931EE284636EC0005E5FF /* Layout */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		182931EE284636EC0005E5FF /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				182931DA284636B30005E5FF /* WebViewContainerView.swift */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		1A3A274D85969AA7C69D838824313765 /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -1374,6 +1450,7 @@
 		6256E78A95C534D8E96E809A52D2D8E0 /* InvoiceScreens */ = {
 			isa = PBXGroup;
 			children = (
+				182931D8284636A50005E5FF /* WebView */,
 				182931AB2844BFD00005E5FF /* RefundPolicy */,
 				182931AA2844BFC80005E5FF /* ShippingPolicy */,
 				5CE665B6FE16B66B23223753FF2B4113 /* InvoiceDetailsScreen */,
@@ -2310,8 +2387,10 @@
 				72C5EE5CB95889F923B3084625C324BB /* InvoiceDetailsEntity.swift in Sources */,
 				1829319E28439DBA0005E5FF /* CountriesISO3166.swift in Sources */,
 				182931A12843A8610005E5FF /* UIButton + Loading.swift in Sources */,
+				182931E8284636B30005E5FF /* WebViewEntity.swift in Sources */,
 				025698C5F2BA7EC8C8D00BBAF3DCBE92 /* InvoiceDetailsInteractor.swift in Sources */,
 				37224439E6170F0F06A3563DBE35A131 /* InvoiceDetailsPaymentSammaryTableViewCell.swift in Sources */,
+				182931E2284636B30005E5FF /* WebViewContainerView.swift in Sources */,
 				182931CA2844BFFA0005E5FF /* ShippingPolicyInteractor.swift in Sources */,
 				A9E86896667588D4160F117CA066D3B2 /* InvoiceDetailsPresenter.swift in Sources */,
 				F77C4FB02F833B30D97F01CD6FE003D2 /* InvoiceDetailsProductTableViewCell.swift in Sources */,
@@ -2333,6 +2412,7 @@
 				985B4C2087A2A31E1AC15852B2EEA45B /* Invoices.swift in Sources */,
 				965158552D0CE8A13713B6BFEFCFF032 /* InvoiceSecondScreenContainerView.swift in Sources */,
 				EA53B899DF4B03FF6D532A16E92B8BDC /* InvoiceSecondScreenEntity.swift in Sources */,
+				182931E3284636B30005E5FF /* WebViewPresenter.swift in Sources */,
 				182931C92844BFFA0005E5FF /* ShippingPolicyProtocols.swift in Sources */,
 				A29F880B8F371F97D59C624A387CE3A9 /* InvoiceSecondScreenInteractor.swift in Sources */,
 				B64D21687BEFD78C87FC706BCF43FE61 /* InvoiceSecondScreenPresenter.swift in Sources */,
@@ -2340,6 +2420,7 @@
 				34E6C87498E3F9EE595F29993C3002CC /* InvoiceSecondScreenRouter.swift in Sources */,
 				1B15FFDB14BEF51081EF14ADC44BC445 /* InvoiceSecondScreenViewController.swift in Sources */,
 				BB433621407CE81BE93BB8179D878B14 /* InvoicesNetworking.swift in Sources */,
+				182931E5284636B30005E5FF /* WebViewViewController.swift in Sources */,
 				AEC750B32C2F9E7DD11DC44468E8535F /* InvoicesWorker.swift in Sources */,
 				96499A1C487D5BBE2A9C928D7F16990F /* Items.swift in Sources */,
 				90E06FD6D0A631AC2E133EB9A3BDBE49 /* KeyValueView.swift in Sources */,
@@ -2387,6 +2468,7 @@
 				182931A52843A8930005E5FF /* NormalIndicator.swift in Sources */,
 				182931B82844BFDE0005E5FF /* RefundPolicyViewController.swift in Sources */,
 				182931C52844BFFA0005E5FF /* ShippingPolicyContainerView.swift in Sources */,
+				182931E6284636B30005E5FF /* WebViewProtocols.swift in Sources */,
 				9D628A48AE597CB55916796964A5E370 /* PaymentMethodsViewModel.swift in Sources */,
 				56B13262214642DF66D0862686909975 /* PaymentMethodWorker.swift in Sources */,
 				719F0CAC6967A1AE7A8E1BFDD4EAF93B /* PaymentNetworking.swift in Sources */,
@@ -2396,6 +2478,7 @@
 				3E6FB1E941F7F67B515942B49171F5F7 /* PhoneContainerView.swift in Sources */,
 				09C006E228D95B2D8F405F3F2F178D2E /* ProductDetailsView.swift in Sources */,
 				833AF10FF981672867409E46363EF1F1 /* RefundCodable.swift in Sources */,
+				182931E7284636B30005E5FF /* WebViewInteractor.swift in Sources */,
 				C26AB29DA5088A1583B51840C327C9A6 /* RefundNetworking.swift in Sources */,
 				BF202AC1968A26BDAC0F664A9151A69E /* Refunds.swift in Sources */,
 				0CC352B3650315D6F2E6E166A35A9383 /* RefundWorker.swift in Sources */,
@@ -2408,6 +2491,7 @@
 				7FB02227A77FDA6211595D03BC85443A /* TitleViewContainer.swift in Sources */,
 				3C2A9F5AE30EF6947EFED45C11B0AD60 /* TotalAmountContainer.swift in Sources */,
 				1829319128438FC20005E5FF /* Date+common+extension.swift in Sources */,
+				182931E4284636B30005E5FF /* WebViewRouter.swift in Sources */,
 				D18C663C169458B400137089F38DA380 /* UIApplication + TopViewController.swift in Sources */,
 				1829319328438FC20005E5FF /* Date+Component+extension.swift in Sources */,
 				84BC0E7B74F77EF5739CA1D30347EF36 /* UITextField.swift in Sources */,

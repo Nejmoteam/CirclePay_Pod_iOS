@@ -22,7 +22,7 @@ class InvoiceListPresenter: InvoiceListPresenterProtocol, InvoiceListInteractorO
     
     func viewDidLoad() {
         print("ViewDidLoad")
-        interactor.getInoviceList(customerMobile: nil)
+        interactor.getInoviceList(customerMobile: "+201157818027")
     }
     
     func numberOfRows() -> Int {

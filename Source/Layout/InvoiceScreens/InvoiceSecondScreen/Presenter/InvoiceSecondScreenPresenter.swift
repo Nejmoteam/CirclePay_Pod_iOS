@@ -133,7 +133,8 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             // OPEN WEB VIEW WITH IFRAME URL
             self.view?.hideLoadingForPayButton()
             self.view?.enablePayButton()
-            self.view?.openIframeViaSafari(iframeUrl: iframeURL)
+            self.router.navigateToWebView(webViewUrl: iframeURL)
+           // self.view?.openIframeViaSafari(iframeUrl: iframeURL)
         }
     }
 }
