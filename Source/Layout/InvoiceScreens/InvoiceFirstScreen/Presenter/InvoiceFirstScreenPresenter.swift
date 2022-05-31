@@ -9,7 +9,7 @@
 
 import Foundation
 class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceFirstScreenInteractorOutPutProtocol {
-
+    
     weak var view: InvoiceFirstScreenViewProtocol?
     private let interactor: InvoiceFirstScreenInteractorInPutProtocol
     private let router: InvoiceFirstScreenRouterProtocol
@@ -34,6 +34,7 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
         print("ViewDidLoad")
         print(invoiceViewModel.invoiceDetails)
         print(invoiceViewModel.merchantDetails)
+        self.setupUIConfigs()
         CirclePay.customers.getCustomer(mobileNumber: invoiceViewModel.invoiceDetails.customerMobile ?? "") { customer, err in
             if let unwrappedError = err {
                 CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
@@ -62,7 +63,40 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
         
         
     }
-
+    
+    private func setupUIConfigs() {
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let unwrappedisLogoEnabled = unwrappedConfigs.logoEnable {
+                self.view?.setupLogoConfigurations(isLogoEnabled: unwrappedisLogoEnabled, logoUrl: unwrappedConfigs.logo ?? "")
+            }
+            if let unwrappedColor = unwrappedConfigs.color {
+                self.view?.setupPrimaryColorConfiguration(colorString: unwrappedColor)
+            }
+            if let unwrappedBilledFromEnabled = unwrappedConfigs.billedFromEnable {
+                self.view?.setupBilledFromConfiguration(isEnabled: unwrappedBilledFromEnabled)
+            }
+            
+            if let unwrappedBilledToEnabled = unwrappedConfigs.billToEnable {
+                self.view?.setupBilledToConfiguration(isEnabled: unwrappedBilledToEnabled)
+            }
+            
+            if let unwrappedTotalAmountisEnabled = unwrappedConfigs.totalPaymentEnable {
+                self.view?.setupTotalAmountConfiguration(isEnabled: unwrappedTotalAmountisEnabled)
+            }
+            if let unwrappedAccountingEnabled = unwrappedConfigs.accountingEnable {
+                self.view?.setupAccountingConfiguration(isEnabled: unwrappedAccountingEnabled)
+            }
+            
+            if let unwrappedShippingPolicyIsEnabled = unwrappedConfigs.shippingPolicyEnable {
+                self.view?.setupShippingPolicyConfiguration(isEnabled: unwrappedShippingPolicyIsEnabled)
+            }
+            
+            if let unwrappedRefundPolicyIsEnabled = unwrappedConfigs.refundPolicyEnable {
+                self.view?.setupRefundPolicyConfiguration(isEnabled: unwrappedRefundPolicyIsEnabled)
+            }
+        }
+    }
+    
     private func setupInvoiceDate() {
         let dateString = self.invoiceViewModel.invoiceDetails.dueDate ?? ""
         let dateStringFormated = dateString.toDate(format: .isoDateTimeMilliSec)?.toString(format: .custom("dd-MM-yyyy"))
