@@ -8,19 +8,19 @@
 //@Mahmoud Allam Templete ^_^
 import UIKit
 class InvoiceSecondScreenContainerView: PaymentBaseClass {
-    private lazy var logoView: LogoContainerView = {
+    lazy var logoView: LogoContainerView = {
         let logoContainer = LogoContainerView()
         logoContainer.translatesAutoresizingMaskIntoConstraints = false
         return logoContainer
     }()
     
-    private lazy var stepsView: StepsView = {
+    lazy var stepsView: StepsView = {
         let stepsViewContainer = StepsView()
         stepsViewContainer.translatesAutoresizingMaskIntoConstraints = false
         return stepsViewContainer
     }()
     
-    private lazy var paymentSummeryTitleContainer: TitleViewContainer = {
+    lazy var customerDataTitleContainer: TitleViewContainer = {
         let titleContainer = TitleViewContainer()
         titleContainer.translatesAutoresizingMaskIntoConstraints = false
         titleContainer.titleLabel.text = "Customer Data"
@@ -57,7 +57,7 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
     }()
     
     
-    private lazy var selectPaymentMethodTitleView: TitleViewContainer = {
+    lazy var selectPaymentMethodTitleView: TitleViewContainer = {
         let titleContainer = TitleViewContainer()
         titleContainer.translatesAutoresizingMaskIntoConstraints = false
         titleContainer.titleLabel.text = "Select Payment Method"
@@ -119,8 +119,8 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
     }
     
     private func addSummeryTitleContainerView() {
-        self.paymentSummeryTitleContainer.heightAnchor.constraint(equalToConstant: 24 + 17).isActive = true
-        self.vStackView.addArrangedSubview(self.paymentSummeryTitleContainer)
+        self.customerDataTitleContainer.heightAnchor.constraint(equalToConstant: 24 + 17).isActive = true
+        self.vStackView.addArrangedSubview(self.customerDataTitleContainer)
         
     }
     

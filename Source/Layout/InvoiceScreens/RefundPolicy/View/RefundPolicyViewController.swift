@@ -8,6 +8,8 @@
 //@Mahmoud Allam Templete ^_^
 import UIKit
 class RefundPolicyViewController: UIViewController, RefundPolicyViewProtocol {
+
+    
     var presenter: RefundPolicyPresenterProtocol!
     lazy var containerView : RefundPolicyContainerView = {
         var view = RefundPolicyContainerView(presenter: self.presenter)
@@ -27,5 +29,15 @@ class RefundPolicyViewController: UIViewController, RefundPolicyViewProtocol {
     
     func setupRefundPolicy(refundPolicy: String) {
         self.containerView.textView.text = refundPolicy
+    }
+    
+    func setupPrimaryColorConfiguration(colorString: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let color = UIColor(hexString: colorString)
+            self.containerView.titleLabel.textColor = color
+        }
     }
 }

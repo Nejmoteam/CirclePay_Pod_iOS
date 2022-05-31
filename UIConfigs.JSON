@@ -1,0 +1,36 @@
+//
+//  Configs.swift
+//  CirclePay_Pod_iOS
+//
+//  Created by Alchemist on 01/06/2022.
+//
+
+{
+    "status": true,
+    "message": "Successfull",
+    "isError": false,
+    "errorCode": "",
+    "details": "Apps with their configurations against this merchant",
+    "data": {
+        "id": 64834,
+        "ColorEnable": false,
+        "ConfiguredAppId": 43246,
+        "CheckoutType": "PAYMENT_LINK",
+        "Logo": "https://blog.trella.app/wp-content/uploads/2020/03/Logo-white-Orange-02-e1585660085760-copy.png",
+        "LogoEnable": true,
+        "Color": "#F17B30",
+        "BilledFromEnable": true,
+        "BillToEnable": true,
+        "InvoicePdfEnable": true,
+        "TotalPaymentEnable": true,
+        "AccountingEnable": true,
+        "ShippingPolicyEnable": true,
+        "RefundPolicyEnable": true,
+        "CouponEnable": true,
+        "CustomerInformationEnable": true,
+        "RequireAddressFromCustomerEnable": true,
+        "createdAt": "2022-05-19T12:25:00.000Z",
+        "updatedAt": "2022-05-19 12:25:00",
+        "UserId": 12
+    }
+}

@@ -9,7 +9,8 @@
 import Foundation
 protocol InvoiceDetailsViewProtocol: AnyObject {
     var presenter: InvoiceDetailsPresenterProtocol! {get set}
-    
+    //UI Configuration
+    func setupPrimaryColorConfiguration(colorString: String)
 }
 protocol InvoiceDetailsPresenterProtocol {
     var view: InvoiceDetailsViewProtocol? {get set}

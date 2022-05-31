@@ -10,6 +10,8 @@ import Foundation
 protocol RefundPolicyViewProtocol: class {
     var presenter: RefundPolicyPresenterProtocol! {get set}
     func setupRefundPolicy(refundPolicy: String)
+    func setupPrimaryColorConfiguration(colorString: String)
+
 }
 protocol RefundPolicyPresenterProtocol {
     var view: RefundPolicyViewProtocol? {get set}

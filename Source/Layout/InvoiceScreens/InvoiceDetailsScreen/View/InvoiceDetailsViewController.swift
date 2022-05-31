@@ -8,6 +8,7 @@
 //@Mahmoud Allam Templete ^_^
 import UIKit
 class InvoiceDetailsViewController: UIViewController, InvoiceDetailsViewProtocol {
+
     var presenter: InvoiceDetailsPresenterProtocol!
     lazy var containerView : InvoiceDetailsContainerView = {
         var view = InvoiceDetailsContainerView(presenter: self.presenter)
@@ -44,4 +45,8 @@ class InvoiceDetailsViewController: UIViewController, InvoiceDetailsViewProtocol
         super.loadView()
         self.view = containerView
     }
+    
+    func setupPrimaryColorConfiguration(colorString: String) {
+    }
+    
 }
