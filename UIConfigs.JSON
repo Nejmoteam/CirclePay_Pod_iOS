@@ -19,11 +19,11 @@
         "Logo": "https://blog.trella.app/wp-content/uploads/2020/03/Logo-white-Orange-02-e1585660085760-copy.png",
         "LogoEnable": true,
         "Color": "#F17B30",
-        "BilledFromEnable": true,
+        "BilledFromEnable": false,
         "BillToEnable": true,
         "InvoicePdfEnable": true,
         "TotalPaymentEnable": true,
-        "AccountingEnable": true,
+        "AccountingEnable": false,
         "ShippingPolicyEnable": true,
         "RefundPolicyEnable": true,
         "CouponEnable": true,
@@ -34,3 +34,4 @@
         "UserId": 12
     }
 }
+
