@@ -37,6 +37,12 @@ protocol InvoiceDetailsPaymentSammaryTableViewCellView {
     func configureDiscount(discountType: DiscountTypes, discountValue:String, value: String)
     func configureSubTotal(subTotal: String)
     func configureTotal(total: String)
+    
+    func setupPrimaryColorConfiguration(colorString: String)
+    func setupBilledFromConfiguration(isEnabled: Bool)
+    func setupBilledToConfiguration(isEnabled: Bool)
+    func setupTotalAmountConfiguration(isEnabled: Bool)
+    func setupAccountingConfiguration(isEnabled:Bool)
 }
 
 
