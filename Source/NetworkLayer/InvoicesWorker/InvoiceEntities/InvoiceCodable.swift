@@ -23,6 +23,8 @@ public struct InvoiceCodable:Codable {
     public let shippingPolicy:String?
     public let returnPolicy:String?
     public let extraNotes:String?
+    public let totalValue: Double?
+    public let subTotalValue: Double?
     
     enum CodingKeys: String, CodingKey {
         case invoiceNumber = "invoice_number"
@@ -39,6 +41,8 @@ public struct InvoiceCodable:Codable {
         case returnPolicy = "return_policy"
         case extraNotes = "extra_notes"
         case items, status, tax
+        case totalValue = "total_value"
+        case subTotalValue = "sub_total_value"
     }
 }
 
