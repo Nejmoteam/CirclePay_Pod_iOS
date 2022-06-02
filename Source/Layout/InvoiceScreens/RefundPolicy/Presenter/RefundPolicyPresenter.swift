@@ -21,7 +21,13 @@ class RefundPolicyPresenter: RefundPolicyPresenterProtocol, RefundPolicyInteract
     }
     func viewDidLoad() {
         print("ViewDidLoad")
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let color = unwrappedConfigs.color {
+                self.view?.setupPrimaryColorConfiguration(colorString: color)
+            }
+        }
         self.view?.setupRefundPolicy(refundPolicy: self.refundPolicy)
+   
 
     }
     func dismissViewController() {

@@ -10,6 +10,7 @@ import Foundation
 protocol ShippingPolicyViewProtocol: class {
     var presenter: ShippingPolicyPresenterProtocol! {get set}
     func setupShippingPolicy(shippingPolicy: String)
+    func setupPrimaryColorConfiguration(colorString: String)
 
 }
 protocol ShippingPolicyPresenterProtocol {

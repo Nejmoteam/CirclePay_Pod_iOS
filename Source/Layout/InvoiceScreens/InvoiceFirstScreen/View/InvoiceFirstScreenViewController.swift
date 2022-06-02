@@ -7,6 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import UIKit
+import Kingfisher
 class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenViewProtocol {
     
     var presenter: InvoiceFirstScreenPresenterProtocol!
@@ -101,11 +102,106 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
         }
     }
     
+    // UIConfiguration
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String) {
+        if isLogoEnabled {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.containerView.logoView.isHidden = !isLogoEnabled
+                // get logo
+                if let imageURL = URL(string: logoUrl) {
+                    self.containerView.logoView.logoImageView.kf.setImage(with: imageURL)
+                    self.containerView.logoView.logoImageView.clipsToBounds = true
+                }
+            }
+        } else {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+            self.containerView.logoView.isHidden = true
+            }
+        }
+    }
+    
+    func setupPrimaryColorConfiguration(colorString: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let color = UIColor(hexString: colorString)
+            self.containerView.paymentSummeryTitleContainer.titleLabel.textColor = color
+            self.containerView.stepsView.stepOneView.stepNumberLabel.backgroundColor = color
+            self.containerView.stepsView.stepTwoView.stepNumberLabel.backgroundColor = color.withAlphaComponent(0.2)
+            self.containerView.shippingRefundButtonContainer.refundPolicyButton.setTitleColor(color, for: .normal)
+            self.containerView.shippingRefundButtonContainer.shippingPolicyButton.setTitleColor(color, for: .normal)
+            self.containerView.nextButtonContainer.nextButton.backgroundColor = color
+        }
+    }
+    
+    func setupBilledFromConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.billedFromView.isHidden = !isEnabled
+        }
+    }
+    
+    func setupBilledToConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.billedToView.isHidden = !isEnabled
+
+        }
+    }
+    
+    func setupTotalAmountConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.totalAmountView.isHidden = !isEnabled
+
+        }
+    }
+    
+    func setupAccountingConfiguration(isEnabled:Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.subTotalView.isHidden = !isEnabled
+            self.containerView.taxView.isHidden = !isEnabled
+            self.containerView.shippingView.isHidden = !isEnabled
+            self.containerView.discuntView.isHidden = !isEnabled
+            self.containerView.cupponView.bottomSeprator.isHidden = !isEnabled
+        }
+    }
+    
+    func setupShippingPolicyConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.shippingRefundButtonContainer.shippingPolicyButton.isHidden = !isEnabled
+        }
+    }
+    
+    func setupRefundPolicyConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.shippingRefundButtonContainer.refundPolicyButton.isHidden = !isEnabled
+
+        }
+    }
+    
+    
     
 }
-
-
-
-
-
-

@@ -28,4 +28,14 @@ class ShippingPolicyViewController: UIViewController, ShippingPolicyViewProtocol
     func setupShippingPolicy(shippingPolicy: String) {
         self.containerView.textView.text = shippingPolicy
     }
+    
+    func setupPrimaryColorConfiguration(colorString: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let color = UIColor(hexString: colorString)
+            self.containerView.titleLabel.textColor = color
+        }
+    }
 }

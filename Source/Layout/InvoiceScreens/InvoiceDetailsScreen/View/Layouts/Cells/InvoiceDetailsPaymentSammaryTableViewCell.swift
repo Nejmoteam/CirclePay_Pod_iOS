@@ -246,4 +246,57 @@ extension InvoiceDetailsPaymentSammaryTableViewCell: InvoiceDetailsPaymentSammar
             self.totalAmountView.keyValueViewContainer.valueLabel.text = total + " EGP"
         }
     }
+    
+    // UI Configuration
+    
+    func setupPrimaryColorConfiguration(colorString: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let color = UIColor(hexString: colorString)
+            self.paymentSummeryTitleContainer.titleLabel.textColor = color
+        }
+    }
+    
+    func setupBilledFromConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.billedFromView.isHidden = !isEnabled
+        }
+    }
+    
+    func setupBilledToConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.billedToView.isHidden = !isEnabled
+
+        }
+    }
+    
+    func setupTotalAmountConfiguration(isEnabled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.totalAmountView.isHidden = !isEnabled
+
+        }
+    }
+    
+    func setupAccountingConfiguration(isEnabled:Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.subTotalView.isHidden = !isEnabled
+            self.taxView.isHidden = !isEnabled
+            self.shippingView.isHidden = !isEnabled
+            self.discountView.isHidden = !isEnabled
+        }
+    }
 }

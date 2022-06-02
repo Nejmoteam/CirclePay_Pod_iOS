@@ -67,6 +67,13 @@ class PaymentMethodsViewContainer: UIView, UITableViewDataSource , UITableViewDe
         guard let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(PaymentMethodCell.self), for: indexPath) as? PaymentMethodCell else {
             return UITableViewCell()
         }
+        if let uiConfigs = CirclePay.uiConfigs {
+            if let color = uiConfigs.color {
+                cell.paymentSelectioanView.selectImage.tintColor = UIColor(hexString: color)
+                cell.paymentSelectioanView.selectedPaymentMethodTintColor = UIColor(hexString: color)
+                cell.paymentSelectioanView.selectedPaymentGetWayTingColor = UIColor(hexString: color).withAlphaComponent(0.5)
+            }
+        }
         
         if let unwrappedPresenter = self.presenter {
             unwrappedPresenter.configurePaymentMethodsCell(cell: cell, indexPath: indexPath)

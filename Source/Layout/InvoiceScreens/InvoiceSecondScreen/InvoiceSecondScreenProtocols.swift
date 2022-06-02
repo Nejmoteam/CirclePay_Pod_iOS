@@ -12,11 +12,14 @@ protocol InvoiceSecondScreenViewProtocol: AnyObject {
     
     func reloadPaymentMethodsData()
     func setupCustomerData(customer:CustomerViewModel)
-    func openIframeViaSafari(iframeUrl: String)
     func showLoadingForPayButton()
     func hideLoadingForPayButton()
     func enablePayButton()
     func disablePayButton()
+    
+    //UI Configs
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String)
+    func setupPrimaryColorConfiguration(colorString: String)
 }
 protocol InvoiceSecondScreenPresenterProtocol {
     var view: InvoiceSecondScreenViewProtocol? {get set}

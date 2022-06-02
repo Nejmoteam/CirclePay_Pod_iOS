@@ -24,7 +24,16 @@ class InvoiceDetailsPresenter: InvoiceDetailsPresenterProtocol, InvoiceDetailsIn
     
     func viewDidLoad() {
         print("ViewDidLoad")
+        setupUIConfigs()
 
+    }
+    
+    private func setupUIConfigs() {
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let unwrappedColor = unwrappedConfigs.color {
+                self.view?.setupPrimaryColorConfiguration(colorString: unwrappedColor)
+            }
+        }
     }
     
     func dismissView() {
@@ -42,6 +51,27 @@ class InvoiceDetailsPresenter: InvoiceDetailsPresenterProtocol, InvoiceDetailsIn
         cell.configureDiscount(discountType: .percentage, discountValue:"\(self.invoiceViewModel.invoiceDetails.discountValueCalculated ?? 0.0)", value: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)")
         cell.configureSubTotal(subTotal: "\(self.invoiceViewModel.getInvoiceSubTotal())")
         cell.configureTotal(total: "\(invoiceViewModel.getTotal())")
+        
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let unwrappedColor = unwrappedConfigs.color {
+                cell.setupPrimaryColorConfiguration(colorString: unwrappedColor)
+            }
+            if let unwrappedBilledFromEnabled = unwrappedConfigs.billedFromEnable {
+                cell.setupBilledFromConfiguration(isEnabled: unwrappedBilledFromEnabled)
+            }
+            
+            if let unwrappedBilledToEnabled = unwrappedConfigs.billToEnable {
+                cell.setupBilledToConfiguration(isEnabled: unwrappedBilledToEnabled)
+            }
+            
+            if let unwrappedTotalAmountisEnabled = unwrappedConfigs.totalPaymentEnable {
+                cell.setupTotalAmountConfiguration(isEnabled: unwrappedTotalAmountisEnabled)
+            }
+            if let unwrappedAccountingEnabled = unwrappedConfigs.accountingEnable {
+                cell.setupAccountingConfiguration(isEnabled: unwrappedAccountingEnabled)
+            }
+        }
+
     }
     
     func configureCell(cell: InvoiceDetailsProductTableViewCellView, at indexPath: IndexPath) {

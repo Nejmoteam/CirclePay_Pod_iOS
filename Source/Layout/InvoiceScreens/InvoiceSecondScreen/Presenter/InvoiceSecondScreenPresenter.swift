@@ -37,6 +37,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     }
     func viewDidLoad() {
         print("ViewDidLoad")
+        self.setupUIConfigs()
         self.getPaymentMethods()
         var customerPhone = ""
         if let unwrappedPhone = customer.mobileNumber {
@@ -135,6 +136,17 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             self.view?.enablePayButton()
             self.router.navigateToWebView(webViewUrl: iframeURL)
            // self.view?.openIframeViaSafari(iframeUrl: iframeURL)
+        }
+    }
+    
+    private func setupUIConfigs() {
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let unwrappedisLogoEnabled = unwrappedConfigs.logoEnable {
+                self.view?.setupLogoConfigurations(isLogoEnabled: unwrappedisLogoEnabled, logoUrl: unwrappedConfigs.logo ?? "")
+            }
+            if let unwrappedColor = unwrappedConfigs.color {
+                self.view?.setupPrimaryColorConfiguration(colorString: unwrappedColor)
+            }
         }
     }
 }
