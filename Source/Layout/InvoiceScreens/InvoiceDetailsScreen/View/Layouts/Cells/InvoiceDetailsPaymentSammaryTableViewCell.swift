@@ -11,7 +11,7 @@ import UIKit
 
 class InvoiceDetailsPaymentSammaryTableViewCell: UITableViewCell {
     lazy var vStackView: UIStackView = {
-       let stack = UIStackView()
+        let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
         stack.alignment = .fill
@@ -81,7 +81,7 @@ class InvoiceDetailsPaymentSammaryTableViewCell: UITableViewCell {
     }()
     
     lazy var bottomSeprator: UIView = {
-       var view = UIView()
+        var view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = ColorTypes.GrayPrimary500.value
         return view
@@ -222,9 +222,9 @@ extension InvoiceDetailsPaymentSammaryTableViewCell: InvoiceDetailsPaymentSammar
             } else {
                 self.discountView.keyLabel.text = "Discount"
             }
-
+            
         }
-
+        
     }
     
     func configureTaxView(taxValue: String, taxPersentage: String) {
@@ -260,43 +260,32 @@ extension InvoiceDetailsPaymentSammaryTableViewCell: InvoiceDetailsPaymentSammar
     }
     
     func setupBilledFromConfiguration(isEnabled: Bool) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.billedFromView.isHidden = !isEnabled
-        }
+        self.billedFromView.isHidden = !isEnabled
+        checkIfTitleAvailable()
     }
     
     func setupBilledToConfiguration(isEnabled: Bool) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.billedToView.isHidden = !isEnabled
-
-        }
+        self.billedToView.isHidden = !isEnabled
+        checkIfTitleAvailable()
     }
     
     func setupTotalAmountConfiguration(isEnabled: Bool) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.totalAmountView.isHidden = !isEnabled
-
-        }
+        self.totalAmountView.isHidden = !isEnabled
+        checkIfTitleAvailable()
     }
     
     func setupAccountingConfiguration(isEnabled:Bool) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.subTotalView.isHidden = !isEnabled
-            self.taxView.isHidden = !isEnabled
-            self.shippingView.isHidden = !isEnabled
-            self.discountView.isHidden = !isEnabled
+        self.subTotalView.isHidden = !isEnabled
+        self.taxView.isHidden = !isEnabled
+        self.shippingView.isHidden = !isEnabled
+        self.discountView.isHidden = !isEnabled
+        self.bottomSeprator.isHidden = !isEnabled
+        checkIfTitleAvailable()
+    }
+    
+    private func checkIfTitleAvailable() {
+        if billedFromView.isHidden && billedToView.isHidden && totalAmountView.isHidden && subTotalView.isHidden {
+            self.paymentSummeryTitleContainer.isHidden = true
         }
     }
 }
