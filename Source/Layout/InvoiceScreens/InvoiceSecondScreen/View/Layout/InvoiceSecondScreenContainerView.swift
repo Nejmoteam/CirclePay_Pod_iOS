@@ -71,6 +71,7 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
         button.nextButton.addTarget(self, action: #selector(didTappedPay), for: .touchUpInside)
         button.nextButton.isEnabled = false
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.backButton.addTarget(self, action: #selector(didTappedBack), for: .touchUpInside)
         return button
     }()
     
@@ -208,6 +209,9 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
             self.countryPicker.frame = self.frame
             self.addSubview(self.countryPicker)
         }
+    }
+    @objc func didTappedBack(){
+        self.presenter.dismiss()
     }
 }
 

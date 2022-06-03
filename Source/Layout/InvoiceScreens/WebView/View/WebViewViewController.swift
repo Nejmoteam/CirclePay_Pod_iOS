@@ -20,6 +20,23 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
         return webView
     }()
     
+    lazy var backButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Back", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: FontType.regularFont.name, size: 18)
+        button.backgroundColor = .white
+        button.setTitleColor(ColorTypes.PrimaryMain500.value, for: .normal)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = 5
+        button.layer.borderWidth = 1
+        button.layer.borderColor = ColorTypes.PrimaryMain500.value.cgColor
+        button.addTarget(self, action: #selector(didTappedBack), for: .touchUpInside)
+        return button
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
@@ -29,18 +46,42 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
     }
     
     private func setupWebView() {
-        self.view.addSubview(self.webView)
-        NSLayoutConstraint.activate([
-            self.webView.topAnchor.constraint(equalTo: self.view.topAnchor),
-            self.webView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            self.webView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-        ])
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.view.addSubview(self.backButton)
+            NSLayoutConstraint.activate([
+                self.backButton.heightAnchor.constraint(equalToConstant: 36),
+                self.backButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 32),
+                self.backButton.widthAnchor.constraint(equalToConstant: (self.view.frame.width / 2) - 48 ),
+                self.backButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -32)
+            ])
+            self.view.addSubview(self.webView)
+            NSLayoutConstraint.activate([
+                self.webView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 32),
+                self.webView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 32),
+                self.webView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -32),
+                self.webView.bottomAnchor.constraint(equalTo: self.backButton.topAnchor, constant: -32)
+            ])
+            if let uiConfigs = CirclePay.uiConfigs {
+                if let colorString = uiConfigs.color {
+                    let color = UIColor(hexString: colorString)
+                    self.backButton.setTitleColor(color, for: .normal)
+                    self.backButton.layer.borderColor = color.cgColor
+                }
+            }
+        }
+        
     }
+    
     override func loadView() {
         super.loadView()
     }
     
+    @objc func didTappedBack() {
+        self.dismiss(animated: true, completion: nil)
+    }
     func openUrl(url: String) {
         guard let actualUrl = URL(string: url) else {
             return

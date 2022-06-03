@@ -30,9 +30,11 @@ protocol InvoiceSecondScreenPresenterProtocol {
     func onTapPay()
     func didChangeCountry(countryName: String)
     var updatedCustomerData : GetCustomerCodable? {get set}
+    func dismiss()
 }
 protocol InvoiceSecondScreenRouterProtocol {
     func navigateToWebView(webViewUrl: String)
+    func dismiss()
 }
 protocol InvoiceSecondScreenInteractorInPutProtocol {
     var presenter: InvoiceSecondScreenInteractorOutPutProtocol? {get set}

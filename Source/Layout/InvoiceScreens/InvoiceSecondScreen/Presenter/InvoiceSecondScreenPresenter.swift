@@ -149,5 +149,9 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             }
         }
     }
+    
+    func dismiss() {
+        self.router.dismiss()
+    }
 }
 

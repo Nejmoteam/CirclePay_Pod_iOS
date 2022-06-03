@@ -125,6 +125,9 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
         self.router.navigateToRefundPolicy(refundPolicy: self.invoiceViewModel.invoiceDetails.returnPolicy ?? "")
     }
     
+    func dismiss() {
+        self.router.dismiss()
+    }
     
     
 }

@@ -138,6 +138,8 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
             self.containerView.shippingRefundButtonContainer.refundPolicyButton.setTitleColor(color, for: .normal)
             self.containerView.shippingRefundButtonContainer.shippingPolicyButton.setTitleColor(color, for: .normal)
             self.containerView.nextButtonContainer.nextButton.backgroundColor = color
+            self.containerView.nextButtonContainer.backButton.setTitleColor(color, for: .normal)
+            self.containerView.nextButtonContainer.backButton.layer.borderColor = color.cgColor
         }
     }
     

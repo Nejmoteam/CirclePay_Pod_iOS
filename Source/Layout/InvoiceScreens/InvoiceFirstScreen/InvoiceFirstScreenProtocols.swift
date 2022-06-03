@@ -38,12 +38,14 @@ protocol InvoiceFirstScreenPresenterProtocol {
     func navigateToInvoiceDetails()
     func navigateToShippingPolicy()
     func navigateToRefundPolicy()
+    func dismiss()
 }
 protocol InvoiceFirstScreenRouterProtocol {
     func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable)
     func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable)
     func navigateToShippingPolicy(shippingPolicy: String)
     func navigateToRefundPolicy(refundPolicy: String)
+    func dismiss()
     
 }
 protocol InvoiceFirstScreenInteractorInPutProtocol {

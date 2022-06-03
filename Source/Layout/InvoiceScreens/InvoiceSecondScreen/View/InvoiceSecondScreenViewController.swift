@@ -117,6 +117,8 @@ class InvoiceSecondScreenViewController: UIViewController, InvoiceSecondScreenVi
             self.containerView.payButtonContainer.nextButton.backgroundColor = color
             self.containerView.stepsView.stepOneView.stepNumberLabel.backgroundColor = color
             self.containerView.stepsView.stepTwoView.stepNumberLabel.backgroundColor = color.withAlphaComponent(0.2)
+            self.containerView.payButtonContainer.backButton.setTitleColor(color, for: .normal)
+            self.containerView.payButtonContainer.backButton.layer.borderColor = color.cgColor
         }
     }
 }

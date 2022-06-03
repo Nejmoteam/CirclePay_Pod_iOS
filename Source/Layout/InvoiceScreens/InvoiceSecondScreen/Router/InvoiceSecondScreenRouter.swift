@@ -30,4 +30,13 @@ class InvoiceSecondScreenRouter: InvoiceSecondScreenRouterProtocol {
             self.viewController?.present(webViewScene, animated: true, completion: nil)
         }
     }
+    
+    func dismiss() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.viewController?.dismiss(animated: true, completion: nil)
+        }
+    }
 }
