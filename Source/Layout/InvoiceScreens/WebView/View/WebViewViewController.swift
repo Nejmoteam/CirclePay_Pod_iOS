@@ -40,6 +40,8 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad()
+        
+        self.view.backgroundColor = .white
         self.setupWebView()
         
         // Do any additional setup after loading the view.
@@ -69,6 +71,7 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
                     let color = UIColor(hexString: colorString)
                     self.backButton.setTitleColor(color, for: .normal)
                     self.backButton.layer.borderColor = color.cgColor
+                    self.view.showActivityIndicator(with: ._default, color: color)
                 }
             }
         }
@@ -80,6 +83,7 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
     }
     
     @objc func didTappedBack() {
+//        self.dismissAll(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
     func openUrl(url: String) {
@@ -90,9 +94,12 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
     }
     
     func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
+        self.view.removeActivityIndicator()
     }
     
     func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {
         print("fail to Navigation")
+        self.view.removeActivityIndicator()
     }
+    
 }

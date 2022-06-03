@@ -59,6 +59,7 @@
 		182932352846C6230005E5FF /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 182932292846C6230005E5FF /* Roboto-Light.ttf */; };
 		182932362846C6230005E5FF /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1829322A2846C6230005E5FF /* Roboto-MediumItalic.ttf */; };
 		182932382846C8820005E5FF /* UIConfigs.JSON in Sources */ = {isa = PBXBuildFile; fileRef = 182932372846C8820005E5FF /* UIConfigs.JSON */; };
+		1829328A284A7B040005E5FF /* UIViewController + DismissAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18293289284A7B040005E5FF /* UIViewController + DismissAll.swift */; };
 		1AC3B7276B02B7CA3541FB2693496435 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DFBB98251206E150645602CBF01E6C /* PaymentMethods.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2944BEF242DD24D475D56ACF495677BD /* RequestTaskMap.swift */; };
 		1D2EC562A58B1804BE1B38D29EFD2F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8063291033C95A8B2A24FA2AD7A79 /* Foundation.framework */; };
@@ -478,6 +479,7 @@
 		182932292846C6230005E5FF /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		1829322A2846C6230005E5FF /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		182932372846C8820005E5FF /* UIConfigs.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UIConfigs.JSON; sourceTree = "<group>"; };
+		18293289284A7B040005E5FF /* UIViewController + DismissAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + DismissAll.swift"; sourceTree = "<group>"; };
 		184E0EEA8471BA3F3CF0B58AA7F4AFD1 /* InvoiceSecondScreenEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenEntity.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		1A15B003FC891AF325C3CD7641A8A2EA /* PaymentLinkSecondScreenInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentLinkSecondScreenInteractor.swift; sourceTree = "<group>"; };
@@ -878,6 +880,7 @@
 				CCED09DCAE279CFEF206C63DF4EDC6E5 /* UITextField.swift */,
 				BAA9CB4A5BB7FC5A26640BAFD2420DB8 /* Date */,
 				20312592B74A8B9AC60CE360D3174931 /* UIButton + Loading */,
+				18293289284A7B040005E5FF /* UIViewController + DismissAll.swift */,
 			);
 			name = Extensions;
 			path = Source/Extensions;
@@ -2674,6 +2677,7 @@
 				4F655694F1D89B42652F52BD4E720595 /* InoviceDetailsTableHeaderView.swift in Sources */,
 				A1E668B7AA0B2C147CDB4F54F0349E06 /* Int+BusinessErrorCode.swift in Sources */,
 				BC29F1255C66A5856BEAFEF1CBF53F60 /* Int+HTTPStatusCode.swift in Sources */,
+				1829328A284A7B040005E5FF /* UIViewController + DismissAll.swift in Sources */,
 				A418DCF958405850D8DD71B7229A83FD /* InvoiceCodable.swift in Sources */,
 				63010A3D419C38CE834FFD51B3F195AD /* InvoiceDeleteCodable.swift in Sources */,
 				16E0B4459D8A1BCF122C2CB4C5F47725 /* InvoiceDetailContainerView + UItableView.swift in Sources */,
