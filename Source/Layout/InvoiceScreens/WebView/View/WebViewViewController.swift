@@ -100,11 +100,9 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
             if url.contains("success=true") && url.contains("circlepay.ai") {
                 print("Paid Sucsessfully")
                 self.presenter.transactionPaidSucsesfully()
-                self.dismiss(animated: true, completion: nil)
             } else if url.contains("success=false") && url.contains("circlepay.ai") {
                 print("Couldn't Pay")
                 self.presenter.failedToPayTransaction()
-                self.dismiss(animated: true, completion: nil)
             }
         }
     }

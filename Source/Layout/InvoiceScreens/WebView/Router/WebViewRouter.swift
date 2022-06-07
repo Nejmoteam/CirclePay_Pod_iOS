@@ -19,4 +19,15 @@ class WebViewRouter: WebViewRouterProtocol {
         router.viewController = view
         return view
     }
+    
+    func presentInvoicePaymentStatusScreen(result: InvoicePaymentStatus) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let resultScene = InvoicePaymentStatusRouter.createAnModule(with: result)
+            resultScene.modalPresentationStyle = .fullScreen
+            self.viewController?.present(resultScene, animated: true, completion: nil)
+        }
+    }
 }

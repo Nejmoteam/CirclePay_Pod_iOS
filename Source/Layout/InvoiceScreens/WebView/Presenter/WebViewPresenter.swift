@@ -30,9 +30,11 @@ class WebViewPresenter: WebViewPresenterProtocol, WebViewInteractorOutPutProtoco
     
     func transactionPaidSucsesfully() {
         CirclePay.delegete?.didPaidTransactionSucsessfully(transactionId: self.transactionId)
+        self.router.presentInvoicePaymentStatusScreen(result: .success)
 
     }
     func failedToPayTransaction() {
         CirclePay.delegete?.didGetErrorAtPayingTransaction(error: CirclePayError(errorCode: 0000, errorMsg: "Something went wrong, please try again"))
+        self.router.presentInvoicePaymentStatusScreen(result: .failure)
     }
 }
