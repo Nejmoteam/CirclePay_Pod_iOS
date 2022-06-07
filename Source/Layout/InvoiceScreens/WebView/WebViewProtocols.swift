@@ -14,6 +14,8 @@ protocol WebViewViewProtocol: class {
 protocol WebViewPresenterProtocol {
     var view: WebViewViewProtocol? {get set}
     func viewDidLoad()
+    func transactionPaidSucsesfully()
+    func failedToPayTransaction()
 }
 protocol WebViewRouterProtocol {
 }

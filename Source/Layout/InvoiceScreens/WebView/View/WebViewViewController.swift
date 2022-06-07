@@ -95,6 +95,18 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
     
     func webView(_ webView: WKWebView, didFinish _: WKNavigation!) {
         self.view.removeActivityIndicator()
+        print("Finish Navigation to \(webView.url?.absoluteString ?? "")")
+        if let url = webView.url?.absoluteString {
+            if url.contains("success=true") && url.contains("circlepay.ai") {
+                print("Paid Sucsessfully")
+                self.presenter.transactionPaidSucsesfully()
+                self.dismiss(animated: true, completion: nil)
+            } else if url.contains("success=false") && url.contains("circlepay.ai") {
+                print("Couldn't Pay")
+                self.presenter.failedToPayTransaction()
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     func webView(_: WKWebView, didFail _: WKNavigation!, withError _: Error) {

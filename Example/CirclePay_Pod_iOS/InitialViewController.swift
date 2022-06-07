@@ -115,12 +115,16 @@ class InitialViewController: UIViewController {
 
 extension InitialViewController: CirclePayDelegete {
     func didGetErrorAtCheckoutProcess(error: CirclePayError) {
+        print("Check out error")
     }
     
     func didPaidTransactionSucsessfully(transactionId: String) {
+        print("Sucsessfully Paid ")
     }
     
     func didGetErrorAtPayingTransaction(error: CirclePayError) {
+        print("Failed to Pay")
+
     }
     
 }
