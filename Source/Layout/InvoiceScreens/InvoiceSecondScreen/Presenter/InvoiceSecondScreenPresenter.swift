@@ -111,7 +111,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     private func handleTappingOnPayButton() {
         let dispatchGroup = DispatchGroup()
         var iframeURL  = ""
-        var transactionId = ""
+        var transactionID = ""
         dispatchGroup.enter()
         CirclePay.customers.updateCustomer(firstName: self.updatedCustomerData?.firstName ?? "", lastName: self.updatedCustomerData?.lastName ?? "", address: self.updatedCustomerData?.address ?? "", country: self.updatedCustomerData?.country ?? "", governorate: self.updatedCustomerData?.governorate ?? "", city: self.updatedCustomerData?.city ?? "", aptNumber: self.updatedCustomerData?.aptNumber ?? "", email: self.updatedCustomerData?.email ?? "", mobileNumber: self.updatedCustomerData?.mobileNumber ?? "") { customerData, error in
             dispatchGroup.leave()
@@ -124,20 +124,20 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
                 dispatchGroup.leave()
             } else {
                 let url = invoiceData?.invoiceUrl
-                var transactionId = invoiceData?.transactionId
+                let transactionId = invoiceData?.transactionId
                 iframeURL = url ?? ""
-                transactionId = transactionId ?? ""
+                transactionID = transactionId ?? ""
                 dispatchGroup.leave()
             }
         }
         dispatchGroup.notify(queue: .main) {
-            guard iframeURL != "" && transactionId != "" else {
+            guard iframeURL != "" && transactionID != "" else {
                 return
             }
             // OPEN WEB VIEW WITH IFRAME URL
             self.view?.hideLoadingForPayButton()
             self.view?.enablePayButton()
-            self.router.navigateToWebView(webViewUrl: iframeURL, transactionId: transactionId)
+            self.router.navigateToWebView(webViewUrl: iframeURL, transactionId: transactionID)
            // self.view?.openIframeViaSafari(iframeUrl: iframeURL)
         }
     }
