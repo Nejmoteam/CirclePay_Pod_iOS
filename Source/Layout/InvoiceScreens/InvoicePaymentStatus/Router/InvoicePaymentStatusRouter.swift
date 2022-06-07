@@ -24,5 +24,5 @@ class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
 
 enum InvoicePaymentStatus {
     case success
-    case failer
+    case failure
 }

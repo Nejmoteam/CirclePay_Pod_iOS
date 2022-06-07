@@ -297,7 +297,7 @@ class InvoicePaymentStatusContainerView: UIView {
                 self.downloadButton.isHidden = false
                 self.tryAgainButton.isHidden = true
             }
-        case .failer:
+        case .failure:
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {
                     return
