@@ -17,6 +17,17 @@ protocol InvoiceFirstScreenViewProtocol: AnyObject {
     func configureInvoiceDate(date: String)
     func configureSubTotal(subTotal: String)
     func configureTotal(total: String)
+    
+    //UI Configuration
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String)
+    func setupPrimaryColorConfiguration(colorString: String)
+    func setupBilledFromConfiguration(isEnabled: Bool)
+    func setupBilledToConfiguration(isEnabled: Bool)
+    func setupTotalAmountConfiguration(isEnabled: Bool)
+    func setupAccountingConfiguration(isEnabled:Bool)
+    func setupShippingPolicyConfiguration(isEnabled: Bool)
+    func setupRefundPolicyConfiguration(isEnabled: Bool)
+
 
 
 }
@@ -27,12 +38,14 @@ protocol InvoiceFirstScreenPresenterProtocol {
     func navigateToInvoiceDetails()
     func navigateToShippingPolicy()
     func navigateToRefundPolicy()
+    func dismiss()
 }
 protocol InvoiceFirstScreenRouterProtocol {
     func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable)
     func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable)
     func navigateToShippingPolicy(shippingPolicy: String)
     func navigateToRefundPolicy(refundPolicy: String)
+    func dismiss()
     
 }
 protocol InvoiceFirstScreenInteractorInPutProtocol {

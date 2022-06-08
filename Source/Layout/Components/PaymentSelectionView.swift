@@ -12,10 +12,11 @@ import UIKit
 class PaymentSelectionView: UIView {
     lazy var selectImage: UIImageView = {
         let imageView = UIImageView()
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "UnSelectedIcon",
                                   in: Bundle(for: type(of:self)),
-                                  compatibleWith: nil)
+                                  compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
         imageView.contentMode = .scaleToFill
         return imageView
     }()
@@ -46,6 +47,8 @@ class PaymentSelectionView: UIView {
         return stack
     }()
     
+    var selectedPaymentMethodTintColor: UIColor?
+    var selectedPaymentGetWayTingColor: UIColor?
     var isSelected = false {
         didSet {
             DispatchQueue.main.async { [weak self] in
@@ -55,13 +58,13 @@ class PaymentSelectionView: UIView {
                 if self.isSelected {
                     self.selectImage.image = UIImage(named: "SelectedIcon",
                                                      in: Bundle(for: type(of:self)),
-                                                     compatibleWith: nil)
-                    self.paymentMethodName.textColor = ColorTypes.PrimaryMain700.value
-                    self.paymentGatewayName.textColor = ColorTypes.PrimaryMain400.value
+                                                     compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
+                    self.paymentMethodName.textColor = self.selectedPaymentMethodTintColor ?? ColorTypes.PrimaryMain700.value
+                    self.paymentGatewayName.textColor = self.selectedPaymentGetWayTingColor ?? ColorTypes.PrimaryMain400.value
                 } else {
                     self.selectImage.image = UIImage(named: "UnSelectedIcon",
                                                      in: Bundle(for: type(of:self)),
-                                                     compatibleWith: nil)
+                                                     compatibleWith: nil)!.withRenderingMode(.alwaysTemplate)
                     self.paymentMethodName.textColor = ColorTypes.GrayPrimary700.value
                     self.paymentGatewayName.textColor = ColorTypes.GrayPrimary600.value
                 }

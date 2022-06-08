@@ -28,6 +28,7 @@ class InvoiceDetailsContainerView: UIView {
         table.backgroundColor = .clear
         table.separatorStyle = .none
         table.allowsSelection = false
+        table.rowHeight = UITableView.automaticDimension
         return table
     }()
     var presenter: InvoiceDetailsPresenterProtocol

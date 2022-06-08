@@ -7,8 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import UIKit
-import SafariServices
-
+import Kingfisher
 class InvoiceSecondScreenViewController: UIViewController, InvoiceSecondScreenViewProtocol {
     var presenter: InvoiceSecondScreenPresenterProtocol!
     lazy var containerView : InvoiceSecondScreenContainerView = {
@@ -80,19 +79,56 @@ class InvoiceSecondScreenViewController: UIViewController, InvoiceSecondScreenVi
             self.containerView.payButtonContainer.nextButton.isEnabled = false
         }
     }
-    func openIframeViaSafari(iframeUrl: String) {
-        if let safariController = self.openSafari(withURL: iframeUrl) {
-            self.present(safariController, animated: true, completion: nil)
+
+    
+    
+    // UIConfiguration
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String) {
+        if isLogoEnabled {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.containerView.logoView.isHidden = !isLogoEnabled
+                // get logo
+                if let imageURL = URL(string: logoUrl) {
+                    self.containerView.logoView.logoImageView.kf.setImage(with: imageURL)
+                    self.containerView.logoView.logoImageView.clipsToBounds = true
+                }
+            }
+        } else {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+            self.containerView.logoView.isHidden = true
+            }
         }
     }
     
-    private func  openSafari(withURL url: String) -> UIViewController? {
-        if let resourceUrl = URL(string: url) {
-            let config = SFSafariViewController.Configuration()
-            config.entersReaderIfAvailable = true
-            let vc = SFSafariViewController(url: resourceUrl, configuration: config)
-            return vc
+    func setupPrimaryColorConfiguration(colorString: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let color = UIColor(hexString: colorString)
+            self.containerView.customerDataTitleContainer.titleLabel.textColor = color
+            self.containerView.selectPaymentMethodTitleView.titleLabel.textColor = color
+            self.containerView.payButtonContainer.nextButton.backgroundColor = color
+            self.containerView.stepsView.stepOneView.stepNumberLabel.backgroundColor = color
+            self.containerView.stepsView.stepTwoView.stepNumberLabel.backgroundColor = color.withAlphaComponent(0.2)
+            self.containerView.payButtonContainer.backButton.setTitleColor(color, for: .normal)
+            self.containerView.payButtonContainer.backButton.layer.borderColor = color.cgColor
         }
-        return nil
+    }
+    
+    func showAlert(with message: String, title: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.showDefaultAlert(title: title, message: message, actionTitle: "Ok") {
+            }
+        }
     }
 }

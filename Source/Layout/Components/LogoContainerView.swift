@@ -10,7 +10,7 @@ import UIKit
 
 class LogoContainerView: UIView {
     
-    private lazy var logoImageView: UIImageView = {
+     lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(image: nil)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(named: "Logo",

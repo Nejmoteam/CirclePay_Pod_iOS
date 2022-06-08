@@ -9,14 +9,18 @@
 import Foundation
 protocol InvoiceSecondScreenViewProtocol: AnyObject {
     var presenter: InvoiceSecondScreenPresenterProtocol! {get set}
-    
+    func showAlert(with message: String, title: String)
     func reloadPaymentMethodsData()
     func setupCustomerData(customer:CustomerViewModel)
-    func openIframeViaSafari(iframeUrl: String)
     func showLoadingForPayButton()
     func hideLoadingForPayButton()
     func enablePayButton()
     func disablePayButton()
+    
+    //UI Configs
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String)
+    func setupPrimaryColorConfiguration(colorString: String)
+    
 }
 protocol InvoiceSecondScreenPresenterProtocol {
     var view: InvoiceSecondScreenViewProtocol? {get set}
@@ -27,9 +31,11 @@ protocol InvoiceSecondScreenPresenterProtocol {
     func onTapPay()
     func didChangeCountry(countryName: String)
     var updatedCustomerData : GetCustomerCodable? {get set}
+    func dismiss()
 }
 protocol InvoiceSecondScreenRouterProtocol {
-    func navigateToWebView(webViewUrl: String)
+    func navigateToWebView(webViewUrl: String,transactionId: String)
+    func dismiss()
 }
 protocol InvoiceSecondScreenInteractorInPutProtocol {
     var presenter: InvoiceSecondScreenInteractorOutPutProtocol? {get set}

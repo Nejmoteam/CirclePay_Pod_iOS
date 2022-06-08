@@ -19,6 +19,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     var updatedCustomerData: GetCustomerCodable?
     var methodsViewModel = [PaymentMethodsViewModel]()
     var selectedPaymentMethod: PaymentMethodsViewModel?
+    private let authValidator : AuthValidationManagerProtocol = AuthValidationManager()
     
     var newCountry:String?
     
@@ -37,6 +38,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     }
     func viewDidLoad() {
         print("ViewDidLoad")
+        self.setupUIConfigs()
         self.getPaymentMethods()
         var customerPhone = ""
         if let unwrappedPhone = customer.mobileNumber {
@@ -77,6 +79,37 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             //Show error
             return
         }
+        guard let email = self.updatedCustomerData?.email  ,!email.isEmpty  else{
+            self.view?.showAlert(with: "Please enter your email address", title: "Error")
+            return
+        }
+              
+        guard let firstName = self.updatedCustomerData?.firstName, !firstName.isEmpty else {
+            self.view?.showAlert(with: "Please enter your first name", title: "Error")
+            return
+        }
+        guard let lastName = self.updatedCustomerData?.lastName ,!lastName.isEmpty else {
+            //Throw Error
+            self.view?.showAlert(with: "Please enter your last name", title: "Error")
+            return
+        }
+        
+        guard self.authValidator.isEmailValid(email) == true else  {
+            // Throw Error
+            self.view?.showAlert(with: "Please enter a valid email address", title: "Error")
+            return
+        }
+        
+//        guard self.authValidator.isValidName(testStr: firstName) == true else {
+//            //Throw Error
+//            self.view?.showAlert(with: "Please enter a valid first Name", title: "Error")
+//            return
+//        }
+//
+//        guard self.authValidator.isValidName(testStr: lastName) == true else {
+//            self.view?.showAlert(with: "Please enter a valid last Name", title: "Error")
+//            return
+//        }
         self.view?.showLoadingForPayButton()
         self.view?.disablePayButton()
         // pay invoice , update customer
@@ -110,6 +143,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     private func handleTappingOnPayButton() {
         let dispatchGroup = DispatchGroup()
         var iframeURL  = ""
+        var transactionID = ""
         dispatchGroup.enter()
         CirclePay.customers.updateCustomer(firstName: self.updatedCustomerData?.firstName ?? "", lastName: self.updatedCustomerData?.lastName ?? "", address: self.updatedCustomerData?.address ?? "", country: self.updatedCustomerData?.country ?? "", governorate: self.updatedCustomerData?.governorate ?? "", city: self.updatedCustomerData?.city ?? "", aptNumber: self.updatedCustomerData?.aptNumber ?? "", email: self.updatedCustomerData?.email ?? "", mobileNumber: self.updatedCustomerData?.mobileNumber ?? "") { customerData, error in
             dispatchGroup.leave()
@@ -122,20 +156,37 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
                 dispatchGroup.leave()
             } else {
                 let url = invoiceData?.invoiceUrl
+                let transactionId = invoiceData?.transactionId
                 iframeURL = url ?? ""
+                transactionID = transactionId ?? ""
                 dispatchGroup.leave()
             }
         }
         dispatchGroup.notify(queue: .main) {
-            guard iframeURL != "" else {
+            guard iframeURL != "" && transactionID != "" else {
                 return
             }
             // OPEN WEB VIEW WITH IFRAME URL
             self.view?.hideLoadingForPayButton()
             self.view?.enablePayButton()
-            self.router.navigateToWebView(webViewUrl: iframeURL)
+            self.router.navigateToWebView(webViewUrl: iframeURL, transactionId: transactionID)
            // self.view?.openIframeViaSafari(iframeUrl: iframeURL)
         }
+    }
+    
+    private func setupUIConfigs() {
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let unwrappedisLogoEnabled = unwrappedConfigs.logoEnable {
+                self.view?.setupLogoConfigurations(isLogoEnabled: unwrappedisLogoEnabled, logoUrl: unwrappedConfigs.logo ?? "")
+            }
+            if let unwrappedColor = unwrappedConfigs.color {
+                self.view?.setupPrimaryColorConfiguration(colorString: unwrappedColor)
+            }
+        }
+    }
+    
+    func dismiss() {
+        self.router.dismiss()
     }
 }
 

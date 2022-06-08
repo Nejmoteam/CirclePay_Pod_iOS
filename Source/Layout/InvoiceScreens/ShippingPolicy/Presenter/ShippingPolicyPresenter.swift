@@ -21,8 +21,12 @@ class ShippingPolicyPresenter: ShippingPolicyPresenterProtocol, ShippingPolicyIn
     }
     func viewDidLoad() {
         print("ViewDidLoad")
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let color = unwrappedConfigs.color {
+                self.view?.setupPrimaryColorConfiguration(colorString: color)
+            }
+        }
         self.view?.setupShippingPolicy(shippingPolicy: self.shippingPolicy)
-
     }
     
     func dismissViewController() {

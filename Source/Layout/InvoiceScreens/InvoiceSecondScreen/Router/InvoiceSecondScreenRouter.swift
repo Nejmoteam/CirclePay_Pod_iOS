@@ -20,14 +20,25 @@ class InvoiceSecondScreenRouter: InvoiceSecondScreenRouterProtocol {
         return view
     }
     
-    func navigateToWebView(webViewUrl: String) {
+    func navigateToWebView(webViewUrl: String,transactionId: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
                 return
             }
-            let webViewScene = WebViewRouter.createAnModule(webViewUrl: webViewUrl)
-            webViewScene.modalPresentationStyle = .fullScreen
-            self.viewController?.present(webViewScene, animated: true, completion: nil)
+            let webViewScene = WebViewRouter.createAnModule(webViewUrl: webViewUrl, transactionId: transactionId)
+         //   webViewScene.modalPresentationStyle = .fullScreen
+            //self.viewController?.present(webViewScene, animated: true, completion: nil)
+            self.viewController?.navigationController?.pushViewController(webViewScene, animated: true)
+        }
+    }
+    
+    func dismiss() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+           // self.viewController?.dismiss(animated: true, completion: nil)
+            self.viewController?.navigationController?.popViewController(animated: true)
         }
     }
 }

@@ -27,7 +27,8 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
             guard let self = self else {
                 return
             }
-            self.viewController?.present(stepTwo, animated: true, completion: nil)
+            self.viewController?.navigationController?.pushViewController(stepTwo, animated: true)
+           // self.viewController?.present(stepTwo, animated: true, completion: nil)
         }
     }
     
@@ -60,6 +61,16 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
             let refundPolicyScene = RefundPolicyRouter.createAnModule(refundPolicy: refundPolicy)
             refundPolicyScene.modalPresentationStyle = .fullScreen
             self.viewController?.present(refundPolicyScene, animated: true, completion: nil)
+        }
+    }
+    
+    func dismiss() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.viewController?.navigationController?.dismiss(animated: true, completion: nil)
+           // self.viewController?.dismiss(animated: true, completion: nil)
         }
     }
 }
