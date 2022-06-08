@@ -729,7 +729,7 @@
 		C855229DD1226F4E287A71C45A00BDB8 /* IQToolbar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQToolbar.swift; path = IQKeyboardManagerSwift/IQToolbar/IQToolbar.swift; sourceTree = "<group>"; };
 		C8C91EA105C4A7BD9899EFC251CD3171 /* KFAnimatedImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFAnimatedImage.swift; path = Sources/SwiftUI/KFAnimatedImage.swift; sourceTree = "<group>"; };
 		C9E0A06070B945147595ADC4266F0E1D /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
-		CB450CAFEB5667B70E0279EABB742F39 /* Pods-CirclePay_Pod_iOS_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CirclePay_Pod_iOS_Tests"; path = Pods_CirclePay_Pod_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB450CAFEB5667B70E0279EABB742F39 /* Pods_CirclePay_Pod_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CirclePay_Pod_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC14ADD7F25C85DE43A74E949E7DE4EB /* DiskStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DiskStorage.swift; path = Sources/Cache/DiskStorage.swift; sourceTree = "<group>"; };
 		CC90994AD2DAE26D29737D4C068A5094 /* PaymentMethodsViewContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentMethodsViewContainer.swift; sourceTree = "<group>"; };
 		CCED09DCAE279CFEF206C63DF4EDC6E5 /* UITextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
@@ -1765,7 +1765,7 @@
 				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				48290D5247EB26AED496C1715C5A1D55 /* Pods-CirclePay_Pod_iOS_Example */,
-				CB450CAFEB5667B70E0279EABB742F39 /* Pods-CirclePay_Pod_iOS_Tests */,
+				CB450CAFEB5667B70E0279EABB742F39 /* Pods_CirclePay_Pod_iOS_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2557,7 +2557,7 @@
 			);
 			name = "Pods-CirclePay_Pod_iOS_Tests";
 			productName = Pods_CirclePay_Pod_iOS_Tests;
-			productReference = CB450CAFEB5667B70E0279EABB742F39 /* Pods-CirclePay_Pod_iOS_Tests */;
+			productReference = CB450CAFEB5667B70E0279EABB742F39 /* Pods_CirclePay_Pod_iOS_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */

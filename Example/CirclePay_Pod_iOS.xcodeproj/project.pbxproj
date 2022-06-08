@@ -15,6 +15,7 @@
 		181DE4ED2843AD8800F82F9B /* InvoiceListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E52843AD8800F82F9B /* InvoiceListProtocols.swift */; };
 		181DE4EE2843AD8800F82F9B /* InvoiceListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E62843AD8800F82F9B /* InvoiceListInteractor.swift */; };
 		181DE4EF2843AD8800F82F9B /* InvoiceListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E72843AD8800F82F9B /* InvoiceListEntity.swift */; };
+		1829334D285133180005E5FF /* InvoicesModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829334C285133180005E5FF /* InvoicesModuleTests.swift */; };
 		187F719C283B79A30054309D /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719B283B79A30054309D /* NormalIndicator.swift */; };
 		187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719D283B79D80054309D /* Indicator + UIView.swift */; };
 		187F71A0283B79EC0054309D /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719F283B79EC0054309D /* LottieIndicator.swift */; };
@@ -46,6 +47,7 @@
 		181DE4E52843AD8800F82F9B /* InvoiceListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListProtocols.swift; sourceTree = "<group>"; };
 		181DE4E62843AD8800F82F9B /* InvoiceListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListInteractor.swift; sourceTree = "<group>"; };
 		181DE4E72843AD8800F82F9B /* InvoiceListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListEntity.swift; sourceTree = "<group>"; };
+		1829334C285133180005E5FF /* InvoicesModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicesModuleTests.swift; sourceTree = "<group>"; };
 		187F719B283B79A30054309D /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
 		187F719D283B79D80054309D /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
 		187F719F283B79EC0054309D /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				1829334C285133180005E5FF /* InvoicesModuleTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				BB97E49219B18EA2EE0CFE45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -451,6 +455,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CirclePay_Pod_iOS_Example/Pods-CirclePay_Pod_iOS_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB97E49219B18EA2EE0CFE45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -478,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				1829334D285133180005E5FF /* InvoicesModuleTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

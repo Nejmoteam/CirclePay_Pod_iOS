@@ -8,8 +8,8 @@
 import Foundation
 
 public struct InvoicePayCodable: Codable {
-    let transactionId:String?
-    let invoiceUrl:String?
+    public let transactionId:String?
+    public let invoiceUrl:String?
     
     enum CodingKeys:String, CodingKey {
         case transactionId = "transaction_id"

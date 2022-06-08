@@ -35,5 +35,17 @@
       "~> 7.2.2"
     ]
   },
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "Tests/*.{h,m}",
+      "dependencies": {
+        "OHHTTPStubs": [
+          "~> 9.1.0"
+        ]
+      }
+    }
+  ],
   "swift_version": "5.0"
 }
