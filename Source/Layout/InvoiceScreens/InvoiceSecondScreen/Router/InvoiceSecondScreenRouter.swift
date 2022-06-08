@@ -26,8 +26,9 @@ class InvoiceSecondScreenRouter: InvoiceSecondScreenRouterProtocol {
                 return
             }
             let webViewScene = WebViewRouter.createAnModule(webViewUrl: webViewUrl, transactionId: transactionId)
-            webViewScene.modalPresentationStyle = .fullScreen
-            self.viewController?.present(webViewScene, animated: true, completion: nil)
+         //   webViewScene.modalPresentationStyle = .fullScreen
+            //self.viewController?.present(webViewScene, animated: true, completion: nil)
+            self.viewController?.navigationController?.pushViewController(webViewScene, animated: true)
         }
     }
     
@@ -36,7 +37,8 @@ class InvoiceSecondScreenRouter: InvoiceSecondScreenRouterProtocol {
             guard let self = self else {
                 return
             }
-            self.viewController?.dismiss(animated: true, completion: nil)
+           // self.viewController?.dismiss(animated: true, completion: nil)
+            self.viewController?.navigationController?.popViewController(animated: true)
         }
     }
 }

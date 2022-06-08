@@ -12,7 +12,6 @@ public class CirclePay {
     public static var merchantToken:String = ""
     public static var accountToken:String = ""
     public static var accountKey:String = ""
-    public init () {}
     public static let customers : CustomersProtocol = Customers()
     public static let invoices: InvoicesProtocol = Invoices()
     public static let merchants: MerchantsProtocol = Merchants()
@@ -22,9 +21,11 @@ public class CirclePay {
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
     public static var mode: Inviroment = .sandBox
     private static var configsWorker: ConfigurationWorkerProtocol = ConfigurationWorker()
-    static var uiConfigs: ConfigurationModel?
+    internal static var uiConfigs: ConfigurationModel?
     public static var delegete: CirclePayDelegete?
     
+    public init () {}
+
     public static func prepareSDK() {
         FontBlaster.debugEnabled = true
         FontBlaster.blast()
@@ -33,16 +34,6 @@ public class CirclePay {
     
     public static func excutePayment(with paymentType: PaymentType) {
         switch paymentType {
-        case .PaymentLink:
-            let error = CirclePayError(errorCode: 1, errorMsg: "Payment link not enabled yet , please contact the support.")
-            self.delegete?.didGetErrorAtCheckoutProcess(error: error)
-            if let vc = UIApplication.shared.topMostViewController() {
-                let paymentLinkScreen = PaymentLinkFirstScreenRouter.createAnModule()
-                paymentLinkScreen.modalPresentationStyle = .fullScreen
-                vc.present(paymentLinkScreen, animated: true, completion: nil)
-            } else {
-                print("failed to get top view Controller")
-            }
         case let .Invoice(invoiceNumber):
             if let vc = UIApplication.shared.topMostViewController() {
                 CirclePay.getInvoiceDetails(invoiceNumber: invoiceNumber) { viewModel, err, uiConfigs  in
@@ -51,7 +42,7 @@ public class CirclePay {
                         CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
                     } else {
                         if let unwrappedViewModel = viewModel {
-                            let invoiceFirstScreen = InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel)
+                            let invoiceFirstScreen =                             BaseNavigationController(rootViewController: InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel))
                             self.uiConfigs = uiConfigs
                             invoiceFirstScreen.modalPresentationStyle = .fullScreen
                             vc.present(invoiceFirstScreen, animated: true, completion: nil)
@@ -143,7 +134,7 @@ public enum Inviroment: String {
 
 
 public enum PaymentType {
-    case PaymentLink(paymentLinkUrl: String)
+   // case PaymentLink(paymentLinkUrl: String)
     case Invoice(invoiceNumber: String)
 }
 

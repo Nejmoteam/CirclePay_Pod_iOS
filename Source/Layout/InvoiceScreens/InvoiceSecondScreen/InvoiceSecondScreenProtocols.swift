@@ -9,7 +9,7 @@
 import Foundation
 protocol InvoiceSecondScreenViewProtocol: AnyObject {
     var presenter: InvoiceSecondScreenPresenterProtocol! {get set}
-    
+    func showAlert(with message: String, title: String)
     func reloadPaymentMethodsData()
     func setupCustomerData(customer:CustomerViewModel)
     func showLoadingForPayButton()
@@ -20,6 +20,7 @@ protocol InvoiceSecondScreenViewProtocol: AnyObject {
     //UI Configs
     func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String)
     func setupPrimaryColorConfiguration(colorString: String)
+    
 }
 protocol InvoiceSecondScreenPresenterProtocol {
     var view: InvoiceSecondScreenViewProtocol? {get set}

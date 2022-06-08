@@ -28,4 +28,10 @@ class InvoicePaymentStatusViewController: UIViewController, InvoicePaymentStatus
     func setupView(with status:InvoicePaymentStatus) {
         self.containerView.setupView(with: status)
     }
+    
+    private func dimissAllCheckOutEmbed() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
+            self.dismissAll(animated: true)
+        }
+    }
 }

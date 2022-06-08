@@ -110,9 +110,6 @@ class PhoneContainerView: UIView {
 }
 
 extension String {
-    func hasCharacter(in characterSet: CharacterSet) -> Bool {
-        rangeOfCharacter(from: characterSet) != nil
-    }
 
     func getEstimatedFrameForText(width: CGFloat, font: UIFont) -> CGRect {
         let size = CGSize(width: width, height: 1000)

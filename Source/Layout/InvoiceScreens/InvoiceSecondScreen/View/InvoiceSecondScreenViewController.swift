@@ -121,4 +121,14 @@ class InvoiceSecondScreenViewController: UIViewController, InvoiceSecondScreenVi
             self.containerView.payButtonContainer.backButton.layer.borderColor = color.cgColor
         }
     }
+    
+    func showAlert(with message: String, title: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.showDefaultAlert(title: title, message: message, actionTitle: "Ok") {
+            }
+        }
+    }
 }
