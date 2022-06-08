@@ -79,16 +79,16 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             //Show error
             return
         }
-        guard let email = self.updatedCustomerData?.email else {
+        guard let email = self.updatedCustomerData?.email  ,!email.isEmpty  else{
             self.view?.showAlert(with: "Please enter your email address", title: "Error")
             return
         }
               
-        guard let firstName = self.updatedCustomerData?.firstName else {
+        guard let firstName = self.updatedCustomerData?.firstName, !firstName.isEmpty else {
             self.view?.showAlert(with: "Please enter your first name", title: "Error")
             return
         }
-        guard let lastName = self.updatedCustomerData?.lastName  else {
+        guard let lastName = self.updatedCustomerData?.lastName ,!lastName.isEmpty else {
             //Throw Error
             self.view?.showAlert(with: "Please enter your last name", title: "Error")
             return
@@ -100,16 +100,16 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             return
         }
         
-        guard self.authValidator.isValidName(testStr: firstName) == true else {
-            //Throw Error
-            self.view?.showAlert(with: "Please enter a valid first Name", title: "Error")
-            return
-        }
-        
-        guard self.authValidator.isValidName(testStr: lastName) == true else {
-            self.view?.showAlert(with: "Please enter a valid last Name", title: "Error")
-            return
-        }
+//        guard self.authValidator.isValidName(testStr: firstName) == true else {
+//            //Throw Error
+//            self.view?.showAlert(with: "Please enter a valid first Name", title: "Error")
+//            return
+//        }
+//
+//        guard self.authValidator.isValidName(testStr: lastName) == true else {
+//            self.view?.showAlert(with: "Please enter a valid last Name", title: "Error")
+//            return
+//        }
         self.view?.showLoadingForPayButton()
         self.view?.disablePayButton()
         // pay invoice , update customer
