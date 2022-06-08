@@ -8,6 +8,19 @@ PODS:
   - FontBlaster (5.3.0)
   - IQKeyboardManagerSwift (6.5.0)
   - Kingfisher (7.2.2)
+  - OHHTTPStubs (9.1.0):
+    - OHHTTPStubs/Default (= 9.1.0)
+  - OHHTTPStubs/Core (9.1.0)
+  - OHHTTPStubs/Default (9.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (9.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (9.1.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.4.1)
@@ -15,6 +28,7 @@ DEPENDENCIES:
   - FontBlaster (= 5.3.0)
   - IQKeyboardManagerSwift (= 6.5.0)
   - Kingfisher (~> 7.2.2)
+  - OHHTTPStubs (~> 9.1.0)
 
 SPEC REPOS:
   trunk:
@@ -22,6 +36,7 @@ SPEC REPOS:
     - FontBlaster
     - IQKeyboardManagerSwift
     - Kingfisher
+    - OHHTTPStubs
 
 EXTERNAL SOURCES:
   CirclePay_Pod_iOS:
@@ -29,11 +44,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
-  CirclePay_Pod_iOS: f2597c85f99a6e964ab75dedc56b92bf80fc116a
+  CirclePay_Pod_iOS: 9f2582a5e8a98eb6f63d12ba37da0e197ec742fc
   FontBlaster: 941f89d735a29e1c7d24e7a90d3e16939ef1609a
   IQKeyboardManagerSwift: 6cd19976c6e871907c4ed9127c2d3affdd4defc2
   Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  OHHTTPStubs: 90eac6d8f2c18317baeca36698523dc67c513831
 
-PODFILE CHECKSUM: 1d810bc2fbff21a53c80217003bf0d33a8801b69
+PODFILE CHECKSUM: 6ecb29093ef45ff3acbc340f685aede517fa9179
 
 COCOAPODS: 1.11.3
