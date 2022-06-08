@@ -25,7 +25,6 @@ class WebViewPresenter: WebViewPresenterProtocol, WebViewInteractorOutPutProtoco
     func viewDidLoad() {
         print("ViewDidLoad")
         self.view?.openUrl(url: self.webViewUrl)
-
     }
     
     func transactionPaidSucsesfully() {

@@ -69,6 +69,8 @@
 		182932362846C6230005E5FF /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1829322A2846C6230005E5FF /* Roboto-MediumItalic.ttf */; };
 		182932382846C8820005E5FF /* UIConfigs.JSON in Sources */ = {isa = PBXBuildFile; fileRef = 182932372846C8820005E5FF /* UIConfigs.JSON */; };
 		1829328A284A7B040005E5FF /* UIViewController + DismissAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18293289284A7B040005E5FF /* UIViewController + DismissAll.swift */; };
+		1829328D284F5E770005E5FF /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829328B284F5D4E0005E5FF /* BaseNavigationController.swift */; };
+		182932CD2850B6BB0005E5FF /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182932CB2850B5430005E5FF /* Validator.swift */; };
 		1AC3B7276B02B7CA3541FB2693496435 /* PaymentMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DFBB98251206E150645602CBF01E6C /* PaymentMethods.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2944BEF242DD24D475D56ACF495677BD /* RequestTaskMap.swift */; };
 		1D2EC562A58B1804BE1B38D29EFD2F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4B8063291033C95A8B2A24FA2AD7A79 /* Foundation.framework */; };
@@ -498,6 +500,8 @@
 		1829322A2846C6230005E5FF /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		182932372846C8820005E5FF /* UIConfigs.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UIConfigs.JSON; sourceTree = "<group>"; };
 		18293289284A7B040005E5FF /* UIViewController + DismissAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + DismissAll.swift"; sourceTree = "<group>"; };
+		1829328B284F5D4E0005E5FF /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		182932CB2850B5430005E5FF /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		184E0EEA8471BA3F3CF0B58AA7F4AFD1 /* InvoiceSecondScreenEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenEntity.swift; sourceTree = "<group>"; };
 		198D074C292A07B1CACB824A6ACE34DA /* Pods-CirclePay_Pod_iOS_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CirclePay_Pod_iOS_Tests.modulemap"; sourceTree = "<group>"; };
 		1A15B003FC891AF325C3CD7641A8A2EA /* PaymentLinkSecondScreenInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentLinkSecondScreenInteractor.swift; sourceTree = "<group>"; };
@@ -1161,6 +1165,14 @@
 				1829321A2846C5BE0005E5FF /* Close.png */,
 			);
 			path = Close;
+			sourceTree = "<group>";
+		};
+		182932CA2850B52F0005E5FF /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				182932CB2850B5430005E5FF /* Validator.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		1AA292C3F3695A1C023D140619D9EF9B /* Kingfisher */ = {
@@ -2119,6 +2131,7 @@
 		D0FB84D13010E95AEE20772DD385AA32 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				182932CA2850B52F0005E5FF /* Validator */,
 				181DE508284E36C300F82F9B /* InvoicePaidFailed */,
 				181DE507284E36B600F82F9B /* InvoicePaidSuccess */,
 				182932152846C5BE0005E5FF /* Arrow */,
@@ -2130,6 +2143,7 @@
 				B9651BB1FFBB6A0805717F331E9302A8 /* Colors */,
 				9FA9AF966520437F0A09AA188D4AA682 /* Fonts */,
 				E7011812D881677F0C5CF98F5C62B69B /* Indicator */,
+				1829328B284F5D4E0005E5FF /* BaseNavigationController.swift */,
 			);
 			path = Utills;
 			sourceTree = "<group>";
@@ -2748,6 +2762,7 @@
 				F6E1E40A1B431A4706667D708EDA3F15 /* ButtonsContainerView.swift in Sources */,
 				8863AF458AB166849A31F0D1D3B50A6C /* CirclePay.swift in Sources */,
 				92BDF1725D34923313CEB60C6A33431F /* CirclePay_Pod_iOS-dummy.m in Sources */,
+				182932CD2850B6BB0005E5FF /* Validator.swift in Sources */,
 				B8647573F858B56C63946DBF55589707 /* CirclePayTFContainer.swift in Sources */,
 				4F01DEC015FB09AD5A7EA8F7606B167A /* ColorTypes.swift in Sources */,
 				181DE500284E369A00F82F9B /* InvoicePaymentStatusContainerView.swift in Sources */,
@@ -2801,6 +2816,7 @@
 				CDEF8A59F2260D38D91ECF0022DDEF41 /* InvoiceFirstScreenPresenter.swift in Sources */,
 				02572AE3BC9FFCDD4C3276838D4110B3 /* InvoiceFirstScreenProtocols.swift in Sources */,
 				BBB2C420699145C16F72948A97C0958F /* InvoiceFirstScreenRouter.swift in Sources */,
+				1829328D284F5E770005E5FF /* BaseNavigationController.swift in Sources */,
 				9E0AE5650794E05A73D48B934E79FF83 /* InvoiceFirstScreenViewController.swift in Sources */,
 				FAE2D036E66EB5C98460CAA14591692D /* InvoiceFirstScreenViewModel.swift in Sources */,
 				702738591A7FEB1D618516ADAD995DEE /* InvoicePayCodable.swift in Sources */,

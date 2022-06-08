@@ -83,8 +83,9 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
     }
     
     @objc func didTappedBack() {
-//        self.dismissAll(animated: true)
-        self.dismiss(animated: true, completion: nil)
+        //        self.dismissAll(animated: true)
+        self.navigationController?.popViewController(animated: true)
+//        self.dismiss(animated: true, completion: nil)
     }
     func openUrl(url: String) {
         guard let actualUrl = URL(string: url) else {

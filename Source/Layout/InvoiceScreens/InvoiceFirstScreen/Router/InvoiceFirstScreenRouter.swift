@@ -27,7 +27,8 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
             guard let self = self else {
                 return
             }
-            self.viewController?.present(stepTwo, animated: true, completion: nil)
+            self.viewController?.navigationController?.pushViewController(stepTwo, animated: true)
+           // self.viewController?.present(stepTwo, animated: true, completion: nil)
         }
     }
     
@@ -68,7 +69,8 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
             guard let self = self else {
                 return
             }
-            self.viewController?.dismiss(animated: true, completion: nil)
+            self.viewController?.navigationController?.dismiss(animated: true, completion: nil)
+           // self.viewController?.dismiss(animated: true, completion: nil)
         }
     }
 }

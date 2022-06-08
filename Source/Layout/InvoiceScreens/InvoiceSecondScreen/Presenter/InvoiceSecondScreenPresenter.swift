@@ -19,6 +19,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     var updatedCustomerData: GetCustomerCodable?
     var methodsViewModel = [PaymentMethodsViewModel]()
     var selectedPaymentMethod: PaymentMethodsViewModel?
+    private let authValidator : AuthValidationManagerProtocol = AuthValidationManager()
     
     var newCountry:String?
     
@@ -76,6 +77,37 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
         self.updatedCustomerData?.governorate = self.customer.governorate
         guard self.selectedPaymentMethod != nil , self.updatedCustomerData?.mobileNumber != nil else {
             //Show error
+            return
+        }
+        guard let email = self.updatedCustomerData?.email else {
+            self.view?.showAlert(with: "Please enter your email address", title: "Error")
+            return
+        }
+              
+        guard let firstName = self.updatedCustomerData?.firstName else {
+            self.view?.showAlert(with: "Please enter your first name", title: "Error")
+            return
+        }
+        guard let lastName = self.updatedCustomerData?.lastName  else {
+            //Throw Error
+            self.view?.showAlert(with: "Please enter your last name", title: "Error")
+            return
+        }
+        
+        guard self.authValidator.isEmailValid(email) == true else  {
+            // Throw Error
+            self.view?.showAlert(with: "Please enter a valid email address", title: "Error")
+            return
+        }
+        
+        guard self.authValidator.isValidName(testStr: firstName) == true else {
+            //Throw Error
+            self.view?.showAlert(with: "Please enter a valid first Name", title: "Error")
+            return
+        }
+        
+        guard self.authValidator.isValidName(testStr: lastName) == true else {
+            self.view?.showAlert(with: "Please enter a valid last Name", title: "Error")
             return
         }
         self.view?.showLoadingForPayButton()

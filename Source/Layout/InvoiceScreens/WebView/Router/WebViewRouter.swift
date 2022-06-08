@@ -27,7 +27,7 @@ class WebViewRouter: WebViewRouterProtocol {
             }
             let resultScene = InvoicePaymentStatusRouter.createAnModule(with: result)
             resultScene.modalPresentationStyle = .fullScreen
-            self.viewController?.present(resultScene, animated: true, completion: nil)
+            self.viewController?.navigationController?.present(resultScene, animated: true, completion: nil)
         }
     }
 }
