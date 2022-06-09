@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
         
         s.test_spec 'Tests' do |test_spec|
             test_spec.source_files = 'Tests/*.{h,m}'
-            test_spec.dependency 'OHHTTPStubs' , '~> 9.1.0'
+            test_spec.dependency 'OHHTTPStubs/Swift' , '~> 9.1.0'
             
             # This dependency will only be linked with your tests.
         end

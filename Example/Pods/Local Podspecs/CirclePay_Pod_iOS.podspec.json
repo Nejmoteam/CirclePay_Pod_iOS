@@ -41,7 +41,7 @@
       "test_type": "unit",
       "source_files": "Tests/*.{h,m}",
       "dependencies": {
-        "OHHTTPStubs": [
+        "OHHTTPStubs/Swift": [
           "~> 9.1.0"
         ]
       }
