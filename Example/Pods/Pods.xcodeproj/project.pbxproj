@@ -48,6 +48,36 @@
 		13E62623092B680C6A5C349D48B8A4FD /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA09B46B5AACCDB6A84E6CB5D9D0680 /* CachedResponseHandler.swift */; };
 		1773084DECF68CADD45567FBEC56036D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B989DDB6F99A2C1E65D38315E9EEA8 /* Alamofire-dummy.m */; };
 		187F0417433AAD6FB63A3FC323EBC97A /* MerchantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25082B6F648E526FF47DF3B151F80825 /* MerchantWorker.swift */; };
+		18B1D3E82853792F008A5052 /* InvoicePaidFailed.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3CF2853792E008A5052 /* InvoicePaidFailed.png */; };
+		18B1D3E92853792F008A5052 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D12853792E008A5052 /* Arrow.png */; };
+		18B1D3EA2853792F008A5052 /* Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D32853792E008A5052 /* Logo@3x.png */; };
+		18B1D3EB2853792F008A5052 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D42853792E008A5052 /* Logo.png */; };
+		18B1D3EC2853792F008A5052 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D52853792E008A5052 /* Logo@2x.png */; };
+		18B1D3ED2853792F008A5052 /* InvoicePaidSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D72853792E008A5052 /* InvoicePaidSuccess.png */; };
+		18B1D3EE2853792F008A5052 /* Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D92853792F008A5052 /* Close@3x.png */; };
+		18B1D3EF2853792F008A5052 /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DA2853792F008A5052 /* Close@2x.png */; };
+		18B1D3F02853792F008A5052 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DB2853792F008A5052 /* Close.png */; };
+		18B1D3F12853792F008A5052 /* SelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DD2853792F008A5052 /* SelectedIcon.png */; };
+		18B1D3F22853792F008A5052 /* UnSelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DF2853792F008A5052 /* UnSelectedIcon.png */; };
+		18B1D3F32853792F008A5052 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E12853792F008A5052 /* Visa.png */; };
+		18B1D3F42853792F008A5052 /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E22853792F008A5052 /* Orange.png */; };
+		18B1D3F52853792F008A5052 /* Etisalat.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E32853792F008A5052 /* Etisalat.png */; };
+		18B1D3F62853792F008A5052 /* Cash.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E42853792F008A5052 /* Cash.png */; };
+		18B1D3F72853792F008A5052 /* Meeza.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E52853792F008A5052 /* Meeza.png */; };
+		18B1D3F82853792F008A5052 /* Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E62853792F008A5052 /* Mastercard.png */; };
+		18B1D3F92853792F008A5052 /* Vodafone.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E72853792F008A5052 /* Vodafone.png */; };
+		18B1D4062853793F008A5052 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FA2853793E008A5052 /* Roboto-Thin.ttf */; };
+		18B1D4072853793F008A5052 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FB2853793E008A5052 /* Roboto-ThinItalic.ttf */; };
+		18B1D4082853793F008A5052 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FC2853793E008A5052 /* Roboto-Black.ttf */; };
+		18B1D4092853793F008A5052 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FD2853793E008A5052 /* Roboto-Italic.ttf */; };
+		18B1D40A2853793F008A5052 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FE2853793E008A5052 /* Roboto-Light.ttf */; };
+		18B1D40B2853793F008A5052 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FF2853793E008A5052 /* Roboto-BoldItalic.ttf */; };
+		18B1D40C2853793F008A5052 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4002853793F008A5052 /* Roboto-BlackItalic.ttf */; };
+		18B1D40D2853793F008A5052 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4012853793F008A5052 /* Roboto-LightItalic.ttf */; };
+		18B1D40E2853793F008A5052 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4022853793F008A5052 /* Roboto-Medium.ttf */; };
+		18B1D40F2853793F008A5052 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4032853793F008A5052 /* Roboto-Regular.ttf */; };
+		18B1D4102853793F008A5052 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4042853793F008A5052 /* Roboto-MediumItalic.ttf */; };
+		18B1D4112853793F008A5052 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4052853793F008A5052 /* Roboto-Bold.ttf */; };
 		1961E8842348A78A301B75FFF05608BE /* PaymentLinkSecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2FB6831EFE8CEFEDBE0A4943E726E /* PaymentLinkSecondScreenRouter.swift */; };
 		19FF16C15407ABBCAB0168CDE44709E1 /* NSURLRequest+HTTPBodyTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF33FF0EA23F1004C07DEF58F29FA75 /* NSURLRequest+HTTPBodyTesting.m */; };
 		1A1A156BA96AF26742D0B309220C749B /* GetCustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5843E85BE460B19FD1A8AA8A9A111B6D /* GetCustomerCodable.swift */; };
@@ -458,6 +488,36 @@
 		17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OHHTTPStubs; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1835E9D15D2DFE84D76DB0A01688BB85 /* MerchantPaymentGatewayCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MerchantPaymentGatewayCodable.swift; sourceTree = "<group>"; };
 		189A2930EA1F30624DF7F735F072BB87 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		18B1D3CF2853792E008A5052 /* InvoicePaidFailed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoicePaidFailed.png; sourceTree = "<group>"; };
+		18B1D3D12853792E008A5052 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
+		18B1D3D32853792E008A5052 /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
+		18B1D3D42853792E008A5052 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		18B1D3D52853792E008A5052 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
+		18B1D3D72853792E008A5052 /* InvoicePaidSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoicePaidSuccess.png; sourceTree = "<group>"; };
+		18B1D3D92853792F008A5052 /* Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@3x.png"; sourceTree = "<group>"; };
+		18B1D3DA2853792F008A5052 /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
+		18B1D3DB2853792F008A5052 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
+		18B1D3DD2853792F008A5052 /* SelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedIcon.png; sourceTree = "<group>"; };
+		18B1D3DF2853792F008A5052 /* UnSelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnSelectedIcon.png; sourceTree = "<group>"; };
+		18B1D3E12853792F008A5052 /* Visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Visa.png; sourceTree = "<group>"; };
+		18B1D3E22853792F008A5052 /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
+		18B1D3E32853792F008A5052 /* Etisalat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Etisalat.png; sourceTree = "<group>"; };
+		18B1D3E42853792F008A5052 /* Cash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cash.png; sourceTree = "<group>"; };
+		18B1D3E52853792F008A5052 /* Meeza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Meeza.png; sourceTree = "<group>"; };
+		18B1D3E62853792F008A5052 /* Mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mastercard.png; sourceTree = "<group>"; };
+		18B1D3E72853792F008A5052 /* Vodafone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vodafone.png; sourceTree = "<group>"; };
+		18B1D3FA2853793E008A5052 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		18B1D3FB2853793E008A5052 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		18B1D3FC2853793E008A5052 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		18B1D3FD2853793E008A5052 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		18B1D3FE2853793E008A5052 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		18B1D3FF2853793E008A5052 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		18B1D4002853793F008A5052 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		18B1D4012853793F008A5052 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		18B1D4022853793F008A5052 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		18B1D4032853793F008A5052 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		18B1D4042853793F008A5052 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		18B1D4052853793F008A5052 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		19B04E7819D2878B7CF125C7617B1E7C /* FontBlaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontBlaster.release.xcconfig; sourceTree = "<group>"; };
 		19C45606000DB2552B474DC4EA589D35 /* HTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTTPStubsResponse+JSON.h"; path = "Sources/OHHTTPStubs/include/HTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
 		19CD3109DC5FCDEA954B9268C87C2347 /* PaymentLinkFirstScreenProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentLinkFirstScreenProtocols.swift; sourceTree = "<group>"; };
@@ -565,7 +625,7 @@
 		740B2CDFF36322DC9DA5600F49106DF9 /* OHHTTPStubs-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "OHHTTPStubs-Info.plist"; sourceTree = "<group>"; };
 		744E638C130010517A2BB35FC14432EB /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image/Image.swift; sourceTree = "<group>"; };
 		74A23F17E13842DDB34A239DA33BBC58 /* InvoiceFirstScreenViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoiceFirstScreenViewModel.swift; sourceTree = "<group>"; };
-		758C115D1713AEB2C5286992D1BDFCEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		758C115D1713AEB2C5286992D1BDFCEA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7714F6772A3FD932363164BD83BA18FD /* GraphicsContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphicsContext.swift; path = Sources/Image/GraphicsContext.swift; sourceTree = "<group>"; };
 		77DAC4F1EC233159A5065044DD35AFF0 /* InvoiceSecondScreenPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenPresenter.swift; sourceTree = "<group>"; };
 		77E900B50064F8400C8FF1CA1576504D /* ConfigurationWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConfigurationWorker.swift; sourceTree = "<group>"; };
@@ -647,7 +707,7 @@
 		9CCDEBA4BBBFE87C452610A96A21114B /* AuthenticationChallengeResponsable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeResponsable.swift; path = Sources/Networking/AuthenticationChallengeResponsable.swift; sourceTree = "<group>"; };
 		9D7A5EA51D63112B4AC014BAA972D8C5 /* RedirectHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RedirectHandler.swift; path = Sources/Networking/RedirectHandler.swift; sourceTree = "<group>"; };
 		9D823EDB30ED982CD4F1150995B0D886 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A00B5DC79DFFF053B6A505882839651E /* CupponView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CupponView.swift; sourceTree = "<group>"; };
 		A04594E0DE8639CFCBF84305641B5D5E /* Items.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		A0850C6D1C5F8136241C95CCE0C5536B /* InvoicePaymentStatusContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoicePaymentStatusContainerView.swift; sourceTree = "<group>"; };
@@ -705,7 +765,7 @@
 		BCD857DBF4AE51C49A5A2950DB36EBEE /* ShippingPolicyProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShippingPolicyProtocols.swift; sourceTree = "<group>"; };
 		BDC6DB7359F22E2A93DB5F18171ABFE7 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
 		BDD9991373FC61B6BA6FD1439CF1EAD8 /* Customers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Customers.swift; sourceTree = "<group>"; };
-		BEE943D018F379282E9EE4C8B97D7B65 /* CirclePay_Pod_iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CirclePay_Pod_iOS.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BEE943D018F379282E9EE4C8B97D7B65 /* CirclePay_Pod_iOS.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CirclePay_Pod_iOS.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C05E0B249C470983EC66CEFD078EA22F /* InvoicePaymentStatusViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoicePaymentStatusViewController.swift; sourceTree = "<group>"; };
 		C07BEF0CE5DECC5BDCAC8625BF2FFA4B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		C28087AE2626B770C83C9D01D49F15BC /* BaseNavigationController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -782,7 +842,7 @@
 		F692DE33336C961C141769ED5D3270EB /* ShippingPolicyEntity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ShippingPolicyEntity.swift; sourceTree = "<group>"; };
 		F6F5E70E7DD28B3A5054318053C163C8 /* OperationQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OperationQueue+Alamofire.swift"; path = "Source/OperationQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		F6F8C61C43EBAA51F3B4FF35575703B9 /* APIRequestBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = APIRequestBuilder.swift; sourceTree = "<group>"; };
-		F789FFF8C826B7A85F583B4C411FCF9F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F789FFF8C826B7A85F583B4C411FCF9F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F862A3338BA2BFA36DE335165FAA015A /* HTTPStubs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HTTPStubs.m; path = Sources/OHHTTPStubs/HTTPStubs.m; sourceTree = "<group>"; };
 		F93E3435C9309C57D7447933558E550F /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		F95E65CF55700DA394AE5EC0F31B382E /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/Extensions/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
@@ -878,7 +938,6 @@
 				255FE8D3CF61024080FDA5B0BFE25E28 /* InvoiceFirstScreenViewController.swift */,
 				ED1DB6FEB4C55D915F52AC29ABE828A4 /* Layouts */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -897,7 +956,6 @@
 				90515854D595E74190BB502FAF014078 /* WebViewViewController.swift */,
 				5B9F5A65508815340DB997A69F643630 /* Layout */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -919,8 +977,81 @@
 				597217483EF9F2DF208DBA1449FF344D /* Router */,
 				927A47186F0C6E5E40B81CCC113962C4 /* View */,
 			);
-			name = RefundPolicy;
 			path = RefundPolicy;
+			sourceTree = "<group>";
+		};
+		18B1D3CE2853792E008A5052 /* InvoicePaidFailed */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3CF2853792E008A5052 /* InvoicePaidFailed.png */,
+			);
+			path = InvoicePaidFailed;
+			sourceTree = "<group>";
+		};
+		18B1D3D02853792E008A5052 /* Arrow */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3D12853792E008A5052 /* Arrow.png */,
+			);
+			path = Arrow;
+			sourceTree = "<group>";
+		};
+		18B1D3D22853792E008A5052 /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3D32853792E008A5052 /* Logo@3x.png */,
+				18B1D3D42853792E008A5052 /* Logo.png */,
+				18B1D3D52853792E008A5052 /* Logo@2x.png */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		18B1D3D62853792E008A5052 /* InvoicePaidSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3D72853792E008A5052 /* InvoicePaidSuccess.png */,
+			);
+			path = InvoicePaidSuccess;
+			sourceTree = "<group>";
+		};
+		18B1D3D82853792F008A5052 /* Close */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3D92853792F008A5052 /* Close@3x.png */,
+				18B1D3DA2853792F008A5052 /* Close@2x.png */,
+				18B1D3DB2853792F008A5052 /* Close.png */,
+			);
+			path = Close;
+			sourceTree = "<group>";
+		};
+		18B1D3DC2853792F008A5052 /* SelectedIcon */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3DD2853792F008A5052 /* SelectedIcon.png */,
+			);
+			path = SelectedIcon;
+			sourceTree = "<group>";
+		};
+		18B1D3DE2853792F008A5052 /* UnselectedIcon */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3DF2853792F008A5052 /* UnSelectedIcon.png */,
+			);
+			path = UnselectedIcon;
+			sourceTree = "<group>";
+		};
+		18B1D3E02853792F008A5052 /* PaymentGetways */ = {
+			isa = PBXGroup;
+			children = (
+				18B1D3E12853792F008A5052 /* Visa.png */,
+				18B1D3E22853792F008A5052 /* Orange.png */,
+				18B1D3E32853792F008A5052 /* Etisalat.png */,
+				18B1D3E42853792F008A5052 /* Cash.png */,
+				18B1D3E52853792F008A5052 /* Meeza.png */,
+				18B1D3E62853792F008A5052 /* Mastercard.png */,
+				18B1D3E72853792F008A5052 /* Vodafone.png */,
+			);
+			path = PaymentGetways;
 			sourceTree = "<group>";
 		};
 		1C6FB5A4DAA246877175D02C938E0F3F /* Alamofire */ = {
@@ -963,7 +1094,6 @@
 				F93E3435C9309C57D7447933558E550F /* Validation.swift */,
 				3FFDA6E7C9A4D04578FC1066C4D61B6C /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -973,7 +1103,6 @@
 				AE59000A4D98E569024CF5B1CA1FAD24 /* PaymentLinkFirstScreenViewController.swift */,
 				6F6734FB84EC07C2E44AD634C8E44E2C /* Layouts */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1046,7 +1175,6 @@
 			children = (
 				C4DF35ED77E87EA3F6FF7193A8B24F86 /* InvoiceSecondScreenInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1057,7 +1185,6 @@
 				5DE89E66A22C8D22E129911C0440F5D4 /* RefundWorker.swift */,
 				A4B05FB0A8500F7236C5FADD441DA94C /* Entities */,
 			);
-			name = RefundWorker;
 			path = RefundWorker;
 			sourceTree = "<group>";
 		};
@@ -1068,7 +1195,6 @@
 				B2F03DAB96FC9BD1206817186FEB98F4 /* PaymentGatewayWorker.swift */,
 				3AEB46A407468375FE26947E259D36A0 /* Entities */,
 			);
-			name = PaymentGatewayWorker;
 			path = PaymentGatewayWorker;
 			sourceTree = "<group>";
 		};
@@ -1089,7 +1215,6 @@
 			children = (
 				CAFD844A344698EC179377DB329E6707 /* WebViewRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1100,7 +1225,6 @@
 				A5CB2BDA158B02248D07147C31300EFB /* InvoiceSecondScreenEntity.swift */,
 				53BD3F78587A3360C9D06D5261B38189 /* PaymentMethodsViewModel.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1109,7 +1233,6 @@
 			children = (
 				958C01D9339237634894672B8A6D8F62 /* PaymentLinkFirstScreenPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1118,7 +1241,6 @@
 			children = (
 				8069646F67543DCE9533BA0CC9E23CA8 /* PaymentGatewayCodable.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1151,7 +1273,6 @@
 			children = (
 				22F69D7FA07CC7B96D8BE0A88D55EA72 /* PaymentLinkFirstScreenRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1174,7 +1295,6 @@
 			children = (
 				F28CFA6145011B50C62141AE7CC86CE1 /* RefundPolicyPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1191,7 +1311,6 @@
 			children = (
 				64222778C96214022357051B974C1A54 /* InvoicePaymentStatusRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1200,7 +1319,6 @@
 			children = (
 				8B87A0933F10E4A4FD698ED1D86670D0 /* RefundPolicyInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1211,7 +1329,6 @@
 				AACFFEDFFA3817C8F4325ED661BCF90A /* CupponTextField.swift */,
 				A00B5DC79DFFF053B6A505882839651E /* CupponView.swift */,
 			);
-			name = CupponView;
 			path = CupponView;
 			sourceTree = "<group>";
 		};
@@ -1229,7 +1346,6 @@
 			children = (
 				F692DE33336C961C141769ED5D3270EB /* ShippingPolicyEntity.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1238,7 +1354,6 @@
 			children = (
 				8119AC6372DEB6BEEF3E2C0DE9CA5444 /* PaymentLinkSecondScreenPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1253,7 +1368,6 @@
 				BE80ECEE1FAA4DEC23B664D5AE1BEA26 /* ShippingPolicy */,
 				CC771B31170A074E2F243BAB5D65BFAA /* WebView */,
 			);
-			name = InvoiceScreens;
 			path = InvoiceScreens;
 			sourceTree = "<group>";
 		};
@@ -1262,7 +1376,6 @@
 			children = (
 				A538347F77338801F4A7F9577409F4AB /* PaymentLinkSecondScreenInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1271,7 +1384,6 @@
 			children = (
 				B626F751D5FCD5E022C109896682E264 /* InvoiceSecondScreenRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1281,7 +1393,6 @@
 				9E11BB54243C979554AA133AAD91B966 /* PaymentLinkFirstScreen */,
 				C5FB02E7E3B59AB7EA7712E6852F7757 /* PaymentLinkSecondScreen */,
 			);
-			name = PaymnetLinkScreens;
 			path = PaymnetLinkScreens;
 			sourceTree = "<group>";
 		};
@@ -1326,7 +1437,6 @@
 				EDEB6E9BBE6481B6C8688EF6D97CE161 /* InvoiceDetailsViewController.swift */,
 				9F3BA0AB0CF7885CC551D017E21DC148 /* Layouts */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1335,7 +1445,6 @@
 			children = (
 				B3D822B4E09F477E3AF5008D2D7F1C69 /* InvoiceSecondScreenContainerView.swift */,
 			);
-			name = Layout;
 			path = Layout;
 			sourceTree = "<group>";
 		};
@@ -1344,7 +1453,6 @@
 			children = (
 				1BB4919C7E65066D3BA767DBF4098553 /* PaymentLinkSecondScreenContainerView.swift */,
 			);
-			name = Layout;
 			path = Layout;
 			sourceTree = "<group>";
 		};
@@ -1353,7 +1461,6 @@
 			children = (
 				3D649670ACDA684D7EE1FB631E74FA17 /* WebViewInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1362,7 +1469,6 @@
 			children = (
 				4131C5B9ED198C692A5087AC3FD77E2A /* Validator.swift */,
 			);
-			name = Validator;
 			path = Validator;
 			sourceTree = "<group>";
 		};
@@ -1372,7 +1478,6 @@
 				C05E0B249C470983EC66CEFD078EA22F /* InvoicePaymentStatusViewController.swift */,
 				9032C7068F565D1FB1ADF06C724A90A8 /* Layouts */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1381,7 +1486,6 @@
 			children = (
 				C355DD005990B316E42037C4927C037D /* ConfigurationModel.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1390,7 +1494,6 @@
 			children = (
 				AD5F4169E3E57C626AE93AE3EE4E13E7 /* RefundPolicyRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1404,7 +1507,6 @@
 				77276EE84041A0C40F2C593F4A90509C /* Router */,
 				01970CA2B9F358A5B003790569DA00DA /* View */,
 			);
-			name = InvoiceFirstScreen;
 			path = InvoiceFirstScreen;
 			sourceTree = "<group>";
 		};
@@ -1413,7 +1515,6 @@
 			children = (
 				8644477C1D8878593F8C59A97DFD3259 /* InvoicePaymentStatusPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1422,7 +1523,6 @@
 			children = (
 				131EE5ACF6273F9A01CFEB9AA418058A /* WebViewContainerView.swift */,
 			);
-			name = Layout;
 			path = Layout;
 			sourceTree = "<group>";
 		};
@@ -1435,7 +1535,6 @@
 				6C9BEA69809D077017F865AA69F320A1 /* InvoicePayCodable.swift */,
 				A04594E0DE8639CFCBF84305641B5D5E /* Items.swift */,
 			);
-			name = InvoiceEntities;
 			path = InvoiceEntities;
 			sourceTree = "<group>";
 		};
@@ -1449,7 +1548,6 @@
 				46171BD026B36130D0C51CFD37BB30F4 /* Router */,
 				584EC46552E281EFA8752202BEB7CA73 /* View */,
 			);
-			name = InvoicePaymentStatus;
 			path = InvoicePaymentStatus;
 			sourceTree = "<group>";
 		};
@@ -1458,7 +1556,6 @@
 			children = (
 				C40B71A87ED9D39C3B5DE858491C0D2D /* InvoiceFirstScreenInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1489,7 +1586,6 @@
 			children = (
 				709CA4BA0A5F146BF236BAC8B7AE97D6 /* ColorTypes.swift */,
 			);
-			name = Colors;
 			path = Colors;
 			sourceTree = "<group>";
 		};
@@ -1498,7 +1594,6 @@
 			children = (
 				D35DA02E580E10E8C5998B38E6596AEE /* PaymentLinkFirstScreenContainerView.swift */,
 			);
-			name = Layouts;
 			path = Layouts;
 			sourceTree = "<group>";
 		};
@@ -1507,7 +1602,6 @@
 			children = (
 				9C9C29D4E47A8BE4DA030C7A7D6EC7B2 /* PaymentLinkFirstScreenInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1523,7 +1617,6 @@
 				16273FA15DDAFEE14A47D83D19274399 /* Date+String+extension.swift */,
 				6C09C931E769EE0C13DEDCA7754F5690 /* String+Date+extension.swift */,
 			);
-			name = Date;
 			path = Date;
 			sourceTree = "<group>";
 		};
@@ -1532,7 +1625,6 @@
 			children = (
 				23820436CABD8BB706BFEBCEBDE718CA /* InvoiceFirstScreenRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1551,7 +1643,6 @@
 			children = (
 				F4B4F4932454E9D588723AA8D0120083 /* InvoiceDetailsRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1561,7 +1652,6 @@
 				BBCBB3E98BEF7EB0000197FC42265BEF /* CountriesISO3166.swift */,
 				9A7B4407FAED9EEFAECB67A576314BB0 /* CountryPerfixPicker.swift */,
 			);
-			name = CountryPerfixPicker;
 			path = CountryPerfixPicker;
 			sourceTree = "<group>";
 		};
@@ -1570,7 +1660,6 @@
 			children = (
 				83BF534EA1E69AF1094AA349E01C9C7C /* ShippingPolicyRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -1594,13 +1683,20 @@
 		7D423BCE4EBA62FD70595C8FCAFD9310 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
+				18B1D3D02853792E008A5052 /* Arrow */,
+				18B1D3D82853792F008A5052 /* Close */,
+				18B1D3CE2853792E008A5052 /* InvoicePaidFailed */,
+				18B1D3D62853792E008A5052 /* InvoicePaidSuccess */,
+				18B1D3D22853792E008A5052 /* Logo */,
+				18B1D3E02853792F008A5052 /* PaymentGetways */,
+				18B1D3DC2853792F008A5052 /* SelectedIcon */,
+				18B1D3DE2853792F008A5052 /* UnselectedIcon */,
 				C28087AE2626B770C83C9D01D49F15BC /* BaseNavigationController.swift */,
 				6ECC868652F52381C54C4507CAB53DEE /* Colors */,
 				D8AFC461764943640296AD95164BBE71 /* Fonts */,
 				E47EE6DBB12AD000859270CE1D9BC849 /* Indicator */,
 				56E20E4CF1D15BF2A8AF67A06C92495D /* Validator */,
 			);
-			name = Utills;
 			path = Utills;
 			sourceTree = "<group>";
 		};
@@ -1609,7 +1705,6 @@
 			children = (
 				0B8A2D97F1B371DCDEF0B751399BE3C9 /* PaymentLinkFirstScreenEntity.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1618,7 +1713,6 @@
 			children = (
 				954D28D1707B5EE944F27F1B8F2582FE /* UIButton + Loading.swift */,
 			);
-			name = "UIButton + Loading";
 			path = "UIButton + Loading";
 			sourceTree = "<group>";
 		};
@@ -1628,7 +1722,6 @@
 				A781E3AAC9945EAF3F8B0787C5D3CFB8 /* ShippingPolicyViewController.swift */,
 				EF303DE04194E21CE366528B7D3D9F62 /* Layout */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1638,7 +1731,6 @@
 				9BCC0CE6B2C21F4978743103B9416BB3 /* CountryView.swift */,
 				027BD1CA084C5B5DC57736C47EE0A9CF /* PhoneContainerView.swift */,
 			);
-			name = PhoneContainerView;
 			path = PhoneContainerView;
 			sourceTree = "<group>";
 		};
@@ -1648,7 +1740,6 @@
 				2ACDB112D415051440D0306CBF3CAE4D /* InvoiceFirstScreenEntity.swift */,
 				74A23F17E13842DDB34A239DA33BBC58 /* InvoiceFirstScreenViewModel.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1669,7 +1760,6 @@
 			children = (
 				05BF5A0E0D325B5013E95EF59893D52B /* WebViewPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1678,7 +1768,6 @@
 			children = (
 				690FA64900823CF75C59265755CA8AC0 /* ShippingPolicyInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1693,7 +1782,6 @@
 				3434AF4FF8A9215F8502B35507B3A359 /* MerchantPaymentMethodEnabledCodable.swift */,
 				036A4D2F4F0282867601384B59795512 /* MerchantSendOTPCodable.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1702,7 +1790,6 @@
 			children = (
 				77DAC4F1EC233159A5065044DD35AFF0 /* InvoiceSecondScreenPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -1711,7 +1798,6 @@
 			children = (
 				A0850C6D1C5F8136241C95CCE0C5536B /* InvoicePaymentStatusContainerView.swift */,
 			);
-			name = Layouts;
 			path = Layouts;
 			sourceTree = "<group>";
 		};
@@ -1730,7 +1816,6 @@
 				474C92660164AD9DBBB2755DC00FE069 /* PaymentMethodCell.swift */,
 				EF8423590FF7077E9B189F8429B4A1C0 /* PaymentMethodsViewContainer.swift */,
 			);
-			name = PaymentMethodsViewContainer;
 			path = PaymentMethodsViewContainer;
 			sourceTree = "<group>";
 		};
@@ -1740,7 +1825,6 @@
 				1BB40EB329C19A50F0DFE6C6EA58CCF1 /* RefundPolicyViewController.swift */,
 				B962C08A8CE03B01977A83CBF85122B3 /* Layout */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1749,7 +1833,6 @@
 			children = (
 				880B530131375691681A2777434C02DF /* WebViewEntity.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1759,7 +1842,6 @@
 				0C40AD0F56B5BED8071695BC14CD46F4 /* PaymentLinkSecondScreenViewController.swift */,
 				53C2EB215ADA531BA4D0C72A204306B6 /* Layout */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -1787,7 +1869,6 @@
 				59297FB4A8A33087030CDB4B92EC2D2B /* PaymentMethodWorker.swift */,
 				DD52EB7D4874E7D7B93E31A2AAAC73F9 /* Entities */,
 			);
-			name = PaymentMethodWorker;
 			path = PaymentMethodWorker;
 			sourceTree = "<group>";
 		};
@@ -1801,7 +1882,6 @@
 				7922B5574725C2725A4751312BFFCAE2 /* Router */,
 				522F232E6C6A3C84ABECBBB7D4F40BF1 /* View */,
 			);
-			name = InvoiceDetailsScreen;
 			path = InvoiceDetailsScreen;
 			sourceTree = "<group>";
 		};
@@ -1827,7 +1907,6 @@
 				0A4E231550C8CAA65899E765D411CE0D /* Resources */,
 				E1FAD94462AB5C2EAEC8321C3BE6464D /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -1838,7 +1917,6 @@
 				05084AE5FB2E92B0695038A5F1865877 /* PaymentWorker.swift */,
 				AAF5D08AFADC5F1D222F73140FF281E7 /* Entities */,
 			);
-			name = PaymentWorker;
 			path = PaymentWorker;
 			sourceTree = "<group>";
 		};
@@ -1852,7 +1930,6 @@
 				400C20E45313F4DAFF28665659D26A16 /* Router */,
 				1DD9B5284ACF38760E96AA4C4FFF2772 /* View */,
 			);
-			name = PaymentLinkFirstScreen;
 			path = PaymentLinkFirstScreen;
 			sourceTree = "<group>";
 		};
@@ -1861,7 +1938,6 @@
 			children = (
 				A7A3E79C76957F77B4B4DE0EBE88E84C /* InvoicePaymentStatusEntity.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1873,7 +1949,6 @@
 				C8F0B0CCEA8874805892D10D1824E623 /* InvoiceDetailsContainerView.swift */,
 				E66FC6845DF484B622B18C470F9E1298 /* Cells */,
 			);
-			name = Layouts;
 			path = Layouts;
 			sourceTree = "<group>";
 		};
@@ -1882,7 +1957,6 @@
 			children = (
 				CAB0DC6036E9C18BD694524800FFBD6E /* InvoiceDetailsInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -1892,7 +1966,6 @@
 				8B8725D1785A378493E18786F6DFE07D /* RefundCodable.swift */,
 				B5D24344528A686E49C91D5F98896517 /* RequestRefundCodable.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1903,7 +1976,6 @@
 				5843E85BE460B19FD1A8AA8A9A111B6D /* GetCustomerCodable.swift */,
 				F020CECC2B9D8B2F8F838F1E03411D90 /* UpdateCustomerCodable.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1912,7 +1984,6 @@
 			children = (
 				B6B8EC2BD15678CB4D6B8AC30572D064 /* PaymentCodable.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1931,7 +2002,6 @@
 				638014A33C020D7990E222FC32857168 /* FontBlaster.swift */,
 				220B054D35928F99E8291ED36059EC08 /* Support Files */,
 			);
-			name = FontBlaster;
 			path = FontBlaster;
 			sourceTree = "<group>";
 		};
@@ -1940,7 +2010,6 @@
 			children = (
 				6D7EEAE67FABE3CAA1784943BE75BD9A /* RefundPolicyEntity.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -1954,7 +2023,6 @@
 				4DEED7916D15F8E61F1413D88B6A2A45 /* Router */,
 				C23924473AA712BBB106D304E1EAED3C /* View */,
 			);
-			name = InvoiceSecondScreen;
 			path = InvoiceSecondScreen;
 			sourceTree = "<group>";
 		};
@@ -1965,7 +2033,6 @@
 				25082B6F648E526FF47DF3B151F80825 /* MerchantWorker.swift */,
 				8C9D4176020714BF8023ABAA3FD1DB7A /* Entities */,
 			);
-			name = MerchantWorker;
 			path = MerchantWorker;
 			sourceTree = "<group>";
 		};
@@ -2035,7 +2102,6 @@
 				B0907AFF9346DFD60241DA42D6F3B069 /* WKInterfaceImage+Kingfisher.swift */,
 				21518F52B58F4834ED782031CDDD4BA3 /* Support Files */,
 			);
-			name = Kingfisher;
 			path = Kingfisher;
 			sourceTree = "<group>";
 		};
@@ -2044,7 +2110,6 @@
 			children = (
 				45FE92A049B4B1C6576D17862016D2BB /* RefundPolicyContainerView.swift */,
 			);
-			name = Layout;
 			path = Layout;
 			sourceTree = "<group>";
 		};
@@ -2058,7 +2123,6 @@
 				7B32E1A3EAAA421C0F0FBF9F1FE705EE /* Router */,
 				810B1B86D0E9F0ABADA309FA47818916 /* View */,
 			);
-			name = ShippingPolicy;
 			path = ShippingPolicy;
 			sourceTree = "<group>";
 		};
@@ -2068,7 +2132,6 @@
 				0E85F58CAE6C5061E08A87391D1E67C9 /* InvoiceSecondScreenViewController.swift */,
 				5357387A05355C0CB9B87BCE138662A4 /* Layout */,
 			);
-			name = View;
 			path = View;
 			sourceTree = "<group>";
 		};
@@ -2082,7 +2145,6 @@
 				EC36D61E71E91BB9E046391219A7BB65 /* Support Files */,
 				EA3F93370B7262E1D375E96FE152F926 /* Swift */,
 			);
-			name = OHHTTPStubs;
 			path = OHHTTPStubs;
 			sourceTree = "<group>";
 		};
@@ -2091,7 +2153,6 @@
 			children = (
 				3EE2FB6831EFE8CEFEDBE0A4943E726E /* PaymentLinkSecondScreenRouter.swift */,
 			);
-			name = Router;
 			path = Router;
 			sourceTree = "<group>";
 		};
@@ -2105,7 +2166,6 @@
 				C3F5216D396F72AFFD4983748E72C545 /* Router */,
 				96D84201B41A38EB1B797EFCF981D5B6 /* View */,
 			);
-			name = PaymentLinkSecondScreen;
 			path = PaymentLinkSecondScreen;
 			sourceTree = "<group>";
 		};
@@ -2125,7 +2185,6 @@
 				77E900B50064F8400C8FF1CA1576504D /* ConfigurationWorker.swift */,
 				5869861900E6F473F2350C9CCE32070E /* Entities */,
 			);
-			name = ConfigurationWorker;
 			path = ConfigurationWorker;
 			sourceTree = "<group>";
 		};
@@ -2154,7 +2213,6 @@
 				38472D8B1A75955B17EF95FF2D4B6795 /* Router */,
 				069331E9F0618EBF9380BBB5CDB4DB60 /* View */,
 			);
-			name = WebView;
 			path = WebView;
 			sourceTree = "<group>";
 		};
@@ -2163,7 +2221,6 @@
 			children = (
 				69BFBC22C01CC28168FB46A9E9214BDB /* ShippingPolicyPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -2184,7 +2241,6 @@
 			children = (
 				07EFFD88C849E2368F76A0291F4E58B0 /* InvoiceFirstScreenPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -2195,7 +2251,6 @@
 				CED1DC2DA4C6950E8A0D46C5F0216664 /* InvoicesWorker.swift */,
 				5E2E1C89F5112CE07745555CB6233A42 /* InvoiceEntities */,
 			);
-			name = InvoicesWorker;
 			path = InvoicesWorker;
 			sourceTree = "<group>";
 		};
@@ -2204,7 +2259,6 @@
 			children = (
 				ABF7A4B7FF5131E9D0813F76B5CF925C /* PaymentLinkSecondScreenEntity.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -2231,9 +2285,20 @@
 		D8AFC461764943640296AD95164BBE71 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				18B1D3FC2853793E008A5052 /* Roboto-Black.ttf */,
+				18B1D4002853793F008A5052 /* Roboto-BlackItalic.ttf */,
+				18B1D4052853793F008A5052 /* Roboto-Bold.ttf */,
+				18B1D3FF2853793E008A5052 /* Roboto-BoldItalic.ttf */,
+				18B1D3FD2853793E008A5052 /* Roboto-Italic.ttf */,
+				18B1D3FE2853793E008A5052 /* Roboto-Light.ttf */,
+				18B1D4012853793F008A5052 /* Roboto-LightItalic.ttf */,
+				18B1D4022853793F008A5052 /* Roboto-Medium.ttf */,
+				18B1D4042853793F008A5052 /* Roboto-MediumItalic.ttf */,
+				18B1D4032853793F008A5052 /* Roboto-Regular.ttf */,
+				18B1D3FA2853793E008A5052 /* Roboto-Thin.ttf */,
+				18B1D3FB2853793E008A5052 /* Roboto-ThinItalic.ttf */,
 				BAA5EEAFBED88D1C58813F8B3CB509CD /* FontType.swift */,
 			);
-			name = Fonts;
 			path = Fonts;
 			sourceTree = "<group>";
 		};
@@ -2244,7 +2309,6 @@
 				CA6EFA31B6C91F67FAE0C649238ABD53 /* CustomersWorker.swift */,
 				A93A50CF41D9A3B4EFE8E99F44C91F83 /* Entities */,
 			);
-			name = CustomersWorker;
 			path = CustomersWorker;
 			sourceTree = "<group>";
 		};
@@ -2254,7 +2318,6 @@
 				DA188D9AACDA8581A4F1D9281492D051 /* SingleStepView.swift */,
 				A7F70D0D15A3A2A72E407387842BB999 /* StepsView.swift */,
 			);
-			name = StepsView;
 			path = StepsView;
 			sourceTree = "<group>";
 		};
@@ -2263,7 +2326,6 @@
 			children = (
 				1CC6D3D3E3ADD949E2746797BEDCADFF /* PaymentMethodCodable.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -2287,7 +2349,6 @@
 			children = (
 				A843045FFA4DFFDB0B56B00070985F32 /* InvoiceDetailsEntity.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -2298,7 +2359,6 @@
 				7A275B25186248AD43FC14C167BB5BB5 /* LottieIndicator.swift */,
 				7D87AE7417B8BA9FD2EC26D16E1CFDD5 /* NormalIndicator.swift */,
 			);
-			name = Indicator;
 			path = Indicator;
 			sourceTree = "<group>";
 		};
@@ -2308,7 +2368,6 @@
 				64930BA3008164B46B6D5BF149302F0A /* InvoiceDetailsPaymentSammaryTableViewCell.swift */,
 				66F4D66D55439FBBB270EFF9FA0A8B06 /* InvoiceDetailsProductTableViewCell.swift */,
 			);
-			name = Cells;
 			path = Cells;
 			sourceTree = "<group>";
 		};
@@ -2325,7 +2384,6 @@
 			children = (
 				263399F79DF937ECBDC03B12FDB44F32 /* InvoiceDetailsPresenter.swift */,
 			);
-			name = Presenter;
 			path = Presenter;
 			sourceTree = "<group>";
 		};
@@ -2358,7 +2416,6 @@
 			children = (
 				910E7508A04C19C4645B98A8EB562E8C /* InvoiceFirstScreenContainerView.swift */,
 			);
-			name = Layouts;
 			path = Layouts;
 			sourceTree = "<group>";
 		};
@@ -2382,7 +2439,6 @@
 				81F137234493A106194454FDFD08A4B1 /* PhoneContainerView */,
 				D9522DA9219D2FBD77189B1BB6F90355 /* StepsView */,
 			);
-			name = Components;
 			path = Components;
 			sourceTree = "<group>";
 		};
@@ -2406,7 +2462,6 @@
 			children = (
 				09DC1BA814FCA91BA9B89D23059070A9 /* ShippingPolicyContainerView.swift */,
 			);
-			name = Layout;
 			path = Layout;
 			sourceTree = "<group>";
 		};
@@ -2415,7 +2470,6 @@
 			children = (
 				876A5D043B5D54D98CD4EF0B17031823 /* ContactsView.swift */,
 			);
-			name = ContactsView;
 			path = ContactsView;
 			sourceTree = "<group>";
 		};
@@ -2433,7 +2487,6 @@
 			children = (
 				EBA871C14A8193578D321968F29A02C9 /* InvoicePaymentStatusInteractor.swift */,
 			);
-			name = Interactor;
 			path = Interactor;
 			sourceTree = "<group>";
 		};
@@ -2739,6 +2792,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B1D4072853793F008A5052 /* Roboto-ThinItalic.ttf in Resources */,
+				18B1D3EB2853792F008A5052 /* Logo.png in Resources */,
+				18B1D4112853793F008A5052 /* Roboto-Bold.ttf in Resources */,
+				18B1D3ED2853792F008A5052 /* InvoicePaidSuccess.png in Resources */,
+				18B1D40A2853793F008A5052 /* Roboto-Light.ttf in Resources */,
+				18B1D40D2853793F008A5052 /* Roboto-LightItalic.ttf in Resources */,
+				18B1D3F52853792F008A5052 /* Etisalat.png in Resources */,
+				18B1D3F92853792F008A5052 /* Vodafone.png in Resources */,
+				18B1D3F42853792F008A5052 /* Orange.png in Resources */,
+				18B1D3EC2853792F008A5052 /* Logo@2x.png in Resources */,
+				18B1D3EE2853792F008A5052 /* Close@3x.png in Resources */,
+				18B1D3E82853792F008A5052 /* InvoicePaidFailed.png in Resources */,
+				18B1D4092853793F008A5052 /* Roboto-Italic.ttf in Resources */,
+				18B1D3EA2853792F008A5052 /* Logo@3x.png in Resources */,
+				18B1D3F32853792F008A5052 /* Visa.png in Resources */,
+				18B1D4082853793F008A5052 /* Roboto-Black.ttf in Resources */,
+				18B1D3E92853792F008A5052 /* Arrow.png in Resources */,
+				18B1D3F22853792F008A5052 /* UnSelectedIcon.png in Resources */,
+				18B1D3F12853792F008A5052 /* SelectedIcon.png in Resources */,
+				18B1D4102853793F008A5052 /* Roboto-MediumItalic.ttf in Resources */,
+				18B1D40C2853793F008A5052 /* Roboto-BlackItalic.ttf in Resources */,
+				18B1D3F62853792F008A5052 /* Cash.png in Resources */,
+				18B1D40B2853793F008A5052 /* Roboto-BoldItalic.ttf in Resources */,
+				18B1D4062853793F008A5052 /* Roboto-Thin.ttf in Resources */,
+				18B1D40F2853793F008A5052 /* Roboto-Regular.ttf in Resources */,
+				18B1D3F82853792F008A5052 /* Mastercard.png in Resources */,
+				18B1D3F02853792F008A5052 /* Close.png in Resources */,
+				18B1D3F72853792F008A5052 /* Meeza.png in Resources */,
+				18B1D3EF2853792F008A5052 /* Close@2x.png in Resources */,
+				18B1D40E2853793F008A5052 /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3582,8 +3665,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
