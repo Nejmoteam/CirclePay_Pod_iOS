@@ -19,7 +19,7 @@ public class CirclePay {
     public static let refunds: RefundsProtocol = Refunds()
     public static let paymentGateways: PaymentGatewaysProtocol = PaymentGateways()
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
-    public static var mode: Inviroment = .sandBox
+    public static var mode: CirclePayInviroment = .sandBox
     private static var configsWorker: ConfigurationWorkerProtocol = ConfigurationWorker()
     internal static var uiConfigs: ConfigurationModel?
     public static var delegete: CirclePayDelegete?
@@ -97,6 +97,7 @@ public class CirclePay {
                     uiConfigs = unwrappedData
                 } else {
                     let err = CirclePayError(errorCode: 200003, errorMsg: resp?.details ?? "")
+                    error = err
                 }
                 dispatchGroup.leave()
             case .failure(let err):
@@ -125,7 +126,7 @@ public class CirclePay {
 }
 
 
-public enum Inviroment: String {
+public enum CirclePayInviroment: String {
     case staging = "https://staging-openapi.circlepay.ai/"
     // case preProduction = "https://preprod-openapi-admin.circlepay.ai"
     case production = "https://openapi-admin.circlepay.ai/"
