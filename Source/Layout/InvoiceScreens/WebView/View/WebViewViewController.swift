@@ -98,10 +98,10 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
         self.view.removeActivityIndicator()
         print("Finish Navigation to \(webView.url?.absoluteString ?? "")")
         if let url = webView.url?.absoluteString {
-            if url.contains("success=true") && url.contains("circlepay.ai") {
+            if url.contains("success=true") && url.contains(".ai") {
                 print("Paid Sucsessfully")
                 self.presenter.transactionPaidSucsesfully()
-            } else if url.contains("success=false") && url.contains("circlepay.ai") {
+            } else if url.contains("success=false") && url.contains(".ai") {
                 print("Couldn't Pay")
                 self.presenter.failedToPayTransaction()
             }
