@@ -20,9 +20,20 @@ class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
         router.viewController = view
         return view
     }
+    
+    func dismissView() {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.viewController?.navigationController?.dismiss(animated: true)
+        }
+    }
 }
 
 enum InvoicePaymentStatus {
     case success
+    case paid
+    case notAvailable
     case failure
 }

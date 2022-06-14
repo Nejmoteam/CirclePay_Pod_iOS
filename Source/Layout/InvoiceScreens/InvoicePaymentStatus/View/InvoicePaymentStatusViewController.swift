@@ -34,4 +34,22 @@ class InvoicePaymentStatusViewController: UIViewController, InvoicePaymentStatus
             self.dismissAll(animated: true)
         }
     }
+    
+    func setInvoiceNumber(value: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.invoiceNumberView.valueLabel.text = value
+        }
+    }
+    
+    func setInvoicePaymentDate(value: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.paymentDateView.valueLabel.text = value
+        }
+    }
 }
