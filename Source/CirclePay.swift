@@ -42,10 +42,30 @@ public class CirclePay {
                         CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
                     } else {
                         if let unwrappedViewModel = viewModel {
-                            let invoiceFirstScreen =                             BaseNavigationController(rootViewController: InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel))
-                            self.uiConfigs = uiConfigs
-                            invoiceFirstScreen.modalPresentationStyle = .fullScreen
-                            vc.present(invoiceFirstScreen, animated: true, completion: nil)
+                            if unwrappedViewModel.invoiceDetails.status == 1 {
+                                print(unwrappedViewModel.invoiceDetails.status)
+                                // Paid
+                                print("Paid")
+
+                            } else {
+                                //Not Paid
+                                let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+                                guard let dueDate = unwrappedViewModel.invoiceDetails.dueDate?.toDate(format: .custom(dateFormat)), let currentDate = Date().toDate(dateFormat: .custom(dateFormat)) else {
+                                    let error = CirclePayError(errorCode: 20000, errorMsg: "Something went wrong, please try again.")
+                                    CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
+                                    return
+                                }
+                                
+                                if dueDate < currentDate {
+                                    //Expired
+                                    print("Expired")
+                                } else {
+                                    let invoiceFirstScreen =                             BaseNavigationController(rootViewController: InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel))
+                                    self.uiConfigs = uiConfigs
+                                    invoiceFirstScreen.modalPresentationStyle = .fullScreen
+                                    vc.present(invoiceFirstScreen, animated: true, completion: nil)
+                                }
+                            }
                         } else {
                             let error = CirclePayError(errorCode: 20000, errorMsg: "Something went wrong, please try again.")
                             CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
