@@ -289,7 +289,7 @@ class InvoicePaymentStatusContainerView: UIView {
             buttonStackView.topAnchor.constraint(equalTo: vStackView.bottomAnchor, constant: 38),
             buttonStackView.widthAnchor.constraint(equalToConstant: 215),
             buttonStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            buttonStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -38)
+            buttonStackView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor)
         ])
     }
     private func setupDownloadButton() {
@@ -343,7 +343,7 @@ class InvoicePaymentStatusContainerView: UIView {
                 self.invoiceNumberView.isHidden = true
                 self.paymentDateView.isHidden = true
                 self.downloadButton.isHidden = true
-                self.dismissButton.isHidden = true
+                self.dismissButton.isHidden = false
                 self.tryAgainButton.isHidden = true
             }
         case .failure:
