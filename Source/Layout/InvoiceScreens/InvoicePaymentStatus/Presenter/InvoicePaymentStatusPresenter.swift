@@ -26,6 +26,18 @@ class InvoicePaymentStatusPresenter: InvoicePaymentStatusPresenterProtocol, Invo
         self.view?.setupView(with: self.status)
         self.view?.setInvoiceNumber(value: "34565767888")
         self.view?.setInvoicePaymentDate(value: "17 Apr 2022")
+        self.setupUIConfigs()
+    }
+    
+    private func setupUIConfigs() {
+        if let unwrappedConfigs = CirclePay.uiConfigs {
+            if let unwrappedisLogoEnabled = unwrappedConfigs.logoEnable {
+                self.view?.setupLogoConfigurations(isLogoEnabled: unwrappedisLogoEnabled, logoUrl: unwrappedConfigs.logo ?? "")
+            }
+            if let unwrappedColor = unwrappedConfigs.color {
+                self.view?.setupPrimaryColorConfiguration(colorString: unwrappedColor)
+            }
+        }
     }
     
     func userPressedViewInvoiceDetails() {

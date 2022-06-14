@@ -217,7 +217,8 @@ class InvoicePaymentStatusContainerView: UIView {
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
         ])
     }
     
@@ -232,9 +233,9 @@ class InvoicePaymentStatusContainerView: UIView {
     
     private func setupStatusImageView() {
         NSLayoutConstraint.activate([
-            statusImageView.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 116),
+            statusImageView.topAnchor.constraint(lessThanOrEqualTo: logoView.bottomAnchor, constant: 116),
             statusImageView.widthAnchor.constraint(equalToConstant: 255),
-            statusImageView.heightAnchor.constraint(equalToConstant: 233),
+            statusImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.25),
             statusImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
     }

@@ -13,6 +13,8 @@ protocol InvoicePaymentStatusViewProtocol: AnyObject {
     func setupView(with status:InvoicePaymentStatus)
     func setInvoiceNumber(value:String)
     func setInvoicePaymentDate(value:String)
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String)
+    func setupPrimaryColorConfiguration(colorString: String)
 }
 protocol InvoicePaymentStatusPresenterProtocol {
     var view: InvoicePaymentStatusViewProtocol? {get set}
