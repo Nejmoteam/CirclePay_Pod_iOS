@@ -42,10 +42,15 @@ public class CirclePay {
                         CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
                     } else {
                         if let unwrappedViewModel = viewModel {
-                            if unwrappedViewModel.invoiceDetails.status == 1 {
+                            if unwrappedViewModel.invoiceDetails.status == 0 {
                                 print(unwrappedViewModel.invoiceDetails.status)
                                 // Paid
                                 print("Paid")
+                                let error = CirclePayError(errorCode: 20000, errorMsg: "Invoice Was Paid Already")
+                                CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
+                                let invoiceStatus =  BaseNavigationController(rootViewController: InvoicePaymentStatusRouter.createAnModule(with: .paid))
+                                invoiceStatus.modalPresentationStyle = .fullScreen
+                                vc.present(invoiceStatus, animated: true, completion: nil)
 
                             } else {
                                 //Not Paid
@@ -59,6 +64,11 @@ public class CirclePay {
                                 if dueDate < currentDate {
                                     //Expired
                                     print("Expired")
+                                    let error = CirclePayError(errorCode: 20000, errorMsg: "Invoice Was Expired Already")
+                                    CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
+                                    let invoiceStatus =  InvoicePaymentStatusRouter.createAnModule(with: .notAvailable)
+                                    invoiceStatus.modalPresentationStyle = .fullScreen
+                                    vc.present(invoiceStatus, animated: true, completion: nil)
                                 } else {
                                     let invoiceFirstScreen =                             BaseNavigationController(rootViewController: InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel))
                                     self.uiConfigs = uiConfigs

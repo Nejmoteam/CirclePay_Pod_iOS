@@ -26,7 +26,7 @@ class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
             guard let self = self else {
                 return
             }
-            self.viewController?.navigationController?.dismiss(animated: true)
+            self.viewController?.dismiss(animated: true, completion: nil)
         }
     }
 }
