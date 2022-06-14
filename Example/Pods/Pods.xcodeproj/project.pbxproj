@@ -47,37 +47,38 @@
 		1304865DB0AA6F31D08BF283F218D571 /* TVMonogramView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E6D80B451EC171F50E615146C92A0B /* TVMonogramView+Kingfisher.swift */; };
 		13E62623092B680C6A5C349D48B8A4FD /* CachedResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA09B46B5AACCDB6A84E6CB5D9D0680 /* CachedResponseHandler.swift */; };
 		1773084DECF68CADD45567FBEC56036D /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D7B989DDB6F99A2C1E65D38315E9EEA8 /* Alamofire-dummy.m */; };
+		181DE53328574EC000F82F9B /* SelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE51A28574EBF00F82F9B /* SelectedIcon.png */; };
+		181DE53428574EC000F82F9B /* Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE51C28574EC000F82F9B /* Close@3x.png */; };
+		181DE53528574EC000F82F9B /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE51D28574EC000F82F9B /* Close@2x.png */; };
+		181DE53628574EC000F82F9B /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE51E28574EC000F82F9B /* Close.png */; };
+		181DE53728574EC000F82F9B /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52028574EC000F82F9B /* Arrow.png */; };
+		181DE53828574EC000F82F9B /* Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52228574EC000F82F9B /* Logo@3x.png */; };
+		181DE53928574EC000F82F9B /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52328574EC000F82F9B /* Logo.png */; };
+		181DE53A28574EC000F82F9B /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52428574EC000F82F9B /* Logo@2x.png */; };
+		181DE53B28574EC000F82F9B /* UnSelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52628574EC000F82F9B /* UnSelectedIcon.png */; };
+		181DE53C28574EC000F82F9B /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52828574EC000F82F9B /* Visa.png */; };
+		181DE53D28574EC000F82F9B /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52928574EC000F82F9B /* Orange.png */; };
+		181DE53E28574EC000F82F9B /* Etisalat.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52A28574EC000F82F9B /* Etisalat.png */; };
+		181DE53F28574EC000F82F9B /* Cash.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52B28574EC000F82F9B /* Cash.png */; };
+		181DE54028574EC000F82F9B /* Meeza.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52C28574EC000F82F9B /* Meeza.png */; };
+		181DE54128574EC000F82F9B /* Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52D28574EC000F82F9B /* Mastercard.png */; };
+		181DE54228574EC000F82F9B /* Vodafone.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE52E28574EC000F82F9B /* Vodafone.png */; };
+		181DE54328574EC000F82F9B /* InvoicePaidSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE53028574EC000F82F9B /* InvoicePaidSuccess.png */; };
+		181DE54428574EC000F82F9B /* InvoicePaidFailed.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE53228574EC000F82F9B /* InvoicePaidFailed.png */; };
+		181DE55128574EE000F82F9B /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54528574EDE00F82F9B /* Roboto-LightItalic.ttf */; };
+		181DE55228574EE000F82F9B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54628574EDE00F82F9B /* Roboto-Regular.ttf */; };
+		181DE55328574EE000F82F9B /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54728574EDE00F82F9B /* Roboto-BoldItalic.ttf */; };
+		181DE55428574EE000F82F9B /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54828574EDE00F82F9B /* Roboto-ThinItalic.ttf */; };
+		181DE55528574EE000F82F9B /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54928574EDE00F82F9B /* Roboto-BlackItalic.ttf */; };
+		181DE55628574EE000F82F9B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54A28574EDE00F82F9B /* Roboto-Medium.ttf */; };
+		181DE55728574EE000F82F9B /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54B28574EDF00F82F9B /* Roboto-Italic.ttf */; };
+		181DE55828574EE000F82F9B /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54C28574EDF00F82F9B /* Roboto-Light.ttf */; };
+		181DE55928574EE000F82F9B /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54D28574EDF00F82F9B /* Roboto-Thin.ttf */; };
+		181DE55A28574EE000F82F9B /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54E28574EDF00F82F9B /* Roboto-Black.ttf */; };
+		181DE55B28574EE000F82F9B /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54F28574EDF00F82F9B /* Roboto-MediumItalic.ttf */; };
+		181DE55C28574EE000F82F9B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE55028574EDF00F82F9B /* Roboto-Bold.ttf */; };
+		181DE55F28576C9B00F82F9B /* InvoiceNotAvailable.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE55E28576C9B00F82F9B /* InvoiceNotAvailable.png */; };
 		187F0417433AAD6FB63A3FC323EBC97A /* MerchantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25082B6F648E526FF47DF3B151F80825 /* MerchantWorker.swift */; };
-		18B1D3E82853792F008A5052 /* InvoicePaidFailed.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3CF2853792E008A5052 /* InvoicePaidFailed.png */; };
-		18B1D3E92853792F008A5052 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D12853792E008A5052 /* Arrow.png */; };
-		18B1D3EA2853792F008A5052 /* Logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D32853792E008A5052 /* Logo@3x.png */; };
-		18B1D3EB2853792F008A5052 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D42853792E008A5052 /* Logo.png */; };
-		18B1D3EC2853792F008A5052 /* Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D52853792E008A5052 /* Logo@2x.png */; };
-		18B1D3ED2853792F008A5052 /* InvoicePaidSuccess.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D72853792E008A5052 /* InvoicePaidSuccess.png */; };
-		18B1D3EE2853792F008A5052 /* Close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3D92853792F008A5052 /* Close@3x.png */; };
-		18B1D3EF2853792F008A5052 /* Close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DA2853792F008A5052 /* Close@2x.png */; };
-		18B1D3F02853792F008A5052 /* Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DB2853792F008A5052 /* Close.png */; };
-		18B1D3F12853792F008A5052 /* SelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DD2853792F008A5052 /* SelectedIcon.png */; };
-		18B1D3F22853792F008A5052 /* UnSelectedIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3DF2853792F008A5052 /* UnSelectedIcon.png */; };
-		18B1D3F32853792F008A5052 /* Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E12853792F008A5052 /* Visa.png */; };
-		18B1D3F42853792F008A5052 /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E22853792F008A5052 /* Orange.png */; };
-		18B1D3F52853792F008A5052 /* Etisalat.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E32853792F008A5052 /* Etisalat.png */; };
-		18B1D3F62853792F008A5052 /* Cash.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E42853792F008A5052 /* Cash.png */; };
-		18B1D3F72853792F008A5052 /* Meeza.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E52853792F008A5052 /* Meeza.png */; };
-		18B1D3F82853792F008A5052 /* Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E62853792F008A5052 /* Mastercard.png */; };
-		18B1D3F92853792F008A5052 /* Vodafone.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3E72853792F008A5052 /* Vodafone.png */; };
-		18B1D4062853793F008A5052 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FA2853793E008A5052 /* Roboto-Thin.ttf */; };
-		18B1D4072853793F008A5052 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FB2853793E008A5052 /* Roboto-ThinItalic.ttf */; };
-		18B1D4082853793F008A5052 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FC2853793E008A5052 /* Roboto-Black.ttf */; };
-		18B1D4092853793F008A5052 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FD2853793E008A5052 /* Roboto-Italic.ttf */; };
-		18B1D40A2853793F008A5052 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FE2853793E008A5052 /* Roboto-Light.ttf */; };
-		18B1D40B2853793F008A5052 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D3FF2853793E008A5052 /* Roboto-BoldItalic.ttf */; };
-		18B1D40C2853793F008A5052 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4002853793F008A5052 /* Roboto-BlackItalic.ttf */; };
-		18B1D40D2853793F008A5052 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4012853793F008A5052 /* Roboto-LightItalic.ttf */; };
-		18B1D40E2853793F008A5052 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4022853793F008A5052 /* Roboto-Medium.ttf */; };
-		18B1D40F2853793F008A5052 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4032853793F008A5052 /* Roboto-Regular.ttf */; };
-		18B1D4102853793F008A5052 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4042853793F008A5052 /* Roboto-MediumItalic.ttf */; };
-		18B1D4112853793F008A5052 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18B1D4052853793F008A5052 /* Roboto-Bold.ttf */; };
 		1961E8842348A78A301B75FFF05608BE /* PaymentLinkSecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2FB6831EFE8CEFEDBE0A4943E726E /* PaymentLinkSecondScreenRouter.swift */; };
 		19FF16C15407ABBCAB0168CDE44709E1 /* NSURLRequest+HTTPBodyTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF33FF0EA23F1004C07DEF58F29FA75 /* NSURLRequest+HTTPBodyTesting.m */; };
 		1A1A156BA96AF26742D0B309220C749B /* GetCustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5843E85BE460B19FD1A8AA8A9A111B6D /* GetCustomerCodable.swift */; };
@@ -486,38 +487,39 @@
 		131EE5ACF6273F9A01CFEB9AA418058A /* WebViewContainerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewContainerView.swift; sourceTree = "<group>"; };
 		16273FA15DDAFEE14A47D83D19274399 /* Date+String+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+String+extension.swift"; sourceTree = "<group>"; };
 		17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OHHTTPStubs; path = OHHTTPStubs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		181DE51A28574EBF00F82F9B /* SelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedIcon.png; sourceTree = "<group>"; };
+		181DE51C28574EC000F82F9B /* Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@3x.png"; sourceTree = "<group>"; };
+		181DE51D28574EC000F82F9B /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
+		181DE51E28574EC000F82F9B /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
+		181DE52028574EC000F82F9B /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
+		181DE52228574EC000F82F9B /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
+		181DE52328574EC000F82F9B /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		181DE52428574EC000F82F9B /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
+		181DE52628574EC000F82F9B /* UnSelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnSelectedIcon.png; sourceTree = "<group>"; };
+		181DE52828574EC000F82F9B /* Visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Visa.png; sourceTree = "<group>"; };
+		181DE52928574EC000F82F9B /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
+		181DE52A28574EC000F82F9B /* Etisalat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Etisalat.png; sourceTree = "<group>"; };
+		181DE52B28574EC000F82F9B /* Cash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cash.png; sourceTree = "<group>"; };
+		181DE52C28574EC000F82F9B /* Meeza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Meeza.png; sourceTree = "<group>"; };
+		181DE52D28574EC000F82F9B /* Mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mastercard.png; sourceTree = "<group>"; };
+		181DE52E28574EC000F82F9B /* Vodafone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vodafone.png; sourceTree = "<group>"; };
+		181DE53028574EC000F82F9B /* InvoicePaidSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoicePaidSuccess.png; sourceTree = "<group>"; };
+		181DE53228574EC000F82F9B /* InvoicePaidFailed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoicePaidFailed.png; sourceTree = "<group>"; };
+		181DE54528574EDE00F82F9B /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		181DE54628574EDE00F82F9B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		181DE54728574EDE00F82F9B /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		181DE54828574EDE00F82F9B /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		181DE54928574EDE00F82F9B /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		181DE54A28574EDE00F82F9B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		181DE54B28574EDF00F82F9B /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		181DE54C28574EDF00F82F9B /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		181DE54D28574EDF00F82F9B /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		181DE54E28574EDF00F82F9B /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		181DE54F28574EDF00F82F9B /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		181DE55028574EDF00F82F9B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		181DE55E28576C9B00F82F9B /* InvoiceNotAvailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoiceNotAvailable.png; sourceTree = "<group>"; };
 		1835E9D15D2DFE84D76DB0A01688BB85 /* MerchantPaymentGatewayCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MerchantPaymentGatewayCodable.swift; sourceTree = "<group>"; };
 		189A2930EA1F30624DF7F735F072BB87 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		18B1D3CF2853792E008A5052 /* InvoicePaidFailed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoicePaidFailed.png; sourceTree = "<group>"; };
-		18B1D3D12853792E008A5052 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
-		18B1D3D32853792E008A5052 /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
-		18B1D3D42853792E008A5052 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
-		18B1D3D52853792E008A5052 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
-		18B1D3D72853792E008A5052 /* InvoicePaidSuccess.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoicePaidSuccess.png; sourceTree = "<group>"; };
-		18B1D3D92853792F008A5052 /* Close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@3x.png"; sourceTree = "<group>"; };
-		18B1D3DA2853792F008A5052 /* Close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close@2x.png"; sourceTree = "<group>"; };
-		18B1D3DB2853792F008A5052 /* Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close.png; sourceTree = "<group>"; };
-		18B1D3DD2853792F008A5052 /* SelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectedIcon.png; sourceTree = "<group>"; };
-		18B1D3DF2853792F008A5052 /* UnSelectedIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UnSelectedIcon.png; sourceTree = "<group>"; };
-		18B1D3E12853792F008A5052 /* Visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Visa.png; sourceTree = "<group>"; };
-		18B1D3E22853792F008A5052 /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
-		18B1D3E32853792F008A5052 /* Etisalat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Etisalat.png; sourceTree = "<group>"; };
-		18B1D3E42853792F008A5052 /* Cash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cash.png; sourceTree = "<group>"; };
-		18B1D3E52853792F008A5052 /* Meeza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Meeza.png; sourceTree = "<group>"; };
-		18B1D3E62853792F008A5052 /* Mastercard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mastercard.png; sourceTree = "<group>"; };
-		18B1D3E72853792F008A5052 /* Vodafone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Vodafone.png; sourceTree = "<group>"; };
-		18B1D3FA2853793E008A5052 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
-		18B1D3FB2853793E008A5052 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
-		18B1D3FC2853793E008A5052 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
-		18B1D3FD2853793E008A5052 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
-		18B1D3FE2853793E008A5052 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		18B1D3FF2853793E008A5052 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
-		18B1D4002853793F008A5052 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
-		18B1D4012853793F008A5052 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
-		18B1D4022853793F008A5052 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		18B1D4032853793F008A5052 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		18B1D4042853793F008A5052 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
-		18B1D4052853793F008A5052 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		19B04E7819D2878B7CF125C7617B1E7C /* FontBlaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontBlaster.release.xcconfig; sourceTree = "<group>"; };
 		19C45606000DB2552B474DC4EA589D35 /* HTTPStubsResponse+JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "HTTPStubsResponse+JSON.h"; path = "Sources/OHHTTPStubs/include/HTTPStubsResponse+JSON.h"; sourceTree = "<group>"; };
 		19CD3109DC5FCDEA954B9268C87C2347 /* PaymentLinkFirstScreenProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentLinkFirstScreenProtocols.swift; sourceTree = "<group>"; };
@@ -980,78 +982,86 @@
 			path = RefundPolicy;
 			sourceTree = "<group>";
 		};
-		18B1D3CE2853792E008A5052 /* InvoicePaidFailed */ = {
+		181DE51928574EBF00F82F9B /* SelectedIcon */ = {
 			isa = PBXGroup;
 			children = (
-				18B1D3CF2853792E008A5052 /* InvoicePaidFailed.png */,
-			);
-			path = InvoicePaidFailed;
-			sourceTree = "<group>";
-		};
-		18B1D3D02853792E008A5052 /* Arrow */ = {
-			isa = PBXGroup;
-			children = (
-				18B1D3D12853792E008A5052 /* Arrow.png */,
-			);
-			path = Arrow;
-			sourceTree = "<group>";
-		};
-		18B1D3D22853792E008A5052 /* Logo */ = {
-			isa = PBXGroup;
-			children = (
-				18B1D3D32853792E008A5052 /* Logo@3x.png */,
-				18B1D3D42853792E008A5052 /* Logo.png */,
-				18B1D3D52853792E008A5052 /* Logo@2x.png */,
-			);
-			path = Logo;
-			sourceTree = "<group>";
-		};
-		18B1D3D62853792E008A5052 /* InvoicePaidSuccess */ = {
-			isa = PBXGroup;
-			children = (
-				18B1D3D72853792E008A5052 /* InvoicePaidSuccess.png */,
-			);
-			path = InvoicePaidSuccess;
-			sourceTree = "<group>";
-		};
-		18B1D3D82853792F008A5052 /* Close */ = {
-			isa = PBXGroup;
-			children = (
-				18B1D3D92853792F008A5052 /* Close@3x.png */,
-				18B1D3DA2853792F008A5052 /* Close@2x.png */,
-				18B1D3DB2853792F008A5052 /* Close.png */,
-			);
-			path = Close;
-			sourceTree = "<group>";
-		};
-		18B1D3DC2853792F008A5052 /* SelectedIcon */ = {
-			isa = PBXGroup;
-			children = (
-				18B1D3DD2853792F008A5052 /* SelectedIcon.png */,
+				181DE51A28574EBF00F82F9B /* SelectedIcon.png */,
 			);
 			path = SelectedIcon;
 			sourceTree = "<group>";
 		};
-		18B1D3DE2853792F008A5052 /* UnselectedIcon */ = {
+		181DE51B28574EC000F82F9B /* Close */ = {
 			isa = PBXGroup;
 			children = (
-				18B1D3DF2853792F008A5052 /* UnSelectedIcon.png */,
+				181DE51C28574EC000F82F9B /* Close@3x.png */,
+				181DE51D28574EC000F82F9B /* Close@2x.png */,
+				181DE51E28574EC000F82F9B /* Close.png */,
+			);
+			path = Close;
+			sourceTree = "<group>";
+		};
+		181DE51F28574EC000F82F9B /* Arrow */ = {
+			isa = PBXGroup;
+			children = (
+				181DE52028574EC000F82F9B /* Arrow.png */,
+			);
+			path = Arrow;
+			sourceTree = "<group>";
+		};
+		181DE52128574EC000F82F9B /* Logo */ = {
+			isa = PBXGroup;
+			children = (
+				181DE52228574EC000F82F9B /* Logo@3x.png */,
+				181DE52328574EC000F82F9B /* Logo.png */,
+				181DE52428574EC000F82F9B /* Logo@2x.png */,
+			);
+			path = Logo;
+			sourceTree = "<group>";
+		};
+		181DE52528574EC000F82F9B /* UnselectedIcon */ = {
+			isa = PBXGroup;
+			children = (
+				181DE52628574EC000F82F9B /* UnSelectedIcon.png */,
 			);
 			path = UnselectedIcon;
 			sourceTree = "<group>";
 		};
-		18B1D3E02853792F008A5052 /* PaymentGetways */ = {
+		181DE52728574EC000F82F9B /* PaymentGetways */ = {
 			isa = PBXGroup;
 			children = (
-				18B1D3E12853792F008A5052 /* Visa.png */,
-				18B1D3E22853792F008A5052 /* Orange.png */,
-				18B1D3E32853792F008A5052 /* Etisalat.png */,
-				18B1D3E42853792F008A5052 /* Cash.png */,
-				18B1D3E52853792F008A5052 /* Meeza.png */,
-				18B1D3E62853792F008A5052 /* Mastercard.png */,
-				18B1D3E72853792F008A5052 /* Vodafone.png */,
+				181DE52828574EC000F82F9B /* Visa.png */,
+				181DE52928574EC000F82F9B /* Orange.png */,
+				181DE52A28574EC000F82F9B /* Etisalat.png */,
+				181DE52B28574EC000F82F9B /* Cash.png */,
+				181DE52C28574EC000F82F9B /* Meeza.png */,
+				181DE52D28574EC000F82F9B /* Mastercard.png */,
+				181DE52E28574EC000F82F9B /* Vodafone.png */,
 			);
 			path = PaymentGetways;
+			sourceTree = "<group>";
+		};
+		181DE52F28574EC000F82F9B /* InvoicePaidSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				181DE53028574EC000F82F9B /* InvoicePaidSuccess.png */,
+			);
+			path = InvoicePaidSuccess;
+			sourceTree = "<group>";
+		};
+		181DE53128574EC000F82F9B /* InvoicePaidFailed */ = {
+			isa = PBXGroup;
+			children = (
+				181DE53228574EC000F82F9B /* InvoicePaidFailed.png */,
+			);
+			path = InvoicePaidFailed;
+			sourceTree = "<group>";
+		};
+		181DE55D28576C7500F82F9B /* InvoiceNotAvailable */ = {
+			isa = PBXGroup;
+			children = (
+				181DE55E28576C9B00F82F9B /* InvoiceNotAvailable.png */,
+			);
+			path = InvoiceNotAvailable;
 			sourceTree = "<group>";
 		};
 		1C6FB5A4DAA246877175D02C938E0F3F /* Alamofire */ = {
@@ -1683,15 +1693,16 @@
 		7D423BCE4EBA62FD70595C8FCAFD9310 /* Utills */ = {
 			isa = PBXGroup;
 			children = (
-				18B1D3D02853792E008A5052 /* Arrow */,
-				18B1D3D82853792F008A5052 /* Close */,
-				18B1D3CE2853792E008A5052 /* InvoicePaidFailed */,
-				18B1D3D62853792E008A5052 /* InvoicePaidSuccess */,
-				18B1D3D22853792E008A5052 /* Logo */,
-				18B1D3E02853792F008A5052 /* PaymentGetways */,
-				18B1D3DC2853792F008A5052 /* SelectedIcon */,
-				18B1D3DE2853792F008A5052 /* UnselectedIcon */,
+				181DE55D28576C7500F82F9B /* InvoiceNotAvailable */,
 				C28087AE2626B770C83C9D01D49F15BC /* BaseNavigationController.swift */,
+				181DE51F28574EC000F82F9B /* Arrow */,
+				181DE51B28574EC000F82F9B /* Close */,
+				181DE53128574EC000F82F9B /* InvoicePaidFailed */,
+				181DE52F28574EC000F82F9B /* InvoicePaidSuccess */,
+				181DE52128574EC000F82F9B /* Logo */,
+				181DE52728574EC000F82F9B /* PaymentGetways */,
+				181DE51928574EBF00F82F9B /* SelectedIcon */,
+				181DE52528574EC000F82F9B /* UnselectedIcon */,
 				6ECC868652F52381C54C4507CAB53DEE /* Colors */,
 				D8AFC461764943640296AD95164BBE71 /* Fonts */,
 				E47EE6DBB12AD000859270CE1D9BC849 /* Indicator */,
@@ -2285,18 +2296,18 @@
 		D8AFC461764943640296AD95164BBE71 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				18B1D3FC2853793E008A5052 /* Roboto-Black.ttf */,
-				18B1D4002853793F008A5052 /* Roboto-BlackItalic.ttf */,
-				18B1D4052853793F008A5052 /* Roboto-Bold.ttf */,
-				18B1D3FF2853793E008A5052 /* Roboto-BoldItalic.ttf */,
-				18B1D3FD2853793E008A5052 /* Roboto-Italic.ttf */,
-				18B1D3FE2853793E008A5052 /* Roboto-Light.ttf */,
-				18B1D4012853793F008A5052 /* Roboto-LightItalic.ttf */,
-				18B1D4022853793F008A5052 /* Roboto-Medium.ttf */,
-				18B1D4042853793F008A5052 /* Roboto-MediumItalic.ttf */,
-				18B1D4032853793F008A5052 /* Roboto-Regular.ttf */,
-				18B1D3FA2853793E008A5052 /* Roboto-Thin.ttf */,
-				18B1D3FB2853793E008A5052 /* Roboto-ThinItalic.ttf */,
+				181DE54E28574EDF00F82F9B /* Roboto-Black.ttf */,
+				181DE54928574EDE00F82F9B /* Roboto-BlackItalic.ttf */,
+				181DE55028574EDF00F82F9B /* Roboto-Bold.ttf */,
+				181DE54728574EDE00F82F9B /* Roboto-BoldItalic.ttf */,
+				181DE54B28574EDF00F82F9B /* Roboto-Italic.ttf */,
+				181DE54C28574EDF00F82F9B /* Roboto-Light.ttf */,
+				181DE54528574EDE00F82F9B /* Roboto-LightItalic.ttf */,
+				181DE54A28574EDE00F82F9B /* Roboto-Medium.ttf */,
+				181DE54F28574EDF00F82F9B /* Roboto-MediumItalic.ttf */,
+				181DE54628574EDE00F82F9B /* Roboto-Regular.ttf */,
+				181DE54D28574EDF00F82F9B /* Roboto-Thin.ttf */,
+				181DE54828574EDE00F82F9B /* Roboto-ThinItalic.ttf */,
 				BAA5EEAFBED88D1C58813F8B3CB509CD /* FontType.swift */,
 			);
 			path = Fonts;
@@ -2792,36 +2803,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B1D4072853793F008A5052 /* Roboto-ThinItalic.ttf in Resources */,
-				18B1D3EB2853792F008A5052 /* Logo.png in Resources */,
-				18B1D4112853793F008A5052 /* Roboto-Bold.ttf in Resources */,
-				18B1D3ED2853792F008A5052 /* InvoicePaidSuccess.png in Resources */,
-				18B1D40A2853793F008A5052 /* Roboto-Light.ttf in Resources */,
-				18B1D40D2853793F008A5052 /* Roboto-LightItalic.ttf in Resources */,
-				18B1D3F52853792F008A5052 /* Etisalat.png in Resources */,
-				18B1D3F92853792F008A5052 /* Vodafone.png in Resources */,
-				18B1D3F42853792F008A5052 /* Orange.png in Resources */,
-				18B1D3EC2853792F008A5052 /* Logo@2x.png in Resources */,
-				18B1D3EE2853792F008A5052 /* Close@3x.png in Resources */,
-				18B1D3E82853792F008A5052 /* InvoicePaidFailed.png in Resources */,
-				18B1D4092853793F008A5052 /* Roboto-Italic.ttf in Resources */,
-				18B1D3EA2853792F008A5052 /* Logo@3x.png in Resources */,
-				18B1D3F32853792F008A5052 /* Visa.png in Resources */,
-				18B1D4082853793F008A5052 /* Roboto-Black.ttf in Resources */,
-				18B1D3E92853792F008A5052 /* Arrow.png in Resources */,
-				18B1D3F22853792F008A5052 /* UnSelectedIcon.png in Resources */,
-				18B1D3F12853792F008A5052 /* SelectedIcon.png in Resources */,
-				18B1D4102853793F008A5052 /* Roboto-MediumItalic.ttf in Resources */,
-				18B1D40C2853793F008A5052 /* Roboto-BlackItalic.ttf in Resources */,
-				18B1D3F62853792F008A5052 /* Cash.png in Resources */,
-				18B1D40B2853793F008A5052 /* Roboto-BoldItalic.ttf in Resources */,
-				18B1D4062853793F008A5052 /* Roboto-Thin.ttf in Resources */,
-				18B1D40F2853793F008A5052 /* Roboto-Regular.ttf in Resources */,
-				18B1D3F82853792F008A5052 /* Mastercard.png in Resources */,
-				18B1D3F02853792F008A5052 /* Close.png in Resources */,
-				18B1D3F72853792F008A5052 /* Meeza.png in Resources */,
-				18B1D3EF2853792F008A5052 /* Close@2x.png in Resources */,
-				18B1D40E2853793F008A5052 /* Roboto-Medium.ttf in Resources */,
+				181DE54028574EC000F82F9B /* Meeza.png in Resources */,
+				181DE54228574EC000F82F9B /* Vodafone.png in Resources */,
+				181DE55C28574EE000F82F9B /* Roboto-Bold.ttf in Resources */,
+				181DE55228574EE000F82F9B /* Roboto-Regular.ttf in Resources */,
+				181DE53F28574EC000F82F9B /* Cash.png in Resources */,
+				181DE54328574EC000F82F9B /* InvoicePaidSuccess.png in Resources */,
+				181DE53728574EC000F82F9B /* Arrow.png in Resources */,
+				181DE53A28574EC000F82F9B /* Logo@2x.png in Resources */,
+				181DE53E28574EC000F82F9B /* Etisalat.png in Resources */,
+				181DE55628574EE000F82F9B /* Roboto-Medium.ttf in Resources */,
+				181DE53D28574EC000F82F9B /* Orange.png in Resources */,
+				181DE53C28574EC000F82F9B /* Visa.png in Resources */,
+				181DE55F28576C9B00F82F9B /* InvoiceNotAvailable.png in Resources */,
+				181DE55A28574EE000F82F9B /* Roboto-Black.ttf in Resources */,
+				181DE55528574EE000F82F9B /* Roboto-BlackItalic.ttf in Resources */,
+				181DE55728574EE000F82F9B /* Roboto-Italic.ttf in Resources */,
+				181DE54128574EC000F82F9B /* Mastercard.png in Resources */,
+				181DE53928574EC000F82F9B /* Logo.png in Resources */,
+				181DE55328574EE000F82F9B /* Roboto-BoldItalic.ttf in Resources */,
+				181DE53528574EC000F82F9B /* Close@2x.png in Resources */,
+				181DE55B28574EE000F82F9B /* Roboto-MediumItalic.ttf in Resources */,
+				181DE55928574EE000F82F9B /* Roboto-Thin.ttf in Resources */,
+				181DE55428574EE000F82F9B /* Roboto-ThinItalic.ttf in Resources */,
+				181DE53428574EC000F82F9B /* Close@3x.png in Resources */,
+				181DE53628574EC000F82F9B /* Close.png in Resources */,
+				181DE53828574EC000F82F9B /* Logo@3x.png in Resources */,
+				181DE55128574EE000F82F9B /* Roboto-LightItalic.ttf in Resources */,
+				181DE55828574EE000F82F9B /* Roboto-Light.ttf in Resources */,
+				181DE53328574EC000F82F9B /* SelectedIcon.png in Resources */,
+				181DE54428574EC000F82F9B /* InvoicePaidFailed.png in Resources */,
+				181DE53B28574EC000F82F9B /* UnSelectedIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

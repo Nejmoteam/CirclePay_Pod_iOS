@@ -30,7 +30,7 @@ class InvoicePaymentStatusContainerView: UIView {
     lazy var statusImageView: UIImageView = {
         let imageView = UIImageView(image: nil)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         imageView.backgroundColor = .clear
         return imageView
     }()
@@ -98,6 +98,16 @@ class InvoicePaymentStatusContainerView: UIView {
         return view
     }()
     
+    lazy var buttonStackView: UIStackView = {
+        let stack = UIStackView()
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.distribution = .fill
+        stack.alignment = .fill
+        stack.axis = .vertical
+        stack.spacing = 16
+        return stack
+    }()
+    
     
     lazy var downloadButton: UIButton = {
         let button = UIButton()
@@ -109,6 +119,17 @@ class InvoicePaymentStatusContainerView: UIView {
         button.addTarget(self, action: #selector(userPressedDownloadInvoice), for: .touchUpInside)
         button.layer.cornerRadius = 5
         button.clipsToBounds = true
+        button.isHidden = true
+        return button
+    }()
+    
+    lazy var dismissButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Dismiss", for: .normal)
+        button.titleLabel?.font = UIFont(name: FontType.mediumFont.name, size: 18)
+        button.setTitleColor(ColorTypes.PrimaryMain500.value, for: .normal)
+        button.addTarget(self, action: #selector(userPressedDismissButton), for: .touchUpInside)
         button.isHidden = true
         return button
     }()
@@ -134,6 +155,9 @@ class InvoicePaymentStatusContainerView: UIView {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    private var tryAgianBottomConstraint: NSLayoutConstraint?
+    private var dismissBottomConstraint: NSLayoutConstraint?
     
     
     var presenter: InvoicePaymentStatusPresenterProtocol
@@ -162,8 +186,10 @@ class InvoicePaymentStatusContainerView: UIView {
         setupEmptyView()
         setupInvoiceNumberView()
         setupPaymentDateView()
+        setupButtonStackView()
         setupDownloadButton()
         setupTryAgainButton()
+        setupDismissButton()
     }
     private func addSubViews() {
         addSubview(scrollView)
@@ -173,8 +199,7 @@ class InvoicePaymentStatusContainerView: UIView {
         contentView.addSubview(titleLabel)
         contentView.addSubview(subTitleLabel)
         contentView.addSubview(vStackView)
-        contentView.addSubview(downloadButton)
-        contentView.addSubview(tryAgainButton)
+        contentView.addSubview(buttonStackView)
     }
     
     private func setupScrollView() {
@@ -258,29 +283,32 @@ class InvoicePaymentStatusContainerView: UIView {
         vStackView.addArrangedSubview(paymentDateView)
     }
     
-    private func setupDownloadButton() {
+    private func setupButtonStackView() {
         NSLayoutConstraint.activate([
-            downloadButton.widthAnchor.constraint(equalToConstant: 215),
-            downloadButton.heightAnchor.constraint(equalToConstant: 50),
-            downloadButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            downloadButton.topAnchor.constraint(equalTo: vStackView.bottomAnchor, constant: 38),
-            downloadButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 20)
+            buttonStackView.topAnchor.constraint(equalTo: vStackView.bottomAnchor, constant: 38),
+            buttonStackView.widthAnchor.constraint(equalToConstant: 215),
+            buttonStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            buttonStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -38)
         ])
+    }
+    private func setupDownloadButton() {
+        downloadButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        buttonStackView.addArrangedSubview(downloadButton)
+    }
+    
+    private func setupDismissButton() {
+        dismissButton.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        buttonStackView.addArrangedSubview(dismissButton)
     }
     
     private func setupTryAgainButton() {
-        NSLayoutConstraint.activate([
-            tryAgainButton.widthAnchor.constraint(equalToConstant: 215),
-            tryAgainButton.heightAnchor.constraint(equalToConstant: 50),
-            tryAgainButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            tryAgainButton.topAnchor.constraint(equalTo: vStackView.bottomAnchor, constant: 38),
-            tryAgainButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 20)
-        ])
+        tryAgainButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        buttonStackView.addArrangedSubview(tryAgainButton)
     }
     
     func setupView(with status:InvoicePaymentStatus) {
         switch status {
-        case .success:
+        case .success, .paid:
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else {
                     return
@@ -295,6 +323,26 @@ class InvoicePaymentStatusContainerView: UIView {
                 self.invoiceNumberView.isHidden = false
                 self.paymentDateView.isHidden = false
                 self.downloadButton.isHidden = false
+                self.dismissButton.isHidden = false
+                self.tryAgainButton.isHidden = true
+            }
+        case .notAvailable:
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.statusImageView.image = UIImage(named: "InvoiceNotAvailable",
+                                                     in: Bundle(for: type(of:self)),
+                                                     compatibleWith: nil)
+                self.titleLabel.text = "Invoice is not available!"
+                self.subTitleLabel.text = "The invoice is no longer exist it may be expired or turned off."
+                self.subTitleLabel.isHidden = false
+                self.inoviceDetailsButton.isHidden = true
+                self.emptyView.isHidden = true
+                self.invoiceNumberView.isHidden = true
+                self.paymentDateView.isHidden = true
+                self.downloadButton.isHidden = true
+                self.dismissButton.isHidden = true
                 self.tryAgainButton.isHidden = true
             }
         case .failure:
@@ -313,6 +361,7 @@ class InvoicePaymentStatusContainerView: UIView {
                 self.invoiceNumberView.isHidden = true
                 self.paymentDateView.isHidden = true
                 self.downloadButton.isHidden = true
+                self.dismissButton.isHidden = true
                 self.tryAgainButton.isHidden = false
             }
         }
@@ -328,5 +377,9 @@ class InvoicePaymentStatusContainerView: UIView {
     
     @objc private func userPressedInvoiceDetails() {
         presenter.userPressedViewInvoiceDetails()
+    }
+    
+    @objc private func userPressedDismissButton() {
+        presenter.userPressedDismiss()
     }
 }

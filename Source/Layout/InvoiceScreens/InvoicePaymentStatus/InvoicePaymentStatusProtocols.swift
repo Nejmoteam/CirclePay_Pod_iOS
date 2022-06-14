@@ -11,6 +11,8 @@ protocol InvoicePaymentStatusViewProtocol: AnyObject {
     var presenter: InvoicePaymentStatusPresenterProtocol! {get set}
     
     func setupView(with status:InvoicePaymentStatus)
+    func setInvoiceNumber(value:String)
+    func setInvoicePaymentDate(value:String)
 }
 protocol InvoicePaymentStatusPresenterProtocol {
     var view: InvoicePaymentStatusViewProtocol? {get set}
@@ -19,8 +21,10 @@ protocol InvoicePaymentStatusPresenterProtocol {
     func userPressedTryAgain()
     func userPressedDownload()
     func userPressedViewInvoiceDetails()
+    func userPressedDismiss()
 }
 protocol InvoicePaymentStatusRouterProtocol {
+    func dismissView()
 }
 protocol InvoicePaymentStatusInteractorInPutProtocol {
     var presenter: InvoicePaymentStatusInteractorOutPutProtocol? {get set}

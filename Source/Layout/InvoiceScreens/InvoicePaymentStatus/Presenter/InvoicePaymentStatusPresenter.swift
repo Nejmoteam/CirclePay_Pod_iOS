@@ -24,6 +24,8 @@ class InvoicePaymentStatusPresenter: InvoicePaymentStatusPresenterProtocol, Invo
     func viewDidLoad() {
         print("ViewDidLoad")
         self.view?.setupView(with: self.status)
+        self.view?.setInvoiceNumber(value: "34565767888")
+        self.view?.setInvoicePaymentDate(value: "17 Apr 2022")
     }
     
     func userPressedViewInvoiceDetails() {
@@ -36,5 +38,9 @@ class InvoicePaymentStatusPresenter: InvoicePaymentStatusPresenterProtocol, Invo
     
     func userPressedTryAgain() {
         print("try again")
+    }
+    
+    func userPressedDismiss() {
+        router.dismissView()
     }
 }
