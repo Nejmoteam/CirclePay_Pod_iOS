@@ -42,7 +42,7 @@ public class CirclePay {
                         CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
                     } else {
                         if let unwrappedViewModel = viewModel {
-                            if unwrappedViewModel.invoiceDetails.status == 0 {
+                            if unwrappedViewModel.invoiceDetails.status == 1 {
                                 print(unwrappedViewModel.invoiceDetails.status)
                                 // Paid
                                 print("Paid")
