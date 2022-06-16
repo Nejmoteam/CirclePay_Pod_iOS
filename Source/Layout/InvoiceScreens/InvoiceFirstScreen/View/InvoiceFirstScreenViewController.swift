@@ -68,11 +68,11 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
             } else {
                 self.containerView.discuntView.keyLabel.text = "Discount"
             }
-
+            
         }
-
+        
     }
-
+    
     func configureInvoiceDate(date: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
@@ -116,6 +116,7 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
                                                                                                                in: Bundle(for: type(of:self)),
                                                                                                                compatibleWith: nil))
                     self.containerView.logoView.logoImageView.clipsToBounds = true
+                    
                 }
             }
         } else {
@@ -123,7 +124,7 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
                 guard let self = self else {
                     return
                 }
-            self.containerView.logoView.isHidden = true
+                self.containerView.logoView.isHidden = true
             }
         }
     }
@@ -160,7 +161,7 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
                 return
             }
             self.containerView.billedToView.isHidden = !isEnabled
-
+            
         }
     }
     
@@ -170,7 +171,7 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
                 return
             }
             self.containerView.totalAmountView.isHidden = !isEnabled
-
+            
         }
     }
     
@@ -202,7 +203,7 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
                 return
             }
             self.containerView.shippingRefundButtonContainer.refundPolicyButton.isHidden = !isEnabled
-
+            
         }
     }
     

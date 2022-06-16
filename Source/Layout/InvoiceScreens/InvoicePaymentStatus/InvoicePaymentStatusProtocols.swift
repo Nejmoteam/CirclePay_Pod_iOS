@@ -25,9 +25,15 @@ protocol InvoicePaymentStatusPresenterProtocol {
 }
 protocol InvoicePaymentStatusRouterProtocol {
     func dismissView()
+    func navigateToStepOneScreen(invoiceViewModel: InvoiceFirstScreenViewModel)
 }
 protocol InvoicePaymentStatusInteractorInPutProtocol {
     var presenter: InvoicePaymentStatusInteractorOutPutProtocol? {get set}
 }
 protocol InvoicePaymentStatusInteractorOutPutProtocol:AnyObject {
+}
+
+
+protocol InvoicePaymentStatusNavigationDelegete {
+    func tryAgain()
 }

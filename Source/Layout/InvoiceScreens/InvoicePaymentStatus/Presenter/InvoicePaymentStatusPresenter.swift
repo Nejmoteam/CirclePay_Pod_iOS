@@ -13,14 +13,23 @@ class InvoicePaymentStatusPresenter: InvoicePaymentStatusPresenterProtocol, Invo
     private let interactor: InvoicePaymentStatusInteractorInPutProtocol
     private let router: InvoicePaymentStatusRouterProtocol
     private var status:InvoicePaymentStatus = .success
-    
-    init(view: InvoicePaymentStatusViewProtocol, interactor: InvoicePaymentStatusInteractorInPutProtocol, router: InvoicePaymentStatusRouterProtocol, status:InvoicePaymentStatus) {
+    private var invoiceViewModel: InvoiceFirstScreenViewModel
+    init(view: InvoicePaymentStatusViewProtocol, interactor: InvoicePaymentStatusInteractorInPutProtocol, router: InvoicePaymentStatusRouterProtocol, status:InvoicePaymentStatus,invoiceViewModel: InvoiceFirstScreenViewModel) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.status = status
+        self.invoiceViewModel = invoiceViewModel
     }
     
+    
+    func setupDownloadInvoiceConfigs() {
+        if let uiConfig = CirclePay.uiConfigs {
+           if let pdfDownload = uiConfig.invoicePDFEnable {
+                
+            }
+        }
+    }
     func viewDidLoad() {
         print("ViewDidLoad")
         self.view?.setupView(with: self.status)
@@ -38,6 +47,7 @@ class InvoicePaymentStatusPresenter: InvoicePaymentStatusPresenterProtocol, Invo
     
     func userPressedTryAgain() {
         print("try again")
+        self.router.navigateToStepOneScreen(invoiceViewModel: self.invoiceViewModel)
     }
     
     func userPressedDismiss() {

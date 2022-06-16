@@ -20,7 +20,7 @@ public class CirclePay {
     public static let paymentGateways: PaymentGatewaysProtocol = PaymentGateways()
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
     public static var mode: CirclePayInviroment = .sandBox
-    private static var configsWorker: ConfigurationWorkerProtocol = ConfigurationWorker()
+    fileprivate static var configsWorker: ConfigurationWorkerProtocol = ConfigurationWorker()
     internal static var uiConfigs: ConfigurationModel?
     public static var delegete: CirclePayDelegete?
     
@@ -48,7 +48,7 @@ public class CirclePay {
                                 print("Paid")
                                 let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasPaid.code, errorMsg: SDKInternalErrorType.invoiceWasPaid.message)
                                 CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
-                                let invoiceStatus =  BaseNavigationController(rootViewController: InvoicePaymentStatusRouter.createAnModule(with: .paid))
+                                let invoiceStatus =  BaseNavigationController(rootViewController: InvoicePaymentStatusRouter.createAnModule(with: .paid, invoiceViewModel: unwrappedViewModel, withDelegete: nil))
                                 invoiceStatus.modalPresentationStyle = .fullScreen
                                 vc.present(invoiceStatus, animated: true, completion: nil)
 
@@ -66,7 +66,7 @@ public class CirclePay {
                                     print("Expired")
                                     let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasExpired.code, errorMsg:SDKInternalErrorType.invoiceWasExpired.message)
                                     CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
-                                    let invoiceStatus =  InvoicePaymentStatusRouter.createAnModule(with: .notAvailable)
+                                    let invoiceStatus =  InvoicePaymentStatusRouter.createAnModule(with: .notAvailable, invoiceViewModel: unwrappedViewModel, withDelegete: nil)
                                     invoiceStatus.modalPresentationStyle = .fullScreen
                                     vc.present(invoiceStatus, animated: true, completion: nil)
                                 } else {

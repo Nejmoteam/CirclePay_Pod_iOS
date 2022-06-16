@@ -16,9 +16,12 @@ protocol WebViewPresenterProtocol {
     func viewDidLoad()
     func transactionPaidSucsesfully()
     func failedToPayTransaction()
+    func userTappedTryAgainInPaymentStatus()
 }
 protocol WebViewRouterProtocol {
-    func presentInvoicePaymentStatusScreen(result: InvoicePaymentStatus)
+    func presentInvoicePaymentStatusScreen(result: InvoicePaymentStatus,invoiceViewModel: InvoiceFirstScreenViewModel)
+    func userTappedTryAgainInPaymentStatus()
+
 }
 protocol WebViewInteractorInPutProtocol {
     var presenter: WebViewInteractorOutPutProtocol? {get set}
