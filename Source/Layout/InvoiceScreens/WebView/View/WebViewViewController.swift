@@ -43,9 +43,8 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
         
         self.view.backgroundColor = .white
         self.setupWebView()
-        self.presenter.failedToPayTransaction()
-
-        
+//        self.presenter.transactionPaidSucsesfully()
+//        self.presenter.failedToPayTransaction()
         // Do any additional setup after loading the view.
     }
     

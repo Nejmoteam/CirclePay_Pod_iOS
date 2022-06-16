@@ -29,12 +29,6 @@ class InvoicePaymentStatusViewController: UIViewController, InvoicePaymentStatus
         self.containerView.setupView(with: status)
     }
     
-    private func dimissAllCheckOutEmbed() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
-            self.dismissAll(animated: true)
-        }
-    }
-    
     func setInvoiceNumber(value: String) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
@@ -50,6 +44,45 @@ class InvoicePaymentStatusViewController: UIViewController, InvoicePaymentStatus
                 return
             }
             self.containerView.paymentDateView.valueLabel.text = value
+        }
+    }
+    func configureColor(stringColor: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let color = UIColor(hexString: stringColor)
+            self.containerView.downloadButton.backgroundColor = color
+            self.containerView.dismissButton.setTitleColor(color, for: .normal)
+            self.containerView.tryAgainButton.setTitleColor(color, for: .normal)
+            self.containerView.tryAgainButton.layer.borderColor = color.cgColor
+            self.containerView.titleLabel.textColor = color
+        }
+    }
+    
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String) {
+        if isLogoEnabled {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.containerView.logoView.isHidden = !isLogoEnabled
+                // get logo
+                if let imageURL = URL(string: logoUrl) {
+                    self.containerView.logoView.logoImageView.kf.setImage(with: imageURL, placeholder: UIImage(named: "Logo",
+                                                                                                               in: Bundle(for: type(of:self)),
+                                                                                                               compatibleWith: nil))
+                    self.containerView.logoView.logoImageView.clipsToBounds = true
+                    
+                }
+            }
+        } else {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
+                }
+                self.containerView.logoView.isHidden = true
+            }
         }
     }
 }

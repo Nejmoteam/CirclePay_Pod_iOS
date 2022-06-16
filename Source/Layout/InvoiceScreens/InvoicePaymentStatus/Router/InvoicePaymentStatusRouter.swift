@@ -8,9 +8,11 @@
 //@Mahmoud Allam Templete ^_^
 import UIKit
 class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
+    
+    
     weak var viewController: UIViewController?
     var delegete: InvoicePaymentStatusNavigationDelegete?
-
+    
     static func createAnModule(with status:InvoicePaymentStatus,invoiceViewModel: InvoiceFirstScreenViewModel,withDelegete:UIViewController?) -> UIViewController {
         let interactor = InvoicePaymentStatusInteractor()
         let router = InvoicePaymentStatusRouter()
@@ -30,7 +32,8 @@ class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
             guard let self = self else {
                 return
             }
-            self.viewController?.dismiss(animated: true, completion: nil)
+            //            self.viewController?.dismiss(animated: true, completion: nil)
+            self.viewController?.dismissAll(animated: true)
         }
     }
     
@@ -45,12 +48,23 @@ class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
                     return
                 }
                 self.delegete?.tryAgain()
-
+                
             })
-
+            
         }
     }
-
+    
+    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            let invoiceDetails = InvoiceDetailsRouter.createAnModule(invoiceViewModel: invoiceViewModel, customer: customer)
+            invoiceDetails.modalPresentationStyle = .fullScreen
+            self.viewController?.present(invoiceDetails, animated: true, completion: nil)
+        }
+    }
+    
 }
 
 enum InvoicePaymentStatus {
