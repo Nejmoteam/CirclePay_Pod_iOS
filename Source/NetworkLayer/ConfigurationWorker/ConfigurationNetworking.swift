@@ -12,13 +12,13 @@ enum ConfigurationNetworking {
 }
 
 extension ConfigurationNetworking: APIRequestBuilder {
-    var baseUrl: String {
-//        return "https://mocki.io/v1/dd58b047-d683-4ee5-8e07-5652039d2c5f"
-                return "https://mocki.io/v1/5f0efbaf-0758-4bf0-9d14-82e3ca228b77"
-//          return "https://mocki.io/v1/d4908ef0-edc5-4b18-8287-e68da5b4febc"
-    }
+//    var baseUrl: String {
+////        return "https://mocki.io/v1/dd58b047-d683-4ee5-8e07-5652039d2c5f"
+//                return "https://mocki.io/v1/5f0efbaf-0758-4bf0-9d14-82e3ca228b77"
+////          return "https://mocki.io/v1/d4908ef0-edc5-4b18-8287-e68da5b4febc"
+//    }
     var path: String {
-        return ""
+        return "merchants/configure/ui/invoice"
     }
     
     var method: HTTPMethod {

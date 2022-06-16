@@ -112,7 +112,9 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
                 self.containerView.logoView.isHidden = !isLogoEnabled
                 // get logo
                 if let imageURL = URL(string: logoUrl) {
-                    self.containerView.logoView.logoImageView.kf.setImage(with: imageURL)
+                    self.containerView.logoView.logoImageView.kf.setImage(with: imageURL, placeholder: UIImage(named: "Logo",
+                                                                                                               in: Bundle(for: type(of:self)),
+                                                                                                               compatibleWith: nil))
                     self.containerView.logoView.logoImageView.clipsToBounds = true
                 }
             }

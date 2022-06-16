@@ -13,14 +13,14 @@ class WebViewPresenter: WebViewPresenterProtocol, WebViewInteractorOutPutProtoco
     private let interactor: WebViewInteractorInPutProtocol
     private let router: WebViewRouterProtocol
     private var webViewUrl: String
-    private var transactionId: String
+    private var transaction: TransactionResult
 
-    init(view: WebViewViewProtocol, interactor: WebViewInteractorInPutProtocol, router: WebViewRouterProtocol, webViewUrl: String,transactionId: String) {
+    init(view: WebViewViewProtocol, interactor: WebViewInteractorInPutProtocol, router: WebViewRouterProtocol, webViewUrl: String,transaction: TransactionResult) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.webViewUrl = webViewUrl
-        self.transactionId = transactionId
+        self.transaction = transaction
     }
     func viewDidLoad() {
         print("ViewDidLoad")
@@ -28,12 +28,14 @@ class WebViewPresenter: WebViewPresenterProtocol, WebViewInteractorOutPutProtoco
     }
     
     func transactionPaidSucsesfully() {
-        CirclePay.delegete?.didPaidTransactionSucsessfully(transactionId: self.transactionId)
+        transaction.transactoinStatus = "PAID"
+        CirclePay.delegete?.didPaidTransactionSucsessfully(transaction: self.transaction)
         self.router.presentInvoicePaymentStatusScreen(result: .success)
 
     }
     func failedToPayTransaction() {
-        CirclePay.delegete?.didGetErrorAtPayingTransaction(error: CirclePayError(errorCode: 0000, errorMsg: "Something went wrong, please try again"))
+        transaction.transactoinStatus = "UNPAID"
+        CirclePay.delegete?.didGetErrorAtPayingTransaction(transaction: self.transaction, error: CirclePayError(errorCode: 0000, errorMsg: "Something went wrong during the payment process, please try again"))
         self.router.presentInvoicePaymentStatusScreen(result: .failure)
     }
 }

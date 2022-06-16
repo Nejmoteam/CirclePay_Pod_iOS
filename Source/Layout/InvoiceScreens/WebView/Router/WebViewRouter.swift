@@ -9,11 +9,11 @@
 import UIKit
 class WebViewRouter: WebViewRouterProtocol {
     weak var viewController: UIViewController?
-    static func createAnModule(webViewUrl: String, transactionId: String) -> UIViewController {
+    static func createAnModule(webViewUrl: String, transaction: TransactionResult) -> UIViewController {
         let interactor = WebViewInteractor()
         let router = WebViewRouter()
         let view = WebViewViewController()
-        let presenter = WebViewPresenter(view: view, interactor: interactor, router: router, webViewUrl: webViewUrl, transactionId: transactionId)
+        let presenter = WebViewPresenter(view: view, interactor: interactor, router: router, webViewUrl: webViewUrl, transaction: transaction)
         view.presenter = presenter
         interactor.presenter = presenter
         router.viewController = view

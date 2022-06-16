@@ -34,7 +34,7 @@ protocol InvoiceSecondScreenPresenterProtocol {
     func dismiss()
 }
 protocol InvoiceSecondScreenRouterProtocol {
-    func navigateToWebView(webViewUrl: String,transactionId: String)
+    func navigateToWebView(webViewUrl: String,transaction: TransactionResult)
     func dismiss()
 }
 protocol InvoiceSecondScreenInteractorInPutProtocol {
