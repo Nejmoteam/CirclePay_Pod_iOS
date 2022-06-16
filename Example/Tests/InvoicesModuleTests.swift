@@ -9,7 +9,7 @@
 import XCTest
 import CirclePay_Pod_iOS
 import OHHTTPStubs
-
+import Alamofire
 class InvoicesModuleTests: XCTestCase {
     override class func setUp() {
         super.setUp()

@@ -39,8 +39,11 @@ protocol InvoiceSecondScreenRouterProtocol {
 }
 protocol InvoiceSecondScreenInteractorInPutProtocol {
     var presenter: InvoiceSecondScreenInteractorOutPutProtocol? {get set}
+    func getPaymentMethodsForMobile()
 }
 protocol InvoiceSecondScreenInteractorOutPutProtocol:AnyObject {
+    func fetchedPaymentMethodsSucsesfully(methods: [MerchantPaymentMethodsMobile])
+    func failedToFetchPaymentMethods(err: String)
 }
 
 protocol PaymentMethodsCellView {

@@ -10,7 +10,6 @@
 import Foundation
 class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, InvoiceSecondScreenInteractorOutPutProtocol {
     
-    
     weak var view: InvoiceSecondScreenViewProtocol?
     private let interactor: InvoiceSecondScreenInteractorInPutProtocol
     private let router: InvoiceSecondScreenRouterProtocol
@@ -39,7 +38,8 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     func viewDidLoad() {
         print("ViewDidLoad")
         self.setupUIConfigs()
-        self.getPaymentMethods()
+        self.interactor.getPaymentMethodsForMobile()
+//        self.getPaymentMethods()
         var customerPhone = ""
         if let unwrappedPhone = customer.mobileNumber {
             customerPhone = unwrappedPhone
@@ -129,7 +129,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
                         
                         merchantPaymentMethods?.forEach({ method in
                             let name = paymenGetways?.filter({$0.id == method.gateWayId}).first?.name
-                            self.methodsViewModel.append(PaymentMethodsViewModel(paymentMethodId: method.id ?? "", paymentMethodName: method.name ?? "", paymentGetwayId: method.gateWayId ?? "", paymentGetwayName: name ?? ""))
+                            self.methodsViewModel.append(PaymentMethodsViewModel(paymentMethodId: method.id ?? "", paymentMethodName: method.name ?? "", paymentGetwayId: method.gateWayId ?? "", paymentGetwayName: name ?? "", image: ""))
                         })
                         self.view?.reloadPaymentMethodsData()
                         //Reload TableView
@@ -139,6 +139,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             }
         }
     }
+    
     
     private func handleTappingOnPayButton() {
         let dispatchGroup = DispatchGroup()
@@ -189,5 +190,18 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     func dismiss() {
         self.router.dismiss()
     }
+    
+    func fetchedPaymentMethodsSucsesfully(methods: [MerchantPaymentMethodsMobile]) {
+        methods.forEach({self.methodsViewModel.append($0.transformToPaymentMethodMobile())})
+        self.view?.reloadPaymentMethodsData()
+        //Reload TableView
+        self.methodsViewModel.forEach({print($0.paymentMethodName , " By: " , $0.paymentGetwayName)})
+    }
+    
+    func failedToFetchPaymentMethods(err: String) {
+        print(err)
+    }
+    
+    
 }
 

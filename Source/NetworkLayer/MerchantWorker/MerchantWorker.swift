@@ -31,6 +31,8 @@ protocol MerchantsWorkerProtocol {
     func sendOTP(countryCode:String, mobileNumber:String, completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[MerchantSendOTPCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
     
     func verifyMerchant(merchantMobile:String, OTP:String, completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[ResponseDataEmptyObject]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
+    
+    func getPaymentMethodsForMobile(completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[MerchantPaymentMethodsMobile]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
 }
 
 class MerchantsWorker: APIRequestExecuter<MerchantsNetworking>, MerchantsWorkerProtocol {
@@ -102,6 +104,12 @@ class MerchantsWorker: APIRequestExecuter<MerchantsNetworking>, MerchantsWorkerP
     
     func verifyMerchant(merchantMobile: String, OTP: String, completion: @escaping (Result<BaseAPIRequestResponseModel<[ResponseDataEmptyObject]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
         self.performRequest(target: .verifyMerchant(merchantMobile: merchantMobile, OTP: OTP), responseClass: BaseAPIRequestResponseModel<[ResponseDataEmptyObject]>.self) { results in
+            completion(results)
+        }
+    }
+    
+    func getPaymentMethodsForMobile(completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[MerchantPaymentMethodsMobile]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
+        self.performRequest(target: .getPaymentMethodForMobile, responseClass: BaseAPIRequestResponseModel<[MerchantPaymentMethodsMobile]>.self) { results in
             completion(results)
         }
     }

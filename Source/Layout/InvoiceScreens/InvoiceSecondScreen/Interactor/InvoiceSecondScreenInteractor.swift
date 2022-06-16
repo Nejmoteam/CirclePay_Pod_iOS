@@ -8,5 +8,27 @@
 //@Mahmoud Allam Templete ^_^
 import Foundation
 class InvoiceSecondScreenInteractor: InvoiceSecondScreenInteractorInPutProtocol {
+    private let merchantWorker: MerchantsWorkerProtocol = MerchantsWorker()
+
    weak var presenter: InvoiceSecondScreenInteractorOutPutProtocol?
+    
+    func getPaymentMethodsForMobile() {
+        merchantWorker.getPaymentMethodsForMobile { results in
+            switch results {
+            case .success(let resp):
+                if resp?.isError == false {
+                    if let unwrappedMethods = resp?.data {
+                        self.presenter?.fetchedPaymentMethodsSucsesfully(methods: unwrappedMethods)
+                    } else {
+                        self.presenter?.failedToFetchPaymentMethods(err: "something went wrong")
+                    }
+                } else {
+                    self.presenter?.failedToFetchPaymentMethods(err: "something went wrong")
+                }
+            case .failure(let err):
+                self.presenter?.failedToFetchPaymentMethods(err: err.message)
+            }
+        }
+    }
+    
 }

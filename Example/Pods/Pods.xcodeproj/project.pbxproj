@@ -78,6 +78,7 @@
 		181DE55B28574EE000F82F9B /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE54F28574EDF00F82F9B /* Roboto-MediumItalic.ttf */; };
 		181DE55C28574EE000F82F9B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 181DE55028574EDF00F82F9B /* Roboto-Bold.ttf */; };
 		181DE55F28576C9B00F82F9B /* InvoiceNotAvailable.png in Resources */ = {isa = PBXBuildFile; fileRef = 181DE55E28576C9B00F82F9B /* InvoiceNotAvailable.png */; };
+		181E7925285B71C60093CEFB /* MerchantPaymentMethodsMobile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181E7924285B71C60093CEFB /* MerchantPaymentMethodsMobile.swift */; };
 		187F0417433AAD6FB63A3FC323EBC97A /* MerchantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25082B6F648E526FF47DF3B151F80825 /* MerchantWorker.swift */; };
 		1961E8842348A78A301B75FFF05608BE /* PaymentLinkSecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2FB6831EFE8CEFEDBE0A4943E726E /* PaymentLinkSecondScreenRouter.swift */; };
 		19FF16C15407ABBCAB0168CDE44709E1 /* NSURLRequest+HTTPBodyTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF33FF0EA23F1004C07DEF58F29FA75 /* NSURLRequest+HTTPBodyTesting.m */; };
@@ -518,6 +519,7 @@
 		181DE54F28574EDF00F82F9B /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		181DE55028574EDF00F82F9B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		181DE55E28576C9B00F82F9B /* InvoiceNotAvailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InvoiceNotAvailable.png; sourceTree = "<group>"; };
+		181E7924285B71C60093CEFB /* MerchantPaymentMethodsMobile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantPaymentMethodsMobile.swift; sourceTree = "<group>"; };
 		1835E9D15D2DFE84D76DB0A01688BB85 /* MerchantPaymentGatewayCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MerchantPaymentGatewayCodable.swift; sourceTree = "<group>"; };
 		189A2930EA1F30624DF7F735F072BB87 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		19B04E7819D2878B7CF125C7617B1E7C /* FontBlaster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontBlaster.release.xcconfig; sourceTree = "<group>"; };
@@ -1792,6 +1794,7 @@
 				C572D6BC4DD8718EE9DFC00A786DF6B0 /* MerchantPaymentMethodCodable.swift */,
 				3434AF4FF8A9215F8502B35507B3A359 /* MerchantPaymentMethodEnabledCodable.swift */,
 				036A4D2F4F0282867601384B59795512 /* MerchantSendOTPCodable.swift */,
+				181E7924285B71C60093CEFB /* MerchantPaymentMethodsMobile.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -2951,6 +2954,7 @@
 				547DD787CFF0DC1EA4AEC50F3221EE0C /* InvoicePaymentStatusProtocols.swift in Sources */,
 				57BEF9E7D16780FD408F93B1E2592EDF /* InvoicePaymentStatusRouter.swift in Sources */,
 				E9C84C7A79A9637C19E36F596444CD2B /* InvoicePaymentStatusViewController.swift in Sources */,
+				181E7925285B71C60093CEFB /* MerchantPaymentMethodsMobile.swift in Sources */,
 				FE52A9B4131B2C70034B684F9D0D9BCD /* Invoices.swift in Sources */,
 				CFA8E264A2D4FBE6FCE14EE3552990C1 /* InvoiceSecondScreenContainerView.swift in Sources */,
 				EF57D28785569DF18BE1C1B9FA569BF7 /* InvoiceSecondScreenEntity.swift in Sources */,

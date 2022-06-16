@@ -12,4 +12,5 @@ struct PaymentMethodsViewModel {
     var paymentMethodName: String
     var paymentGetwayId: String
     var paymentGetwayName: String
+    var image: String
 }

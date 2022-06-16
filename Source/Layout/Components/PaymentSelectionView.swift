@@ -126,7 +126,7 @@ class PaymentSelectionView: UIView {
     
     private func setupPaymentMethodIconStackConstraints() {
         NSLayoutConstraint.activate([
-            paymentMethodIconStack.heightAnchor.constraint(equalToConstant: 20),
+            paymentMethodIconStack.heightAnchor.constraint(equalTo: self.heightAnchor),
             paymentMethodIconStack.leadingAnchor.constraint(greaterThanOrEqualTo: paymentGatewayName.trailingAnchor, constant: 10),
             paymentMethodIconStack.centerYAnchor.constraint(equalTo: centerYAnchor),
             paymentMethodIconStack.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16)

@@ -41,6 +41,7 @@ public class CirclePay {
                         print("Throw an error here")
                         CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
                     } else {
+                        self.uiConfigs = uiConfigs
                         if let unwrappedViewModel = viewModel {
                             if unwrappedViewModel.invoiceDetails.status == 1 {
                                 print(unwrappedViewModel.invoiceDetails.status)

@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import Kingfisher
 class PaymentMethodCell: UITableViewCell {
     lazy var paymentSelectioanView: PaymentSelectionView = {
         var view = PaymentSelectionView()
@@ -50,9 +50,15 @@ extension PaymentMethodCell: PaymentMethodsCellView {
             }
             self.paymentSelectioanView.paymentMethodName.text = paymentMethod.paymentMethodName
             self.paymentSelectioanView.paymentGatewayName.text = "By: \(paymentMethod.paymentGetwayName)"
+            
+            if let url = URL(string: paymentMethod.image) {
+                let imageView1 = UIImageView()
+                imageView1.kf.setImage(with: url)
+                imageView1.contentMode = .center
+                imageView1.clipsToBounds = true
+                self.paymentSelectioanView.paymentMethodIconStack.addArrangedSubview(imageView1)
+            }
         }
-       
-        
     }
     
     

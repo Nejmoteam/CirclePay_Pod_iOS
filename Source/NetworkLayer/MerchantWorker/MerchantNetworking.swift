@@ -30,6 +30,8 @@ enum MerchantsNetworking {
     case sendOTP(countryCode:String, mobileNumber:String)
     
     case verifyMerchant(merchantMobile:String, OTP:String)
+    
+    case getPaymentMethodForMobile
 }
 
 extension MerchantsNetworking: APIRequestBuilder {
@@ -70,6 +72,9 @@ extension MerchantsNetworking: APIRequestBuilder {
             
         case .verifyMerchant:
             return "merchants/verify"
+            
+        case .getPaymentMethodForMobile:
+            return "merchants/payment/method/list/mobile"
         }
     }
 
@@ -110,6 +115,9 @@ extension MerchantsNetworking: APIRequestBuilder {
             
         case .verifyMerchant:
             return .post
+            
+        case .getPaymentMethodForMobile:
+            return .get
         }
     }
 
@@ -154,6 +162,8 @@ extension MerchantsNetworking: APIRequestBuilder {
         case let .verifyMerchant(merchantMobile, OTP):
             let params = ["merchant_mobile":merchantMobile, "otp":OTP]
             return .WithParametersRequest(parameters: params, encoding: JSONEncoding.default)
+        case .getPaymentMethodForMobile:
+            return .normalRequest
         }
     }
 }
