@@ -20,7 +20,7 @@ public class CirclePay {
     public static let paymentGateways: PaymentGatewaysProtocol = PaymentGateways()
     public static let paymentMethods: PaymentMethodsProtocol = PaymentMethods()
     public static var mode: CirclePayInviroment = .sandBox
-    private static var configsWorker: ConfigurationWorkerProtocol = ConfigurationWorker()
+    fileprivate static var configsWorker: ConfigurationWorkerProtocol = ConfigurationWorker()
     internal static var uiConfigs: ConfigurationModel?
     public static var delegete: CirclePayDelegete?
     
@@ -46,9 +46,9 @@ public class CirclePay {
                                 print(unwrappedViewModel.invoiceDetails.status)
                                 // Paid
                                 print("Paid")
-                                let error = CirclePayError(errorCode: 20000, errorMsg: "Invoice Was Paid Already")
+                                let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasPaid.code, errorMsg: SDKInternalErrorType.invoiceWasPaid.message)
                                 CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
-                                let invoiceStatus =  BaseNavigationController(rootViewController: InvoicePaymentStatusRouter.createAnModule(with: .paid))
+                                let invoiceStatus =  BaseNavigationController(rootViewController: InvoicePaymentStatusRouter.createAnModule(with: .paid, invoiceViewModel: unwrappedViewModel, withDelegete: nil))
                                 invoiceStatus.modalPresentationStyle = .fullScreen
                                 vc.present(invoiceStatus, animated: true, completion: nil)
 
@@ -64,9 +64,9 @@ public class CirclePay {
                                 if dueDate < currentDate {
                                     //Expired
                                     print("Expired")
-                                    let error = CirclePayError(errorCode: 20000, errorMsg: "Invoice Was Expired Already")
+                                    let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasExpired.code, errorMsg:SDKInternalErrorType.invoiceWasExpired.message)
                                     CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
-                                    let invoiceStatus =  InvoicePaymentStatusRouter.createAnModule(with: .notAvailable)
+                                    let invoiceStatus =  InvoicePaymentStatusRouter.createAnModule(with: .notAvailable, invoiceViewModel: unwrappedViewModel, withDelegete: nil)
                                     invoiceStatus.modalPresentationStyle = .fullScreen
                                     vc.present(invoiceStatus, animated: true, completion: nil)
                                 } else {
@@ -77,7 +77,7 @@ public class CirclePay {
                                 }
                             }
                         } else {
-                            let error = CirclePayError(errorCode: 20000, errorMsg: "Something went wrong, please try again.")
+                            let error = CirclePayError(errorCode: SDKInternalErrorType.failedToGetInvoices.code, errorMsg: SDKInternalErrorType.failedToGetInvoices.message)
                             CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
                         }
                     }
@@ -123,15 +123,15 @@ public class CirclePay {
         CirclePay.configsWorker.getConfigurations(merchantToken: CirclePay.merchantToken, type: "") { result in
             switch result {
             case .success(let resp):
-                if let unwrappedData = resp?.data {
-                    uiConfigs = unwrappedData
+                if let unwrappedData = resp?.data , unwrappedData.count != 0{
+                    uiConfigs = unwrappedData.first
                 } else {
-                    let err = CirclePayError(errorCode: 200003, errorMsg: resp?.details ?? "")
+                    let err = CirclePayError(errorCode: SDKInternalErrorType.failedToGetConfigs.code, errorMsg: resp?.details ?? "")
                     error = err
                 }
                 dispatchGroup.leave()
             case .failure(let err):
-                let err = CirclePayError(errorCode: 200003, errorMsg: err.message)
+                let err = CirclePayError(errorCode: SDKInternalErrorType.failedToGetConfigs.code, errorMsg: err.message)
                 error = err
                 dispatchGroup.leave()
             }
@@ -172,7 +172,15 @@ public enum PaymentType {
 
 public protocol CirclePayDelegete {
     func didGetErrorAtCheckoutProcess(error: CirclePayError)
-    func didPaidTransactionSucsessfully(transactionId: String)
-    func didGetErrorAtPayingTransaction(error: CirclePayError)
+    func didPaidTransactionSucsessfully(transaction: TransactionResult)
+    func didGetErrorAtPayingTransaction(transaction: TransactionResult, error: CirclePayError)
     
+}
+
+public struct TransactionResult {
+    var paymentGatewayName: String?
+    var paymentMethodName: String?
+    var transactionId: String?
+    var transactoinStatus: String?
+    var transactionType: Int
 }

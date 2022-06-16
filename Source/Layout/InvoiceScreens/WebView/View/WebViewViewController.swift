@@ -43,7 +43,8 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
         
         self.view.backgroundColor = .white
         self.setupWebView()
-        
+//        self.presenter.transactionPaidSucsesfully()
+//        self.presenter.failedToPayTransaction()
         // Do any additional setup after loading the view.
     }
     
@@ -112,5 +113,14 @@ class WebViewViewController: UIViewController, WebViewViewProtocol, WKNavigation
         print("fail to Navigation")
         self.view.removeActivityIndicator()
     }
+    
+}
+
+
+extension WebViewViewController: InvoicePaymentStatusNavigationDelegete {
+    func tryAgain() {
+        self.presenter.userTappedTryAgainInPaymentStatus()
+    }
+    
     
 }

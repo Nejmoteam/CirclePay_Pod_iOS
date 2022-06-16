@@ -316,7 +316,7 @@ class InvoicePaymentStatusContainerView: UIView {
                 self.statusImageView.image = UIImage(named: "InvoicePaidSuccess",
                                                      in: Bundle(for: type(of:self)),
                                                      compatibleWith: nil)
-                self.titleLabel.text = "transaction Paid successfully."
+                self.titleLabel.text = "Transaction Paid successfully."
                 self.subTitleLabel.isHidden = true
                 self.inoviceDetailsButton.isHidden = false
                 self.emptyView.isHidden = false

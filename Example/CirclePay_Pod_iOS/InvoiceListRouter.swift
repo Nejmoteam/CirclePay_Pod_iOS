@@ -34,17 +34,19 @@ class InvoiceListRouter: InvoiceListRouterProtocol {
 }
 
 extension InvoiceListRouter: CirclePayDelegete {
+
+    
     func didGetErrorAtCheckoutProcess(error: CirclePayError) {
         print(error)
     }
     
-    func didPaidTransactionSucsessfully(transactionId: String) {
-        print(transactionId)
+    func didPaidTransactionSucsessfully(transaction: TransactionResult) {
+        print(transaction)
+        
     }
-    
-    func didGetErrorAtPayingTransaction(error: CirclePayError) {
+    func didGetErrorAtPayingTransaction(transaction: TransactionResult, error: CirclePayError) {
         print(error)
+
     }
-    
     
 }

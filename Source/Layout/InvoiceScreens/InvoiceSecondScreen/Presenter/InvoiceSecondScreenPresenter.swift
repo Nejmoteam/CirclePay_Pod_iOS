@@ -169,7 +169,8 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
             // OPEN WEB VIEW WITH IFRAME URL
             self.view?.hideLoadingForPayButton()
             self.view?.enablePayButton()
-            self.router.navigateToWebView(webViewUrl: iframeURL, transactionId: transactionID)
+            let transactionResult = TransactionResult(paymentGatewayName: self.selectedPaymentMethod?.paymentGetwayName ?? "", paymentMethodName: self.selectedPaymentMethod?.paymentMethodName ?? "", transactionId: transactionID, transactoinStatus: "", transactionType: 1)
+            self.router.navigateToWebView(webViewUrl: iframeURL, transaction: transactionResult, invoiceViewModel: self.invoiceViewModel)
            // self.view?.openIframeViaSafari(iframeUrl: iframeURL)
         }
     }

@@ -13,14 +13,16 @@ class WebViewPresenter: WebViewPresenterProtocol, WebViewInteractorOutPutProtoco
     private let interactor: WebViewInteractorInPutProtocol
     private let router: WebViewRouterProtocol
     private var webViewUrl: String
-    private var transactionId: String
+    private var transaction: TransactionResult
+    private var invoiceViewModel: InvoiceFirstScreenViewModel
 
-    init(view: WebViewViewProtocol, interactor: WebViewInteractorInPutProtocol, router: WebViewRouterProtocol, webViewUrl: String,transactionId: String) {
+    init(view: WebViewViewProtocol, interactor: WebViewInteractorInPutProtocol, router: WebViewRouterProtocol, webViewUrl: String,transaction: TransactionResult,invoiceViewModel: InvoiceFirstScreenViewModel) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.webViewUrl = webViewUrl
-        self.transactionId = transactionId
+        self.transaction = transaction
+        self.invoiceViewModel = invoiceViewModel
     }
     func viewDidLoad() {
         print("ViewDidLoad")
@@ -28,12 +30,18 @@ class WebViewPresenter: WebViewPresenterProtocol, WebViewInteractorOutPutProtoco
     }
     
     func transactionPaidSucsesfully() {
-        CirclePay.delegete?.didPaidTransactionSucsessfully(transactionId: self.transactionId)
-        self.router.presentInvoicePaymentStatusScreen(result: .success)
+        transaction.transactoinStatus = "PAID"
+        CirclePay.delegete?.didPaidTransactionSucsessfully(transaction: self.transaction)
+        self.router.presentInvoicePaymentStatusScreen(result: .success, invoiceViewModel: self.invoiceViewModel)
 
     }
     func failedToPayTransaction() {
-        CirclePay.delegete?.didGetErrorAtPayingTransaction(error: CirclePayError(errorCode: 0000, errorMsg: "Something went wrong, please try again"))
-        self.router.presentInvoicePaymentStatusScreen(result: .failure)
+        transaction.transactoinStatus = "UNPAID"
+        CirclePay.delegete?.didGetErrorAtPayingTransaction(transaction: self.transaction, error: CirclePayError(errorCode: 0000, errorMsg: "Something went wrong during the payment process, please try again"))
+        self.router.presentInvoicePaymentStatusScreen(result: .failure, invoiceViewModel: self.invoiceViewModel)
+    }
+    
+    func userTappedTryAgainInPaymentStatus() {
+        self.router.userTappedTryAgainInPaymentStatus()
     }
 }

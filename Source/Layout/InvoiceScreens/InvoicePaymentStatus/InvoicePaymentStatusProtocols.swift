@@ -13,6 +13,9 @@ protocol InvoicePaymentStatusViewProtocol: AnyObject {
     func setupView(with status:InvoicePaymentStatus)
     func setInvoiceNumber(value:String)
     func setInvoicePaymentDate(value:String)
+    func configureColor(stringColor: String)
+    func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String)
+
 }
 protocol InvoicePaymentStatusPresenterProtocol {
     var view: InvoicePaymentStatusViewProtocol? {get set}
@@ -25,9 +28,16 @@ protocol InvoicePaymentStatusPresenterProtocol {
 }
 protocol InvoicePaymentStatusRouterProtocol {
     func dismissView()
+    func navigateToStepOneScreen(invoiceViewModel: InvoiceFirstScreenViewModel)
+    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable)
 }
 protocol InvoicePaymentStatusInteractorInPutProtocol {
     var presenter: InvoicePaymentStatusInteractorOutPutProtocol? {get set}
 }
 protocol InvoicePaymentStatusInteractorOutPutProtocol:AnyObject {
+}
+
+
+protocol InvoicePaymentStatusNavigationDelegete {
+    func tryAgain()
 }
