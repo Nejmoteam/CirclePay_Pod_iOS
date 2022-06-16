@@ -44,7 +44,7 @@ class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
             }
             //Navigating to The StepoNE Screen
             self.viewController?.dismiss(animated: true, completion: {
-                guard let delegete = self.delegete else {
+                guard self.delegete != nil else {
                     return
                 }
                 self.delegete?.tryAgain()

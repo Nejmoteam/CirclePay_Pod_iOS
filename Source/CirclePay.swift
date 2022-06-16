@@ -44,7 +44,6 @@ public class CirclePay {
                         self.uiConfigs = uiConfigs
                         if let unwrappedViewModel = viewModel {
                             if unwrappedViewModel.invoiceDetails.status == 1 {
-                                print(unwrappedViewModel.invoiceDetails.status)
                                 // Paid
                                 print("Paid")
                                 let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasPaid.code, errorMsg: SDKInternalErrorType.invoiceWasPaid.message)

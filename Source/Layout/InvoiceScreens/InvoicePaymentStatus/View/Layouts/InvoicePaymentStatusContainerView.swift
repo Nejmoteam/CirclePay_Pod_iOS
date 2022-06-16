@@ -217,7 +217,8 @@ class InvoicePaymentStatusContainerView: UIView {
             contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
         ])
     }
     
@@ -232,9 +233,9 @@ class InvoicePaymentStatusContainerView: UIView {
     
     private func setupStatusImageView() {
         NSLayoutConstraint.activate([
-            statusImageView.topAnchor.constraint(equalTo: logoView.bottomAnchor, constant: 116),
+            statusImageView.topAnchor.constraint(lessThanOrEqualTo: logoView.bottomAnchor, constant: 116),
             statusImageView.widthAnchor.constraint(equalToConstant: 255),
-            statusImageView.heightAnchor.constraint(equalToConstant: 233),
+            statusImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.25),
             statusImageView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
     }
@@ -288,7 +289,7 @@ class InvoicePaymentStatusContainerView: UIView {
             buttonStackView.topAnchor.constraint(equalTo: vStackView.bottomAnchor, constant: 38),
             buttonStackView.widthAnchor.constraint(equalToConstant: 215),
             buttonStackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            buttonStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -38)
+            buttonStackView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor)
         ])
     }
     private func setupDownloadButton() {
@@ -342,7 +343,7 @@ class InvoicePaymentStatusContainerView: UIView {
                 self.invoiceNumberView.isHidden = true
                 self.paymentDateView.isHidden = true
                 self.downloadButton.isHidden = true
-                self.dismissButton.isHidden = true
+                self.dismissButton.isHidden = false
                 self.tryAgainButton.isHidden = true
             }
         case .failure:

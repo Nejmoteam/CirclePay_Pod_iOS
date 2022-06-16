@@ -62,7 +62,7 @@ class InitialViewController: UIViewController {
             return
         }
         
-        let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 230, itemQuantity: 8), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 189, itemQuantity: 10),Items(itemDescription: "Testing Description 3", itemnName: "Testing ItemName 3", itemPrice: 667, itemQuantity: 2)]
+        let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 100, itemQuantity: 3), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 200, itemQuantity: 2),Items(itemDescription: "Testing Description 3", itemnName: "Testing ItemName 3", itemPrice: 260, itemQuantity: 1)]
         
         
         self.view.showActivityIndicator(with: ._default, isUserInteractionEnabled: false, frame: self.view.frame, color: #colorLiteral(red: 0, green: 0.4588235294, blue: 0.8901960784, alpha: 1))

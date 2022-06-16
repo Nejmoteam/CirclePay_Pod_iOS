@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol ShippingPolicyViewProtocol: class {
+protocol ShippingPolicyViewProtocol: AnyObject {
     var presenter: ShippingPolicyPresenterProtocol! {get set}
     func setupShippingPolicy(shippingPolicy: String)
     func setupPrimaryColorConfiguration(colorString: String)
@@ -24,5 +24,5 @@ protocol ShippingPolicyRouterProtocol {
 protocol ShippingPolicyInteractorInPutProtocol {
     var presenter: ShippingPolicyInteractorOutPutProtocol? {get set}
 }
-protocol ShippingPolicyInteractorOutPutProtocol:class {
+protocol ShippingPolicyInteractorOutPutProtocol:AnyObject {
 }

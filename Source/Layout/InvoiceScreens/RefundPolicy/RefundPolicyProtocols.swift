@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol RefundPolicyViewProtocol: class {
+protocol RefundPolicyViewProtocol: AnyObject {
     var presenter: RefundPolicyPresenterProtocol! {get set}
     func setupRefundPolicy(refundPolicy: String)
     func setupPrimaryColorConfiguration(colorString: String)
@@ -24,5 +24,5 @@ protocol RefundPolicyRouterProtocol {
 protocol RefundPolicyInteractorInPutProtocol {
     var presenter: RefundPolicyInteractorOutPutProtocol? {get set}
 }
-protocol RefundPolicyInteractorOutPutProtocol:class {
+protocol RefundPolicyInteractorOutPutProtocol:AnyObject {
 }

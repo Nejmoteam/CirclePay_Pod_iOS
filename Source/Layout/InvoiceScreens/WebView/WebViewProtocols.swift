@@ -7,7 +7,7 @@
 //
 //@Mahmoud Allam Templete ^_^
 import Foundation
-protocol WebViewViewProtocol: class {
+protocol WebViewViewProtocol: AnyObject {
     var presenter: WebViewPresenterProtocol! {get set}
     func openUrl(url: String)
 }
@@ -26,5 +26,5 @@ protocol WebViewRouterProtocol {
 protocol WebViewInteractorInPutProtocol {
     var presenter: WebViewInteractorOutPutProtocol? {get set}
 }
-protocol WebViewInteractorOutPutProtocol:class {
+protocol WebViewInteractorOutPutProtocol:AnyObject {
 }

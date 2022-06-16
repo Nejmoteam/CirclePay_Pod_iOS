@@ -46,7 +46,7 @@ class InvoiceDetailsPresenter: InvoiceDetailsPresenterProtocol, InvoiceDetailsIn
     
     func configureCell(cell: InvoiceDetailsPaymentSammaryTableViewCellView) {
         cell.configurePaymentSummery(billedFrom: customer.getFullName(), billedTo: invoiceViewModel.merchantDetails.businessName ?? "")
-        cell.configureTaxView(taxValue: "\(self.invoiceViewModel.getTax() ?? 0.0)", taxPersentage: "\(self.invoiceViewModel.invoiceDetails.tax ?? 0.0)")
+        cell.configureTaxView(taxValue: "\(self.invoiceViewModel.getTax() )", taxPersentage: "\(self.invoiceViewModel.invoiceDetails.tax ?? 0.0)")
         cell.configureShipping(shippingValue: "\(invoiceViewModel.invoiceDetails.shippingFees ?? 0.0)")
         cell.configureDiscount(discountType: .percentage, discountValue:"\(self.invoiceViewModel.invoiceDetails.discountValueCalculated ?? 0.0)", value: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)")
         cell.configureSubTotal(subTotal: "\(self.invoiceViewModel.getInvoiceSubTotal())")
