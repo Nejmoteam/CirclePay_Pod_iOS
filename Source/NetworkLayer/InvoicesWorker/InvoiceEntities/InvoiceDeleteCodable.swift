@@ -8,7 +8,7 @@
 import Foundation
 
 public struct InvoiceDeleteCodable:Codable {
-    let invoiceNumber:String?
+   public let invoiceNumber:String?
     enum CodingKeys: String, CodingKey {
         case invoiceNumber = "invoice_number"
     }
