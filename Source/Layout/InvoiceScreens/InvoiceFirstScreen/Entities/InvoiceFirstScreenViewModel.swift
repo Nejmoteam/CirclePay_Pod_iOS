@@ -6,7 +6,7 @@
 //
 
 import Foundation
-public struct InvoiceFirstScreenViewModel {
+struct InvoiceFirstScreenViewModel {
     public var invoiceDetails :InvoiceCodable
     public var merchantDetails: MerchantCodable
     
