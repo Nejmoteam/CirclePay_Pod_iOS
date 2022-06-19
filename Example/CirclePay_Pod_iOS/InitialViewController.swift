@@ -41,7 +41,7 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        // invoiceNumber = "CIR_INV_1653564987377"
+        invoiceNumber = "CIR_INV_1655636242987"
         self.setupButtons()
     }
     
@@ -114,7 +114,7 @@ class InitialViewController: UIViewController {
 
 
 extension InitialViewController: CirclePayDelegete {
-
+    
     func didGetErrorAtCheckoutProcess(error: CirclePayError) {
         print("Check out error")
     }

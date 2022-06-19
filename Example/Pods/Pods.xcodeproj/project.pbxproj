@@ -791,7 +791,7 @@
 		CA75E11971121D73F951F26145377290 /* Date+Date+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Date+extension.swift"; sourceTree = "<group>"; };
 		CAB0DC6036E9C18BD694524800FFBD6E /* InvoiceDetailsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InvoiceDetailsInteractor.swift; sourceTree = "<group>"; };
 		CAFD844A344698EC179377DB329E6707 /* WebViewRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewRouter.swift; sourceTree = "<group>"; };
-		CB450CAFEB5667B70E0279EABB742F39 /* Pods-CirclePay_Pod_iOS_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CirclePay_Pod_iOS_Tests"; path = Pods_CirclePay_Pod_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB450CAFEB5667B70E0279EABB742F39 /* Pods_CirclePay_Pod_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CirclePay_Pod_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBD349F87E666C1AA2221B913A955B82 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		CC2F6497C0798BB0153AB3404267B44E /* FontBlaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontBlaster-dummy.m"; sourceTree = "<group>"; };
 		CCD56BAAFDC0B3100764DD41AC684D8D /* KFImageRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KFImageRenderer.swift; path = Sources/SwiftUI/KFImageRenderer.swift; sourceTree = "<group>"; };
@@ -2466,7 +2466,7 @@
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher */,
 				17E33041B314FA837A3CAEB9DF3CDE9F /* OHHTTPStubs */,
 				48290D5247EB26AED496C1715C5A1D55 /* Pods-CirclePay_Pod_iOS_Example */,
-				CB450CAFEB5667B70E0279EABB742F39 /* Pods-CirclePay_Pod_iOS_Tests */,
+				CB450CAFEB5667B70E0279EABB742F39 /* Pods_CirclePay_Pod_iOS_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2742,7 +2742,7 @@
 			);
 			name = "Pods-CirclePay_Pod_iOS_Tests";
 			productName = Pods_CirclePay_Pod_iOS_Tests;
-			productReference = CB450CAFEB5667B70E0279EABB742F39 /* Pods-CirclePay_Pod_iOS_Tests */;
+			productReference = CB450CAFEB5667B70E0279EABB742F39 /* Pods_CirclePay_Pod_iOS_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -2753,6 +2753,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					F25A3ECFC91B5741AA3C08228CE2125C = {
+						LastSwiftMigration = 1250;
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3500,6 +3505,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3522,6 +3528,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -3789,6 +3797,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -3811,6 +3820,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -1,5 +1,6 @@
+
 import XCTest
-import CirclePay_Pod_iOS
+
 
 class Tests: XCTestCase {
     

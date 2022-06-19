@@ -11,8 +11,8 @@ import Foundation
 class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceFirstScreenInteractorOutPutProtocol {
     
     weak var view: InvoiceFirstScreenViewProtocol?
-    private let interactor: InvoiceFirstScreenInteractorInPutProtocol
-    private let router: InvoiceFirstScreenRouterProtocol
+    let interactor: InvoiceFirstScreenInteractorInPutProtocol
+    let router: InvoiceFirstScreenRouterProtocol
     var invoiceViewModel: InvoiceFirstScreenViewModel
     var customer: GetCustomerCodable?
     var subTotal:Double {
@@ -40,24 +40,7 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
                 CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
             } else {
                 self.customer = customer
-                //Sammery
-                self.view?.configurePaymentSummery(billedFrom: customer?.getFullName() ?? "", billedTo: self.invoiceViewModel.merchantDetails.businessName ?? "")
-                //TOTAL
-                self.view?.configureTotal(total: "\(self.invoiceViewModel.getTotal())")
-                //SUBTOTAL
-                self.view?.configureSubTotal(subTotal: "\(self.subTotal)")
-                //TAX
-                self.view?.configureTaxView(taxValue: "\(self.tax)", taxPersentage: "\((self.invoiceViewModel.invoiceDetails.tax ?? 0.0))")
-                //Shipping
-                self.view?.configureShipping(shippingValue: "\(self.invoiceViewModel.invoiceDetails.shippingFees ?? 0.0)")
-                //DISCOUNT
-                if self.invoiceViewModel.invoiceDetails.discountType == DiscountTypes.percentage.rawValue {
-                    self.view?.configureDiscount(discountType: .percentage, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
-                } else {
-                    self.view?.configureDiscount(discountType: .fixed, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
-                }
-                //DATE
-                self.setupInvoiceDate()
+                self.configureViewData()
             }
         }
         
@@ -95,6 +78,27 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
                 self.view?.setupRefundPolicyConfiguration(isEnabled: unwrappedRefundPolicyIsEnabled)
             }
         }
+    }
+    
+    func configureViewData() {
+        //Sammery
+        self.view?.configurePaymentSummery(billedFrom: customer?.getFullName() ?? "", billedTo: self.invoiceViewModel.merchantDetails.businessName ?? "")
+        //TOTAL
+        self.view?.configureTotal(total: "\(self.invoiceViewModel.getTotal())")
+        //SUBTOTAL
+        self.view?.configureSubTotal(subTotal: "\(self.subTotal)")
+        //TAX
+        self.view?.configureTaxView(taxValue: "\(self.tax)", taxPersentage: "\((self.invoiceViewModel.invoiceDetails.tax ?? 0.0))")
+        //Shipping
+        self.view?.configureShipping(shippingValue: "\(self.invoiceViewModel.invoiceDetails.shippingFees ?? 0.0)")
+        //DISCOUNT
+        if self.invoiceViewModel.invoiceDetails.discountType == DiscountTypes.percentage.rawValue {
+            self.view?.configureDiscount(discountType: .percentage, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
+        } else {
+            self.view?.configureDiscount(discountType: .fixed, discountValue: "\(self.invoiceViewModel.invoiceDetails.discountValue ?? 0.0)", value: "\(self.invoiceViewModel.getDiscuntValue())")
+        }
+        //DATE
+        self.setupInvoiceDate()
     }
     
     private func setupInvoiceDate() {

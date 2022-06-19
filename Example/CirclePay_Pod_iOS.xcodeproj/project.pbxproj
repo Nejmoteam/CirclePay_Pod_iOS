@@ -19,7 +19,7 @@
 		187F719C283B79A30054309D /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719B283B79A30054309D /* NormalIndicator.swift */; };
 		187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719D283B79D80054309D /* Indicator + UIView.swift */; };
 		187F71A0283B79EC0054309D /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719F283B79EC0054309D /* LottieIndicator.swift */; };
-		18E430F4285EA37E007E39ED /* CirclePayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E430F3285EA37E007E39ED /* CirclePayTests.swift */; };
+		18E430F9285EAA1E007E39ED /* InvoiceFirstScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E430F8285EAA1E007E39ED /* InvoiceFirstScreenPresenterTests.swift */; };
 		498F500029D9409882FB5AD4 /* Pods_CirclePay_Pod_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A2134673A78D8D125EA624 /* Pods_CirclePay_Pod_iOS_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* InitialViewController.swift */; };
@@ -52,7 +52,7 @@
 		187F719B283B79A30054309D /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
 		187F719D283B79D80054309D /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
 		187F719F283B79EC0054309D /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
-		18E430F3285EA37E007E39ED /* CirclePayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePayTests.swift; sourceTree = "<group>"; };
+		18E430F8285EAA1E007E39ED /* InvoiceFirstScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFirstScreenPresenterTests.swift; sourceTree = "<group>"; };
 		3D65E01FE3EF862122C994EE /* Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DF9595C73407471D3DAD489 /* CirclePay_Pod_iOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CirclePay_Pod_iOS.podspec; path = ../CirclePay_Pod_iOS.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5EBA8DD96B26A74407A05CCF /* Pods-CirclePay_Pod_iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Tests.release.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		18E430F2285EA366007E39ED /* InvoiceFirstScreenTests */ = {
 			isa = PBXGroup;
 			children = (
-				18E430F3285EA37E007E39ED /* CirclePayTests.swift */,
+				18E430F8285EAA1E007E39ED /* InvoiceFirstScreenPresenterTests.swift */,
 			);
 			name = InvoiceFirstScreenTests;
 			sourceTree = "<group>";
@@ -510,7 +510,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E430F4285EA37E007E39ED /* CirclePayTests.swift in Sources */,
+				18E430F9285EAA1E007E39ED /* InvoiceFirstScreenPresenterTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				1829334D285133180005E5FF /* InvoicesModuleTests.swift in Sources */,
 			);
