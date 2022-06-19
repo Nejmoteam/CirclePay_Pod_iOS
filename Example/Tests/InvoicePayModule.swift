@@ -54,6 +54,7 @@ class InvoicePayModule: XCTestCase {
     func payInvoiceStubCondition() -> HTTPStubsTestBlock {
         return { req in
             let urlCondition = req.url?.absoluteString.contains("invoice/pay") ?? false
+            let methodCondition = req.method == HTTPMethod.post
             if let httpBody = req.ohhttpStubs_httpBody {
                 let bodyString = String.init(data: httpBody, encoding: String.Encoding.utf8)
                 
@@ -61,9 +62,9 @@ class InvoicePayModule: XCTestCase {
                 let bodyCondition = (filteredStringBody?.contains("payment_method_id:1653564987377"))! &&
                     (filteredStringBody?.contains("customer_mobile:+201157818027"))! &&
                     (filteredStringBody?.contains("invoice_number:CIR_INV_1653564987377"))!
-                return urlCondition && bodyCondition
+                return urlCondition && bodyCondition && methodCondition
             } else {
-                return urlCondition
+                return urlCondition  && methodCondition
             }
         }
     }
