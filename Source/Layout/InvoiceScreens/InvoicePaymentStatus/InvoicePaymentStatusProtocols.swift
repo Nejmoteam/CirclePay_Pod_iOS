@@ -15,6 +15,8 @@ protocol InvoicePaymentStatusViewProtocol: AnyObject {
     func setInvoicePaymentDate(value:String)
     func configureColor(stringColor: String)
     func setupLogoConfigurations(isLogoEnabled:Bool, logoUrl: String)
+    func setupInvoicePdfConfiguration(isEnbaled: Bool)
+
 
 }
 protocol InvoicePaymentStatusPresenterProtocol {

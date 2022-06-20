@@ -207,6 +207,16 @@ class InvoiceFirstScreenViewController: UIViewController, InvoiceFirstScreenView
         }
     }
     
+    func setupInvoicePdfConfiguration(isEnbaled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.invoiceDetails.isHidden = !isEnbaled
+            
+        }
+    }
+    
     
     
 }

@@ -51,6 +51,9 @@ class InvoicePaymentStatusPresenter: InvoicePaymentStatusPresenterProtocol, Invo
             if let unwrappedColor = unwrappedConfigs.color {
                 self.view?.configureColor(stringColor: unwrappedColor)
             }
+            if let unwrappedInvoicePdf = unwrappedConfigs.invoicePDFEnable {
+                self.view?.setupInvoicePdfConfiguration(isEnbaled: unwrappedInvoicePdf)
+            }
         }
     }
     

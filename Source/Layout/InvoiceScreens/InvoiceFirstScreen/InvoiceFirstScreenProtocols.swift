@@ -27,7 +27,7 @@ protocol InvoiceFirstScreenViewProtocol: AnyObject {
     func setupAccountingConfiguration(isEnabled:Bool)
     func setupShippingPolicyConfiguration(isEnabled: Bool)
     func setupRefundPolicyConfiguration(isEnabled: Bool)
-
+    func setupInvoicePdfConfiguration(isEnbaled: Bool)
 
 
 }

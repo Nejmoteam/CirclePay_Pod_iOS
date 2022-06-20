@@ -94,6 +94,9 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
             if let unwrappedRefundPolicyIsEnabled = unwrappedConfigs.refundPolicyEnable {
                 self.view?.setupRefundPolicyConfiguration(isEnabled: unwrappedRefundPolicyIsEnabled)
             }
+            if let unwrappedInvoicePdf = unwrappedConfigs.invoicePDFEnable {
+                self.view?.setupInvoicePdfConfiguration(isEnbaled: unwrappedInvoicePdf)
+            }
         }
     }
     

@@ -85,4 +85,14 @@ class InvoicePaymentStatusViewController: UIViewController, InvoicePaymentStatus
             }
         }
     }
+    
+    func setupInvoicePdfConfiguration(isEnbaled: Bool) {
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.containerView.inoviceDetailsButton.isHidden = !isEnbaled
+            
+        }
+    }
 }
