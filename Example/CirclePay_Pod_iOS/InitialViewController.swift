@@ -62,23 +62,9 @@ class InitialViewController: UIViewController {
             return
         }
         
-        let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 100, itemQuantity: 3), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 200, itemQuantity: 2),Items(itemDescription: "Testing Description 3", itemnName: "Testing ItemName 3", itemPrice: 260, itemQuantity: 1)]
-        
-        
-        self.view.showActivityIndicator(with: ._default, isUserInteractionEnabled: false, frame: self.view.frame, color: #colorLiteral(red: 0, green: 0.4588235294, blue: 0.8901960784, alpha: 1))
-        CirclePay.invoices.createInvoice(invoiceNumber: nil, items: items, customerMobile: "+201061140960", status: 0, createDate: nil, dueDate: "2022-6-22", prefPaymentMethod: nil, shippingFees: 15, discountValue: 2, discountType: .percentage,  tax: 5, taxValue: nil, shippingPolicy: "Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy", returnPolicy: "return Policy return Policy return Policy return Policyreturn Policyreturn Policy return Policy return Policy", extraNotes: "Extra Notes for this Invoice for testing") { createdInvoice, err in
-            self.view.removeActivityIndicator()
-            if err != nil {
-            } else {
-                // print(createdInvoice)
-                if let unwrappedInvoice = createdInvoice {
-                    //  print(unwrappedInvoice.invoiceNumber)
-                    self.invoiceNumber = unwrappedInvoice.invoiceNumber
-                    self.createInvoice.setTitle("Execute Invoice", for: .normal)
-                }
-            }
-        }
-        
+        self.createAnInvoice(date: "2022-6-22") // Not Expired
+//        self.createAnInvoice(date: "2022-6-6") // Expired
+
     }
     
     @objc func userPressedInvoicesList() {
@@ -128,6 +114,25 @@ extension InitialViewController: CirclePayDelegete {
         print("Failed to Pay")
     }
     
+    func createAnInvoice(date:String) {
+        
+        let items = [Items(itemDescription: "Testing Description", itemnName: "Testing ItemName", itemPrice: 100, itemQuantity: 3), Items(itemDescription: "Testing Description 2", itemnName: "Testing ItemName 2", itemPrice: 200, itemQuantity: 2),Items(itemDescription: "Testing Description 3", itemnName: "Testing ItemName 3", itemPrice: 260, itemQuantity: 1)]
+        
+        
+        self.view.showActivityIndicator(with: ._default, isUserInteractionEnabled: false, frame: self.view.frame, color: #colorLiteral(red: 0, green: 0.4588235294, blue: 0.8901960784, alpha: 1))
+        CirclePay.invoices.createInvoice(invoiceNumber: nil, items: items, customerMobile: "+201061140960", status: 0, createDate: nil, dueDate: date, prefPaymentMethod: nil, shippingFees: 15, discountValue: 2, discountType: .percentage,  tax: 5, taxValue: nil, shippingPolicy: "Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy Shipping policy", returnPolicy: "return Policy return Policy return Policy return Policyreturn Policyreturn Policy return Policy return Policy", extraNotes: "Extra Notes for this Invoice for testing") { createdInvoice, err in
+            self.view.removeActivityIndicator()
+            if err != nil {
+            } else {
+                // print(createdInvoice)
+                if let unwrappedInvoice = createdInvoice {
+                    //  print(unwrappedInvoice.invoiceNumber)
+                    self.invoiceNumber = unwrappedInvoice.invoiceNumber
+                    self.createInvoice.setTitle("Execute Invoice", for: .normal)
+                }
+            }
+        }
+    }
 }
 
 
