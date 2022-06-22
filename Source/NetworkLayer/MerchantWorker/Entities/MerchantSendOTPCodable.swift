@@ -8,5 +8,5 @@
 import Foundation
 
 public struct MerchantSendOTPCodable:Codable {
-    let status:String?
+   public let status:String?
 }

@@ -19,6 +19,18 @@
 		181DE569285F183B00F82F9B /* InvoiceGetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE568285F183B00F82F9B /* InvoiceGetModule.swift */; };
 		181DE56B285F1BD200F82F9B /* InvoiceListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE56A285F1BD200F82F9B /* InvoiceListModule.swift */; };
 		181DE56D285F1F9B00F82F9B /* InvoiceDeleteModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE56C285F1F9B00F82F9B /* InvoiceDeleteModule.swift */; };
+		181DE57128639A0400F82F9B /* MerchantCreateModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE57028639A0400F82F9B /* MerchantCreateModule.swift */; };
+		181DE57328639E0A00F82F9B /* MerchantGetModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE57228639E0A00F82F9B /* MerchantGetModule.swift */; };
+		181DE57528639F7A00F82F9B /* MerchantListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE57428639F7A00F82F9B /* MerchantListModule.swift */; };
+		181DE5772863A0CC00F82F9B /* MerchantUpdateModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE5762863A0CC00F82F9B /* MerchantUpdateModule.swift */; };
+		181DE5792863A26300F82F9B /* MerchantEnablePaymentGatewayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE5782863A26300F82F9B /* MerchantEnablePaymentGatewayModule.swift */; };
+		181DE57B2863A40000F82F9B /* MerchantDisablePaymentGatewayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE57A2863A40000F82F9B /* MerchantDisablePaymentGatewayModule.swift */; };
+		181DE57D2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE57C2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift */; };
+		181DE57F2863A69400F82F9B /* MerchantEnablePaymentMethodModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE57E2863A69400F82F9B /* MerchantEnablePaymentMethodModule.swift */; };
+		181DE5812863A75F00F82F9B /* MerchantDisablePaymentMethodModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE5802863A75F00F82F9B /* MerchantDisablePaymentMethodModule.swift */; };
+		181DE5832863A81300F82F9B /* MerchantListPaymentMethodsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE5822863A81300F82F9B /* MerchantListPaymentMethodsModule.swift */; };
+		181DE5852863AA2300F82F9B /* MerchantSendOTPModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE5842863AA2300F82F9B /* MerchantSendOTPModule.swift */; };
+		181DE5872863AB9E00F82F9B /* MerchantVerifyModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE5862863AB9E00F82F9B /* MerchantVerifyModule.swift */; };
 		1829334D285133180005E5FF /* InvoicePayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829334C285133180005E5FF /* InvoicePayModule.swift */; };
 		187F719C283B79A30054309D /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719B283B79A30054309D /* NormalIndicator.swift */; };
 		187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719D283B79D80054309D /* Indicator + UIView.swift */; };
@@ -55,6 +67,18 @@
 		181DE568285F183B00F82F9B /* InvoiceGetModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceGetModule.swift; sourceTree = "<group>"; };
 		181DE56A285F1BD200F82F9B /* InvoiceListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListModule.swift; sourceTree = "<group>"; };
 		181DE56C285F1F9B00F82F9B /* InvoiceDeleteModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDeleteModule.swift; sourceTree = "<group>"; };
+		181DE57028639A0400F82F9B /* MerchantCreateModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantCreateModule.swift; sourceTree = "<group>"; };
+		181DE57228639E0A00F82F9B /* MerchantGetModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantGetModule.swift; sourceTree = "<group>"; };
+		181DE57428639F7A00F82F9B /* MerchantListModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantListModule.swift; sourceTree = "<group>"; };
+		181DE5762863A0CC00F82F9B /* MerchantUpdateModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantUpdateModule.swift; sourceTree = "<group>"; };
+		181DE5782863A26300F82F9B /* MerchantEnablePaymentGatewayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantEnablePaymentGatewayModule.swift; sourceTree = "<group>"; };
+		181DE57A2863A40000F82F9B /* MerchantDisablePaymentGatewayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantDisablePaymentGatewayModule.swift; sourceTree = "<group>"; };
+		181DE57C2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantListPaymentGatewaysModule.swift; sourceTree = "<group>"; };
+		181DE57E2863A69400F82F9B /* MerchantEnablePaymentMethodModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantEnablePaymentMethodModule.swift; sourceTree = "<group>"; };
+		181DE5802863A75F00F82F9B /* MerchantDisablePaymentMethodModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantDisablePaymentMethodModule.swift; sourceTree = "<group>"; };
+		181DE5822863A81300F82F9B /* MerchantListPaymentMethodsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantListPaymentMethodsModule.swift; sourceTree = "<group>"; };
+		181DE5842863AA2300F82F9B /* MerchantSendOTPModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantSendOTPModule.swift; sourceTree = "<group>"; };
+		181DE5862863AB9E00F82F9B /* MerchantVerifyModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantVerifyModule.swift; sourceTree = "<group>"; };
 		1829334C285133180005E5FF /* InvoicePayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicePayModule.swift; sourceTree = "<group>"; };
 		187F719B283B79A30054309D /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
 		187F719D283B79D80054309D /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
@@ -160,6 +184,25 @@
 			name = InvoicesModule;
 			sourceTree = "<group>";
 		};
+		181DE56F286399BC00F82F9B /* MerchantModule */ = {
+			isa = PBXGroup;
+			children = (
+				181DE57028639A0400F82F9B /* MerchantCreateModule.swift */,
+				181DE57228639E0A00F82F9B /* MerchantGetModule.swift */,
+				181DE57428639F7A00F82F9B /* MerchantListModule.swift */,
+				181DE5762863A0CC00F82F9B /* MerchantUpdateModule.swift */,
+				181DE5782863A26300F82F9B /* MerchantEnablePaymentGatewayModule.swift */,
+				181DE57A2863A40000F82F9B /* MerchantDisablePaymentGatewayModule.swift */,
+				181DE57C2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift */,
+				181DE57E2863A69400F82F9B /* MerchantEnablePaymentMethodModule.swift */,
+				181DE5802863A75F00F82F9B /* MerchantDisablePaymentMethodModule.swift */,
+				181DE5822863A81300F82F9B /* MerchantListPaymentMethodsModule.swift */,
+				181DE5842863AA2300F82F9B /* MerchantSendOTPModule.swift */,
+				181DE5862863AB9E00F82F9B /* MerchantVerifyModule.swift */,
+			);
+			name = MerchantModule;
+			sourceTree = "<group>";
+		};
 		187F7199283B798D0054309D /* Utills */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +301,7 @@
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				181DE565285F17A800F82F9B /* InvoicesModule */,
+				181DE56F286399BC00F82F9B /* MerchantModule */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -519,11 +563,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				181DE57B2863A40000F82F9B /* MerchantDisablePaymentGatewayModule.swift in Sources */,
 				181DE56D285F1F9B00F82F9B /* InvoiceDeleteModule.swift in Sources */,
+				181DE5852863AA2300F82F9B /* MerchantSendOTPModule.swift in Sources */,
+				181DE57528639F7A00F82F9B /* MerchantListModule.swift in Sources */,
 				181DE569285F183B00F82F9B /* InvoiceGetModule.swift in Sources */,
+				181DE57328639E0A00F82F9B /* MerchantGetModule.swift in Sources */,
+				181DE57D2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				181DE5832863A81300F82F9B /* MerchantListPaymentMethodsModule.swift in Sources */,
+				181DE57128639A0400F82F9B /* MerchantCreateModule.swift in Sources */,
+				181DE5772863A0CC00F82F9B /* MerchantUpdateModule.swift in Sources */,
+				181DE5792863A26300F82F9B /* MerchantEnablePaymentGatewayModule.swift in Sources */,
 				181DE567285F180400F82F9B /* InvoiceCreateModule.swift in Sources */,
 				1829334D285133180005E5FF /* InvoicePayModule.swift in Sources */,
+				181DE57F2863A69400F82F9B /* MerchantEnablePaymentMethodModule.swift in Sources */,
+				181DE5812863A75F00F82F9B /* MerchantDisablePaymentMethodModule.swift in Sources */,
+				181DE5872863AB9E00F82F9B /* MerchantVerifyModule.swift in Sources */,
 				181DE56B285F1BD200F82F9B /* InvoiceListModule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
