@@ -36,45 +36,26 @@ public class CirclePay {
         switch paymentType {
         case let .Invoice(invoiceNumber):
             if let vc = UIApplication.shared.topMostViewController() {
-                CirclePay.getInvoiceDetails(invoiceNumber: invoiceNumber) { viewModel, err, uiConfigs  in
+                self.getInvoiceDetails(invoiceNumber: invoiceNumber) { viewModel, err, uiConfigs  in
                     if let unwrappedError = err {
                         print("Throw an error here")
                         CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: unwrappedError)
+                        return
                     } else {
                         self.uiConfigs = uiConfigs
                         if let unwrappedViewModel = viewModel {
-                            if unwrappedViewModel.invoiceDetails.status == 1 {
-                                // Paid
-                                print("Paid")
-                                let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasPaid.code, errorMsg: SDKInternalErrorType.invoiceWasPaid.message)
-                                CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
-                                let invoiceStatus =  BaseNavigationController(rootViewController: InvoicePaymentStatusRouter.createAnModule(with: .paid, invoiceViewModel: unwrappedViewModel, withDelegete: nil))
-                                invoiceStatus.modalPresentationStyle = .fullScreen
-                                vc.present(invoiceStatus, animated: true, completion: nil)
-
-                            } else {
-                                //Not Paid
-                                let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-                                guard let dueDate = unwrappedViewModel.invoiceDetails.dueDate?.toDate(format: .custom(dateFormat)), let currentDate = Date().toDate(dateFormat: .custom(dateFormat)) else {
-                                    let error = CirclePayError(errorCode: 20000, errorMsg: "Something went wrong, please try again.")
-                                    CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
-                                    return
-                                }
-                                
-                                if dueDate < currentDate {
-                                    //Expired
-                                    print("Expired")
-                                    let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasExpired.code, errorMsg:SDKInternalErrorType.invoiceWasExpired.message)
-                                    CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
-                                    let invoiceStatus =  InvoicePaymentStatusRouter.createAnModule(with: .notAvailable, invoiceViewModel: unwrappedViewModel, withDelegete: nil)
-                                    invoiceStatus.modalPresentationStyle = .fullScreen
-                                    vc.present(invoiceStatus, animated: true, completion: nil)
-                                } else {
-                                    let invoiceFirstScreen =                             BaseNavigationController(rootViewController: InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: unwrappedViewModel))
-                                    self.uiConfigs = uiConfigs
-                                    invoiceFirstScreen.modalPresentationStyle = .fullScreen
-                                    vc.present(invoiceFirstScreen, animated: true, completion: nil)
-                                }
+                            let status = CheckoutInvoiceResult.Initial.prepare(vm: unwrappedViewModel, topVc: vc)
+                            switch status {
+                            case .Expired:
+                                self.handleInvoiceExpiredStatuss(invoiceViewModel: unwrappedViewModel, topViewController: vc)
+                                return
+                            case .Paid:
+                                self.handleInvoicePaidStatus(invoiceViewModel: unwrappedViewModel, topViewController: vc)
+                                return
+                            case .Valid:
+                                self.handleInvoiceValidStatus(invoiceViewModel: unwrappedViewModel, topViewController: vc)
+                            default:
+                                return
                             }
                         } else {
                             let error = CirclePayError(errorCode: SDKInternalErrorType.failedToGetInvoices.code, errorMsg: SDKInternalErrorType.failedToGetInvoices.message)
@@ -152,8 +133,71 @@ public class CirclePay {
         }
     }
     
+    fileprivate static func handleInvoicePaidStatus(invoiceViewModel:InvoiceFirstScreenViewModel, topViewController: UIViewController) {
+        // Paid
+        print("Paid")
+        
+        let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasPaid.code, errorMsg: SDKInternalErrorType.invoiceWasPaid.message)
+        CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
+        let invoiceStatus =  BaseNavigationController(rootViewController: InvoicePaymentStatusRouter.createAnModule(with: .paid, invoiceViewModel: invoiceViewModel, withDelegete: nil))
+        invoiceStatus.modalPresentationStyle = .fullScreen
+        topViewController.present(invoiceStatus, animated: true, completion: nil)
+    }
     
+    fileprivate static func handleInvoiceExpiredStatuss(invoiceViewModel:InvoiceFirstScreenViewModel, topViewController: UIViewController) {
+            let error = CirclePayError(errorCode: SDKInternalErrorType.invoiceWasExpired.code, errorMsg:SDKInternalErrorType.invoiceWasExpired.message)
+            CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
+            let invoiceStatus =  InvoicePaymentStatusRouter.createAnModule(with: .notAvailable, invoiceViewModel: invoiceViewModel, withDelegete: nil)
+            invoiceStatus.modalPresentationStyle = .fullScreen
+            topViewController.present(invoiceStatus, animated: true, completion: nil)
+    }
+    
+    fileprivate static func handleInvoiceValidStatus(invoiceViewModel:InvoiceFirstScreenViewModel, topViewController: UIViewController) {
+        let invoiceFirstScreen = BaseNavigationController(rootViewController: InvoiceFirstScreenRouter.createAnModule(invoiceViewModel: invoiceViewModel))
+        invoiceFirstScreen.modalPresentationStyle = .fullScreen
+        topViewController.present(invoiceFirstScreen, animated: true, completion: nil)
+    }
+    
+    fileprivate static func isInvoicePaid(invoiceStatus:Int?) -> Bool {
+        if invoiceStatus == 1 {
+            return true
+        }
+        return false
+    }
+    
+    fileprivate static func isInvoiceExpired(dueDate: String?) -> Bool {
+        let dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        guard let dueDate = dueDate?.toDate(format: .custom(dateFormat)), let currentDate = Date().toDate(dateFormat: .custom(dateFormat)) else {
+            let error = CirclePayError(errorCode: 20000, errorMsg: "Something went wrong, please try again.")
+            CirclePay.delegete?.didGetErrorAtCheckoutProcess(error: error)
+            return true
+        }
+        
+        if currentDate > dueDate {
+            return true
+        } else {
+            return false
+        }
+    }
 }
+
+fileprivate enum CheckoutInvoiceResult {
+    case Paid
+    case Expired
+    case Valid
+    case Initial
+    
+    func prepare(vm: InvoiceFirstScreenViewModel , topVc: UIViewController) -> Self {
+        if CirclePay.isInvoicePaid(invoiceStatus: vm.invoiceDetails.status) {
+            return .Paid
+        } else if CirclePay.isInvoiceExpired(dueDate: vm.invoiceDetails.dueDate) {
+            return .Expired
+        } else {
+            return .Valid
+        }
+    }
+}
+
 
 
 public enum CirclePayInviroment: String {
