@@ -14,7 +14,7 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
     private let interactor: InvoiceFirstScreenInteractorInPutProtocol
     private let router: InvoiceFirstScreenRouterProtocol
     var invoiceViewModel: InvoiceFirstScreenViewModel
-    var customer: GetCustomerCodable?
+    var customer: CustomerCodable?
     var subTotal:Double {
         return invoiceViewModel.getInvoiceSubTotal()
     }

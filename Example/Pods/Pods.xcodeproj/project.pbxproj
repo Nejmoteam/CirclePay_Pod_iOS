@@ -82,7 +82,7 @@
 		187F0417433AAD6FB63A3FC323EBC97A /* MerchantWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25082B6F648E526FF47DF3B151F80825 /* MerchantWorker.swift */; };
 		1961E8842348A78A301B75FFF05608BE /* PaymentLinkSecondScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE2FB6831EFE8CEFEDBE0A4943E726E /* PaymentLinkSecondScreenRouter.swift */; };
 		19FF16C15407ABBCAB0168CDE44709E1 /* NSURLRequest+HTTPBodyTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EF33FF0EA23F1004C07DEF58F29FA75 /* NSURLRequest+HTTPBodyTesting.m */; };
-		1A1A156BA96AF26742D0B309220C749B /* GetCustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5843E85BE460B19FD1A8AA8A9A111B6D /* GetCustomerCodable.swift */; };
+		1A1A156BA96AF26742D0B309220C749B /* CustomerCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5843E85BE460B19FD1A8AA8A9A111B6D /* CustomerCodable.swift */; };
 		1AAE279117AF6F9C70FE47BE266A0CC4 /* FontBlaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638014A33C020D7990E222FC32857168 /* FontBlaster.swift */; };
 		1B2DEB05DFA61AA6A41D70EF1ED8CBF5 /* WebViewContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131EE5ACF6273F9A01CFEB9AA418058A /* WebViewContainerView.swift */; };
 		1D17B83410DC98911D539F2BD5254C05 /* RequestTaskMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353713C9B9DEE433FF811B0A331A2420 /* RequestTaskMap.swift */; };
@@ -590,7 +590,7 @@
 		56E9DBB5DEDFF8F9283B511AA8BE3553 /* UIColor + HEX.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor + HEX.swift"; sourceTree = "<group>"; };
 		57006C6911D18FC510F2CB4D554BD75F /* ImageContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageContext.swift; path = Sources/SwiftUI/ImageContext.swift; sourceTree = "<group>"; };
 		579FE90A872EC987B8287945E7BCD7E9 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/Networking/ImageDownloader.swift; sourceTree = "<group>"; };
-		5843E85BE460B19FD1A8AA8A9A111B6D /* GetCustomerCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetCustomerCodable.swift; sourceTree = "<group>"; };
+		5843E85BE460B19FD1A8AA8A9A111B6D /* CustomerCodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomerCodable.swift; sourceTree = "<group>"; };
 		588ED92BD4542F49222F301A3E0E4EDD /* MultipartUpload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartUpload.swift; path = Source/MultipartUpload.swift; sourceTree = "<group>"; };
 		58A9A2C0A304646ABDA9000D9019A6DC /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		59297FB4A8A33087030CDB4B92EC2D2B /* PaymentMethodWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PaymentMethodWorker.swift; sourceTree = "<group>"; };
@@ -1987,7 +1987,7 @@
 			isa = PBXGroup;
 			children = (
 				A6F3D25AAAB0E0314E225DC095A71CCD /* CreateCustomerEntities.swift */,
-				5843E85BE460B19FD1A8AA8A9A111B6D /* GetCustomerCodable.swift */,
+				5843E85BE460B19FD1A8AA8A9A111B6D /* CustomerCodable.swift */,
 				F020CECC2B9D8B2F8F838F1E03411D90 /* UpdateCustomerCodable.swift */,
 			);
 			path = Entities;
@@ -2921,7 +2921,7 @@
 				482DF11CB6C421CB179D8169E029F0BA /* Date+String+extension.swift in Sources */,
 				E63A939ECE6B643FD060B5DC1787CED5 /* FontType.swift in Sources */,
 				BA92F6108A526438CB8A7AB68E11F487 /* FullNameDataView.swift in Sources */,
-				1A1A156BA96AF26742D0B309220C749B /* GetCustomerCodable.swift in Sources */,
+				1A1A156BA96AF26742D0B309220C749B /* CustomerCodable.swift in Sources */,
 				E7CA226A8F7409469E87C4CC3AEE2712 /* Indicator + UIView.swift in Sources */,
 				1EAB437691DD4E6DB890D7A688ABBD47 /* InoviceDetailsTableHeaderView.swift in Sources */,
 				432E5E64F634E274205FB28AC047C368 /* Int+BusinessErrorCode.swift in Sources */,

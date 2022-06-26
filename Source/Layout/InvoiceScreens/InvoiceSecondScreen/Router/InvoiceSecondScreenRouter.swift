@@ -9,7 +9,7 @@
 import UIKit
 class InvoiceSecondScreenRouter: InvoiceSecondScreenRouterProtocol {
     weak var viewController: UIViewController?
-    static func createAnModule(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable) -> UIViewController {
+    static func createAnModule(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: CustomerCodable) -> UIViewController {
         let interactor = InvoiceSecondScreenInteractor()
         let router = InvoiceSecondScreenRouter()
         let view = InvoiceSecondScreenViewController()

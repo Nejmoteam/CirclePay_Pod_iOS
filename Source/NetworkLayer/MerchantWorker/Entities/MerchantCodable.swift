@@ -8,16 +8,16 @@
 import Foundation
 
 public struct MerchantCodable: Codable {
-    let firstName:String?
-    let lastName:String?
-    let email:String?
-    let mobileNumber:String?
-    let businessName:String?
-    let businessAddress:String?
-    let refundPolicy:String?
-    let shippingPolicy:String?
-    let status:String?
-    let merchantToken:String?
+    public let firstName:String?
+    public let lastName:String?
+    public let email:String?
+    public let mobileNumber:String?
+    public let businessName:String?
+    public let businessAddress:String?
+    public let refundPolicy:String?
+    public let shippingPolicy:String?
+    public  let status:String?
+    public  let merchantToken:String?
     
     enum CodingKeys:String, CodingKey {
         case firstName = "first_name"

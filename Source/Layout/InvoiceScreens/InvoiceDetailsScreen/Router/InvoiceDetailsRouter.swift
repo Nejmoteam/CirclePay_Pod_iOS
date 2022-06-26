@@ -10,7 +10,7 @@ import UIKit
 class InvoiceDetailsRouter: InvoiceDetailsRouterProtocol {
     weak var viewController: UIViewController?
     
-    static func createAnModule(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable) -> UIViewController {
+    static func createAnModule(invoiceViewModel: InvoiceFirstScreenViewModel, customer: CustomerCodable) -> UIViewController {
         let interactor = InvoiceDetailsInteractor()
         let router = InvoiceDetailsRouter()
         let view = InvoiceDetailsViewController()

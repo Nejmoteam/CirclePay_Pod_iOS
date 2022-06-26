@@ -30,7 +30,7 @@ protocol InvoiceSecondScreenPresenterProtocol {
     func didSelectPaymentMethod(at indexPath: IndexPath)
     func onTapPay()
     func didChangeCountry(countryName: String)
-    var updatedCustomerData : GetCustomerCodable? {get set}
+    var updatedCustomerData : CustomerCodable? {get set}
     func dismiss()
 }
 protocol InvoiceSecondScreenRouterProtocol {

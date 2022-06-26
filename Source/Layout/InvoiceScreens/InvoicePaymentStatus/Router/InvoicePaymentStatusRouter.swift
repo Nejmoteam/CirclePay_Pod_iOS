@@ -54,7 +54,7 @@ class InvoicePaymentStatusRouter: InvoicePaymentStatusRouterProtocol {
         }
     }
     
-    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable) {
+    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: CustomerCodable) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
                 return

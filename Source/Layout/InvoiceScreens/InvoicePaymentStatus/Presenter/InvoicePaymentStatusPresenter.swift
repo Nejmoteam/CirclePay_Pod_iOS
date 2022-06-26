@@ -14,7 +14,7 @@ class InvoicePaymentStatusPresenter: InvoicePaymentStatusPresenterProtocol, Invo
     private let router: InvoicePaymentStatusRouterProtocol
     private var status:InvoicePaymentStatus = .success
     private var invoiceViewModel: InvoiceFirstScreenViewModel
-    private var customer: GetCustomerCodable?
+    private var customer: CustomerCodable?
     init(view: InvoicePaymentStatusViewProtocol, interactor: InvoicePaymentStatusInteractorInPutProtocol, router: InvoicePaymentStatusRouterProtocol, status:InvoicePaymentStatus,invoiceViewModel: InvoiceFirstScreenViewModel) {
         self.view = view
         self.interactor = interactor

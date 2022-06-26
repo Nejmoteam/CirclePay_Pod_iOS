@@ -8,7 +8,7 @@
 import Foundation
 
 public struct MerchantCreateCodable:Codable {
-    let merchantToken:String?
+    public let merchantToken:String?
     
     enum CodingKeys:String, CodingKey {
         case merchantToken = "merchant_token"

@@ -8,7 +8,7 @@
 import Foundation
 
 public struct CreateCustomerCodable:Codable {
-    let customerMobileNumber:String?
+  public  let customerMobileNumber:String?
     
     enum CodingKeys: String, CodingKey {
         case customerMobileNumber = "customer_mobile_number"

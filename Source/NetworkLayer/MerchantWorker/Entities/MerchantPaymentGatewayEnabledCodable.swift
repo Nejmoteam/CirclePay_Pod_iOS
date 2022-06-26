@@ -8,7 +8,7 @@
 import Foundation
 
 public struct MerchantPaymentGatewayEnabledCodable: Codable {
-    let paymentGatewayId: String?
+   public let paymentGatewayId: String?
     
     enum CodingKeys:String, CodingKey {
         case paymentGatewayId = "payment_gateway_id"

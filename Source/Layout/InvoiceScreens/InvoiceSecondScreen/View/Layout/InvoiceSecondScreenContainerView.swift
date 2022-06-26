@@ -166,7 +166,7 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
     }
     
     @objc func didTappedPay() {
-        self.presenter.updatedCustomerData = GetCustomerCodable(firstName: self.fullDataView.firstNameTextField.text, lastName: self.fullDataView.lastNameTextField.text, email: self.contactsView.emailTextField.text, mobileNumber: nil, country: self.addressDetailsView.selectCountryField.text, governorate: nil, city: self.addressDetailsView.selectCityField.text, address: self.addressDetailsView.extraDetailsField.text, aptNumber: self.addressDetailsView.appartmentNumberField.text)
+        self.presenter.updatedCustomerData = CustomerCodable(firstName: self.fullDataView.firstNameTextField.text, lastName: self.fullDataView.lastNameTextField.text, email: self.contactsView.emailTextField.text, mobileNumber: nil, country: self.addressDetailsView.selectCountryField.text, governorate: nil, city: self.addressDetailsView.selectCityField.text, address: self.addressDetailsView.extraDetailsField.text, aptNumber: self.addressDetailsView.appartmentNumberField.text)
         self.presenter.onTapPay()
     }
     

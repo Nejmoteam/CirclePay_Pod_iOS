@@ -14,8 +14,8 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     private let interactor: InvoiceSecondScreenInteractorInPutProtocol
     private let router: InvoiceSecondScreenRouterProtocol
     var invoiceViewModel: InvoiceFirstScreenViewModel
-    var customer: GetCustomerCodable
-    var updatedCustomerData: GetCustomerCodable?
+    var customer: CustomerCodable
+    var updatedCustomerData: CustomerCodable?
     var methodsViewModel = [PaymentMethodsViewModel]()
     var selectedPaymentMethod: PaymentMethodsViewModel?
     private let authValidator : AuthValidationManagerProtocol = AuthValidationManager()
@@ -28,7 +28,7 @@ class InvoiceSecondScreenPresenter: InvoiceSecondScreenPresenterProtocol, Invoic
     var customerNumber: String {
         return self.invoiceViewModel.invoiceDetails.customerMobile ?? ""
     }
-    init(view: InvoiceSecondScreenViewProtocol, interactor: InvoiceSecondScreenInteractorInPutProtocol, router: InvoiceSecondScreenRouterProtocol, invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable) {
+    init(view: InvoiceSecondScreenViewProtocol, interactor: InvoiceSecondScreenInteractorInPutProtocol, router: InvoiceSecondScreenRouterProtocol, invoiceViewModel: InvoiceFirstScreenViewModel, customer: CustomerCodable) {
         self.view = view
         self.interactor = interactor
         self.router = router

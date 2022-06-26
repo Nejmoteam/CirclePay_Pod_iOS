@@ -20,7 +20,7 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
         return view
     }
     
-    func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable) {
+    func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: CustomerCodable) {
         let stepTwo = InvoiceSecondScreenRouter.createAnModule(invoiceViewModel: invoiceViewModel, customer: customer)
         stepTwo.modalPresentationStyle = .fullScreen
         DispatchQueue.main.async { [weak self] in
@@ -32,7 +32,7 @@ class InvoiceFirstScreenRouter: InvoiceFirstScreenRouterProtocol {
         }
     }
     
-    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable) {
+    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: CustomerCodable) {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else {
                 return

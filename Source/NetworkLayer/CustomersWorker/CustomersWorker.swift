@@ -4,9 +4,9 @@ protocol CustomersWorkerProtocol {
     
     func updateCustomer(firstName:String, lastName:String, address:String, country:String, governorate:String, city:String, aptNumber:String, email:String, mobileNumber:String, completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[UpdateCustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
     
-    func getCustomer(mobileNumber:String,  completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[GetCustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
+    func getCustomer(mobileNumber:String,  completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[CustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
     
-    func listCustomers( completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[GetCustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
+    func listCustomers( completion: @escaping (Swift.Result<BaseAPIRequestResponseModel<[CustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void)
 }
 
 class CustomersWorker: APIRequestExecuter<CustomersNetworking>, CustomersWorkerProtocol {
@@ -22,14 +22,14 @@ class CustomersWorker: APIRequestExecuter<CustomersNetworking>, CustomersWorkerP
         }
     }
     
-    func getCustomer(mobileNumber: String, completion: @escaping (Result<BaseAPIRequestResponseModel<[GetCustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
-        self.performRequest(target: .get(mobileNumber: mobileNumber), responseClass: BaseAPIRequestResponseModel<[GetCustomerCodable]>.self) { results in
+    func getCustomer(mobileNumber: String, completion: @escaping (Result<BaseAPIRequestResponseModel<[CustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
+        self.performRequest(target: .get(mobileNumber: mobileNumber), responseClass: BaseAPIRequestResponseModel<[CustomerCodable]>.self) { results in
             completion(results)
         }
     }
     
-    func listCustomers(completion: @escaping (Result<BaseAPIRequestResponseModel<[GetCustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
-        self.performRequest(target: .list, responseClass: BaseAPIRequestResponseModel<[GetCustomerCodable]>.self) { results in
+    func listCustomers(completion: @escaping (Result<BaseAPIRequestResponseModel<[CustomerCodable]>?, BaseAPIRequestResponseFailureErrorType>) -> Void) {
+        self.performRequest(target: .list, responseClass: BaseAPIRequestResponseModel<[CustomerCodable]>.self) { results in
             completion(results)
         }
     }
