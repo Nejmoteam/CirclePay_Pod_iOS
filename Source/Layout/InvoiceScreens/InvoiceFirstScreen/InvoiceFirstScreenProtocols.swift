@@ -41,8 +41,8 @@ protocol InvoiceFirstScreenPresenterProtocol {
     func dismiss()
 }
 protocol InvoiceFirstScreenRouterProtocol {
-    func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: GetCustomerCodable)
-    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable)
+    func navigateToStepTwo(invoiceViewModel:InvoiceFirstScreenViewModel ,customer: CustomerCodable)
+    func navigateToInvoiceDetails(invoiceViewModel: InvoiceFirstScreenViewModel, customer: CustomerCodable)
     func navigateToShippingPolicy(shippingPolicy: String)
     func navigateToRefundPolicy(refundPolicy: String)
     func dismiss()

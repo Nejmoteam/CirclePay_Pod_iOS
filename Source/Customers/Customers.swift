@@ -11,9 +11,9 @@ public protocol CustomersProtocol {
     
     func updateCustomer(firstName:String, lastName:String, address:String, country:String, governorate:String, city:String, aptNumber:String, email:String, mobileNumber:String,  completion: @escaping (UpdateCustomerCodable?, CirclePayError?) -> Void)
     
-    func getCustomer(mobileNumber:String, completion: @escaping (GetCustomerCodable?, CirclePayError?) -> Void)
+    func getCustomer(mobileNumber:String, completion: @escaping (CustomerCodable?, CirclePayError?) -> Void)
     
-    func listCustomers(completion: @escaping ([GetCustomerCodable]?, CirclePayError?) -> Void)
+    func listCustomers(completion: @escaping ([CustomerCodable]?, CirclePayError?) -> Void)
 }
 public class Customers: CustomersProtocol{
     private let customersWorker: CustomersWorkerProtocol = CustomersWorker()
@@ -49,7 +49,7 @@ public class Customers: CustomersProtocol{
         }
     }
     
-    public func getCustomer(mobileNumber: String, completion: @escaping (GetCustomerCodable?, CirclePayError?) -> Void) {
+    public func getCustomer(mobileNumber: String, completion: @escaping (CustomerCodable?, CirclePayError?) -> Void) {
         customersWorker.getCustomer(mobileNumber: mobileNumber) { results in
             switch results {
             case let .success(model):
@@ -64,7 +64,7 @@ public class Customers: CustomersProtocol{
         }
     }
     
-    public func listCustomers(completion: @escaping ([GetCustomerCodable]?, CirclePayError?) -> Void) {
+    public func listCustomers(completion: @escaping ([CustomerCodable]?, CirclePayError?) -> Void) {
         customersWorker.listCustomers { results in
             switch results {
             case let .success(model):

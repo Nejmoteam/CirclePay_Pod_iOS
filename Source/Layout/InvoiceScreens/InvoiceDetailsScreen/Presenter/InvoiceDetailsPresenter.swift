@@ -13,8 +13,8 @@ class InvoiceDetailsPresenter: InvoiceDetailsPresenterProtocol, InvoiceDetailsIn
     private let interactor: InvoiceDetailsInteractorInPutProtocol
     private let router: InvoiceDetailsRouterProtocol
     var invoiceViewModel: InvoiceFirstScreenViewModel
-    var customer: GetCustomerCodable
-    init(view: InvoiceDetailsViewProtocol, interactor: InvoiceDetailsInteractorInPutProtocol, router: InvoiceDetailsRouterProtocol,invoiceViewModel: InvoiceFirstScreenViewModel, customer: GetCustomerCodable) {
+    var customer: CustomerCodable
+    init(view: InvoiceDetailsViewProtocol, interactor: InvoiceDetailsInteractorInPutProtocol, router: InvoiceDetailsRouterProtocol,invoiceViewModel: InvoiceFirstScreenViewModel, customer: CustomerCodable) {
         self.view = view
         self.interactor = interactor
         self.router = router

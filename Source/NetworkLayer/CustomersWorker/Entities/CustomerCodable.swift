@@ -7,16 +7,16 @@
 
 import Foundation
 
-public struct GetCustomerCodable: Codable{
-    let firstName:String?
-    let lastName:String?
-    let email:String?
-    var mobileNumber:String?
-    let country:String?
-    var governorate:String?
-    let city:String?
-    let address:String?
-    let aptNumber:String?
+public struct CustomerCodable: Codable{
+    public let firstName:String?
+    public let lastName:String?
+    public let email:String?
+    public var mobileNumber:String?
+    public let country:String?
+    public var governorate:String?
+    public let city:String?
+    public let address:String?
+    public let aptNumber:String?
     
     enum CodingKeys:String, CodingKey {
         case firstName = "first_name"
