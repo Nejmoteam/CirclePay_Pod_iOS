@@ -14,10 +14,6 @@ class InvoiceFirstScreenPresenterTests: XCTestCase {
     var mockInteractor: InvoiceFirstScreenInteractor?
     var mockRouter: InvoiceFirstScreenRouter?
     var mockInvoiceFirstScreenVM: InvoiceFirstScreenViewModelMock?
-    override class func setUp() {
-        super.setUp()
-    }
-    
     /* We need to do a lot of setup here to make sure all
      out dependcies are loaded before the tests are run.*/
     override func setUp() {
