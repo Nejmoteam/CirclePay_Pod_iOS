@@ -214,13 +214,30 @@ class InvoiceFirstScreenViewModelMock{
                                             subTotalValue: 500)
         
         
-        let merchantDetailsMock = MerchantCodable(firstName: "Mahmoud", lastName: "Allam", email: "allam40960@gmail.com", mobileNumber: "+201157818027", businessName: "EGiant", businessAddress: "", refundPolicy: "Refund", shippingPolicy: "Shipping", status: "", merchantToken: "")
+        let merchantDetailsMock = MerchantCodable(firstName: "Mahmoud",
+                                                  lastName: "Allam",
+                                                  email: "allam40960@gmail.com",
+                                                  mobileNumber: "+201157818027",
+                                                  businessName: "EGiant",
+                                                  businessAddress: "",
+                                                  refundPolicy: "Refund",
+                                                  shippingPolicy: "Shipping",
+                                                  status: "",
+                                                  merchantToken: "")
         
         return InvoiceFirstScreenViewModel(invoiceDetails: invDetailsMock, merchantDetails: merchantDetailsMock)
     }
     
     func getInvoiceCustomer() -> CustomerCodable {
-        return CustomerCodable(firstName: "Allam", lastName: "Allam", email: "mahmoudallam@circlepay.ai", mobileNumber: "+201061140960", country: "Egypt", governorate: "A", city: "Cairo", address: "_", aptNumber: "123")
+        return CustomerCodable(firstName: "Allam",
+                               lastName: "Allam",
+                               email: "mahmoudallam@circlepay.ai",
+                               mobileNumber: "+201061140960",
+                               country: "Egypt",
+                               governorate: "A",
+                               city: "Cairo",
+                               address: "_",
+                               aptNumber: "123")
     }
 }
 
