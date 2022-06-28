@@ -39,6 +39,7 @@
 		187F719C283B79A30054309D /* NormalIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719B283B79A30054309D /* NormalIndicator.swift */; };
 		187F719E283B79D80054309D /* Indicator + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719D283B79D80054309D /* Indicator + UIView.swift */; };
 		187F71A0283B79EC0054309D /* LottieIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187F719F283B79EC0054309D /* LottieIndicator.swift */; };
+		1886C1C92868ADB500C812E5 /* InvoiceFirstScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1886C1C82868ADB500C812E5 /* InvoiceFirstScreenPresenterTests.swift */; };
 		498F500029D9409882FB5AD4 /* Pods_CirclePay_Pod_iOS_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A2134673A78D8D125EA624 /* Pods_CirclePay_Pod_iOS_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* InitialViewController.swift */; };
@@ -91,6 +92,7 @@
 		187F719B283B79A30054309D /* NormalIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalIndicator.swift; sourceTree = "<group>"; };
 		187F719D283B79D80054309D /* Indicator + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Indicator + UIView.swift"; sourceTree = "<group>"; };
 		187F719F283B79EC0054309D /* LottieIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieIndicator.swift; sourceTree = "<group>"; };
+		1886C1C82868ADB500C812E5 /* InvoiceFirstScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFirstScreenPresenterTests.swift; sourceTree = "<group>"; };
 		3D65E01FE3EF862122C994EE /* Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3DF9595C73407471D3DAD489 /* CirclePay_Pod_iOS.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CirclePay_Pod_iOS.podspec; path = ../CirclePay_Pod_iOS.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		5EBA8DD96B26A74407A05CCF /* Pods-CirclePay_Pod_iOS_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Tests.release.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Tests/Pods-CirclePay_Pod_iOS_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +272,22 @@
 			name = InvoicesList;
 			sourceTree = "<group>";
 		};
+		1886C1C62868AD8C00C812E5 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				1886C1C72868AD9B00C812E5 /* Invoice */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		1886C1C72868AD9B00C812E5 /* Invoice */ = {
+			isa = PBXGroup;
+			children = (
+				1886C1C82868ADB500C812E5 /* InvoiceFirstScreenPresenterTests.swift */,
+			);
+			name = Invoice;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +335,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1886C1C62868AD8C00C812E5 /* Layout */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				181DE565285F17A800F82F9B /* InvoicesModule */,
@@ -592,6 +611,7 @@
 				181DE57328639E0A00F82F9B /* MerchantGetModule.swift in Sources */,
 				181DE57D2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				1886C1C92868ADB500C812E5 /* InvoiceFirstScreenPresenterTests.swift in Sources */,
 				181DE5832863A81300F82F9B /* MerchantListPaymentMethodsModule.swift in Sources */,
 				181DE57128639A0400F82F9B /* MerchantCreateModule.swift in Sources */,
 				181DE5772863A0CC00F82F9B /* MerchantUpdateModule.swift in Sources */,

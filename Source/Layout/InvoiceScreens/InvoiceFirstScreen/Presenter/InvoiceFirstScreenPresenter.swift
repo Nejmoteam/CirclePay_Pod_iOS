@@ -64,7 +64,7 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
         
     }
     
-    private func setupUIConfigs() {
+     func setupUIConfigs() {
         if let unwrappedConfigs = CirclePay.uiConfigs {
             if let unwrappedisLogoEnabled = unwrappedConfigs.logoEnable {
                 self.view?.setupLogoConfigurations(isLogoEnabled: unwrappedisLogoEnabled, logoUrl: unwrappedConfigs.logo ?? "")
@@ -97,7 +97,7 @@ class InvoiceFirstScreenPresenter: InvoiceFirstScreenPresenterProtocol, InvoiceF
         }
     }
     
-    private func setupInvoiceDate() {
+    func setupInvoiceDate() {
         let dateString = self.invoiceViewModel.invoiceDetails.dueDate ?? ""
         let dateStringFormated = dateString.toDate(format: .isoDateTimeMilliSec)?.toString(format: .custom("dd-MM-yyyy"))
         self.view?.configureInvoiceDate(date: dateStringFormated ?? "")
