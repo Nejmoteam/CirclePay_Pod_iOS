@@ -275,17 +275,9 @@
 		1886C1C62868AD8C00C812E5 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				1886C1C72868AD9B00C812E5 /* Invoice */,
-			);
-			name = Layout;
-			sourceTree = "<group>";
-		};
-		1886C1C72868AD9B00C812E5 /* Invoice */ = {
-			isa = PBXGroup;
-			children = (
 				1886C1C82868ADB500C812E5 /* InvoiceFirstScreenPresenterTests.swift */,
 			);
-			name = Invoice;
+			name = Layout;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
