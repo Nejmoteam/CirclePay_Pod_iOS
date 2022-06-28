@@ -272,12 +272,12 @@
 			name = InvoicesList;
 			sourceTree = "<group>";
 		};
-		1886C1C62868AD8C00C812E5 /* Layout */ = {
+		1886C1C62868AD8C00C812E5 /* CheckOutEmbed */ = {
 			isa = PBXGroup;
 			children = (
 				1886C1C82868ADB500C812E5 /* InvoiceFirstScreenPresenterTests.swift */,
 			);
-			name = Layout;
+			name = CheckOutEmbed;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -327,7 +327,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1886C1C62868AD8C00C812E5 /* Layout */,
+				1886C1C62868AD8C00C812E5 /* CheckOutEmbed */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				181DE565285F17A800F82F9B /* InvoicesModule */,
