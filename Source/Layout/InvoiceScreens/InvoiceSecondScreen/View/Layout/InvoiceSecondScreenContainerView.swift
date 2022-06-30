@@ -28,19 +28,19 @@ class InvoiceSecondScreenContainerView: PaymentBaseClass {
         return titleContainer
     }()
     
-    private lazy var fullDataView: FullNameDataView = {
+     lazy var fullDataView: FullNameDataView = {
         var container = FullNameDataView()
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
     
-    private lazy var contactsView: ContactsView = {
+     lazy var contactsView: ContactsView = {
         var container = ContactsView()
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
     
-    private lazy var addressDetailsView: AddressDetailsView = {
+     lazy var addressDetailsView: AddressDetailsView = {
         var container = AddressDetailsView()
         container.translatesAutoresizingMaskIntoConstraints = false
         let countryButton = UIButton()
