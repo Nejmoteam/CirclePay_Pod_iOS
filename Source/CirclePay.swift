@@ -159,6 +159,14 @@ public class CirclePay {
     }
     
     fileprivate static func isInvoicePaid(invoiceStatus:Int?) -> Bool {
+        if invoiceStatus == 2 {
+            return true
+        }
+        return false
+    }
+    
+    
+    fileprivate static func isInvoiceExpired(invoiceStatus:Int?) -> Bool  {
         if invoiceStatus == 1 {
             return true
         }
@@ -179,6 +187,7 @@ public class CirclePay {
             return false
         }
     }
+
 }
 
 fileprivate enum CheckoutInvoiceResult {
@@ -190,7 +199,7 @@ fileprivate enum CheckoutInvoiceResult {
     func prepare(vm: InvoiceFirstScreenViewModel , topVc: UIViewController) -> Self {
         if CirclePay.isInvoicePaid(invoiceStatus: vm.invoiceDetails.status) {
             return .Paid
-        } else if CirclePay.isInvoiceExpired(dueDate: vm.invoiceDetails.dueDate) {
+        } else if CirclePay.isInvoiceExpired(invoiceStatus: vm.invoiceDetails.status) {
             return .Expired
         } else {
             return .Valid
