@@ -8,13 +8,13 @@
 import Foundation
 
 public struct RefundCodable: Codable {
-    let refundId:Int?
-    let externalRefId:String?
-    let initDate:String?
-    let updateDate:String?
-    let value:Double?
-    let transactionId:String?
-    let status:String?
+    public let refundId:Int?
+    public let externalRefId:String?
+    public let initDate:String?
+    public let updateDate:String?
+    public let value:Double?
+    public let transactionId:String?
+    public let status:String?
     
     enum CodingKeys:String, CodingKey {
         case refundId = "refund_id"
