@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		060B5AA48FF6E7A86D8B5696 /* Pods_CirclePay_Pod_iOS_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D2084C5B1FEB93B9908C58 /* Pods_CirclePay_Pod_iOS_Tests.framework */; };
+		1809AA6D2871CF1700B9E6B6 /* ShippingPolicyPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809AA6C2871CF1700B9E6B6 /* ShippingPolicyPresenterTests.swift */; };
+		1809AA6F2871CF4000B9E6B6 /* RefundPolicyPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809AA6E2871CF4000B9E6B6 /* RefundPolicyPresenterTests.swift */; };
+		1809AA712871CF6C00B9E6B6 /* InvoiceFirstScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809AA702871CF6C00B9E6B6 /* InvoiceFirstScreenPresenterTests.swift */; };
+		1809AA732871CF9E00B9E6B6 /* InvoicePaymentStatusPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809AA722871CF9E00B9E6B6 /* InvoicePaymentStatusPresenterTests.swift */; };
+		1809AA752871CFB800B9E6B6 /* InvoiceSecondScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809AA742871CFB800B9E6B6 /* InvoiceSecondScreenPresenterTests.swift */; };
 		181DE4E92843AD8800F82F9B /* InvoiceListContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E12843AD8800F82F9B /* InvoiceListContainerView.swift */; };
 		181DE4EA2843AD8800F82F9B /* InvoiceListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E22843AD8800F82F9B /* InvoiceListPresenter.swift */; };
 		181DE4EB2843AD8800F82F9B /* InvoiceListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181DE4E32843AD8800F82F9B /* InvoiceListRouter.swift */; };
@@ -69,6 +74,11 @@
 
 /* Begin PBXFileReference section */
 		01D7A2188D4229946AD6D51C /* Pods-CirclePay_Pod_iOS_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Example.debug.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Example/Pods-CirclePay_Pod_iOS_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		1809AA6C2871CF1700B9E6B6 /* ShippingPolicyPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingPolicyPresenterTests.swift; sourceTree = "<group>"; };
+		1809AA6E2871CF4000B9E6B6 /* RefundPolicyPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefundPolicyPresenterTests.swift; sourceTree = "<group>"; };
+		1809AA702871CF6C00B9E6B6 /* InvoiceFirstScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceFirstScreenPresenterTests.swift; sourceTree = "<group>"; };
+		1809AA722871CF9E00B9E6B6 /* InvoicePaymentStatusPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicePaymentStatusPresenterTests.swift; sourceTree = "<group>"; };
+		1809AA742871CFB800B9E6B6 /* InvoiceSecondScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceSecondScreenPresenterTests.swift; sourceTree = "<group>"; };
 		181DE4E12843AD8800F82F9B /* InvoiceListContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListContainerView.swift; sourceTree = "<group>"; };
 		181DE4E22843AD8800F82F9B /* InvoiceListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListPresenter.swift; sourceTree = "<group>"; };
 		181DE4E32843AD8800F82F9B /* InvoiceListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListRouter.swift; sourceTree = "<group>"; };
@@ -149,6 +159,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1809AA6B2871CEFC00B9E6B6 /* InvoiceCheckoutEmbed */ = {
+			isa = PBXGroup;
+			children = (
+				1809AA6C2871CF1700B9E6B6 /* ShippingPolicyPresenterTests.swift */,
+				1809AA6E2871CF4000B9E6B6 /* RefundPolicyPresenterTests.swift */,
+				1809AA702871CF6C00B9E6B6 /* InvoiceFirstScreenPresenterTests.swift */,
+				1809AA722871CF9E00B9E6B6 /* InvoicePaymentStatusPresenterTests.swift */,
+				1809AA742871CFB800B9E6B6 /* InvoiceSecondScreenPresenterTests.swift */,
+			);
+			name = InvoiceCheckoutEmbed;
+			sourceTree = "<group>";
+		};
 		181DE4F02843AD9700F82F9B /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +394,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1809AA6B2871CEFC00B9E6B6 /* InvoiceCheckoutEmbed */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				181DE565285F17A800F82F9B /* InvoicesModule */,
@@ -642,8 +665,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1809AA6F2871CF4000B9E6B6 /* RefundPolicyPresenterTests.swift in Sources */,
 				181DE5A2286C70FA00F82F9B /* RefundsListModule.swift in Sources */,
 				181DE57B2863A40000F82F9B /* MerchantDisablePaymentGatewayModule.swift in Sources */,
+				1809AA6D2871CF1700B9E6B6 /* ShippingPolicyPresenterTests.swift in Sources */,
 				181DE56D285F1F9B00F82F9B /* InvoiceDeleteModule.swift in Sources */,
 				181DE5852863AA2300F82F9B /* MerchantSendOTPModule.swift in Sources */,
 				181DE5A42871CADF00F82F9B /* RefundGetModule.swift in Sources */,
@@ -651,13 +676,16 @@
 				181DE5902868895800F82F9B /* CustomerGetModule.swift in Sources */,
 				181DE569285F183B00F82F9B /* InvoiceGetModule.swift in Sources */,
 				181DE57328639E0A00F82F9B /* MerchantGetModule.swift in Sources */,
+				1809AA712871CF6C00B9E6B6 /* InvoiceFirstScreenPresenterTests.swift in Sources */,
 				181DE57D2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift in Sources */,
 				181DE59A2869BA8C00F82F9B /* PaymentMethodsGetModule.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				181DE5832863A81300F82F9B /* MerchantListPaymentMethodsModule.swift in Sources */,
 				181DE57128639A0400F82F9B /* MerchantCreateModule.swift in Sources */,
 				181DE5982869B8C400F82F9B /* PaymentMethodsListModule.swift in Sources */,
+				1809AA752871CFB800B9E6B6 /* InvoiceSecondScreenPresenterTests.swift in Sources */,
 				181DE5772863A0CC00F82F9B /* MerchantUpdateModule.swift in Sources */,
+				1809AA732871CF9E00B9E6B6 /* InvoicePaymentStatusPresenterTests.swift in Sources */,
 				181DE5792863A26300F82F9B /* MerchantEnablePaymentGatewayModule.swift in Sources */,
 				181DE5932869B6B200F82F9B /* PaymentGatewaysListModule.swift in Sources */,
 				181DE567285F180400F82F9B /* InvoiceCreateModule.swift in Sources */,

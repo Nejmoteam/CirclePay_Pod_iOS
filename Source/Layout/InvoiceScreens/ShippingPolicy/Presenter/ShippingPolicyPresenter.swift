@@ -12,7 +12,7 @@ class ShippingPolicyPresenter: ShippingPolicyPresenterProtocol, ShippingPolicyIn
     weak var view: ShippingPolicyViewProtocol?
     private let interactor: ShippingPolicyInteractorInPutProtocol
     private let router: ShippingPolicyRouterProtocol
-    private var shippingPolicy: String
+    var shippingPolicy: String
     init(view: ShippingPolicyViewProtocol, interactor: ShippingPolicyInteractorInPutProtocol, router: ShippingPolicyRouterProtocol, shippingPolicy: String) {
         self.view = view
         self.interactor = interactor

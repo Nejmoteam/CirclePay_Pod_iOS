@@ -12,7 +12,7 @@ class RefundPolicyPresenter: RefundPolicyPresenterProtocol, RefundPolicyInteract
     weak var view: RefundPolicyViewProtocol?
     private let interactor: RefundPolicyInteractorInPutProtocol
     private let router: RefundPolicyRouterProtocol
-    private var refundPolicy: String
+    var refundPolicy: String
     init(view: RefundPolicyViewProtocol, interactor: RefundPolicyInteractorInPutProtocol, router: RefundPolicyRouterProtocol,refundPolicy: String) {
         self.view = view
         self.interactor = interactor
