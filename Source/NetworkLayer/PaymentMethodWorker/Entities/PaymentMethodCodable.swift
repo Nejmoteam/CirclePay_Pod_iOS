@@ -8,9 +8,9 @@
 import Foundation
 
 public struct PaymentMethodCodable: Codable {
-    let id:String?
-    let name:String?
-    let gatewayId:String?
+    public let id:String?
+    public let name:String?
+    public let gatewayId:String?
     
     enum CodingKeys:String, CodingKey {
         case id

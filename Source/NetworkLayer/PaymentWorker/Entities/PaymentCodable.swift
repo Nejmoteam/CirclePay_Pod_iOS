@@ -8,21 +8,21 @@
 import Foundation
 
 public struct PaymentCodable:Codable {
-    let id:Int?
-    let transactionId:Int?
-    let externalRefId:String?
-    let initDate:String?
-    let updateDate:String?
-    let customerMobile:String?
-    let status:String?
-    let paymentLinkUrl:String?
-    let invoiceNum:String?
-    let value:Double?
-    let netFees:Double?
-    let currency:String?
-    let paymentMethodId:String?
-    let paymentMethodName:String?
-    let paymentGatewayName:String?
+    public let id:Int?
+    public let transactionId:Int?
+    public let externalRefId:String?
+    public let initDate:String?
+    public let updateDate:String?
+    public let customerMobile:String?
+    public let status:String?
+    public let paymentLinkUrl:String?
+    public let invoiceNum:String?
+    public let value:Double?
+    public let netFees:Double?
+    public let currency:String?
+    public let paymentMethodId:String?
+    public let paymentMethodName:String?
+    public let paymentGatewayName:String?
     
     enum CodingKeys:String, CodingKey {
         case transactionId = "transaction_id"

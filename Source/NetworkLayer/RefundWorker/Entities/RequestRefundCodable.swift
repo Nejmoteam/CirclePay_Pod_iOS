@@ -8,7 +8,7 @@
 import Foundation
 
 public struct RequestRefundCodable:Codable {
-    let refundId:Int?
+   public let refundId:Int?
     
     enum CodingKeys:String, CodingKey {
         case refundId = "refund_id"
