@@ -228,14 +228,3 @@ public struct TransactionResult {
     var transactoinStatus: String?
     var transactionType: Int
 }
-
-
-
-
-STATUS == 1 {
-    PAID
-} ELSE  CHECK DATE {
-   EXPIRED
-} ELSE {
-    VALID
-}
