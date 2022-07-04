@@ -159,7 +159,7 @@ public class CirclePay {
     }
     
     fileprivate static func isInvoicePaid(invoiceStatus:Int?) -> Bool {
-        if invoiceStatus == 1 {
+        if invoiceStatus == 2 {
             return true
         }
         return false
@@ -227,4 +227,15 @@ public struct TransactionResult {
     var transactionId: String?
     var transactoinStatus: String?
     var transactionType: Int
+}
+
+
+
+
+STATUS == 1 {
+    PAID
+} ELSE  CHECK DATE {
+   EXPIRED
+} ELSE {
+    VALID
 }

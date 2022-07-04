@@ -59,7 +59,6 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,7 +130,6 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* CirclePay_Pod_iOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CirclePay_Pod_iOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		77321889E784A1E07FA0B841 /* Pods-CirclePay_Pod_iOS_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CirclePay_Pod_iOS_Example.release.xcconfig"; path = "Target Support Files/Pods-CirclePay_Pod_iOS_Example/Pods-CirclePay_Pod_iOS_Example.release.xcconfig"; sourceTree = "<group>"; };
 		91D2084C5B1FEB93B9908C58 /* Pods_CirclePay_Pod_iOS_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CirclePay_Pod_iOS_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C53A196807C4A6F607F5703 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -395,7 +393,6 @@
 			isa = PBXGroup;
 			children = (
 				1809AA6B2871CEFC00B9E6B6 /* InvoiceCheckoutEmbed */,
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				181DE565285F17A800F82F9B /* InvoicesModule */,
 				181DE56F286399BC00F82F9B /* MerchantModule */,
@@ -679,7 +676,6 @@
 				1809AA712871CF6C00B9E6B6 /* InvoiceFirstScreenPresenterTests.swift in Sources */,
 				181DE57D2863A48A00F82F9B /* MerchantListPaymentGatewaysModule.swift in Sources */,
 				181DE59A2869BA8C00F82F9B /* PaymentMethodsGetModule.swift in Sources */,
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				181DE5832863A81300F82F9B /* MerchantListPaymentMethodsModule.swift in Sources */,
 				181DE57128639A0400F82F9B /* MerchantCreateModule.swift in Sources */,
 				181DE5982869B8C400F82F9B /* PaymentMethodsListModule.swift in Sources */,
