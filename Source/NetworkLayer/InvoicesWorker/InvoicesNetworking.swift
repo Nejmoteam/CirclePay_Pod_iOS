@@ -101,7 +101,7 @@ extension InvoicesNetworking: APIRequestBuilder {
                 params["extra_notes"] = unwrappedExtraNotes
             }
             let totalParams = ["invoice":params]
-            return .WithParametersRequest(parameters: totalParams, encoding: JSONEncoding.default)
+            return .WithParametersRequest(parameters: params, encoding: JSONEncoding.default)
         case .list:
             return .normalRequest
         case .get:

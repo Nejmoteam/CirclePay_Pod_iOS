@@ -101,7 +101,7 @@ class InvoiceSecondScreenPresenterTests: XCTestCase {
     func test_disable_pay_button() {
 
         sut?.view?.disablePayButton()
-        wait(interval: 0.1) {
+        wait(interval: 0.2) {
             XCTAssert(self.mockView?.containerView.payButtonContainer.nextButton.isEnabled == false)
         }
     }
@@ -109,7 +109,7 @@ class InvoiceSecondScreenPresenterTests: XCTestCase {
     func test_enable_pay_button() {
 
         sut?.view?.enablePayButton()
-        wait(interval: 0.1) {
+        wait(interval: 0.2) {
             XCTAssert(self.mockView?.containerView.payButtonContainer.nextButton.isEnabled == true)
         }
     }
